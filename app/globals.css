@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  /* Heavenly Light Theme Base */
+  --background: #f8fafc;
+  --foreground: #475569;
+
+  /* Lumina Accents */
+  --lumina-cyan: #06b6d4;
+  /* Soft Cyan */
+  --lumina-gold: #fbbf24;
+  /* Warm Gold */
+  --lumina-lavender: #a855f7;
+  /* Spiritual Lavender */
+  --lumina-white: #ffffff;
+
+  /* Soft Borders */
+  --grid-line: #e2e8f0;
+  --border-util: #cbd5e1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-lumina-cyan: var(--lumina-cyan);
+  --color-lumina-gold: var(--lumina-gold);
+  --color-lumina-lavender: var(--lumina-lavender);
+  --color-lumina-white: var(--lumina-white);
+  --color-grid-line: var(--grid-line);
+  --color-border-util: var(--border-util);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-radiate: radiate 8s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes radiate {
+
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+      filter: brightness(1);
+    }
+
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  @keyframes breath {
+
+    0%,
+    100% {
+      transform: scale(1.0);
+    }
+
+    50% {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.animate-breath {
+  animation: breath 15s ease-in-out infinite;
+}
+
+.animate-blob {
+  animation: blob 10s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animation-delay-6000 {
+  animation-delay: 6s;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Ethereal Background Utility */
+.bg-util-grid {
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
