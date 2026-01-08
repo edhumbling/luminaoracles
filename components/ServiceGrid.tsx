@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { SERVICES } from "@/lib/data";
+import { ShaderAnimation } from "@/components/shader-animation";
 
 export default function ServiceGrid() {
     return (
@@ -14,37 +14,45 @@ export default function ServiceGrid() {
                 <div className="w-24 h-1 bg-gradient-to-r from-transparent via-lumina-cyan to-transparent mt-6 opacity-30" />
             </div>
 
-            <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {SERVICES.map((service) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-black/10">
+                {SERVICES.map((service, index) => (
                     <Link
+                        key={index}
                         href={`/services/${service.id}`}
-                        key={service.id}
-                        className="group relative p-8 bg-white border border-white shadow-sm hover:shadow-[0_10px_40px_rgba(6,182,212,0.1)] hover:border-lumina-cyan/30 rounded-2xl transition-all duration-500 overflow-hidden"
+                        className="group relative h-72 p-8 border-b border-r border-black/10 bg-white hover:bg-black transition-colors duration-0 overflow-hidden"
                     >
-                        {/* Hover Aura Effect */}
-                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                            <Image
-                                src="/aura-glow.png"
-                                alt="Aura"
-                                fill
-                                className="object-cover opacity-60 mix-blend-multiply"
-                            />
+                        {/* Shader Animation - Background */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 mix-blend-screen">
+                            <ShaderAnimation className="w-full h-full" />
                         </div>
 
-                        {/* Content */}
-                        <div className="relative z-10 flex flex-col h-full justify-between gap-6">
+                        {/* Hover Overlay - Sharp/Knife Edge */}
+                        <div className="absolute inset-0 bg-lumina-gold/10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-0 pointer-events-none z-10" />
+
+                        <div className="relative z-20 flex flex-col justify-between h-full">
+                            {/* Header */}
                             <div className="flex justify-between items-start">
-                                <span className="font-serif italic text-lumina-lavender/70 text-lg">#{service.id}</span>
-                                <div className="w-2 h-2 bg-lumina-gold/30 group-hover:bg-lumina-gold group-hover:shadow-[0_0_15px_#fbbf24] transition-all duration-500 rounded-full" />
+                                <span className="font-mono text-xs tracking-widest text-black/40 group-hover:text-lumina-gold font-bold transition-colors">
+                                    {"//"} {service.id}
+                                </span>
+                                <div className="w-2 h-2 bg-black opacity-0 group-hover:opacity-100 group-hover:bg-lumina-gold transition-all duration-0" />
                             </div>
 
+                            {/* Content */}
                             <div>
-                                <h3 className="text-xl font-medium tracking-wide mb-3 text-foreground group-hover:text-lumina-cyan transition-colors">
+                                <h3 className="text-2xl font-bold uppercase tracking-tighter text-black mb-2 group-hover:text-white group-hover:translate-x-2 transition-all duration-100">
                                     {service.title}
                                 </h3>
-                                <p className="font-sans text-sm text-foreground/60 group-hover:text-foreground/80 leading-relaxed">
+                                <p className="font-mono text-sm text-black/60 group-hover:text-white/80 line-clamp-2 transition-colors">
                                     {service.desc}
                                 </p>
+                            </div>
+
+                            {/* Action Icon */}
+                            <div className="self-end">
+                                <span className="font-mono text-xl text-black/20 group-hover:text-lumina-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-100">
+                                    ↗
+                                </span>
                             </div>
                         </div>
                     </Link>

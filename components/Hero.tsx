@@ -20,38 +20,32 @@ export default function Hero() {
             </div>
 
             {/* Content */}
+            {/* Content */}
             <div className="relative z-10 container mx-auto px-4 text-center">
                 <div className="flex flex-col items-center gap-6">
-                    <div className="flex items-center gap-4 text-lumina-lavender font-mono text-sm tracking-[0.2em] border border-lumina-lavender/30 bg-white/50 px-6 py-2 rounded-full uppercase backdrop-blur-sm shadow-[0_0_15px_rgba(168,85,247,0.1)]">
-                        <span>✨</span>
-                        <span>Soul Alignment: Harmonized</span>
-                        <span>✨</span>
-                    </div>
-
-                    <div className="relative w-24 h-24 md:w-32 md:h-32 mb-[-20px] animate-float">
+                    <div className="relative w-24 h-24 md:w-32 md:h-32 mb-[-10px] animate-float">
                         <Image
                             src="/logo.png"
                             alt="Lumina Oracles Logo"
                             fill
-                            className="object-contain drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]"
+                            className="object-contain drop-shadow-[0_0_20px_rgba(168,85,247,0.5)]"
                         />
                     </div>
 
-                    <h1 className="text-6xl md:text-8xl font-thin tracking-tighter text-foreground uppercase py-4 drop-shadow-sm">
-                        Lumina <span className="text-transparent bg-clip-text bg-gradient-to-r from-lumina-cyan via-lumina-gold to-lumina-lavender font-normal">Oracles</span>
+                    <h1 className="text-6xl md:text-8xl font-thin tracking-tighter text-foreground uppercase py-2 drop-shadow-sm mix-blend-overlay">
+                        <span className="font-[family-name:var(--font-calligraffitti)] capitalize">Lumina</span> <span className="font-normal text-white drop-shadow-[0_0_15px_rgba(6,182,212,0.8)]">Oracles</span>
                     </h1>
 
-                    <p className="max-w-xl text-foreground/70 font-sans text-lg md:text-xl leading-relaxed">
-                        Welcome to the sanctuary of light. Connect your spirit to higher dimensional wisdom
-                        through gentle, illuminating guidance.
+                    <p className="max-w-md text-foreground/80 font-sans text-lg md:text-xl leading-relaxed text-center backdrop-blur-sm bg-white/10 p-4 rounded-2xl border border-white/20 shadow-xl">
+                        Connect to higher wisdom.
                     </p>
 
-                    <div className="mt-10 flex flex-col md:flex-row gap-6 w-full md:w-auto">
-                        <button className="px-10 py-4 bg-gradient-to-r from-lumina-cyan to-lumina-lavender text-white font-medium tracking-wide uppercase rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                            Begin Your Journey
+                    <div className="mt-8 flex flex-col md:flex-row gap-6 w-full md:w-auto">
+                        <button className="px-10 py-4 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/40 text-white font-medium tracking-widest uppercase rounded-full shadow-[0_0_30px_rgba(6,182,212,0.3)] hover:shadow-[0_0_50px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300">
+                            Begin
                         </button>
-                        <button className="px-10 py-4 border border-lumina-gold/50 text-lumina-gold font-medium uppercase rounded-full hover:bg-lumina-gold/10 hover:border-lumina-gold transition-colors duration-300">
-                            Sacred Pathways
+                        <button className="px-10 py-4 border border-white/30 text-lumina-gold font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm">
+                            Explore
                         </button>
                     </div>
                 </div>
