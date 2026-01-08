@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SERVICES } from "@/lib/data";
-import { ShaderAnimation } from "@/components/shader-animation";
+import { AnimatedShader } from "@/components/animated-shader-hero";
 
 export default function ServiceGrid() {
     return (
@@ -21,9 +21,8 @@ export default function ServiceGrid() {
                         href={`/services/${service.id}`}
                         className="group relative h-72 p-8 border-b border-r border-black/10 bg-white hover:bg-black transition-colors duration-0 overflow-hidden"
                     >
-                        {/* Shader Animation - Background */}
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 mix-blend-screen">
-                            <ShaderAnimation className="w-full h-full" />
+                            <AnimatedShader className="w-full h-full" />
                         </div>
 
                         {/* Hover Overlay - Sharp/Knife Edge */}
