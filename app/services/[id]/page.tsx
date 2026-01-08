@@ -11,7 +11,6 @@ export async function generateStaticParams() {
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ id: string }> }) {
-    // Await params because in Next.js 15+ params is a Promise
     const { id } = await params;
     const service = SERVICES.find((s) => s.id === id);
 
@@ -19,49 +18,97 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
         notFound();
     }
 
+    // Default to center if not specified (though data.ts should have it)
+    // We treat "images" as mandatory now based on data update
+    const layout = service.layout || "center";
+    const images = service.images || ["/aura-1.png", "/aura-2.png", "/spirit-orb.png"];
+
     return (
         <main className="min-h-screen bg-transparent relative overflow-hidden">
             <ServiceHero title={service.title} subtitle={service.desc} />
 
-            <div className="container mx-auto px-4 py-24 relative">
-                {/* Spiritual Aura "Splashes" - Absolute Positioned */}
-                <div className="absolute top-0 left-[-10%] w-[500px] h-[500px] opacity-40 pointer-events-none animate-float">
-                    <Image src="/aura-1.png" alt="Aura" fill className="object-contain mix-blend-multiply" />
-                </div>
-                <div className="absolute bottom-0 right-[-10%] w-[600px] h-[600px] opacity-30 pointer-events-none animate-float animation-delay-4000">
-                    <Image src="/aura-2.png" alt="Aura" fill className="object-contain mix-blend-multiply" />
-                </div>
-                <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] opacity-50 pointer-events-none animate-pulse-slow">
-                    <Image src="/spirit-orb.png" alt="Spirit Orb" fill className="object-contain mix-blend-screen" />
+            <div className="container mx-auto px-4 py-24 relative min-h-[800px]">
+
+                {/* Dynamic Floating Assets - Position based on Layout */}
+                {/* We render them absolutely but their positions might shift slightly or we keep them generally floating */}
+
+                {/* Asset 1: Top Left-ish */}
+                <div className="absolute top-0 left-[-5%] w-[400px] h-[400px] md:w-[600px] md:h-[600px] opacity-40 pointer-events-none animate-float">
+                    <Image src={images[0]} alt="Atmosphere" fill className="object-contain mix-blend-multiply" />
                 </div>
 
-                {/* Content Container */}
-                <div className="max-w-4xl mx-auto relative z-10 bg-white/60 backdrop-blur-md p-12 rounded-3xl border border-white shadow-xl">
-                    <div className="flex flex-col items-center text-center gap-8">
-                        <span className="text-6xl text-lumina-gold opacity-50 font-serif italic">
-                            #{service.id}
-                        </span>
+                {/* Asset 2: Bottom Right-ish */}
+                <div className="absolute bottom-0 right-[-10%] w-[500px] h-[500px] md:w-[700px] md:h-[700px] opacity-30 pointer-events-none animate-float animation-delay-4000">
+                    <Image src={images[1]} alt="Atmosphere" fill className="object-contain mix-blend-multiply" />
+                </div>
 
-                        <div className="w-24 h-1 bg-gradient-to-r from-lumina-cyan via-lumina-gold to-lumina-lavender" />
+                {/* Asset 3: Floating Middle/Random */}
+                <div className={`absolute top-[20%] ${layout === 'split-left' ? 'right-[5%]' : 'right-[10%]'} w-[300px] h-[300px] opacity-50 pointer-events-none animate-pulse-slow`}>
+                    <Image src={images[2]} alt="Spirit" fill className="object-contain mix-blend-screen" />
+                </div>
 
-                        <p className="text-xl md:text-2xl font-sans leading-relaxed text-foreground/80">
-                            {service.longDesc}
-                        </p>
 
-                        <div className="mt-8 p-6 bg-lumina-lavender/5 border border-lumina-lavender/20 rounded-xl relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-1 h-full bg-lumina-lavender" />
-                            <p className="font-mono text-xs tracking-widest uppercase text-lumina-lavender/80 mb-2">
-                                [ ESSENCE DETECTED ]
+                {/* Content Container - Layout Variants */}
+                <div className={`
+                    relative z-10 max-w-6xl mx-auto 
+                    ${layout === 'center' ? 'flex flex-col items-center text-center' : ''}
+                    ${layout === 'split-left' ? 'flex flex-col md:flex-row items-center gap-12 text-left' : ''}
+                    ${layout === 'split-right' ? 'flex flex-col md:flex-row-reverse items-center gap-12 text-left md:text-right' : ''}
+                `}>
+
+                    {/* Text Block */}
+                    <div className={`
+                        bg-white/60 backdrop-blur-md p-10 md:p-12 rounded-3xl border border-white shadow-xl
+                        ${layout === 'center' ? 'max-w-4xl' : 'flex-1'}
+                    `}>
+                        <div className={`flex flex-col gap-8 ${layout === 'center' ? 'items-center' : ''}`}>
+                            <div className="flex items-center gap-4 opacity-50">
+                                <span className="text-6xl text-lumina-gold font-serif italic">
+                                    #{service.id}
+                                </span>
+                                {layout !== 'center' && <div className="h-px flex-1 bg-gradient-to-r from-lumina-gold/50 to-transparent" />}
+                            </div>
+
+                            {layout === 'center' && <div className="w-24 h-1 bg-gradient-to-r from-lumina-cyan via-lumina-gold to-lumina-lavender" />}
+
+                            <p className="text-xl md:text-2xl font-sans leading-relaxed text-foreground/80">
+                                {service.longDesc}
                             </p>
-                            <p className="text-foreground/70 italic">
-                                &quot;Align your spirit with the frequency of {service.title.toLowerCase()} and witness the transformation.&quot;
-                            </p>
+
+                            <div className="mt-4 p-6 bg-lumina-lavender/5 border border-lumina-lavender/20 rounded-xl relative overflow-hidden">
+                                <div className={`absolute top-0 ${layout === 'split-right' ? 'right-0' : 'left-0'} w-1 h-full bg-lumina-lavender`} />
+                                <p className="font-mono text-xs tracking-widest uppercase text-lumina-lavender/80 mb-2">
+                                    [ ESSENCE DETECTED ]
+                                </p>
+                                <p className="text-foreground/70 italic">
+                                    &quot;Align your spirit with the frequency of {service.title.toLowerCase()} and witness the transformation.&quot;
+                                </p>
+                            </div>
+
+                            <button className={`
+                                mt-4 px-10 py-4 bg-gradient-to-r from-lumina-cyan to-lumina-lavender text-white font-bold uppercase tracking-widest rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-fit
+                                ${layout === 'split-right' ? 'self-end' : ''}
+                            `}>
+                                Book Session
+                            </button>
                         </div>
-
-                        <button className="mt-8 px-12 py-4 bg-gradient-to-r from-lumina-cyan to-lumina-lavender text-white font-bold uppercase tracking-widest rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                            Book Session
-                        </button>
                     </div>
+
+                    {/* Visual Block for Split Layouts (Optional extra imagery) */}
+                    {(layout === 'split-left' || layout === 'split-right') && (
+                        <div className="flex-1 hidden md:flex items-center justify-center relative h-[400px] w-full">
+                            {/* We can put a focused main image here, or just let the background assets shine. 
+                                Let's put a "card" or "orb" representation here using the 3rd asset again but larger */}
+                            <div className="relative w-full h-full animate-float animation-delay-2000">
+                                <Image
+                                    src={images[0]}
+                                    alt="Focus Asset"
+                                    fill
+                                    className="object-contain drop-shadow-2xl opacity-90"
+                                />
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </main>
