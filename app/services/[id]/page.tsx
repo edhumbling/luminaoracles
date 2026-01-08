@@ -58,7 +58,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
 
                     {/* Text Block */}
                     <div className={`
-                        bg-white/60 backdrop-blur-md p-10 md:p-12 rounded-3xl border border-white shadow-xl
+                        bg-white p-10 md:p-12 border border-black/10 shadow-none
                         ${layout === 'center' ? 'max-w-4xl' : 'flex-1'}
                     `}>
                         <div className={`flex flex-col gap-8 ${layout === 'center' ? 'items-center' : ''}`}>
@@ -66,18 +66,18 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
                                 <span className="text-6xl text-lumina-gold font-serif italic">
                                     #{service.id}
                                 </span>
-                                {layout !== 'center' && <div className="h-px flex-1 bg-gradient-to-r from-lumina-gold/50 to-transparent" />}
+                                {layout !== 'center' && <div className="h-px flex-1 bg-lumina-gold/30" />}
                             </div>
 
-                            {layout === 'center' && <div className="w-24 h-1 bg-gradient-to-r from-lumina-cyan via-lumina-gold to-lumina-lavender" />}
+                            {layout === 'center' && <div className="w-24 h-px bg-lumina-gold opacity-50" />}
 
                             <p className="text-xl md:text-2xl font-sans leading-relaxed text-foreground/80">
                                 {service.longDesc}
                             </p>
 
-                            <div className="mt-4 p-6 bg-lumina-lavender/5 border border-lumina-lavender/20 rounded-xl relative overflow-hidden">
-                                <div className={`absolute top-0 ${layout === 'split-right' ? 'right-0' : 'left-0'} w-1 h-full bg-lumina-lavender`} />
-                                <p className="font-mono text-xs tracking-widest uppercase text-lumina-lavender/80 mb-2">
+                            <div className="mt-4 p-6 bg-black/[0.02] border border-black/5 rounded-none relative overflow-hidden">
+                                <div className={`absolute top-0 ${layout === 'split-right' ? 'right-0' : 'left-0'} w-1 h-full bg-lumina-gold`} />
+                                <p className="font-mono text-xs tracking-widest uppercase text-black/40 mb-2">
                                     [ ESSENCE DETECTED ]
                                 </p>
                                 <p className="text-foreground/70 italic">
@@ -86,7 +86,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
                             </div>
 
                             <button className={`
-                                mt-4 px-10 py-4 bg-gradient-to-r from-lumina-cyan to-lumina-lavender text-white font-bold uppercase tracking-widest rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-fit
+                                mt-4 px-10 py-5 bg-black text-white font-bold uppercase tracking-widest hover:bg-lumina-gold hover:text-black transition-all duration-100 border border-black w-fit
                                 ${layout === 'split-right' ? 'self-end' : ''}
                             `}>
                                 Book Session
@@ -97,9 +97,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
                     {/* Visual Block for Split Layouts (Optional extra imagery) */}
                     {(layout === 'split-left' || layout === 'split-right') && (
                         <div className="flex-1 hidden md:flex items-center justify-center relative h-[400px] w-full">
-                            {/* We can put a focused main image here, or just let the background assets shine. 
-                                Let's put a "card" or "orb" representation here using the 3rd asset again but larger */}
-                            <div className="relative w-full h-full animate-float animation-delay-2000">
+                            <div className="relative w-full h-full animate-float">
                                 <Image
                                     src={images[0]}
                                     alt="Focus Asset"

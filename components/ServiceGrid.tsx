@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SERVICES } from "@/lib/data";
-import { AnimatedShader } from "@/components/animated-shader-hero";
+import { ATCShader } from "@/components/atc-shader";
 
 export default function ServiceGrid() {
     return (
@@ -22,7 +22,7 @@ export default function ServiceGrid() {
                         className="group relative h-72 p-8 border-b border-r border-black/10 bg-white hover:bg-black transition-colors duration-0 overflow-hidden"
                     >
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 mix-blend-screen">
-                            <AnimatedShader className="w-full h-full" />
+                            <ATCShader className="w-full h-full" />
                         </div>
 
                         {/* Hover Overlay - Sharp/Knife Edge */}
