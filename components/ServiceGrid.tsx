@@ -1,10 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { SERVICES } from "@/lib/data";
-import { ATCShader } from "@/components/atc-shader";
-import { AnimatedShader } from "@/components/animated-shader-hero";
-import PulsingGeometricDream from "@/components/pulsing-geometric-dream";
-import PatternShader from "@/components/pattern-shader";
-import { PsychedelicVortexHero } from "@/components/psychedelic-vortex-hero";
+import dynamic from 'next/dynamic';
+
+const ATCShader = dynamic(() => import("@/components/atc-shader").then(mod => mod.ATCShader), { ssr: false });
+const AnimatedShader = dynamic(() => import("@/components/animated-shader-hero").then(mod => mod.AnimatedShader), { ssr: false });
+const PulsingGeometricDream = dynamic(() => import("@/components/pulsing-geometric-dream"), { ssr: false });
+const PatternShader = dynamic(() => import("@/components/pattern-shader"), { ssr: false });
+const PsychedelicVortexHero = dynamic(() => import("@/components/psychedelic-vortex-hero").then(mod => mod.PsychedelicVortexHero), { ssr: false });
 
 export default function ServiceGrid() {
     const Shaders = [ATCShader, AnimatedShader, PulsingGeometricDream, PatternShader, PsychedelicVortexHero];
