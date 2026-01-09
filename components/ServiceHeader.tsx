@@ -1,10 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { ATCShader } from "@/components/atc-shader";
 import { AnimatedShader } from "@/components/animated-shader-hero";
 import PulsingGeometricDream from "@/components/pulsing-geometric-dream";
 import PatternShader from "@/components/pattern-shader";
 import { PsychedelicVortexHero } from "@/components/psychedelic-vortex-hero";
+import { ArrowLeft } from "lucide-react";
 
 const SHADERS = [ATCShader, AnimatedShader, PulsingGeometricDream, PatternShader, PsychedelicVortexHero];
 
@@ -15,10 +17,20 @@ interface ServiceHeaderProps {
 }
 
 export default function ServiceHeader({ title, divineEssence, shaderIndex }: ServiceHeaderProps) {
+    const router = useRouter();
     const ShaderComponent = SHADERS[shaderIndex % SHADERS.length];
 
     return (
         <header className="relative w-full h-[60vh] min-h-[500px] border-b border-white/20 overflow-hidden flex flex-col justify-end">
+            {/* Back Button */}
+            <button
+                onClick={() => router.back()}
+                className="absolute top-8 left-8 z-50 text-white hover:text-lumina-gold transition-colors duration-300 flex items-center gap-2 group"
+            >
+                <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
+                <span className="font-mono text-sm uppercase tracking-widest">Back</span>
+            </button>
+
             {/* Background Shader */}
             <div className="absolute inset-0 z-0">
                 <ShaderComponent className="w-full h-full" />
