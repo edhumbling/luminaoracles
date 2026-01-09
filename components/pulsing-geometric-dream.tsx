@@ -135,7 +135,11 @@ const PulsingGeometricDream: FC<PulsingGeometricDreamProps> = ({
 
     // Compile shader helper
     const compile = (type: GLenum, src: string) => {
-      const sh = gl.createShader(type)!;
+      const sh = gl.createShader(type);
+      if (!sh) {
+        setError("Failed to create shader");
+        return null;
+      }
       gl.shaderSource(sh, src);
       gl.compileShader(sh);
       if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) {
