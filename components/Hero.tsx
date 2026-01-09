@@ -36,18 +36,7 @@ export default function Hero() {
                         <span className="font-[family-name:var(--font-calligraffitti)] capitalize text-white drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]">Lumina</span> <span className="font-normal bg-gradient-to-r from-[#ffe259] via-[#ffa751] to-[#ffe259] bg-[length:200%_auto] bg-clip-text text-transparent animate-flow drop-shadow-[0_0_30px_rgba(255,255,255,0.8)]">Oracles</span>
                     </h1>
 
-                    <p className="max-w-md text-foreground/80 font-sans text-lg md:text-xl leading-relaxed text-center backdrop-blur-sm bg-white/10 p-4 rounded-2xl border border-white/20 shadow-xl">
-                        Connect to higher wisdom.
-                    </p>
 
-                    <div className="mt-8 flex flex-col md:flex-row gap-6 w-full md:w-auto">
-                        <button className="px-10 py-4 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/40 text-white font-medium tracking-widest uppercase rounded-full shadow-[0_0_30px_rgba(6,182,212,0.3)] hover:shadow-[0_0_50px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300">
-                            Begin
-                        </button>
-                        <button className="px-10 py-4 border border-white/30 text-lumina-gold font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm">
-                            Explore
-                        </button>
-                    </div>
                 </div>
             </div>
 
