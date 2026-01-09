@@ -36,12 +36,12 @@ export function GradientBlur({
     if (!canvas) return
 
     const defaultColorGenerator = () => {
-      const rgb: [number, number, number] = [
-        Math.floor(Math.random() * 130 + 10),
-        Math.floor(0.5 * Math.random() * 50),
-        Math.floor(0.5 * Math.random() * 255),
-      ]
-      return rgb
+      // Alternates or randomizes between Gold and White
+      if (Math.random() > 0.5) {
+        return [250, 204, 21] as [number, number, number]; // Gold
+      } else {
+        return [255, 255, 255] as [number, number, number]; // White
+      }
     }
 
     const getColor = () => color || colorGenerator?.() || defaultColorGenerator()
