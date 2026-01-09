@@ -49,10 +49,10 @@ export function GradientBlur({
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
-    // Responsive radius - smaller on mobile
+    // Responsive radius - much smaller on mobile
     const getResponsiveRadius = () => {
       const isMobile = window.innerWidth < 768;
-      return isMobile ? 25 : radius;
+      return isMobile ? 10 : radius;
     };
     let currentRadius = getResponsiveRadius();
 
