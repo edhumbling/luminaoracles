@@ -18,8 +18,8 @@ export default function Footer() {
             <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent opacity-20" />
 
             {/* Content Content */}
-            <div className="relative z-10 w-full text-center mix-blend-overlay">
-                <h1 className="text-[25vw] font-bold leading-none text-white tracking-tighter select-none animate-pulse-slow font-serif opacity-80">
+            <div className="relative z-10 w-full text-center mix-blend-overlay mb-24 md:mb-40">
+                <h1 className="text-[25vw] font-bold leading-none text-white tracking-tighter select-none animate-pulse-slow font-sans opacity-80">
                     Flow
                 </h1>
             </div>
