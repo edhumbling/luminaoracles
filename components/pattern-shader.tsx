@@ -20,14 +20,14 @@ export interface PatternShaderProps {
   ariaLabel?: string;
 }
 
-const vsSource = `
+const vsSource = `#version 100
 attribute vec2 a_position;
 void main() {
   gl_Position = vec4(a_position, 0.0, 1.0);
 }
 `;
 
-const fsSource = `
+const fsSource = `#version 100
 precision highp float;
 
 uniform vec2 u_resolution;
@@ -99,8 +99,8 @@ const PatternShader: FC<PatternShaderProps> = ({
     if (!canvas) return;
 
     const gl =
-      (canvas.getContext("webgl2") as WebGL2RenderingContext)
-      || (canvas.getContext("webgl") as WebGLRenderingContext);
+      (canvas.getContext("webgl") as WebGLRenderingContext) ||
+      (canvas.getContext("experimental-webgl") as WebGLRenderingContext);
     if (!gl) {
       setError("WebGL not supported in this browser.");
       return;
@@ -108,7 +108,11 @@ const PatternShader: FC<PatternShaderProps> = ({
 
     // Compile a shader of given type
     const compileShader = (type: GLenum, src: string) => {
-      const sh = gl.createShader(type)!;
+      const sh = gl.createShader(type);
+      if (!sh) {
+        setError("Failed to create shader");
+        return null;
+      }
       gl.shaderSource(sh, src);
       gl.compileShader(sh);
       if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) {
