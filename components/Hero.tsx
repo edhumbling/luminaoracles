@@ -33,7 +33,7 @@ export default function Hero() {
                     </div>
 
                     <h1 className="text-6xl md:text-8xl font-thin tracking-tighter text-foreground py-2 drop-shadow-sm mix-blend-overlay">
-                        <span className="font-[family-name:var(--font-calligraffitti)] capitalize text-white drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]">Lumina</span> <span className="font-normal bg-gradient-to-r from-[#ffe259] via-[#ffa751] to-[#ffe259] bg-[length:200%_auto] bg-clip-text text-transparent animate-flow drop-shadow-[0_0_30px_rgba(255,255,255,0.8)]">Oracles</span>
+                        <span className="font-[family-name:var(--font-calligraffitti)] capitalize text-[#8B4513] drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]">Lumina</span> <span className="font-normal bg-gradient-to-r from-[#ffe259] via-[#ffa751] to-[#ffe259] bg-[length:200%_auto] bg-clip-text text-transparent animate-flow drop-shadow-[0_0_30px_rgba(255,255,255,0.8)]">Oracles</span>
                     </h1>
 
 
