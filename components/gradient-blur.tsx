@@ -49,11 +49,13 @@ export function GradientBlur({
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
-    // Responsive radius - much smaller on mobile
+    // Responsive radius - extremely small on mobile
+    const isMobile = window.innerWidth < 768;
     const getResponsiveRadius = () => {
-      const isMobile = window.innerWidth < 768;
-      return isMobile ? 10 : radius;
+      return isMobile ? 5 : radius;
     };
+    // Faster fade on mobile
+    const mobileOpacityDecay = isMobile ? opacityDecay * 3 : opacityDecay;
     let currentRadius = getResponsiveRadius();
 
     const resizeCanvas = () => {
@@ -105,7 +107,7 @@ export function GradientBlur({
         ctx.arc(circ.x, circ.y, currentRadius, 0, Math.PI * 2)
         ctx.fill()
 
-        circ.alpha -= opacityDecay
+        circ.alpha -= mobileOpacityDecay
         if (circ.alpha <= 0) toRemove.push(i)
       }
 
