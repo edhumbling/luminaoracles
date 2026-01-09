@@ -1,3 +1,5 @@
+import { SERVICES } from "@/lib/data";
+
 export default function ContactSection() {
     return (
         <section className="pt-0 pb-24 relative border-t border-black/10 overflow-hidden">
@@ -55,10 +57,11 @@ export default function ContactSection() {
                             </label>
                             <select className="w-full bg-background border border-black/10 p-3 text-foreground font-sans focus:border-lumina-gold focus:outline-none transition-all appearance-none cursor-pointer hover:bg-black/5">
                                 <option value="" className="text-foreground/20">SELECT SACRED SERVICE</option>
-                                <option value="psychic">Psychic Reading</option>
-                                <option value="astrology">Astrology Service</option>
-                                <option value="healing">Energy Healing</option>
-                                <option value="coaching">Spiritual Coaching</option>
+                                {SERVICES.map((service) => (
+                                    <option key={service.id} value={service.id}>
+                                        {service.title}
+                                    </option>
+                                ))}
                             </select>
                         </div>
 
