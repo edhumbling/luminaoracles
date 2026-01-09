@@ -6,6 +6,7 @@ import LiquidBackground from "@/components/LiquidBackground";
 import Footer from "@/components/Footer";
 import BackgroundAudio from "@/components/BackgroundAudio";
 import { GradientBlur } from "@/components/gradient-blur";
+import MobileHeader from "@/components/MobileHeader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
       >
         <LiquidBackground />
         <GradientBlur />
+        <MobileHeader />
         <BackgroundAudio />
         {children}
         <Footer />
