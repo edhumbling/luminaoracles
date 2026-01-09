@@ -14,7 +14,7 @@ export default function ServiceGrid() {
     const Shaders = [ATCShader, AnimatedShader, PulsingGeometricDream, PatternShader, PsychedelicVortexHero];
 
     return (
-        <section className="py-24 bg-background relative overflow-hidden">
+        <section className="pt-24 pb-0 bg-background relative overflow-hidden">
             {/* Ethereal Section Header */}
             <div className="container mx-auto px-4 mb-16 flex flex-col items-center justify-center text-center">
                 <span className="text-lumina-gold font-mono text-xs tracking-widest uppercase mb-4">Discover Your Path</span>

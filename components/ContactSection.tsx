@@ -1,6 +1,6 @@
 export default function ContactSection() {
     return (
-        <section className="py-24 relative border-t border-black/10 overflow-hidden">
+        <section className="pt-0 pb-24 relative border-t border-black/10 overflow-hidden">
             <video
                 autoPlay
                 loop
@@ -13,11 +13,11 @@ export default function ContactSection() {
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header */}
                 <div className="flex flex-col items-center mb-16 text-center">
-                    <span className="text-lumina-gold font-mono text-xs tracking-widest uppercase mb-4">Finalize the Connection</span>
-                    <h2 className="text-4xl md:text-6xl font-thin uppercase text-foreground">
-                        Sacred <span className="text-lumina-gold font-normal">Petition</span>
+                    <span className="text-white font-mono text-xs tracking-widest uppercase mb-4 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]">Finalize the Connection</span>
+                    <h2 className="text-4xl md:text-6xl font-thin uppercase text-white drop-shadow-[0_0_15px_rgba(250,204,21,0.5)]">
+                        Sacred <span className="font-normal text-white drop-shadow-[0_0_25px_rgba(250,204,21,0.8)]">Petition</span>
                     </h2>
-                    <div className="w-24 h-px bg-lumina-gold mt-6 opacity-30" />
+                    <div className="w-24 h-px bg-white mt-6 opacity-30 shadow-[0_0_10px_rgba(250,204,21,1)]" />
                 </div>
 
                 {/* Sacred Petition Form */}
