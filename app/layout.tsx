@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import LiquidBackground from "@/components/LiquidBackground";
 import Footer from "@/components/Footer";
+import BackgroundAudio from "@/components/BackgroundAudio";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${calligraffitti.variable} antialiased`}
       >
         <LiquidBackground />
+        <BackgroundAudio />
         {children}
         <Footer />
       </body>
