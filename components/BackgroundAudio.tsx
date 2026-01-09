@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { LiquidButton } from "@/components/liquid-glass-button";
 
 const PLAYLIST = [
     "https://ik.imagekit.io/humbling/Suno%20-%20AI%20Music_11.m4a",
@@ -67,22 +68,23 @@ export default function BackgroundAudio() {
                 loop={false} // We handle looping via playlist logic
             />
 
-            <button
+            <LiquidButton
                 onClick={togglePlay}
-                className="group flex items-center justify-center w-16 h-16 bg-black border-2 border-lumina-gold hover:bg-lumina-gold transition-colors duration-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)]"
+                className="w-16 h-16 rounded-full overflow-hidden p-0 bg-black/20"
+                variant="default" // Use default for transparency or adjust if needed based on liquid-glass-button definitions
             >
-                <div className="relative w-6 h-6 flex items-center justify-center">
+                <div className="relative w-full h-full flex items-center justify-center z-20">
                     {isPlaying ? (
                         <div className="flex gap-1 h-4">
-                            <div className="w-1.5 bg-white group-hover:bg-black animate-[pulse_0.5s_linear_infinite]" />
-                            <div className="w-1.5 bg-white group-hover:bg-black animate-[pulse_0.8s_linear_infinite]" />
-                            <div className="w-1.5 bg-white group-hover:bg-black animate-[pulse_0.6s_linear_infinite]" />
+                            <div className="w-1.5 bg-white animate-[pulse_0.5s_linear_infinite]" />
+                            <div className="w-1.5 bg-white animate-[pulse_0.8s_linear_infinite]" />
+                            <div className="w-1.5 bg-white animate-[pulse_0.6s_linear_infinite]" />
                         </div>
                     ) : (
-                        <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white group-hover:border-l-black border-b-[8px] border-b-transparent ml-1" />
+                        <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
                     )}
                 </div>
-            </button>
+            </LiquidButton>
         </div>
     );
 }
