@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MistOverlay from "./MistOverlay";
 
 export default function Hero() {
     return (
@@ -52,11 +53,14 @@ export default function Hero() {
             </div>
 
             {/* Footer Decoration */}
-            <div className="absolute bottom-0 left-0 w-full p-6 flex justify-between text-xs font-mono text-foreground/40 uppercase tracking-widest">
+            <div className="absolute bottom-0 left-0 w-full p-6 flex justify-between text-xs font-mono text-foreground/40 uppercase tracking-widest z-30">
                 <span>Divine Love</span>
                 <span>Reverberation: 963Hz</span>
                 <span>Peace</span>
             </div>
+
+            {/* Heavenly Mist Overlay */}
+            <MistOverlay />
         </section>
     );
 }
