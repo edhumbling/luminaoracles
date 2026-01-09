@@ -1,7 +1,16 @@
 export default function ContactSection() {
     return (
-        <section className="py-24 bg-background relative border-t border-black/10">
-            <div className="container mx-auto px-4">
+        <section className="py-24 relative border-t border-black/10 overflow-hidden">
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute top-0 left-0 w-full h-full object-cover z-0"
+            >
+                <source src="https://ik.imagekit.io/humbling/Sequence%2002_1.mp4" type="video/mp4" />
+            </video>
+            <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header */}
                 <div className="flex flex-col items-center mb-16 text-center">
                     <span className="text-lumina-gold font-mono text-xs tracking-widest uppercase mb-4">Finalize the Connection</span>
