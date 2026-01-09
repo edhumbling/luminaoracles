@@ -25,7 +25,13 @@ export default function Footer() {
             </div>
 
             {/* Subtle copyright/links at bottom */}
-            <div className="absolute bottom-8 w-full text-center z-20">
+            {/* Subtle copyright/links at bottom */}
+            <div className="absolute bottom-8 w-full text-center z-20 flex flex-col gap-4">
+                <div className="flex flex-col md:flex-row gap-4 justify-center items-center text-white/50 text-sm font-mono tracking-widest">
+                    <a href="tel:+233201639414" className="hover:text-lumina-gold transition-colors">+233 20 163 9414</a>
+                    <span className="hidden md:inline text-lumina-gold/30">•</span>
+                    <a href="tel:+233241343329" className="hover:text-lumina-gold transition-colors">+233 24 134 3329</a>
+                </div>
                 <p className="text-white/30 text-xs tracking-[0.3em] font-mono uppercase">
                     Lumina Oracles © {new Date().getFullYear()}
                 </p>
