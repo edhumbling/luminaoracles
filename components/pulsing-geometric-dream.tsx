@@ -32,7 +32,8 @@ void main() {
 }
 `;
 
-const fsSource = `precision mediump float;
+const fsSource = `#version 100
+precision mediump float;
 uniform vec2 u_resolution;
 uniform float u_time;
 uniform float u_circleR1;
@@ -124,10 +125,10 @@ const PulsingGeometricDream: FC<PulsingGeometricDreamProps> = ({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    // Request WebGL context
+    // Request WebGL context - Prioritize WebGL1 for this shader
     const gl =
-      (canvas.getContext("webgl2") as WebGL2RenderingContext)
-      || (canvas.getContext("webgl") as WebGLRenderingContext);
+      (canvas.getContext("webgl") as WebGLRenderingContext) ||
+      (canvas.getContext("experimental-webgl") as WebGLRenderingContext);
     if (!gl) {
       setError("WebGL not supported");
       return;
