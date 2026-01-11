@@ -49,6 +49,10 @@ export function GradientBlur({
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
+    // Disable cursor gradient entirely on mobile
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) return;
+
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
