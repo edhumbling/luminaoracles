@@ -28,6 +28,18 @@ const calligraffitti = localFont({
 export const metadata: Metadata = {
   title: "Lumina Oracles | Sacred Spiritual Consultation",
   description: "Connect to your higher self with heavenly light and divine guidance.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
+  appleWebApp: {
+    title: 'Lumina Oracles',
+  },
 };
 
 export default function RootLayout({
