@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SanctuaryBackground from "@/components/SanctuaryBackground";
 import Footer from "@/components/Footer";
+import MarqueeFooter from "@/components/MarqueeFooter";
 import BackgroundAudio from "@/components/BackgroundAudio";
 import { GradientBlur } from "@/components/gradient-blur";
 import MobileHeader from "@/components/MobileHeader";
@@ -45,6 +46,7 @@ export default function RootLayout({
         <BackgroundAudio />
         {children}
         <Footer />
+        <MarqueeFooter />
       </body>
     </html>
   );
