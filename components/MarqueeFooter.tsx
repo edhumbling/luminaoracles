@@ -53,11 +53,6 @@ export default function MarqueeFooter() {
           text-transform: uppercase;
           letter-spacing: -0.02em;
           color: #ffffff;
-          text-shadow:
-            0 0 20px rgba(255, 255, 255, 0.9),
-            0 0 40px rgba(255, 255, 255, 0.7),
-            0 0 80px rgba(255, 255, 255, 0.5),
-            0 0 120px rgba(255, 255, 255, 0.3);
           padding-right: 2vw;
         }
 
