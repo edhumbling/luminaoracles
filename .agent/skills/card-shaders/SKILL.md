@@ -8,7 +8,7 @@ metadata:
   version: "1.0"
 ---
 
-# Card Shader Effects
+# Card Shader Effects Skill
 
 This skill documents how the WebGL shader backgrounds are implemented for service cards in the Lumina Oracles project. The project uses 5 distinct shader components that cycle through the service grid cards.
 
