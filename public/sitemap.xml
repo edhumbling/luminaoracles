@@ -1,39 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://luminaoracles.com/</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- Services Page -->
   <url>
     <loc>https://luminaoracles.com/services</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  
+  <!-- Blog Listing -->
   <url>
     <loc>https://luminaoracles.com/blogs</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+  
+  <!-- Media/TikTok Page -->
   <url>
     <loc>https://luminaoracles.com/media</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- About Page -->
   <url>
     <loc>https://luminaoracles.com/about</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- Contact Page -->
   <url>
     <loc>https://luminaoracles.com/contact</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Blog Articles - High Priority for Content Discovery -->
+  <url>
+    <loc>https://luminaoracles.com/blogs/mastering-the-law-of-attraction-manifesting-your-desires</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://luminaoracles.com/blogs/understanding-your-chakras-a-complete-guide-to-energy-alignment</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://luminaoracles.com/blogs/the-power-of-sacred-geometry-in-spiritual-practice</loc>
+    <lastmod>2026-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://luminaoracles.com/blogs/moon-phases-and-their-impact-on-manifestation</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://luminaoracles.com/blogs/understanding-tarot-a-beginners-guide-to-reading-the-cards</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://luminaoracles.com/blogs/numerology-101-discover-your-life-path-number</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://luminaoracles.com/blogs/ancestral-healing-connecting-with-your-roots</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://luminaoracles.com/blogs/crystal-healing-guide-choosing-stones-for-your-journey</loc>
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://luminaoracles.com/blogs/meditation-techniques-for-spiritual-awakening</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://luminaoracles.com/blogs/aura-cleansing-rituals-for-energy-protection</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

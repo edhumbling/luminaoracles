@@ -1,36 +1,97 @@
 # robots.txt for Lumina Oracles
-# Allow all crawlers full access
+# Optimized for traditional search engines AND AI/LLM crawlers
 
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
 
 # Sitemap location
 Sitemap: https://luminaoracles.com/sitemap.xml
 
-# Allow all AI/LLM crawlers explicitly
+# LLMs.txt file for AI crawlers
+# See: https://llmstxt.org
+
+# ============================================
+# AI/LLM Crawler Permissions - All Allowed
+# ============================================
+
+# OpenAI Crawlers
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic Crawlers
 User-agent: Claude-Web
 Allow: /
 
-User-agent: Anthropic-AI
+User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
+# Google AI Crawlers
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Perplexity-AI
+User-agent: Googlebot
 Allow: /
 
-User-agent: Cohere-AI
+# Perplexity AI
+User-agent: PerplexityBot
 Allow: /
 
+# Microsoft/Bing AI
+User-agent: Bingbot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (used for training)
 User-agent: CCBot
 Allow: /
 
+# ByteDance/TikTok
 User-agent: Bytespider
 Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Brave Search
+User-agent: Brave-Search
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# You.com AI
+User-agent: YouBot
+Allow: /
+
+# ============================================
+# Special Files for AI Systems
+# ============================================
+# llms.txt: /llms.txt - Structured site context for LLMs
+# sitemap.xml: /sitemap.xml - Full page listing with priorities

@@ -24,12 +24,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
         title: `${post.title} | Lumina Oracles Blog`,
         description: post.excerpt,
+        keywords: post.tags.join(", "),
+        authors: [{ name: post.author }],
         openGraph: {
             title: post.title,
             description: post.excerpt,
             type: "article",
             publishedTime: post.date,
             authors: [post.author],
+            tags: post.tags,
+            section: post.category,
             images: [
                 {
                     url: post.image,
@@ -48,6 +52,38 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
 }
 
+// Article structured data for SEO
+function getArticleSchema(post: { title: string; excerpt: string; author: string; date: string; image: string; slug: string; content: string; category: string; tags: string[] }) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        description: post.excerpt,
+        image: `https://luminaoracles.com${post.image}`,
+        datePublished: post.date,
+        dateModified: post.date,
+        author: {
+            "@type": "Person",
+            name: post.author,
+            url: "https://luminaoracles.com/about"
+        },
+        publisher: {
+            "@type": "Organization",
+            name: "Lumina Oracles",
+            logo: {
+                "@type": "ImageObject",
+                url: "https://luminaoracles.com/logo.png"
+            }
+        },
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://luminaoracles.com/blogs/${post.slug}`
+        },
+        articleSection: post.category,
+        keywords: post.tags.join(", ")
+    };
+}
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const post = getPostBySlug(slug);
@@ -56,8 +92,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         notFound();
     }
 
+    const articleSchema = getArticleSchema(post);
+
     return (
         <article className="min-h-screen bg-black text-white selection:bg-lumina-gold selection:text-black pb-24">
+            {/* Article Structured Data for Google */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+            />
             {/* Header / Hero with Article Image */}
             <div className="relative w-full h-[60vh] min-h-[500px]">
                 <div className="absolute inset-0 bg-black/60 z-10" />

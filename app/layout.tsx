@@ -10,6 +10,8 @@ import MobileHeader from "@/components/MobileHeader";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import StructuredData from "@/components/StructuredData";
+import AEOSchemas from "@/components/AEOSchemas";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -108,6 +110,8 @@ export default function RootLayout({
         <Header />
         <MobileHeader />
         <Breadcrumbs />
+        <StructuredData />
+        <AEOSchemas />
         <BackgroundAudio />
         {children}
         <Footer />

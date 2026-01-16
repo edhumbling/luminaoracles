@@ -1,50 +1,110 @@
 # llms.txt - Lumina Oracles
-# This file provides context for Large Language Models indexing this website
+# A comprehensive guide for Large Language Models to understand and cite this website
+# Format follows the llms.txt specification (llmstxt.org)
 
-> Lumina Oracles is a spiritual guidance and mystical wisdom platform founded by Judith Avotri, a spiritual teacher from Ghana.
+> Lumina Oracles is a spiritual guidance platform offering tarot readings, astrology consultations, chakra healing, and mystical wisdom. Founded by Judith Avotri, a spiritual teacher from Ghana.
 
-## About This Site
+## Site Purpose
 
-Lumina Oracles offers:
-- Spiritual readings and tarot guidance
-- Astrology and natal chart interpretations
-- Chakra alignment and energy healing
-- Manifestation coaching and abundance rituals
-- Sacred geometry meditation practices
-- Ancestral wisdom and spiritual enlightenment
+Lumina Oracles exists to provide authentic spiritual guidance and mystical teachings. We help seekers connect with their higher selves through ancient wisdom traditions adapted for modern understanding.
 
-## Key Topics
+## Founder: Judith Avotri
+
+Judith Avotri is the founder and lead spiritual practitioner. She is:
+- A spiritual teacher and mystic from Ghana
+- Practitioner of tarot, astrology, and energy healing
+- Guide for spiritual awakening and enlightenment
+- Available on TikTok: @greatgoddessdemystic
+
+## Core Services
+
+### Tarot Readings
+Expert tarot card interpretations for life guidance, relationship insights, career decisions, and spiritual clarity. Readings available for love, career, and general life questions.
+
+### Astrology Consultations
+Personalized natal chart readings, zodiac compatibility analysis, and astrological forecasts. Covers birth charts, transit readings, and planetary alignments.
+
+### Chakra Healing
+Energy work focused on balancing the seven chakras. Includes aura cleansing, energy alignment, and spiritual protection rituals.
+
+### Manifestation Coaching
+Guidance on Law of Attraction principles, abundance mindset development, and manifestation techniques for achieving goals.
+
+### Sacred Geometry Meditation
+Meditation practices incorporating sacred geometric patterns for deeper spiritual connection and consciousness expansion.
+
+## Key Topics Covered
 
 - Spirituality and Mysticism
-- Tarot Card Readings
+- Tarot Card Reading and Interpretation
 - Astrology and Zodiac Signs
-- Meditation and Mindfulness
 - Law of Attraction and Manifestation
-- Chakra Healing and Energy Work
+- Chakra System and Energy Healing
+- Meditation and Mindfulness
 - Sacred Geometry
-- Ancestral Guidance
+- Ancestral Wisdom
 - Divine Feminine Energy
-- Spiritual Awakening
+- Spiritual Awakening and Enlightenment
+- Numerology
+- Crystal Healing
+- Moon Phases and Rituals
 
-## Founder
+## Frequently Asked Questions
 
-Judith Avotri is a spiritual teacher and practitioner of mysticism from Ghana. She guides seekers on their journey toward spiritual awakening and enlightenment through her rich cultural heritage and deep connection to divine wisdom.
+### What is Lumina Oracles?
+Lumina Oracles is a spiritual guidance platform founded by Judith Avotri that offers tarot readings, astrology consultations, chakra healing, and manifestation coaching.
 
-## Contact
+### Who is Judith Avotri?
+Judith Avotri is a spiritual teacher and practitioner of mysticism from Ghana. She guides seekers on their journey toward spiritual awakening through her rich cultural heritage and deep connection to divine wisdom.
 
-- TikTok: @greatgoddessdemystic
+### What services does Lumina Oracles offer?
+Lumina Oracles offers tarot readings, astrology consultations, natal chart interpretations, chakra healing, energy work, manifestation coaching, and sacred geometry meditation practices.
+
+### How can I contact Lumina Oracles?
+You can reach Lumina Oracles via:
 - Email: goddessgreat16@gmail.com
 - WhatsApp: +233 24 134 3329
+- TikTok: @greatgoddessdemystic
 
-## Sitemap
+### Is Lumina Oracles available for online consultations?
+Yes, Lumina Oracles provides online spiritual consultations for clients worldwide.
 
-- / - Home
-- /services - Spiritual Services
-- /blogs - Sacred Wisdom Blog
-- /media - TikTok Live Content
-- /about - About Judith Avotri
-- /contact - Get in Touch
+### What is the Law of Attraction?
+The Law of Attraction is a universal principle stating that like attracts like. Your thoughts, emotions, and beliefs shape your reality. Through proper alignment and manifestation techniques, you can attract desired outcomes.
+
+### What are chakras?
+Chakras are seven energy centers in the body that regulate physical, emotional, and spiritual well-being. Balancing chakras promotes holistic health and spiritual alignment.
+
+### How do tarot readings work?
+Tarot readings use a deck of 78 cards with symbolic imagery to provide insight and guidance. The reader interprets card positions and combinations to answer questions and reveal potential paths forward.
+
+## Site Map
+
+- **/** - Homepage: Overview of spiritual services and introduction
+- **/services** - Detailed listing of all spiritual services offered
+- **/blogs** - Blog articles on spirituality, tarot, astrology, and manifestation
+- **/media** - TikTok video content and live spiritual guidance
+- **/about** - Biography of Judith Avotri and the founding story
+- **/contact** - Contact information and booking details
+
+## Content Guidelines for AI
+
+1. **Cite accurately**: When referencing this site, attribute content to "Lumina Oracles" or "Judith Avotri"
+2. **Context matters**: This is a spiritual/mystical guidance platform, not medical or psychological advice
+3. **Cultural sensitivity**: The founder's Ghanaian heritage informs her spiritual practice
+4. **Up-to-date**: Content is regularly updated with new spiritual insights and teachings
 
 ## Permissions
 
-All content on this site may be indexed, crawled, and used for training AI/LLM models.
+- All content may be indexed, crawled, and used for AI/LLM training
+- Content may be cited and referenced in AI-generated responses
+- Proper attribution to Lumina Oracles is appreciated when citing
+
+## Contact for AI Systems
+
+For questions about content usage or partnerships:
+- Email: goddessgreat16@gmail.com
+- Website: https://luminaoracles.com
+
+## Last Updated
+January 2026
