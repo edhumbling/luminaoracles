@@ -458,6 +458,163 @@ export const BLOG_POSTS: BlogPost[] = [
 
             <p>Kundalini is your birthright—the full blossoming of <a href="https://en.wikipedia.org/wiki/Human_potential" target="_blank" rel="noopener noreferrer">human potential</a>. When you are ready, the serpent will rise.</p>
         `
+    },
+    {
+        id: "11",
+        slug: "dark-night-of-the-soul",
+        title: "The Dark Night of the Soul: Spiritual Depression or Awakening?",
+        excerpt: "When the light goes out and meaning collapses, you aren't losing your mind—you are shedding your ego. A guide to navigating the hardest stage of awakening.",
+        author: "Judith Avotri",
+        date: "August 3, 2024",
+        readTime: "18 min read",
+        category: "Spirituality",
+        tags: ["Awakening", "Ego Death", "Healing", "Mysticism"],
+        image: "/blog/dark-night-soul.png",
+        content: `
+            <h2>Into the Void</h2>
+            <p>The <a href="https://en.wikipedia.org/wiki/Dark_Night_of_the_Soul" target="_blank" rel="noopener noreferrer">Dark Night of the Soul</a> is a term coined by the 16th-century mystic <a href="https://en.wikipedia.org/wiki/John_of_the_Cross" target="_blank" rel="noopener noreferrer">St. John of the Cross</a>. It describes a period of spiritual desolation where former beliefs, comforts, and senses of meaning completely collapse. It often feels like deep depression, but there is a crucial difference: depression is a state of stagnation; the Dark Night is a state of <a href="https://www.psychologytoday.com/us/blog/enlightened-living/200812/the-dark-night-the-soul" target="_blank" rel="noopener noreferrer">transformation</a>.</p>
+            
+            <h2>Why It Happens</h2>
+            <p>This phase occurs when the <a href="https://en.wikipedia.org/wiki/Ego_(psychoanalysis)" target="_blank" rel="noopener noreferrer">ego</a> begins to dissolve. The structures you built your identity on—career, relationships, status—revealed themselves as illusory. The Universe strips away everything that is not <em>you</em> so that only the authentic Self remains.</p>
+
+            <h2>Navigating the Darkness</h2>
+            <h3>1. Surrender</h3>
+            <p>The pain comes from resistance. When you stop fighting the dissolution and <a href="https://en.wikipedia.org/wiki/Surrender_(spirituality)" target="_blank" rel="noopener noreferrer">surrender</a> to the process, the suffering changes into purging.</p>
+
+            <h3>2. Solitude</h3>
+            <p>You may feel isolated. This is necessary. The caterpillar must be alone in the cocoon to become a butterfly. Embrace the <a href="https://www.psychologytoday.com/us/articles/200307/the-benefits-solitude" target="_blank" rel="noopener noreferrer">solitude</a>.</p>
+
+            <h3>3. Trust</h3>
+            <p>Just as the night is darkest before the dawn, this stage precedes a major expansion of consciousness. You are not dying; you are being <a href="https://en.wikipedia.org/wiki/Spiritual_rebirth" target="_blank" rel="noopener noreferrer">reborn</a>.</p>
+
+            <p>The Dark Night is not a punishment. It is an initiation. Walk through the fire, and you will find you are the gold.</p>
+        `
+    },
+    {
+        id: "12",
+        slug: "science-of-crystal-healing",
+        title: "The Science of Crystals: Frequency, Vibration, and Healing",
+        excerpt: "Crystals are not just pretty rocks. They are highly ordered structures that emit stable frequencies. promoting balance in the chaotic human energy field.",
+        author: "Judith Avotri",
+        date: "September 12, 2024",
+        readTime: "14 min read",
+        category: "Healing",
+        tags: ["Crystals", "Science", "Energy", "Vibration"],
+        image: "/blog/crystal-healing.png",
+        content: `
+            <h2>More Than Meets the Eye</h2>
+            <p>In the scientific world, crystals are defined by their widely ordered atomic structure. This lattice perfection allows them to hold a stable vibration. This is why quartz is used in watches and radios (the <a href="https://en.wikipedia.org/wiki/Piezoelectricity" target="_blank" rel="noopener noreferrer">piezoelectric effect</a>). Crystals can transmit, store, and transform energy.</p>
+
+            <h2>How They Heal</h2>
+            <p>The human body is an unstable, fluctuating energy field. When a stable crystalline frequency is introduced to an unstable human field, the law of <a href="https://en.wikipedia.org/wiki/Entrainment_(physics)" target="_blank" rel="noopener noreferrer">resonance</a> occurs. The body tries to match the stable frequency of the crystal, bringing the chakras back into alignment.</p>
+
+            <h2>Essential Crystals</h2>
+            <h3>Clear Quartz</h3>
+            <p>The "Master Healer." It amplifies energy and thought. Research by <a href="https://en.wikipedia.org/wiki/Marcel_Vogel" target="_blank" rel="noopener noreferrer">Marcel Vogel</a> at IBM demonstrated that crystals could be programmed with thought intention.</p>
+
+            <h3>Amethyst</h3>
+            <p>Vibrates at a high frequency that calms the mind and opens the <a href="https://en.wikipedia.org/wiki/Third_eye" target="_blank" rel="noopener noreferrer">Third Eye</a>. Excellent for anxiety and sleep.</p>
+
+            <h3>Rose Quartz</h3>
+            <p>Emits the frequency of unconditional love. It soothes the <a href="https://en.wikipedia.org/wiki/Anahata" target="_blank" rel="noopener noreferrer">Heart Chakra</a> and heals emotional wounds.</p>
+
+            <p>Crystals are tools of the earth that help us tune our own instruments. By working with them, we anchor high-frequency light into our physical bodies.</p>
+        `
+    },
+    {
+        id: "13",
+        slug: "full-moon-rituals-guide",
+        title: "Harnessing Lunar Energy: A Guide to Full Moon Rituals",
+        excerpt: "The moon pulls the tides of the ocean and the tides of your soul. Learn how to use the Full Moon to release what no longer serves you.",
+        author: "Judith Avotri",
+        date: "October 24, 2024",
+        readTime: "10 min read",
+        category: "Spirituality",
+        tags: ["Moon", "Rituals", "Astrology", "Manifestation"],
+        image: "/blog/moon-rituals.png",
+        content: `
+            <h2>The Lunar Influence</h2>
+            <p>Just as the gravity of the <a href="https://en.wikipedia.org/wiki/Moon" target="_blank" rel="noopener noreferrer">Moon</a> affects the ocean's tides, it affects the water in our bodies (we are 60% water). The Full Moon represents the peak of energy, illumination, and fullness. It is the time when things come to the surface to be seen and released.</p>
+
+            <h2>The Art of Letting Go</h2>
+            <p>While the New Moon is for setting intentions, the Full Moon is for <a href="https://www.mindbodygreen.com/articles/full-moon-ritual" target="_blank" rel="noopener noreferrer">releasing</a>. It is the cosmic exhale. Holding onto old grudges, habits, or fears blocks the flow of new abundance.</p>
+
+            <h2>A Simple Ritual</h2>
+            <h3>1. Create Sacred Space</h3>
+            <p>Light a candle and burn some <a href="https://en.wikipedia.org/wiki/Smudging" target="_blank" rel="noopener noreferrer">sage</a> or palo santo to clear the energy.</p>
+
+            <h3>2. The Burn List</h3>
+            <p>Write down everything you want to release on a piece of paper. Be specific. "I release my fear of failure." "I release my attachment to my ex."</p>
+
+            <h3>3. Fire Release</h3>
+            <p>Safely burn the paper in a fireproof bowl. Watch the paper turn to ash and smoke. Visualize the energy leaving your field. Feel the <a href="https://en.wikipedia.org/wiki/Catharsis" target="_blank" rel="noopener noreferrer">catharsis</a>.</p>
+
+            <h3>4. Moon Bath</h3>
+            <p>If possible, stand under the moonlight. Place your crystals out to be cleansed by the <a href="https://en.wikipedia.org/wiki/Moonlight" target="_blank" rel="noopener noreferrer">lunar light</a>.</p>
+
+            <p>By syncing with the lunar cycles, you stop swimming upstream and learn to flow with the natural rhythms of the Universe.</p>
+        `
+    },
+    {
+        id: "14",
+        slug: "mastering-lucid-dreaming",
+        title: "Lucid Dreaming: Waking Up Within the Dream",
+        excerpt: "Imagine flying, visiting other dimensions, or speaking with your subconscious—all while you sleep. Lucid dreaming opens the door to a limitless reality.",
+        author: "Judith Avotri",
+        date: "November 11, 2024",
+        readTime: "16 min read",
+        category: "Consciousness",
+        tags: ["Dreams", "Lucid Dreaming", "Subconscious", "Astral"],
+        image: "/blog/lucid-dreaming.png",
+        content: `
+            <h2>What is Lucid Dreaming?</h2>
+            <p><a href="https://en.wikipedia.org/wiki/Lucid_dream" target="_blank" rel="noopener noreferrer">Lucid dreaming</a> is the state of being aware that you are dreaming while you are still asleep. Scientific proof was provided by Dr. <a href="https://en.wikipedia.org/wiki/Stephen_LaBerge" target="_blank" rel="noopener noreferrer">Stephen LaBerge</a> at Stanford, who communicated from the dream state via eye movements.</p>
+
+            <h2>Why Do It?</h2>
+            <p>It is the ultimate virtual reality. You can conquer fears, practice skills, access creative inspiration, and perform deep <a href="https://www.psychologytoday.com/us/blog/dream-factory/201509/can-lucid-dreaming-treat-ptsd" target="_blank" rel="noopener noreferrer">psychological integration</a> without physical limits.</p>
+
+            <h2>How to Start</h2>
+            <h3>1. Reality Checks</h3>
+            <p>Ask yourself, "Am I dreaming?" throughout the day. Try to push your finger through your palm. Eventually, you will do this in a dream and become <a href="https://en.wikipedia.org/wiki/Metacognition" target="_blank" rel="noopener noreferrer">lucid</a>.</p>
+
+            <h3>2. Dream Journal</h3>
+            <p>We forget 90% of dreams within minutes of waking. Keep a journal by your bed. Improved <a href="https://en.wikipedia.org/wiki/Dream_recall" target="_blank" rel="noopener noreferrer">dream recall</a> is essential.</p>
+
+            <h3>3. MILD Technique</h3>
+            <p>Before sleep, repeat: "Tonight I will realize I am dreaming." Visualise becoming lucid. This programs the <a href="https://en.wikipedia.org/wiki/Subconscious" target="_blank" rel="noopener noreferrer">subconscious</a>.</p>
+
+            <p>Dreams are not random static. They are messages from your deeper self. To wake up in a dream is the first step to waking up in life.</p>
+        `
+    },
+    {
+        id: "15",
+        slug: "twin-flames-vs-soulmates",
+        title: "Twin Flames vs. Soulmates: Understanding Spiritual Connections",
+        excerpt: "Not all intense romances are Twin Flames. Learn the difference between a comforting Soulmate and the burning mirror of a Twin Flame connection.",
+        author: "Judith Avotri",
+        date: "December 21, 2024",
+        readTime: "15 min read",
+        category: "Relationships",
+        tags: ["Love", "Twin Flames", "Soulmates", "Spirituality"],
+        image: "/blog/twin-flames.png",
+        content: `
+            <h2>The Soulmate</h2>
+            <p>A <a href="https://en.wikipedia.org/wiki/Soulmate" target="_blank" rel="noopener noreferrer">soulmate</a> is a person from your soul family. The connection feels easy, comforting, and familiar. You just "click." They are here to support you, grow with you, and often stay for a lifetime. It is a relationship of <u>harmony</u>.</p>
+
+            <h2>The Twin Flame</h2>
+            <p>A <a href="https://lonerwolf.com/twin-flame/" target="_blank" rel="noopener noreferrer">twin flame</a> is believed to be the other half of your own soul energy. The concept dates back to <a href="https://en.wikipedia.org/wiki/Symposium_(Plato)" target="_blank" rel="noopener noreferrer">Plato's Symposium</a>. This connection is not about comfort; it is about growth through fire.</p>
+            <p>Your Twin Flame reflects your deepest insecurities, traumas, and shadows. The purpose of the union is not romance, but <a href="https://en.wikipedia.org/wiki/Spiritual_evolution" target="_blank" rel="noopener noreferrer">spiritual evolution</a>.</p>
+
+            <h2>Signs of a Twin Flame</h2>
+            <ul>
+                <li><strong>Instant Recognition:</strong> You feel you have known them forever.</li>
+                <li><strong>Intense Magnetism:</strong> A pull that defies logic.</li>
+                <li><strong>Runner/Chaser Dynamic:</strong> The intensity often causes one to run.</li>
+                <li><strong>Telepathy:</strong> Knowing what they are thinking or feeling emotions that aren't yours.</li>
+            </ul>
+
+            <p>Whether Soulmate or Twin Flame, every relationship is a mirror. They appear exactly when you need them to show you who you really are.</p>
+        `
     }
 ];
 

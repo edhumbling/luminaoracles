@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import BlogGrid from "@/components/BlogGrid";
 
 export const metadata = {
     title: "Mystical Wisdom Blog | Lumina Oracles",
@@ -37,51 +37,7 @@ export default function BlogsPage() {
 
             {/* Blog Grid Section */}
             <section className="container mx-auto px-4 py-16 md:py-24 relative z-40 -mt-20">
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-                    {BLOG_POSTS.map((post) => (
-                        <Link
-                            key={post.id}
-                            href={`/blogs/${post.slug}`}
-                            className="group relative flex flex-col h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden hover:border-lumina-gold/50 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(250,204,21,0.1)]"
-                        >
-                            {/* Card Image Area with Actual Thumbnail */}
-                            <div className="relative h-32 md:h-40 w-full overflow-hidden bg-black">
-                                <Image
-                                    src={post.image}
-                                    alt={post.title}
-                                    fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                                <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-[10px] uppercase tracking-widest text-lumina-gold border border-lumina-gold/20">
-                                    {post.category}
-                                </div>
-                            </div>
-
-                            {/* Content */}
-                            <div className="flex-1 p-4 md:p-5 flex flex-col">
-                                <span className="text-[10px] text-white/40 font-mono tracking-wider mb-2 uppercase">
-                                    {post.date}
-                                </span>
-                                <h2 className="text-sm md:text-base font-serif font-medium text-white group-hover:text-lumina-gold transition-colors duration-300 leading-snug mb-3 line-clamp-3">
-                                    {post.title}
-                                </h2>
-                                <p className="text-xs text-white/60 line-clamp-3 mb-4 flex-1 leading-relaxed">
-                                    {post.excerpt}
-                                </p>
-
-                                <div className="flex items-center justify-between pt-4 border-t border-white/5 mt-auto">
-                                    <span className="text-[10px] text-white/40 uppercase tracking-widest group-hover:text-white transition-colors">
-                                        Read Article
-                                    </span>
-                                    <span className="text-lumina-gold transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300 text-xs">
-                                        →
-                                    </span>
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
+                <BlogGrid posts={BLOG_POSTS} />
             </section>
         </main>
     );
