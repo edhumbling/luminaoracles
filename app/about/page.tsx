@@ -72,7 +72,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Mission & Vision Section - WIDE Container - UPDATED DESIGN */}
+      {/* Mission & Vision Section - WIDE Container - FINAL DESIGN Black & Gold Knife Edge */}
       <div className="relative z-10 max-w-7xl mx-auto mt-40 px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -86,19 +86,27 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
           {/* Mission */}
-          <div className="group relative h-full">
-            <div className="absolute inset-0 bg-lumina-gold/5 blur-2xl rounded-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <div className="relative h-full bg-zinc-900/40 backdrop-blur-md border border-white/10 p-8 lg:p-10 rounded-[20px] hover:border-lumina-gold/50 transition-all duration-300 hover:transform hover:-translate-y-2 group-hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
-              {/* Subtle Corner Accents (Knife Edge homage) */}
-              <div className="absolute top-0 left-0 w-12 h-12 border-t font-light border-l border-lumina-gold/60 rounded-tl-[20px] opacity-60" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-lumina-gold/60 rounded-br-[20px] opacity-60" />
-
-              <div className="flex flex-col h-full">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-lumina-gold/20 to-transparent border border-lumina-gold/20 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  🏛️
+          <div className="group relative">
+            <div
+              className="absolute inset-0 bg-lumina-gold/20 blur-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+              style={{ clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)' }}
+            />
+            {/* Knife Edge Polygon Shape */}
+            <div
+              className="relative h-full bg-black border border-lumina-gold/50 p-8 lg:p-10 shadow-[0_0_20px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all duration-300 hover:-translate-y-1"
+              style={{ clipPath: 'polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)' }}
+            >
+              <div className="flex flex-col h-full items-center text-center">
+                <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Image
+                    src="/icon-sacred-design.png"
+                    alt="Sacred Design Icon"
+                    fill
+                    className="object-contain drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]"
+                  />
                 </div>
 
-                <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+                <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4 drop-shadow-sm">
                   The Sacred Design
                 </h3>
                 <p className="text-base text-gray-300 leading-relaxed font-light">
@@ -109,19 +117,26 @@ export default function AboutPage() {
           </div>
 
           {/* Vision for the Collective */}
-          <div className="group relative h-full">
-            <div className="absolute inset-0 bg-lumina-gold/5 blur-2xl rounded-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <div className="relative h-full bg-zinc-900/40 backdrop-blur-md border border-white/10 p-8 lg:p-10 rounded-[20px] hover:border-lumina-gold/50 transition-all duration-300 hover:transform hover:-translate-y-2 group-hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
-              {/* Subtle Corner Accents */}
-              <div className="absolute top-0 right-0 w-12 h-12 border-t border-r border-lumina-gold/60 rounded-tr-[20px] opacity-60" />
-              <div className="absolute bottom-0 left-0 w-12 h-12 border-b border-l border-lumina-gold/60 rounded-bl-[20px] opacity-60" />
-
-              <div className="flex flex-col h-full">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-lumina-gold/20 to-transparent border border-lumina-gold/20 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  🌍
+          <div className="group relative">
+            <div
+              className="absolute inset-0 bg-lumina-gold/20 blur-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+              style={{ clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)' }}
+            />
+            <div
+              className="relative h-full bg-black border border-lumina-gold/50 p-8 lg:p-10 shadow-[0_0_20px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all duration-300 hover:-translate-y-1"
+              style={{ clipPath: 'polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)' }}
+            >
+              <div className="flex flex-col h-full items-center text-center">
+                <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Image
+                    src="/icon-vision-collective.png"
+                    alt="Global Vision Icon"
+                    fill
+                    className="object-contain drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]"
+                  />
                 </div>
 
-                <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+                <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4 drop-shadow-sm">
                   Vision for the Collective
                 </h3>
                 <p className="text-base text-gray-300 leading-relaxed font-light">
@@ -132,19 +147,26 @@ export default function AboutPage() {
           </div>
 
           {/* Impact */}
-          <div className="group relative h-full">
-            <div className="absolute inset-0 bg-lumina-gold/5 blur-2xl rounded-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <div className="relative h-full bg-zinc-900/40 backdrop-blur-md border border-white/10 p-8 lg:p-10 rounded-[20px] hover:border-lumina-gold/50 transition-all duration-300 hover:transform hover:-translate-y-2 group-hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
-              {/* Subtle Corner Accents */}
-              <div className="absolute top-0 left-0 w-12 h-12 border-t border-l border-lumina-gold/60 rounded-tl-[20px] opacity-60" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-lumina-gold/60 rounded-br-[20px] opacity-60" />
-
-              <div className="flex flex-col h-full">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-lumina-gold/20 to-transparent border border-lumina-gold/20 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  🌊
+          <div className="group relative">
+            <div
+              className="absolute inset-0 bg-lumina-gold/20 blur-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+              style={{ clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)' }}
+            />
+            <div
+              className="relative h-full bg-black border border-lumina-gold/50 p-8 lg:p-10 shadow-[0_0_20px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all duration-300 hover:-translate-y-1"
+              style={{ clipPath: 'polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)' }}
+            >
+              <div className="flex flex-col h-full items-center text-center">
+                <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Image
+                    src="/icon-ripple-effect.png"
+                    alt="Ripple Effect Icon"
+                    fill
+                    className="object-contain drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]"
+                  />
                 </div>
 
-                <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+                <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4 drop-shadow-sm">
                   The Ripple Effect
                 </h3>
                 <p className="text-base text-gray-300 leading-relaxed font-light">
