@@ -1,9 +1,8 @@
 import { getAllSlugs, getPostBySlug } from "@/lib/blog-data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import ArticleShare from "@/components/ArticleShare";
-import { ArrowLeft } from "lucide-react";
+import BlogBackButton from "@/components/BlogBackButton";
 
 export async function generateStaticParams() {
     const slugs = getAllSlugs();
@@ -73,16 +72,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-20" />
 
                 {/* Back Link - Positioned below header */}
-                <div className="absolute top-32 md:top-36 left-6 md:left-8 z-30">
-                    <Link
-                        href="/blogs"
-                        className="flex items-center gap-2 text-white/70 hover:text-lumina-gold transition-colors group bg-black/40 backdrop-blur-md pr-4 rounded-full border border-white/10"
-                    >
-                        <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-lumina-gold transition-colors">
-                            <ArrowLeft className="w-4 h-4" />
-                        </div>
-                        <span className="text-sm uppercase tracking-widest font-mono">Back to Blogs</span>
-                    </Link>
+                <div className="absolute top-24 md:top-32 left-6 md:left-8 z-30">
+                    <BlogBackButton />
                 </div>
 
                 {/* Title and Meta - Positioned at bottom of hero */}
@@ -117,7 +108,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     {/* Main Text */}
                     <div className="lg:col-span-8 lg:col-start-2">
                         <div
-                            className="prose prose-lg md:prose-xl prose-invert max-w-none prose-headings:font-light prose-headings:text-lumina-gold prose-p:text-white/80 prose-p:leading-relaxed prose-p:font-light prose-strong:text-white prose-li:text-white/80 font-sans mt-12 mb-16"
+                            className="prose prose-lg md:prose-xl prose-invert max-w-none prose-headings:font-extralight prose-headings:text-lumina-gold prose-p:text-white/80 prose-p:leading-relaxed prose-p:font-extralight prose-strong:font-normal prose-strong:text-white prose-li:text-white/80 prose-li:font-extralight font-sans font-extralight mt-12 mb-16"
                             dangerouslySetInnerHTML={{ __html: post.content }}
                         />
 

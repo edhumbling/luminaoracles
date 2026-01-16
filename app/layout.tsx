@@ -27,6 +27,7 @@ const calligraffitti = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://luminaoracles.com'),
   title: "Lumina Oracles | Sacred Spiritual Consultation",
   description: "Connect to your higher self with heavenly light and divine guidance.",
   icons: {
