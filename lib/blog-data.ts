@@ -949,6 +949,145 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>We are not separate from these shapes; we are made of them. Our cells divide in geometric progressions. Our DNA is a spiral. To study sacred geometry is to study the architecture of your own soul.</p>
         `,
   },
+  {
+    id: "26",
+    slug: "power-of-sound-healing",
+    title: "The Power of Sound: Healing with Frequencies",
+    excerpt:
+      "Sound is more than what we hear; it is vibration that can heal our bodies and minds. Explore the ancient practice of sound healing.",
+    author: "Judith Avotri",
+    date: "January 26, 2026",
+    readTime: "18 min read",
+    category: "Healing",
+    tags: ["Sound Healing", "Vibration", "Frequencies", "Wellness"],
+    image: "/blog/sound-healing.png",
+    content: `
+            <h2>Everything is Vibration</h2>
+            <p>At the quantum level, everything in the universe is vibrating energy. Sound healing works by using specific frequencies to restore the body's natural resonance. It has been used for thousands of years in cultures around the world.</p>
+
+            <h2>Brainwave Entrainment</h2>
+            <p>Sound can alter our brainwave states. By listening to binaural beats or specific rhythms, we can shift from a stressed Beta state to a relaxed Alpha or Theta state, promoting deep healing and meditation.</p>
+
+            <h2>Instruments of Healing</h2>
+            <p>From Tibetan singing bowls to tuning forks and gongs, various instruments are used to break up energetic blockages. The vibrations penetrate deep into the cellular level, releasing tension and stored trauma.</p>
+
+            <h2>The Future of Medicine?</h2>
+            <p>Modern science is beginning to validate what ancients knew. "Sound medicine" is emerging as a powerful complementary therapy for everything from anxiety to pain management.</p>
+        `,
+  },
+  {
+    id: "27",
+    slug: "navigating-mercury-retrograde",
+    title: "Surviving and Thriving During Mercury Retrograde",
+    excerpt:
+      "Mercury Retrograde doesn't have to be a disaster. Learn how to use this cosmic pause to reflect, review, and realign your life.",
+    author: "Judith Avotri",
+    date: "January 27, 2026",
+    readTime: "15 min read",
+    category: "Astrology",
+    tags: ["Mercury Retrograde", "Astrology", "Planets", "Growth"],
+    image: "/blog/mercury-retrograde.png",
+    content: `
+            <h2>The Cosmic Optical Illusion</h2>
+            <p>Mercury Retrograde occurs when the planet appears to move backward in the sky. While it's an optical illusion, the energetic effects are real. It rules communication, technology, and travel—areas that often go haywire during this time.</p>
+
+            <h2>The "Re" Period</h2>
+            <p>Don't launch; review. This is the time for all the "re" words: rethink, redo, reclaim, reconnect. It's a built-in cosmic pause button allowing us to slow down and catch mistakes before moving forward.</p>
+
+            <h2>Shadow Work</h2>
+            <p>Retrogrades often bring up the past. Ex-partners, old unresolved issues, and forgotten dreams may resurface. Treat these not as annoyances but as opportunities for closure and integration.</p>
+
+            <h2>Practical Tips</h2>
+            <p>Back up your data. Double-check your emails. Leave early for appointments. And most importantly, practice patience. The universe is asking you to slow down for a reason.</p>
+        `,
+  },
+  {
+    id: "28",
+    slug: "art-of-astral-projection",
+    title: "Beyond the Body: A Beginner's Guide to Astral Projection",
+    excerpt:
+      "The physical body is just a vessel. Learn to detach your consciousness and explore the astral plane in this comprehensive guide.",
+    author: "Judith Avotri",
+    date: "January 28, 2026",
+    readTime: "22 min read",
+    category: "Consciousness",
+    tags: ["Astral Projection", "OBE", "Consciousness", "Spirituality"],
+    image: "/blog/astral-projection.png",
+    content: `
+            <h2>What is Astral Projection?</h2>
+            <p>Astral projection, or an Out-of-Body Experience (OBE), is the phenomenon where the astral body separates from the physical body. It allows consciousness to travel freely through different dimensions and realities.</p>
+
+            <h2>The Vibrational State</h2>
+            <p>The gateway to the astral is often preceded by intense vibrations or buzzing sounds. This can be frightening for beginners, but it is a sign that the energy body is loosening its grip on the physical form.</p>
+
+            <h2>Techniques to Exit</h2>
+            <p>The "Rope Technique" involves visualizing climbing a rope out of your body. The "Roll Out" method involves mentally rolling out of bed without moving a muscle. Regular meditation and lucid dreaming practice increase your chances of success.</p>
+
+            <h2>Safety and Protection</h2>
+            <p>Fear is the biggest block. The astral realm reacts instantly to your thoughts. surrounding yourself with white light and setting a clear intention for protection ensures a safe and positive journey.</p>
+        `,
+  },
+  {
+    id: "29",
+    slug: "feng-shui-for-abundance",
+    title: "Feng Shui for Abundance: Arranging Your Space for Prosperity",
+    excerpt:
+      "Your environment reflects your inner state. Discover how to arrange your home to invite wealth, health, and harmony into your life.",
+    author: "Judith Avotri",
+    date: "January 29, 2026",
+    readTime: "16 min read",
+    category: "Ancient Wisdom",
+    tags: ["Feng Shui", "Home", "Abundance", "Energy"],
+    image: "/blog/feng-shui.png",
+    content: `
+            <h2>The Flow of Chi</h2>
+            <p>Feng Shui is the ancient Chinese art of placement. It focuses on the flow of "Chi" (energy) through your environment. Stagnant Chi leads to stagnant life; flowing Chi brings opportunity.</p>
+
+            <h2>The Wealth Corner</h2>
+            <p>In Feng Shui, the southeast corner of your home (or any room) is the Wealth area. Enhance this space with wood elements, water features, or symbols of abundance like coins or healthy plants.</p>
+
+            <h2>Clearing Clutter</h2>
+            <p>Clutter is an energy block. Holding onto things you don't love or need signals to the universe that you live in the past. clearing space creates a vacuum for new blessings to enter.</p>
+
+            <h2>The Power of the Front Door</h2>
+            <p>Your front door is the "Mouth of Chi." Keep it clean, well-lit, and welcoming. This is where energy (and opportunity) enters your life. A blocked entrance literally blocks your path forward.</p>
+        `,
+  },
+  {
+    id: "30",
+    slug: "numerology-life-path",
+    title: "Decoding Your Destiny: How to Calculate Your Life Path Number",
+    excerpt:
+      "Numbers are the universal language. calculate your Life Path Number to uncover your soul's blueprint, strengths, and challenges.",
+    author: "Judith Avotri",
+    date: "January 30, 2026",
+    readTime: "14 min read",
+    category: "Astrology",
+    tags: ["Numerology", "Life Path", "Destiny", "Self-Discovery"],
+    image: "/blog/numerology.png",
+    content: `
+            <h2>The Pythagorean System</h2>
+            <p>Numerology posits that your birth date is not random. It contains a code. The most important number in your chart is the Life Path Number, derived from your full date of birth.</p>
+
+            <h2>How to Calculate</h2>
+            <p>Add the digits of your day, month, and year of birth separately until you get single digits (or Master Numbers 11, 22, 33). Then add those three numbers together. For example, November 12, 1980 becomes 11 + 3 + 9 = 23, which reduces to 5.</p>
+
+            <h2>The Archetypes</h2>
+            <p>Each number carries a specific vibration. 
+            <br>1: The Leader
+            <br>2: The Peacemaker
+            <br>3: The Creative
+            <br>4: The Builder
+            <br>5: The Adventurer
+            <br>6: The Nurturer
+            <br>7: The Seeker
+            <br>8: The Powerhouse
+            <br>9: The Humanitarian</p>
+
+            <h2>Master Numbers</h2>
+            <p>Numbers 11, 22, and 33 are Master Numbers. They possess higher spiritual potential and greater challenges. They are here to master life on a grander scale.</p>
+        `,
+  },
 ];
 
 // Helper functions
