@@ -43,6 +43,11 @@ export default function MobileHeader() {
                         />
                     </button>
 
+                    {/* Brand Name - Center */}
+                    <span className="font-[family-name:var(--font-calligraffitti)] text-xl text-lumina-gold drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">
+                        Lumora
+                    </span>
+
                     {/* Logo - Right Side */}
                     <Link href="/" className="relative w-10 h-10" onClick={closeMenu}>
                         <Image
