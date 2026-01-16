@@ -1,6 +1,9 @@
 import { MetadataRoute } from 'next';
 import { BLOG_POSTS } from '@/lib/blog-data';
 
+// Required for static export (output: 'export')
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://luminaoracles.com';
 
