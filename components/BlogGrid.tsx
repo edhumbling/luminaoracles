@@ -62,6 +62,11 @@ export default function BlogGrid({ posts }: BlogGridProps) {
                 .map((item) => item.post);
         }
 
+        // Default Sort: Newest First
+        if (!searchQuery.trim()) {
+            results.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        }
+
         return results;
     }, [posts, searchQuery, selectedCategory]);
 
