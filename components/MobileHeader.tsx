@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,6 +9,18 @@ export default function MobileHeader() {
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const closeMenu = () => setIsMenuOpen(false);
+
+    // Lock body scroll when menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+        return () => {
+            document.body.style.overflow = "unset";
+        };
+    }, [isMenuOpen]);
 
     const navLinks = [
         { href: "/", label: "Home" },
@@ -67,27 +79,34 @@ export default function MobileHeader() {
                 onClick={closeMenu}
             />
 
-            {/* Slide-out Navigation Menu - Fast slide */}
+            {/* Slide-out Navigation Menu - Knife Edge Glass Design */}
             <nav
-                className={`fixed top-0 left-0 h-full w-64 bg-white/40 backdrop-blur-xl border-r border-white/20 z-50 md:hidden shadow-2xl transition-transform duration-200 ease-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed top-0 left-0 h-full w-[85vw] max-w-md bg-transparent backdrop-blur-3xl z-50 md:hidden transition-transform duration-300 ease-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
-                style={{ willChange: 'transform' }}
+                style={{
+                    willChange: 'transform',
+                    clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)', // Knife edge shape
+                    filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.3))'
+                }}
             >
+                {/* Glass sheen overlay */}
+                <div className="absolute inset-0 bg-white/5 pointer-events-none" />
+
                 {/* Spiritual Light overlay */}
-                <div className="absolute inset-0 bg-[url('/asset_sacred_geometry_1767893429698.png')] opacity-5 pointer-events-none mix-blend-multiply bg-cover bg-center" />
+                <div className="absolute inset-0 bg-[url('/asset_sacred_geometry_1767893429698.png')] opacity-10 pointer-events-none mix-blend-overlay bg-cover bg-center" />
 
                 {/* Menu Header */}
-                <div className="relative flex items-center justify-between p-6 border-b border-lumina-gold/20 bg-white/50 backdrop-blur-sm">
-                    <span className="font-[family-name:var(--font-calligraffitti)] text-2xl text-lumina-gold drop-shadow-sm">
+                <div className="relative flex items-center justify-between p-8 border-b border-white/10 bg-white/5 backdrop-blur-sm">
+                    <span className="font-[family-name:var(--font-calligraffitti)] text-4xl text-lumina-gold drop-shadow-md">
                         Portals
                     </span>
                     <button
                         onClick={closeMenu}
-                        className="w-8 h-8 flex items-center justify-center text-black/40 hover:text-lumina-gold transition-colors duration-100"
+                        className="w-10 h-10 flex items-center justify-center text-white/60 hover:text-lumina-gold transition-colors duration-100"
                         aria-label="Close menu"
                     >
                         <svg
-                            className="w-6 h-6"
+                            className="w-8 h-8"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -103,19 +122,19 @@ export default function MobileHeader() {
                 </div>
 
                 {/* Navigation Links */}
-                <div className="p-6 relative z-10">
-                    <ul className="space-y-4">
+                <div className="p-8 relative z-10">
+                    <ul className="space-y-6">
                         {navLinks.map((link) => (
                             <li key={link.href}>
                                 <Link
                                     href={link.href}
                                     onClick={closeMenu}
-                                    className="group flex items-center justify-between py-3 px-4 rounded-lg border border-lumina-gold/20 bg-white/60 hover:bg-gradient-to-r hover:from-[#FFFBEB] hover:to-white hover:border-lumina-gold hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] transition-all duration-150"
+                                    className="group flex items-center justify-between py-2 transition-all duration-300"
                                 >
-                                    <span className="text-black/80 font-medium uppercase tracking-widest text-sm group-hover:text-black transition-colors duration-100">
+                                    <span className="text-white/80 font-[family-name:var(--font-calligraffitti)] text-3xl group-hover:text-lumina-gold transition-colors duration-300 drop-shadow-sm">
                                         {link.label}
                                     </span>
-                                    <span className="text-lumina-gold opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-150">
+                                    <span className="text-lumina-gold opacity-0 group-hover:opacity-100 transform translate-x-[-20px] group-hover:translate-x-0 transition-all duration-300 text-xl">
                                         ✨
                                     </span>
                                 </Link>
@@ -125,8 +144,9 @@ export default function MobileHeader() {
                 </div>
 
                 {/* Footer Decoration */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 border-t border-lumina-gold/10 bg-white/30 backdrop-blur-sm">
-                    <p className="text-black/40 font-mono text-[10px] text-center uppercase tracking-[0.2em] mb-2">
+                {/* Footer Decoration */}
+                <div className="absolute bottom-0 left-0 right-0 p-8 border-t border-white/10 bg-transparent">
+                    <p className="text-white/30 font-mono text-[10px] text-center uppercase tracking-[0.2em] mb-2">
                         Sacred Geometry
                     </p>
                     <div className="flex justify-center gap-2 opacity-30">

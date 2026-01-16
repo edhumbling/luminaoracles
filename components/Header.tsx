@@ -11,9 +11,6 @@ import { cn } from "@/lib/utils";
 export default function Header() {
   const pathname = usePathname();
 
-  // Check if we are on the founder page or any other page that needs dark text
-  const isLightPage = pathname === "/founder" || pathname === "/contact";
-
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
@@ -52,12 +49,7 @@ export default function Header() {
           {/* Navigation - Right Side (or Center-Right) */}
           <nav className="relative">
             {/* Glass Background for Nav */}
-            <div className={cn(
-              "absolute inset-0 backdrop-blur-md rounded-full border shadow-lg -z-10 transition-colors duration-300",
-              isLightPage
-                ? "bg-white/40 border-black/10 shadow-black/5"
-                : "bg-white/5 border-white/10 shadow-black/20"
-            )} />
+            <div className="absolute inset-0 backdrop-blur-md rounded-full border border-white/10 shadow-lg -z-10 transition-colors duration-300 bg-black/40 shadow-black/20" />
 
             <ul className="flex items-center gap-1 px-2 py-1.5">
               {navLinks.map((link) => {
@@ -70,13 +62,9 @@ export default function Header() {
                         "relative px-6 py-2.5 rounded-full text-sm font-medium tracking-widest uppercase transition-all duration-300 overflow-hidden group",
                         // Active State
                         isActive
-                          ? (isLightPage
-                            ? "text-lumina-gold bg-black/5 shadow-[0_0_15px_rgba(250,204,21,0.1)]"
-                            : "text-lumina-gold bg-white/10 shadow-[0_0_15px_rgba(250,204,21,0.1)]")
+                          ? "text-lumina-gold bg-white/10 shadow-[0_0_15px_rgba(250,204,21,0.1)]"
                           // Inactive State
-                          : (isLightPage
-                            ? "text-black/70 hover:text-black hover:bg-black/5"
-                            : "text-white/70 hover:text-white hover:bg-white/5")
+                          : "text-white/70 hover:text-white hover:bg-white/5"
                       )}
                     >
                       <span className="relative z-10">{link.label}</span>
