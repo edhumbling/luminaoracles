@@ -73,14 +73,14 @@ export default function AboutPage() {
       </div>
 
       {/* Mission & Vision Section - WIDE Container - FINAL DESIGN Black & Gold Knife Edge */}
-      <div className="relative z-10 max-w-7xl mx-auto mt-40 px-4">
+      <div className="relative z-10 max-w-7xl mx-auto mt-40 px-0 md:px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block py-1 px-3 border border-lumina-gold/30 rounded-full text-xs font-semibold tracking-widest text-lumina-gold uppercase mb-4 bg-lumina-gold/5 backdrop-blur-sm">
+          <span className="inline-block py-1 px-3 border border-lumina-gold/30 rounded-full text-xs font-bold tracking-widest text-black uppercase mb-4 bg-lumina-gold/5 backdrop-blur-sm">
             Our Purpose
           </span>
-          <h2 className="text-3xl lg:text-5xl font-[family-name:var(--font-calligraffitti)] text-white drop-shadow-md">
-            The Path of <span className="text-lumina-gold">Lumina</span>
+          <h2 className="text-3xl lg:text-5xl font-[family-name:var(--font-calligraffitti)] text-black font-bold drop-shadow-md">
+            The Path of <span className="text-black">Lumina</span>
           </h2>
         </div>
 
@@ -110,7 +110,7 @@ export default function AboutPage() {
                   The Sacred Design
                 </h3>
                 <p className="text-base text-gray-300 leading-relaxed font-light">
-                  To reawaken the dormant divinity encoded within the human spirit. Our mission is to provide the architectural blueprints for the soul's ascension, guiding seekers through the labyrinth of existence with the unwavering lamp of ancient truth.
+                  To reawaken the dormant divinity encoded within the human spirit. Our mission is to provide the architectural blueprints for the soul&apos;s ascension, guiding seekers through the labyrinth of existence with the unwavering lamp of ancient truth.
                 </p>
               </div>
             </div>
