@@ -25,7 +25,7 @@ export default function ServiceHeader({ title, divineEssence, shaderIndex }: Ser
             {/* Back Button - Positioned for visibility */}
             <button
                 onClick={() => router.back()}
-                className="fixed top-24 md:top-28 left-6 md:left-8 z-50 bg-black/80 backdrop-blur-sm text-white hover:text-lumina-gold hover:bg-black transition-all duration-300 flex items-center gap-2 group px-4 py-2 rounded-full border border-white/20 shadow-lg"
+                className="fixed top-24 md:top-28 left-6 md:left-8 z-30 bg-black/80 backdrop-blur-sm text-white hover:text-lumina-gold hover:bg-black transition-all duration-300 flex items-center gap-2 group px-4 py-2 rounded-full border border-white/20 shadow-lg"
             >
                 <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                 <span className="font-mono text-sm uppercase tracking-widest">Back</span>
