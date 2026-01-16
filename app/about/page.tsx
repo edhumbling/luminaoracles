@@ -84,7 +84,7 @@ export default function AboutPage() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
           {/* Mission */}
           <div className="group relative h-full">
             <div className="absolute inset-0 bg-lumina-gold/5 blur-2xl rounded-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
