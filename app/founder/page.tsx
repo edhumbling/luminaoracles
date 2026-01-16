@@ -1,5 +1,6 @@
 
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Judith Avotri - Founder | Lumina Oracles",
@@ -23,7 +24,19 @@ export default function FounderPage() {
   return (
     <main className="min-h-screen relative overflow-hidden bg-background text-foreground pt-24 md:pt-32 pb-20 px-6 md:px-12 lg:px-24">
       {/* Creamy Glowy Top Effect */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[600px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-lumina-gold/20 via-lumina-lavender/10 to-transparent blur-[100px] pointer-events-none z-0" />
+      {/* Hero Background Image - Spiritual Lines */}
+      <div className="absolute top-0 left-0 w-full h-[700px] pointer-events-none z-0 overflow-hidden">
+        <Image
+          src="/hero-spiritual.png"
+          alt="Sacred Geometry Spiritual Lines"
+          fill
+          className="object-cover opacity-60 mix-blend-screen animate-pulse-slow"
+          priority
+        />
+        {/* Gradient Overlay for blending */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-background/50 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-lumina-gold/10 via-transparent to-transparent" />
+      </div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-calligraffitti)] text-center text-lumina-gold mb-12 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] animate-breath">
