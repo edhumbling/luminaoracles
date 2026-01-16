@@ -32,11 +32,11 @@ export default function FounderPage() {
 
         <div className="prose prose-lg dark:prose-invert md:prose-xl max-w-none font-light leading-relaxed">
           {/* Image Placeholder - Immersed in text */}
-          <div className="float-right ml-8 mb-8 relative w-64 h-80 md:w-72 md:h-96 rounded-2xl overflow-hidden border border-lumina-gold/30 shadow-[0_0_30px_rgba(250,204,21,0.15)] group bg-background/50 backdrop-blur-sm">
+          <div className="float-right ml-8 mb-8 relative w-80 h-[400px] md:w-96 md:h-[500px] lg:w-[420px] lg:h-[560px] rounded-2xl overflow-hidden border border-lumina-gold/30 shadow-[0_0_30px_rgba(250,204,21,0.15)] group bg-background/50 backdrop-blur-sm">
             {/* Placeholder Content */}
             <div className="absolute inset-0 bg-gradient-to-br from-lumina-gold/10 to-lumina-lavender/10 flex flex-col items-center justify-center p-6 text-center">
               <div className="w-20 h-20 rounded-full border border-lumina-gold/30 flex items-center justify-center mb-4">
-                 <span className="text-4xl">✨</span>
+                <span className="text-4xl">✨</span>
               </div>
               <p className="font-[family-name:var(--font-calligraffitti)] text-lumina-gold text-xl">
                 Judith Avotri
@@ -45,7 +45,7 @@ export default function FounderPage() {
                 Image Placeholder
               </p>
             </div>
-            
+
             {/* Shine Effect */}
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           </div>
@@ -53,21 +53,21 @@ export default function FounderPage() {
           <p className="first-letter:text-5xl first-letter:font-[family-name:var(--font-calligraffitti)] first-letter:text-lumina-gold first-letter:mr-2 first-letter:float-left">
             Judith Avotri is a spiritual teacher and practitioner of mysticism from Ghana. With a deep dedication to exploring and sharing the spiritual and mystical teachings, Judith guides others on their journey toward spiritual awakening and enlightenment.
           </p>
-          
+
           <p className="mt-6">
             Her work is rooted in her rich cultural heritage and her passion for helping individuals connect with their higher selves. As a practicing mystic, Judith offers insights and teachings that inspire growth, inner peace, and a profound understanding of the divine.
           </p>
-          
+
           <p className="mt-6">
             Through her guidance, many have found pathways to greater spiritual fulfillment and self-discovery. She embodies the sacred bridge between ancient wisdom and modern understanding, holding a lantern for those seeking to traverse the mists of the unknown.
           </p>
         </div>
-        
+
         {/* Decorative Divider */}
         <div className="flex items-center justify-center gap-4 mt-16 opacity-30">
-            <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-lumina-gold to-transparent" />
-            <div className="w-2 h-2 rotate-45 border border-lumina-gold" />
-            <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-lumina-gold to-transparent" />
+          <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-lumina-gold to-transparent" />
+          <div className="w-2 h-2 rotate-45 border border-lumina-gold" />
+          <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-lumina-gold to-transparent" />
         </div>
       </div>
     </main>
