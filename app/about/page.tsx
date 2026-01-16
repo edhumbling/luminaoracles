@@ -3,18 +3,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Judith Avotri | Lumina Oracles",
-  description: "Meet Judith Avotri, the spiritual teacher and mystic behind Lumina Oracles. Discover her journey of spiritual awakening and dedication to divine guidance.",
+  title: "About Mamaga Judith Etornam | Lumina Oracles",
+  description: "Meet Mamaga Judith Etornam, the spiritual teacher and mystic behind Lumina Oracles. Discover her journey of spiritual awakening and dedication to divine guidance.",
   openGraph: {
-    title: "About Judith Avotri | Lumina Oracles",
-    description: "Meet Judith Avotri, the spiritual teacher and mystic behind Lumina Oracles. Discover her journey of spiritual awakening and dedication to divine guidance.",
+    title: "About Mamaga Judith Etornam | Lumina Oracles",
+    description: "Meet Mamaga Judith Etornam, the spiritual teacher and mystic behind Lumina Oracles. Discover her journey of spiritual awakening and dedication to divine guidance.",
     type: "profile",
     images: [
       {
         url: "https://ik.imagekit.io/humbling/damn.jpg",
         width: 1200,
         height: 630,
-        alt: "Judith Avotri - Founder of Lumina Oracles",
+        alt: "Mamaga Judith Etornam - Founder of Lumina Oracles",
       },
     ],
   },
@@ -46,7 +46,7 @@ export default function AboutPage() {
           <div className="float-right ml-8 mb-8 relative w-80 h-[400px] md:w-96 md:h-[500px] lg:w-[420px] lg:h-[560px] rounded-2xl overflow-hidden border border-lumina-gold/30 shadow-[0_0_30px_rgba(250,204,21,0.15)] group bg-background/50 backdrop-blur-sm">
             <Image
               src="https://ik.imagekit.io/humbling/damn.jpg"
-              alt="Judith Avotri - Founder of Lumina Oracles"
+              alt="Mamaga Judith Etornam - Founder of Lumina Oracles"
               fill
               className="object-cover"
             />
@@ -54,7 +54,7 @@ export default function AboutPage() {
           </div>
 
           <p className="text-lumina-gold first-letter:text-5xl first-letter:font-[family-name:var(--font-calligraffitti)] first-letter:mr-2 first-letter:float-left">
-            Judith Avotri is a spiritual teacher and practitioner of mysticism from Ghana. With a deep dedication to exploring and sharing the spiritual and mystical teachings, Judith guides others on their journey toward spiritual awakening and enlightenment.
+            Mamaga Judith Etornam is a spiritual teacher and practitioner of mysticism from Ghana. With a deep dedication to exploring and sharing the spiritual and mystical teachings, Judith guides others on their journey toward spiritual awakening and enlightenment.
           </p>
 
           <p className="mt-6">

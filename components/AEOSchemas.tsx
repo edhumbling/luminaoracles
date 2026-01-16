@@ -12,15 +12,15 @@ const faqSchema = {
             name: "What is Lumina Oracles?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Lumina Oracles is a spiritual guidance platform founded by Judith Avotri that offers tarot readings, astrology consultations, chakra healing, and manifestation coaching. We help seekers connect with their higher selves through ancient wisdom traditions."
+                text: "Lumina Oracles is a spiritual guidance platform founded by Mamaga Judith Etornam that offers tarot readings, astrology consultations, chakra healing, and manifestation coaching. We help seekers connect with their higher selves through ancient wisdom traditions."
             }
         },
         {
             "@type": "Question",
-            name: "Who is Judith Avotri?",
+            name: "Who is Mamaga Judith Etornam?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Judith Avotri is a spiritual teacher and practitioner of mysticism from Ghana. She guides seekers on their journey toward spiritual awakening through her rich cultural heritage and deep connection to divine wisdom. She is the founder of Lumina Oracles."
+                text: "Mamaga Judith Etornam is a spiritual teacher and practitioner of mysticism from Ghana. She guides seekers on their journey toward spiritual awakening through her rich cultural heritage and deep connection to divine wisdom. She is the founder of Lumina Oracles."
             }
         },
         {
@@ -110,7 +110,7 @@ const localBusinessSchema = {
     "@type": "LocalBusiness",
     "@id": "https://luminaoracles.com/#business",
     name: "Lumina Oracles",
-    description: "Spiritual guidance, tarot readings, astrology consultations, and mystical wisdom from Judith Avotri.",
+    description: "Spiritual guidance, tarot readings, astrology consultations, and mystical wisdom from Mamaga Judith Etornam.",
     url: "https://luminaoracles.com",
     telephone: "+233241343329",
     email: "goddessgreat16@gmail.com",
@@ -130,7 +130,7 @@ const localBusinessSchema = {
     ],
     founder: {
         "@type": "Person",
-        name: "Judith Avotri"
+        name: "Mamaga Judith Etornam"
     }
 };
 

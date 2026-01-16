@@ -20,7 +20,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Mastering the Law of Attraction: A Guide to Manifesting Your Deepest Desires",
     excerpt:
       "Unlock the secrets of the Universe and learn how to align your vibrational frequency with the reality you wish to create. The Law of Attraction is not just a concept; it is the fundamental physics of your existence.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 1, 2026",
     readTime: "15 min read",
     category: "Manifestation",
@@ -70,7 +70,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "The Symphony of Existence: Understanding Frequencies and Vibrations",
     excerpt:
       "Everything is vibration. From the atoms in your body to the stars in the sky, existence is a musical score of energy. Learn how to tune your instrument.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 2, 2026",
     readTime: "12 min read",
     category: "Spirituality",
@@ -119,7 +119,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Energy Healing: A Comprehensive Guide to Restoring Balance",
     excerpt:
       "Your body is a self-healing mechanism, blocked only by energetic stagnation. Discover how techniques like Reiki and Chakra balancing can restore your flow.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 3, 2026",
     readTime: "20 min read",
     category: "Healing",
@@ -167,7 +167,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Power of Intention: Directing the Flow of Creation",
     excerpt:
       "Intention is the arrow; energy is the bow. Without a target, your energy dissipates into the void. Learn to harness the laser-focus of spiritual intention.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 4, 2026",
     readTime: "10 min read",
     category: "Mindfulness",
@@ -205,7 +205,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Ancient Wisdom for Modern Life: Timeless Truths in a Digital Age",
     excerpt:
       "As technology advances, our souls starve for meaning. The ancient mystery schools held keys that are more relevant now than ever before.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 5, 2026",
     readTime: "18 min read",
     category: "Philosophy",
@@ -244,7 +244,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Meditation for Beginners: A Complete Guide to Inner Stillness",
     excerpt:
       "In the silence between thoughts lies the doorway to your true self. Learn how to meditate effectively and transform your mind from chaos to clarity.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 6, 2026",
     readTime: "14 min read",
     category: "Mindfulness",
@@ -292,7 +292,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Shadow Work: Embracing Your Darkness to Find the Light",
     excerpt:
       "The parts of ourselves we reject don't disappear—they go underground and control us from the shadows. True healing requires meeting your darkness face to face.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 7, 2026",
     readTime: "16 min read",
     category: "Healing",
@@ -340,7 +340,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Science of Gratitude: How Thankfulness Transforms Your Brain",
     excerpt:
       "Gratitude is more than politeness—it is a powerful neurochemical intervention that rewires your brain for happiness. Discover the science behind saying thank you.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 8, 2026",
     readTime: "12 min read",
     category: "Mindfulness",
@@ -382,7 +382,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Understanding Synchronicity: The Universe Speaking Through Coincidence",
     excerpt:
       "Have you ever thought of someone moments before they called? These meaningful coincidences are not random—they are the language of the Universe.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 9, 2026",
     readTime: "14 min read",
     category: "Spirituality",
@@ -430,7 +430,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Kundalini Awakening: The Serpent Power Within",
     excerpt:
       "Coiled at the base of your spine lies a dormant force of unimaginable power. When awakened, Kundalini can transform every aspect of your being.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 10, 2026",
     readTime: "20 min read",
     category: "Spirituality",
@@ -477,7 +477,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Dark Night of the Soul: Spiritual Depression or Awakening?",
     excerpt:
       "When the light goes out and meaning collapses, you aren't losing your mind—you are shedding your ego. A guide to navigating the hardest stage of awakening.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 11, 2026",
     readTime: "18 min read",
     category: "Spirituality",
@@ -509,7 +509,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Science of Crystals: Frequency, Vibration, and Healing",
     excerpt:
       "Crystals are not just pretty rocks. They are highly ordered structures that emit stable frequencies. promoting balance in the chaotic human energy field.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 12, 2026",
     readTime: "14 min read",
     category: "Healing",
@@ -541,7 +541,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Harnessing Lunar Energy: A Guide to Full Moon Rituals",
     excerpt:
       "The moon pulls the tides of the ocean and the tides of your soul. Learn how to use the Full Moon to release what no longer serves you.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 13, 2026",
     readTime: "10 min read",
     category: "Spirituality",
@@ -576,7 +576,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Lucid Dreaming: Waking Up Within the Dream",
     excerpt:
       "Imagine flying, visiting other dimensions, or speaking with your subconscious—all while you sleep. Lucid dreaming opens the door to a limitless reality.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 14, 2026",
     readTime: "16 min read",
     category: "Consciousness",
@@ -608,7 +608,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Twin Flames vs. Soulmates: Understanding Spiritual Connections",
     excerpt:
       "Not all intense romances are Twin Flames. Learn the difference between a comforting Soulmate and the burning mirror of a Twin Flame connection.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 15, 2026",
     readTime: "15 min read",
     category: "Relationships",
@@ -639,7 +639,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Akashic Records: Accessing the Cosmic Library of Your Soul",
     excerpt:
       "Imagine a library that contains every thought, word, and deed of every soul that has ever lived. This is the Akashic Record. Learn how to open the book of your life.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 16, 2026",
     readTime: "25 min read",
     category: "Consciousness",
@@ -674,7 +674,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Are You a Starseed? Tracing Your Galactic Heritage",
     excerpt:
       "Do you feel like you don't belong on Earth? You might be a Starseed—a soul that originated from another star system like the Pleiades or Sirius to assist humanity.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 17, 2026",
     readTime: "22 min read",
     category: "Spirituality",
@@ -711,7 +711,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Sacred Geometry: The Divine Blueprint of Creation",
     excerpt:
       "From the spiral of a galaxy to the center of a sunflower, nature follows a mathematical code. Sacred Geometry reveals the order behind the chaos.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 18, 2026",
     readTime: "24 min read",
     category: "Science",
@@ -736,7 +736,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Reiki and Energy Medicine: Healing from the Inside Out",
     excerpt:
       "Reiki is the Japanese art of channeling Universal Life Force energy. Discover how hands-on healing can clear blockages and restore physical and emotional health.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 19, 2026",
     readTime: "20 min read",
     category: "Healing",
@@ -759,7 +759,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Dance of Polarity: Balancing Divine Masculine and Feminine",
     excerpt:
       "We all contain both masculine and feminine energies within us. True spiritual power comes not from choosing one, but from integrating both.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 20, 2026",
     readTime: "28 min read",
     category: "Relationships",
@@ -786,7 +786,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "The Science of Crystal Healing: Vibrational Energy and Mineral Structures",
     excerpt:
       "Beyond the mysticism lies a world of physics. Explore the scientific principles of piezoelectricity, resonance, and entropy that explain how crystals interact with the human biofield.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 21, 2026",
     readTime: "35 min read",
     category: "Science & Spirit",
@@ -825,7 +825,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Emerald Tablets and the Tarot: Tracing the Path of Thoth",
     excerpt:
       "The Tarot is more than a card game; it is the visual encoding of the Hermetic wisdom of Thoth. Discover the ancient Egyptian origins of the Major Arcana.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 22, 2026",
     readTime: "42 min read",
     category: "Ancient Wisdom",
@@ -857,7 +857,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Age of Technology and Rebellion: Pluto in Aquarius 2025-2044",
     excerpt:
       "A tectonic shift is upon us. Pluto's entry into Aquarius signals a 20-year era of technological revolution, the decentralization of power, and the rise of the collective.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 23, 2026",
     readTime: "30 min read",
     category: "Astrology",
@@ -886,7 +886,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Awake in the Dream: The Neuroscience of Lucid Dreaming",
     excerpt:
       "Lucid dreaming is not just a fantasy; it is a measurable state of hybrid consciousness. Learn how to activate your prefrontal cortex during REM sleep.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 24, 2026",
     readTime: "25 min read",
     category: "Consciousness",
@@ -914,7 +914,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Language of God: Sacred Geometry and the Blueprint of Reality",
     excerpt:
       "From the spiral of a nautilus shell to the orbit of galaxies, the same mathematical patterns emerge. Explore the Golden Ratio, the Flower of Life, and the code of creation.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 25, 2026",
     readTime: "33 min read",
     category: "Ancient Wisdom",
@@ -955,7 +955,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Power of Sound: Healing with Frequencies",
     excerpt:
       "Sound is more than what we hear; it is vibration that can heal our bodies and minds. Explore the ancient practice of sound healing.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 26, 2026",
     readTime: "18 min read",
     category: "Healing",
@@ -981,7 +981,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Surviving and Thriving During Mercury Retrograde",
     excerpt:
       "Mercury Retrograde doesn't have to be a disaster. Learn how to use this cosmic pause to reflect, review, and realign your life.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 27, 2026",
     readTime: "15 min read",
     category: "Astrology",
@@ -1007,7 +1007,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Beyond the Body: A Beginner's Guide to Astral Projection",
     excerpt:
       "The physical body is just a vessel. Learn to detach your consciousness and explore the astral plane in this comprehensive guide.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 28, 2026",
     readTime: "22 min read",
     category: "Consciousness",
@@ -1033,7 +1033,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Feng Shui for Abundance: Arranging Your Space for Prosperity",
     excerpt:
       "Your environment reflects your inner state. Discover how to arrange your home to invite wealth, health, and harmony into your life.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 29, 2026",
     readTime: "16 min read",
     category: "Ancient Wisdom",
@@ -1059,7 +1059,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Decoding Your Destiny: How to Calculate Your Life Path Number",
     excerpt:
       "Numbers are the universal language. calculate your Life Path Number to uncover your soul's blueprint, strengths, and challenges.",
-    author: "Judith Avotri",
+    author: "Mamaga Judith Etornam",
     date: "January 30, 2026",
     readTime: "14 min read",
     category: "Astrology",
@@ -1100,3 +1100,4 @@ export function getAllSlugs() {
     slug: post.slug,
   }));
 }
+

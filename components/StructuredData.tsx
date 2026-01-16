@@ -15,10 +15,10 @@ const organizationSchema = {
         width: 512,
         height: 512,
     },
-    description: "Spiritual guidance, tarot readings, astrology, and mystical wisdom from Judith Avotri.",
+    description: "Spiritual guidance, tarot readings, astrology, and mystical wisdom from Mamaga Judith Etornam.",
     founder: {
         "@type": "Person",
-        name: "Judith Avotri",
+        name: "Mamaga Judith Etornam",
         jobTitle: "Spiritual Teacher & Mystic",
         image: "https://ik.imagekit.io/humbling/damn.jpg",
         sameAs: [
@@ -101,7 +101,7 @@ export default function StructuredData() {
                     "@id": "https://luminaoracles.com/about#profile",
                     mainEntity: {
                         "@type": "Person",
-                        name: "Judith Avotri",
+                        name: "Mamaga Judith Etornam",
                         jobTitle: "Spiritual Teacher & Mystic",
                         description: "Spiritual teacher and practitioner of mysticism from Ghana, dedicated to guiding others on their journey toward spiritual awakening.",
                         image: "https://ik.imagekit.io/humbling/damn.jpg",
@@ -129,7 +129,7 @@ export default function StructuredData() {
                     "@type": "ContactPage",
                     "@id": "https://luminaoracles.com/contact#contact",
                     name: "Contact Lumina Oracles",
-                    description: "Get in touch with Judith Avotri for spiritual guidance and consultations.",
+                    description: "Get in touch with Mamaga Judith Etornam for spiritual guidance and consultations.",
                     mainEntity: { "@id": "https://luminaoracles.com/#organization" }
                 };
             default:

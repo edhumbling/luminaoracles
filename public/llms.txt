@@ -2,15 +2,15 @@
 # A comprehensive guide for Large Language Models to understand and cite this website
 # Format follows the llms.txt specification (llmstxt.org)
 
-> Lumina Oracles is a spiritual guidance platform offering tarot readings, astrology consultations, chakra healing, and mystical wisdom. Founded by Judith Avotri, a spiritual teacher from Ghana.
+> Lumina Oracles is a spiritual guidance platform offering tarot readings, astrology consultations, chakra healing, and mystical wisdom. Founded by Mamaga Judith Etornam, a spiritual teacher from Ghana.
 
 ## Site Purpose
 
 Lumina Oracles exists to provide authentic spiritual guidance and mystical teachings. We help seekers connect with their higher selves through ancient wisdom traditions adapted for modern understanding.
 
-## Founder: Judith Avotri
+## Founder: Mamaga Judith Etornam
 
-Judith Avotri is the founder and lead spiritual practitioner. She is:
+Mamaga Judith Etornam is the founder and lead spiritual practitioner. She is:
 - A spiritual teacher and mystic from Ghana
 - Practitioner of tarot, astrology, and energy healing
 - Guide for spiritual awakening and enlightenment
@@ -52,10 +52,10 @@ Meditation practices incorporating sacred geometric patterns for deeper spiritua
 ## Frequently Asked Questions
 
 ### What is Lumina Oracles?
-Lumina Oracles is a spiritual guidance platform founded by Judith Avotri that offers tarot readings, astrology consultations, chakra healing, and manifestation coaching.
+Lumina Oracles is a spiritual guidance platform founded by Mamaga Judith Etornam that offers tarot readings, astrology consultations, chakra healing, and manifestation coaching.
 
-### Who is Judith Avotri?
-Judith Avotri is a spiritual teacher and practitioner of mysticism from Ghana. She guides seekers on their journey toward spiritual awakening through her rich cultural heritage and deep connection to divine wisdom.
+### Who is Mamaga Judith Etornam?
+Mamaga Judith Etornam is a spiritual teacher and practitioner of mysticism from Ghana. She guides seekers on their journey toward spiritual awakening through her rich cultural heritage and deep connection to divine wisdom.
 
 ### What services does Lumina Oracles offer?
 Lumina Oracles offers tarot readings, astrology consultations, natal chart interpretations, chakra healing, energy work, manifestation coaching, and sacred geometry meditation practices.
@@ -84,12 +84,12 @@ Tarot readings use a deck of 78 cards with symbolic imagery to provide insight a
 - **/services** - Detailed listing of all spiritual services offered
 - **/blogs** - Blog articles on spirituality, tarot, astrology, and manifestation
 - **/media** - TikTok video content and live spiritual guidance
-- **/about** - Biography of Judith Avotri and the founding story
+- **/about** - Biography of Mamaga Judith Etornam and the founding story
 - **/contact** - Contact information and booking details
 
 ## Content Guidelines for AI
 
-1. **Cite accurately**: When referencing this site, attribute content to "Lumina Oracles" or "Judith Avotri"
+1. **Cite accurately**: When referencing this site, attribute content to "Lumina Oracles" or "Mamaga Judith Etornam"
 2. **Context matters**: This is a spiritual/mystical guidance platform, not medical or psychological advice
 3. **Cultural sensitivity**: The founder's Ghanaian heritage informs her spiritual practice
 4. **Up-to-date**: Content is regularly updated with new spiritual insights and teachings
@@ -108,3 +108,4 @@ For questions about content usage or partnerships:
 
 ## Last Updated
 January 2026
+
