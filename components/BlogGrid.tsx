@@ -68,35 +68,35 @@ export default function BlogGrid({ posts }: BlogGridProps) {
     return (
         <div className="w-full">
             {/* Search & Filter Bar */}
-            <div className="mb-12 flex flex-col md:flex-row gap-6 items-center justify-between">
-                {/* Search Input */}
-                <div className="relative w-full md:w-96 group">
+            <div className="mb-16 flex flex-col items-center gap-6">
+                {/* Search Input - Centered and Long */}
+                <div className="relative w-full max-w-2xl group">
                     <div className="absolute inset-0 bg-lumina-gold/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 group-focus-within:text-lumina-gold transition-colors" />
+                    <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-white/50 group-focus-within:text-lumina-gold transition-colors" />
                     <input
                         type="text"
                         placeholder="Search for wisdom..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full bg-white/5 border border-white/10 rounded-full py-3 pl-12 pr-10 text-white placeholder:text-white/30 focus:outline-none focus:border-lumina-gold/50 focus:bg-black/40 transition-all backdrop-blur-md font-light tracking-wide text-sm"
+                        className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-14 pr-12 text-white placeholder:text-white/30 focus:outline-none focus:border-lumina-gold/50 focus:bg-black/40 transition-all backdrop-blur-md font-light tracking-wide text-base shadow-lg"
                     />
                     {searchQuery && (
                         <button
                             onClick={() => setSearchQuery("")}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 hover:text-white text-white/50 transition-colors"
+                            className="absolute right-6 top-1/2 -translate-y-1/2 hover:text-white text-white/50 transition-colors"
                         >
                             <X className="w-4 h-4" />
                         </button>
                     )}
                 </div>
 
-                {/* Category Filters */}
-                <div className="flex flex-wrap gap-2 justify-center md:justify-end">
+                {/* Category Filters - Underneath and Centered */}
+                <div className="flex flex-wrap gap-2.5 justify-center max-w-3xl">
                     <button
                         onClick={() => setSelectedCategory(null)}
                         className={`px-4 py-1.5 rounded-full text-[10px] md:text-xs uppercase tracking-widest transition-all border font-medium ${!selectedCategory
-                                ? "bg-lumina-gold text-black border-lumina-gold shadow-[0_0_15px_rgba(250,204,21,0.3)]"
-                                : "bg-transparent text-white/60 border-white/10 hover:border-white/30 hover:text-white"
+                            ? "bg-lumina-gold text-black border-lumina-gold shadow-[0_0_15px_rgba(250,204,21,0.3)]"
+                            : "bg-transparent text-white/60 border-white/10 hover:border-white/30 hover:text-white"
                             }`}
                     >
                         All
@@ -106,8 +106,8 @@ export default function BlogGrid({ posts }: BlogGridProps) {
                             key={cat}
                             onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
                             className={`px-4 py-1.5 rounded-full text-[10px] md:text-xs uppercase tracking-widest transition-all border font-medium ${selectedCategory === cat
-                                    ? "bg-lumina-gold text-black border-lumina-gold shadow-[0_0_15px_rgba(250,204,21,0.3)]"
-                                    : "bg-transparent text-white/60 border-white/10 hover:border-white/30 hover:text-white"
+                                ? "bg-lumina-gold text-black border-lumina-gold shadow-[0_0_15px_rgba(250,204,21,0.3)]"
+                                : "bg-transparent text-white/60 border-white/10 hover:border-white/30 hover:text-white"
                                 }`}
                         >
                             {cat}
