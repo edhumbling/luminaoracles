@@ -103,7 +103,7 @@ export default function AboutPage() {
           </div>
 
           {/* Vision for the Collective (Global) */}
-          <div className="group relative md:-mt-8"> {/* Staggered effect for sharpness */}
+          <div className="group relative"> {/* Staggered removed */}
             <div
               className="absolute inset-0 bg-lumina-gold/20 blur-[20px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
               style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%)' }}
