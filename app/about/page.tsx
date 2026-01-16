@@ -77,37 +77,43 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Mission & Vision Section - Subtle Sharp Design */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Mission & Vision Section - Redesigned for Clarity & Impact */}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {/* Mission */}
-          <div className="group relative p-8 border border-white/10 hover:border-lumina-gold/30 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1">
-            <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-lumina-gold/50 opacity-50 group-hover:opacity-100 transition-opacity" />
-            <h3 className="text-xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+          <div className="relative p-8 rounded-2xl bg-zinc-900/90 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+            <div className="w-12 h-12 rounded-full bg-lumina-gold/10 flex items-center justify-center mb-6 text-2xl border border-lumina-gold/20 shadow-[0_0_15px_rgba(250,204,21,0.1)] group-hover:shadow-[0_0_25px_rgba(250,204,21,0.3)] transition-shadow">
+              🏛️
+            </div>
+            <h3 className="text-2xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
               The Sacred Design
             </h3>
-            <p className="text-sm font-light leading-relaxed text-white/70">
+            <p className="text-base font-light leading-relaxed text-gray-200">
               To reawaken the dormant divinity encoded within the human spirit. Our mission is to provide the architectural blueprints for the soul's ascension, guiding seekers through the labyrinth of existence with the unwavering lamp of ancient truth.
             </p>
           </div>
 
-          {/* Vision for Ghana */}
-          <div className="group relative p-8 border border-white/10 hover:border-lumina-gold/30 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1">
-            <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-lumina-gold/50 opacity-50 group-hover:opacity-100 transition-opacity" />
-            <h3 className="text-xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
-              Vision for the Gold Coast
+          {/* Vision for the Collective (Global) */}
+          <div className="relative p-8 rounded-2xl bg-zinc-900/90 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+            <div className="w-12 h-12 rounded-full bg-lumina-gold/10 flex items-center justify-center mb-6 text-2xl border border-lumina-gold/20 shadow-[0_0_15px_rgba(250,204,21,0.1)] group-hover:shadow-[0_0_25px_rgba(250,204,21,0.3)] transition-shadow">
+              🌍
+            </div>
+            <h3 className="text-2xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+              Vision for the Collective
             </h3>
-            <p className="text-sm font-light leading-relaxed text-white/70">
-              We envision a Ghana that stands as a fortress of spiritual sovereignty. A nation where the rhythmic heartbeat of our ancestors harmonizes with the pulse of the future, creating a sanctuary where every citizen walks in the fullness of their power and purpose.
+            <p className="text-base font-light leading-relaxed text-gray-200">
+              We envision a world that stands as a fortress of spiritual sovereignty. A global reality where the rhythmic heartbeat of ancient wisdom harmonizes with the pulse of the future, creating a sanctuary where every soul across the earth walks in the fullness of their power and purpose.
             </p>
           </div>
 
           {/* Impact */}
-          <div className="group relative p-8 border border-white/10 hover:border-lumina-gold/30 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1">
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-lumina-gold/50 opacity-50 group-hover:opacity-100 transition-opacity" />
-            <h3 className="text-xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+          <div className="relative p-8 rounded-2xl bg-zinc-900/90 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+            <div className="w-12 h-12 rounded-full bg-lumina-gold/10 flex items-center justify-center mb-6 text-2xl border border-lumina-gold/20 shadow-[0_0_15px_rgba(250,204,21,0.1)] group-hover:shadow-[0_0_25px_rgba(250,204,21,0.3)] transition-shadow">
+              🌊
+            </div>
+            <h3 className="text-2xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
               The Ripple Effect
             </h3>
-            <p className="text-sm font-light leading-relaxed text-white/70">
+            <p className="text-base font-light leading-relaxed text-gray-200">
               We do not merely heal individuals; we weave a tapestry of awakened consciousness. Our impact is measured not in numbers, but in the silent revolutions of the heart—lives transformed, families restored, and a collective destiny elevated to the realm of the divine.
             </p>
           </div>
