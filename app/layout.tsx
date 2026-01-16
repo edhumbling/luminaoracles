@@ -8,6 +8,7 @@ import MarqueeFooter from "@/components/MarqueeFooter";
 import BackgroundAudio from "@/components/BackgroundAudio";
 import MobileHeader from "@/components/MobileHeader";
 import Header from "@/components/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,6 +60,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <MarqueeFooter />
+        <ScrollToTop />
       </body>
     </html>
   );

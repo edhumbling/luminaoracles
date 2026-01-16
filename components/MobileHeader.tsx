@@ -69,7 +69,7 @@ export default function MobileHeader() {
 
             {/* Slide-out Navigation Menu - Fast slide */}
             <nav
-                className={`fixed top-0 left-0 h-full w-64 bg-gradient-to-b from-[#FFFBEB] to-white z-50 md:hidden shadow-2xl transition-transform duration-200 ease-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed top-0 left-0 h-full w-64 bg-white/40 backdrop-blur-xl border-r border-white/20 z-50 md:hidden shadow-2xl transition-transform duration-200 ease-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
                 style={{ willChange: 'transform' }}
             >
