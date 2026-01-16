@@ -756,6 +756,526 @@ export const BLOG_POSTS: BlogPost[] = [
             <h2>The Hieros Gamos (Sacred Marriage)</h2>
             <p>True awakening is the <a href="https://en.wikipedia.org/wiki/Hieros_gamos" target="_blank" rel="noopener noreferrer">Hieros Gamos</a>—the sacred marriage of these two energies within <em>yourself</em>. You don't need a partner to complete you; you need to balance your own inner polarities.</p>
         `
+    },
+    {
+        id: "21",
+        slug: "numerology-guide",
+        title: "The Sacred Language of Numbers: A Complete Guide to Numerology",
+        excerpt: "Numbers are not just for counting; they are the building blocks of the universe. Discover how Numerology can reveal your Life Path, destiny, and soul's purpose.",
+        author: "Judith Avotri",
+        date: "January 21, 2026",
+        readTime: "30 min read",
+        category: "Metaphysics",
+        tags: ["Numerology", "Life Path", "Destiny", "Spirituality"],
+        image: "/blog/numerology-guide.png",
+        content: `
+            <h2>The Mathematics of the Soul</h2>
+            <p>In the ancient world, mathematics was not merely a secular tool for commerce or engineering; it was a sacred language. <a href="https://en.wikipedia.org/wiki/Pythagoras" target="_blank" rel="noopener noreferrer">Pythagoras</a>, the Greek philosopher and mathematician, famously declared, "All is number." He believed that the universe was built upon vibrational frequencies that could be expressed numerically. This is the foundation of <a href="https://en.wikipedia.org/wiki/Numerology" target="_blank" rel="noopener noreferrer">Numerology</a>.</p>
+            <p>Numerology is the study of the mystical relationship between numbers and coinciding events. It is a tool for self-discovery, allowing us to uncover the blueprint of our souls. Just as your DNA contains the biological code for your physical body, your numerological chart contains the energetic code for your life's purpose, challenges, and potential.</p>
+
+            <h2>History and Origins</h2>
+            <p>While Pythagoras is often credited as the father of modern numerology (Western Numerology), the practice predates him. Evidence of numerological systems exists in the <a href="https://en.wikipedia.org/wiki/Vedas" target="_blank" rel="noopener noreferrer">Vedas</a> of India, the <a href="https://en.wikipedia.org/wiki/I_Ching" target="_blank" rel="noopener noreferrer">I Ching</a> of China, and the Hebrew <a href="https://en.wikipedia.org/wiki/Kabbalah" target="_blank" rel="noopener noreferrer">Kabbalah</a>. The Chaldeans of ancient Babylon also developed a system based on the vibrations of sound.</p>
+            <p>The central premise is that the universe works in an orderly fashion. It is not chaotic. It is mathematical. By understanding the numbers that govern your life, you can align with the natural flow of the universe rather than swimming against the current.</p>
+
+            <h2>The Core Numbers</h2>
+            <p>While there are many aspects to a numerology chart, five core numbers form the pillar of your personality and destiny. Understanding these can provide profound clarity.</p>
+
+            <h3>1. The Life Path Number</h3>
+            <p>The <a href="https://www.numerology.com/articles/your-numerology-chart/life-path-number-meanings/" target="_blank" rel="noopener noreferrer">Life Path Number</a> is the most important number in your chart. Derived from your date of birth, it reveals the path you are destined to walk in this lifetime. It outlines your natural strengths, weaknesses, and the major lessons you are here to learn. It represents <em>who you are</em> at your core.</p>
+            <p><strong>Calculation:</strong> Add every single digit of your birth date together until you reduce it to a single digit (unless it is 11, 22, or 33, which are Master Numbers). Note: There are different ways to calculate, but the most common is reducing Month, Day, and Year separately, then adding them.</p>
+            <p><em>Example: November 12, 1985</em></p>
+            <ul>
+                <li><strong>Month:</strong> November is the 11th month. Since 11 is a Master Number, we do not reduce it. (If it were December, 12, we would do 1+2=3). Value: 11.</li>
+                <li><strong>Day:</strong> 12. 1 + 2 = 3. Value: 3.</li>
+                <li><strong>Year:</strong> 1985. 1 + 9 + 8 + 5 = 23. 2 + 3 = 5. Value: 5.</li>
+                <li><strong>Total:</strong> 11 + 3 + 5 = 19.</li>
+                <li><strong>Reduce:</strong> 1 + 9 = 10. 1 + 0 = 1.</li>
+                <li><strong>Life Path:</strong> 1</li>
+            </ul>
+
+            <h3>2. The Destiny Number (Expression Number)</h3>
+            <p>Derived from your full birth name (as it appears on your birth certificate), the Destiny Number reveals what you are destined to <em>do</em>. It represents your innate talents, abilities, and the goal of your life. While the Life Path is the road you walk, the Destiny number is the character you play.</p>
+            <p>Each letter is assigned a number based on the Pythagorean system:</p>
+            <ul>
+                <li>1: A, J, S</li>
+                <li>2: B, K, T</li>
+                <li>3: C, L, U</li>
+                <li>4: D, M, V</li>
+                <li>5: E, N, W</li>
+                <li>6: F, O, X</li>
+                <li>7: G, P, Y</li>
+                <li>8: H, Q, Z</li>
+                <li>9: I, R</li>
+            </ul>
+
+            <h3>3. The Soul Urge Number (Heart's Desire)</h3>
+            <p>This number reveals your heart's deepest desire—what truly motivates you and what you need to feel fulfilled emotionally and spiritually. It is often a side of you that only those closest to you see. It is calculated from the <strong>vowels</strong> in your full name.</p>
+            <ul>
+               <li>A = 1</li>
+               <li>E = 5</li>
+               <li>I = 9</li>
+               <li>O = 6</li>
+               <li>U = 3</li>
+               <li>Y = 7 (only when it acts as a vowel)</li>
+            </ul>
+
+            <h3>4. The Personality Number</h3>
+            <p>This is the "mask" you wear. It represents how others perceive you upon first impression. It is calculated from the <strong>consonants</strong> in your full name.</p>
+
+            <h3>5. The Birthday Number</h3>
+            <p>This is simply the day of the month you were born (e.g., the 12th). It represents a special talent or ability that will help you on your Life Path.</p>
+
+            <h2>Detailed Meaning of the Numbers</h2>
+            <p>Each number from 1 to 9 (and the Master Numbers) has a unique vibrational frequency. Here is a deep dive into each archetype.</p>
+
+            <h3>Number 1: The Leader (The Primal Force)</h3>
+            <p><strong>Keywords:</strong> Independence, Innovation, Courage, Determination, Aggression, Ego.</p>
+            <p><strong>The Vibration:</strong> The 1 is the first non-zero number. It is the number of creation. It stands alone. It represents the masculine principle (Yang)—the spear, the phallus, the singular focus.</p>
+            <p><strong>Strengths:</strong> Those with Life Path 1 are born leaders. They are here to pave new paths, break boundaries, and assert their individuality. They are original thinkers and often entrepreneurs.</p>
+            <p><strong>Challenges:</strong> The 1 can be lonely. They must learn that leading does not mean dominating. They often struggle with self-doubt masked by arrogance. They must learn to cooperate without compromising their vision.</p>
+            <p><strong>In Relationships:</strong> They need a partner who is independent and self-sufficient. They do not tolerate clinginess.</p>
+
+            <h3>Number 2: The Diplomat (The Peacemaker)</h3>
+            <p><strong>Keywords:</strong> Harmony, Cooperation, Sensitivity, Intuition, Balance, Passivity.</p>
+            <p><strong>The Vibration:</strong> The 2 is the number of duality. It represents the feminine principle (Yin). It is the curve, the receiver, the mother. It seeks union.</p>
+            <p><strong>Strengths:</strong> Number 2s are the glue that holds society together. They are empathetic, kind, and diplomatic. They can see both sides of an argument. They thrive in partnership.</p>
+            <p><strong>Challenges:</strong> They are easily hurt and can be overly sensitive. Their lesson is to set boundaries and not lose themselves in the service of others. They often struggle with saying "no."</p>
+            <p><strong>In Relationships:</strong> They are the ultimate romantics. They need constant reassurance and affection.</p>
+
+            <h3>Number 3: The Communicator (The Child)</h3>
+            <p><strong>Keywords:</strong> Creativity, Expression, Joy, Imagination, Optimism, Scatterbrained.</p>
+            <p><strong>The Vibration:</strong> The 3 is the result of the union of 1 and 2. It is the child. It is pure creative energy. It is the triangle.</p>
+            <p><strong>Strengths:</strong> 3s are the artists, writers, and entertainers of the world. They have the gift of gab. They are here to express themselves and uplift others with their infectious joy.</p>
+            <p><strong>Challenges:</strong> They can suffer from "Peter Pan Syndrome"—refusing to grow up. They struggle with focus and discipline. They can be prone to mood swings and superficiality.</p>
+            <p><strong>In Relationships:</strong> They need a partner who is a good listener and can handle their social nature.</p>
+
+            <h3>Number 4: The Builder (The Rock)</h3>
+            <p><strong>Keywords:</strong> Stability, Structure, Hard Work, Practicality, Order, Rigidity.</p>
+            <p><strong>The Vibration:</strong> The 4 is the square. It is the four walls of a house, the four seasons, the four elements. It is grounded earth energy.</p>
+            <p><strong>Strengths:</strong> 4s are the salt of the earth. They build lasting foundations. They are disciplined, reliable, and honest. They are the ones you call in a crisis.</p>
+            <p><strong>Challenges:</strong> They can be stubborn and resistant to change. They often work too hard and forget to enjoy life. Their lesson is to learn flexibility.</p>
+            <p><strong>In Relationships:</strong> They are loyal and dependable, but not necessarily romantic. They show love through acts of service.</p>
+
+            <h3>Number 5: The Freedom Seeker (The Adventurer)</h3>
+            <p><strong>Keywords:</strong> Change, Adventure, Versatility, Freedom, Sensuality, Instability.</p>
+            <p><strong>The Vibration:</strong> The 5 is the midpoint of the cycle (1-9). It is the number of dynamic motion. It is the five senses.</p>
+            <p><strong>Strengths:</strong> 5s are the agents of change. They are magnetic, charismatic, and adaptable. They are here to experience the world in all its variety. They make great salespeople and travelers.</p>
+            <p><strong>Challenges:</strong> They fear boredom above all else. This can lead to recklessness, addiction, and an inability to commit. Their lesson is discipline.</p>
+            <p><strong>In Relationships:</strong> They need freedom. A jealous or possessive partner will send them running.</p>
+
+            <h3>Number 6: The Nurturer (The Parent)</h3>
+            <p><strong>Keywords:</strong> Responsibility, Love, Family, Service, Healing, Perfectionism.</p>
+            <p><strong>The Vibration:</strong> The 6 is the number of domesticity and unconditional love. It is the pregnant belly.</p>
+            <p><strong>Strengths:</strong> 6s are the caretakers. They feel a deep sense of duty to their community and family. They are often healers, teachers, or counselors. They create beauty and harmony.</p>
+            <p><strong>Challenges:</strong> They can be meddlesome and self-righteous. They often give too much and become resentful (the martyr complex). Their lesson is that you cannot save everyone.</p>
+            <p><strong>In Relationships:</strong> They are devoted and protective, sometimes to the point of smothering.</p>
+
+            <h3>Number 7: The Seeker (The Mystic)</h3>
+            <p><strong>Keywords:</strong> Wisdom, Introspection, Spirituality, Analysis, Solitude, Cynicism.</p>
+            <p><strong>The Vibration:</strong> The 7 is the number of the mind and the spirit. It is the scholar and the monk.</p>
+            <p><strong>Strengths:</strong> 7s are the deep thinkers. They search for the deeper truth behind reality. They are not satisfied with surface-level answers. They have strong intuition and analytical skills.</p>
+            <p><strong>Challenges:</strong> They can be socially awkward and aloof. They tend to overthink and isolate themselves. Their lesson is to trust and to open their heart.</p>
+            <p><strong>In Relationships:</strong> They need a lot of space and intellectual stimulation. They are private.</p>
+
+            <h3>Number 8: The Powerhouse (The CEO)</h3>
+            <p><strong>Keywords:</strong> Abundance, Authority, Karma, Material Success, Power, Greed.</p>
+            <p><strong>The Vibration:</strong> The 8 is the infinity symbol turned on its side. It represents the balance between the spiritual and material worlds ("As above, so below").</p>
+            <p><strong>Strengths:</strong> 8s are here to master the material world. They understand money, business, and power. They are natural executives and leaders. They are resilient.</p>
+            <p><strong>Challenges:</strong> They can become workaholics and materialistic. They may abuse power. Their life is often a series of booms and busts until they learn balance.</p>
+            <p><strong>In Relationships:</strong> They need a strong partner who is not intimidated by their power.</p>
+
+            <h3>Number 9: The Humanitarian (The Old Soul)</h3>
+            <p><strong>Keywords:</strong> Compassion, Endings, Universal Love, Wisdom, Letting Go, Drama.</p>
+            <p><strong>The Vibration:</strong> The 9 contains all the numbers before it. It is the end of the cycle.</p>
+            <p><strong>Strengths:</strong> 9s are the visionaries who care for humanity as a whole. They are selfless, artistic, and romantic. They are here to complete things and let them go.</p>
+            <p><strong>Challenges:</strong> They often carry the weight of the world on their shoulders. They struggle with letting go of the past. They can be moody.</p>
+            <p><strong>In Relationships:</strong> They are idealistic lovers who want a soul connection.</p>
+
+            <h2>The Master Numbers</h2>
+            <p>In Numerology, the numbers 11, 22, and 33 are not reduced because they carry a higher vibrational frequency. These are the Master Numbers. They indicate a soul with great potential but also high tension.</p>
+
+            <h3>Master Number 11: The Illuminator</h3>
+            <p>11 is the most intuitive of all numbers. It represents illumination and insight. It is a channel to the subconscious. Those with this number are often spiritual teachers or visionaries, but they may struggle with high anxiety and nervous energy due to their sensitivity. They are "Super 2s".</p>
+
+            <h3>Master Number 22: The Master Builder</h3>
+            <p>22 combines the intuition of the 11 with the practicality of the 4. It has the power to turn lofty dreams into concrete reality. It is the most powerful of all numbers, capable of great good but also needing great discipline. They are "Super 4s".</p>
+
+            <h3>Master Number 33: The Master Teacher</h3>
+            <p>33 is the number of altruistic devotion. It focuses on spiritual uplifting of mankind. It is rare and carries a heavy burden of responsibility. They are "Super 6s".</p>
+
+            <h2>Karmic Debt Numbers</h2>
+            <p>If you have a 13, 14, 16, or 19 in your chart (before reducing), you carry a Karmic Debt from a past life.</p>
+            <ul>
+                <li><strong>13/4:</strong> Laziness in a past life. You must work hard in this one.</li>
+                <li><strong>14/5:</strong> Abuse of freedom/pleasure. You must learn moderation.</li>
+                <li><strong>16/7:</strong> Ego/Love affairs. You must learn humility and destruction of the ego (The Tower).</li>
+                <li><strong>19/1:</strong> Abuse of power. You must learn to stand alone and help others without seeking reward.</li>
+            </ul>
+
+            <h2>Personal Year Cycles</h2>
+            <p>Life moves in 9-year cycles. By calculating your <a href="https://www.gaia.com/article/how-to-calculate-your-personal-year-number" target="_blank" rel="noopener noreferrer">Personal Year Number</a> (Birth Month + Birth Day + Current Year), you can understand the theme of your current year.</p>
+            <ul>
+                <li><strong>Year 1:</strong> New beginnings, planting seeds, high energy. A time to start projects.</li>
+                <li><strong>Year 2:</strong> Patience, partnership, waiting. The seed is germinating underground. Do not force things.</li>
+                <li><strong>Year 3:</strong> Socializing, creativity, self-expression. The plant breaks the surface. Enjoyment.</li>
+                <li><strong>Year 4:</strong> Hard work, building foundation, weeding. Essential maintenance.</li>
+                <li><strong>Year 5:</strong> Change, freedom, unexpected turns. The plant grows wild branches. Travel and variety.</li>
+                <li><strong>Year 6:</strong> Family, duty, home. Caring for the plant and those around it. Responsibility.</li>
+                <li><strong>Year 7:</strong> Introspection, rest, spiritual study. The plant goes dormant to strengthen roots. Solitude.</li>
+                <li><strong>Year 8:</strong> Manifestation, career success, harvest. Reaping what you sowed in Year 1. Power.</li>
+                <li><strong>Year 9:</strong> Completion, letting go, preparing for the new. Clearing the dead leaves. Release.</li>
+            </ul>
+
+            <p>Numerology is a vast ocean of wisdom. By learning the language of numbers, you stop navigating life blindly. You begin to see the patterns, the cycles, and the divine order that underpins your existence. You realize that you are exactly where you are meant to be, doing exactly what you were designed to do.</p>
+        `
+    },
+    {
+        id: "22",
+        slug: "astral-projection",
+        title: "Astral Projection for Beginners: Exploring the Astral Plane",
+        excerpt: "Have you ever dreamed of flying? Astral projection is the ability to separate your consciousness from your physical body and explore other dimensions.",
+        author: "Judith Avotri",
+        date: "January 22, 2026",
+        readTime: "25 min read",
+        category: "Consciousness",
+        tags: ["Astral Projection", "OBE", "Consciousness", "Dimensions"],
+        image: "/blog/astral-projection.png",
+        content: `
+            <h2>Beyond the Physical Body</h2>
+            <p><a href="https://en.wikipedia.org/wiki/Astral_projection" target="_blank" rel="noopener noreferrer">Astral projection</a>, also known as an Out-of-Body Experience (OBE), is a phenomenon where the consciousness (or "astral body") separates from the physical body and travels through the <a href="https://en.wikipedia.org/wiki/Astral_plane" target="_blank" rel="noopener noreferrer">Astral Plane</a>. While this may sound like science fiction, it is a practice that has been documented for thousands of years. In Ancient Egypt, the soul was seen as having multiple parts, one of which—the <em>Ba</em>—could travel outside the body. In Tibetan Buddhism, <em>Dream Yoga</em> is a disciplined practice of maintaining awareness during sleep to prepare for death.</p>
+            <p>Modern research, spearheaded by pioneers like <a href="https://www.monroeinstitute.org/" target="_blank" rel="noopener noreferrer">Robert Monroe</a> (author of <em>Journeys Out of the Body</em>) and organizations like the Monroe Institute, has moved OBEs from the realm of mysticism to the realm of exploration. Using technologies like Hemi-Sync (audio binaural beats), they have demonstrated that specific brainwave states can reliably induce separation.</p>
+
+            <h2>The Science of Separation</h2>
+            <p>During sleep, everyone enters a state where the bond between the physical and astral bodies loosens to allow the physical body to recharge and the subtle body to align. Usually, we are unconscious during this process and experience it as vague dreams. Astral projection is the art of retaining <strong>conscious awareness</strong> while the body falls asleep.</p>
+            <p>This state is often referred to as "Mind Awake, Body Asleep." It correlates with the <a href="https://en.wikipedia.org/wiki/Hypnagogia" target="_blank" rel="noopener noreferrer">Hypnagogic state</a>, where the brain produces <a href="https://en.wikipedia.org/wiki/Theta_wave" target="_blank" rel="noopener noreferrer">Theta waves</a> (4-7 Hz). In this frequency, the critical factor of the waking mind (Beta) is bypassed, but awareness is not lost to Delta (deep sleep).</p>
+
+            <h2>Preparing for Takeoff</h2>
+            <p>Successful projection requires a delicate balance of deep relaxation and high mental energy. If you are physically exhausted, you will simply fall asleep. If you are too mentally alert, you won't be able to relax the body enough.</p>
+            <h3>1. The Setup</h3>
+            <ul>
+                <li><strong>Time:</strong> The "Wake Back to Bed" (WBTB) method is the gold standard. Sleep for 5-6 hours. Wake up, get out of bed for 30 minutes (read about astral projection to set the intention). Then, go back to bed. Your body is tired enough to sleep, but your mind is awake.</li>
+                <li><strong>Position:</strong> Lie on your back (Corpse Pose). This is crucial because it is not your habitual sleeping position, which signals "alertness" to the subconscious while the body rests. Keep your spine straight to align the chakras.</li>
+                <li><strong>Diet:</strong> Avoid heavy meals before practice. Digestion draws energy to the stomach. You want energy in the head/heart.</li>
+            </ul>
+
+            <h3>2. Relaxation Technique</h3>
+            <p>You must reach a state called "paralysis." This is <a href="https://en.wikipedia.org/wiki/Sleep_paralysis" target="_blank" rel="noopener noreferrer">Sleep Paralysis</a>, but induced voluntarily. Perform a progressive muscle relaxation. Start from your toes. Tense them for 5 seconds, then release. Move to ankles, calves, thighs, hips, stomach, chest, hands, arms, shoulders, neck, face. </p>
+            <p>Visualize a wave of leaden heaviness filling your body. You are sinking into the mattress. You must reach a point where you cannot feel your physical body—it feels numb or non-existent.</p>
+
+            <h2>The Vibrational State</h2>
+            <p>As you deepen your trance, you may experience the "vibrational stage." This is the most famous signpost of an impending exit. It can feel like:</p>
+            <ul>
+                <li>A mild buzzing (like a bee).</li>
+                <li>An electric current running through your body.</li>
+                <li>A rushing sound (like a train or wind).</li>
+                <li>A sensation of expanding or shrinking.</li>
+            </ul>
+            <p><strong>Do not panic.</strong> Fear is the #1 reason people fail. Fear will snap you back into your body instantly, often with a jolt (the "hypnic jerk"). These vibrations are simply the astral body loosening its density to match the higher frequency of the astral plane. Remain calm. Encourage the vibrations. Will them to pulse from your head to your toes.</p>
+
+            <h2>Separation Techniques</h2>
+            <p>Once the vibrations are stable and smooth (not erratic), use a separation technique to exit. Do not use your muscles. You must move with your <em>will</em>.</p>
+            <ul>
+                <li><strong>The Rope Technique:</strong> Visualize a sturdy rope hanging from the ceiling above your chest. Reach out with your <em>astral</em> hands (ghost hands) and pull yourself up. Feel the texture of the rope. Feel the weight of your astral body. Pull hand over hand. This sensation of "climbing" triggers the separation reflex.</li>
+                <li><strong>The Roll-Out:</strong> Imagine rolling over to the side, just as you would physically. Do not tense your muscles. Just "feel" the rolling motion. Often, you will literally roll out of your body and land on the floor.</li>
+                <li><strong>The Float:</strong> Visualize yourself becoming lighter than hydrogen. You are a balloon. You are naturally floating upwards toward the ceiling.</li>
+                <li><strong>The Target Technique:</strong> Fix your mind on a location in the room (e.g., the door handle). Desire to be there. Suddenly, you may find yourself teleported there, looking back at your body.</li>
+            </ul>
+
+            <h2>Navigating the Astral Plane</h2>
+            <p>The Astral Plane is not a single place; it is a spectrum of frequencies. It is responsive to thought. In the physical world, if you think about a location, you remain where you are. In the astral world, thought is propulsion. To move, you simply <em>will</em> yourself to move.</p>
+
+            <h3>The Silver Cord</h3>
+            <p>Many projectors report seeing a <a href="https://en.wikipedia.org/wiki/Silver_cord" target="_blank" rel="noopener noreferrer">Silver Cord</a> connecting their astral body (usually at the navel or head) to their physical body. This is an infinite, unbreakable tether. It transmits energy to the physical body while you are away. It ensures you can never get "lost." No matter how far you travel, the moment you think of your physical body or feel fear, the cord retracts you instantly at the speed of thought.</p>
+
+            <h3>Realities and Dimensions</h3>
+            <p>The astral realm is layered like an onion.</p>
+            <ul>
+                <li><strong>The Real-Time Zone:</strong> This is the layer closest to the physical. It looks exactly like your bedroom, but with subtle differences (e.g., furniture might be rearranged, or colors are different). This is where "ghosts" or earthbound spirits often reside.</li>
+                <li><strong>The Lower Astral:</strong> A dense, confusing realm often populated by "thought forms" or nightmares. It is created by the collective fears of humanity. If you find yourself here (dark, swampy, heavy), simply raise your vibration by thinking of love, light, or God, and you will ascend.</li>
+                <li><strong>The Middle Astral:</strong> A place of learning, creation, and beauty. The scenery here is often breathtaking—colors you've never seen, landscapes that defy physics.</li>
+                <li><strong>The Higher Astral:</strong> Realms of pure light, angelic contact, and profound spiritual truth. Here, communication is telepathic and instantaneous.</li>
+            </ul>
+
+            <h2>Safety and Protection</h2>
+            <p>Is astral projection dangerous? Generally, no. You cannot be "possessed" simply by leaving your body, as the Silver Cord maintains your claim. Your physical body is also protected by its own natural shields.</p>
+            <p>However, you can encounter low-vibe entities. These are often "astral wildlife"—larvae or parasites that feed on fear. They are annoying but harmless, like mosquitoes. The best defense is your vibration. Like attracts like. If you project with fear, anger, or lust, you will attract entities of that frequency. If you project with love, curiosity, and courage, you are invisible to the lower entities.</p>
+            <p><strong>Protection Visualization:</strong> Before you start, visualize a sphere of brilliant white gold light surrounding your body. State the affirmation: "I am safe. I am protected. Only beings of 100% pure light may approach me."</p>
+
+            <h2>Benefits of Astral Projection</h2>
+            <ul>
+                <li><strong>Fear of Death:</strong> Once you experience existence outside your physical shell, the fear of death vanishes. You know, with certainty, that you are not your body. You are an immortal consciousness driving a biological vehicle.</li>
+                <li><strong>Spiritual Growth:</strong> You can visit the <a href="https://en.wikipedia.org/wiki/Akashic_records" target="_blank" rel="noopener noreferrer">Akashic Records</a> (the library of all soul memories), meet spirit guides, and understand the nature of reality firsthand.</li>
+                <li><strong>Healing:</strong> Many report performing energetic healing on themselves or others from the astral state, which then manifests in the physical.</li>
+                <li><strong>Adventure:</strong> You can fly through the cosmos, visit other planets, or explore historical events. The universe is your playground.</li>
+            </ul>
+
+            <p>Astral projection is a journey of ultimate freedom. It breaks the illusion of limitation and reveals the infinite nature of the soul. With patience and practice, the skies are not the limit—they are just the beginning.</p>
+        `
+    },
+    {
+        id: "23",
+        slug: "tarot-mastery",
+        title: "The Fool's Journey: Mastering the Ancient Art of Tarot",
+        excerpt: "Tarot is not just fortune-telling; it is a map of human consciousness. Follow the Fool's Journey from innocence to enlightenment.",
+        author: "Judith Avotri",
+        date: "January 23, 2026",
+        readTime: "35 min read",
+        category: "Divination",
+        tags: ["Tarot", "Divination", "Archetypes", "Intuition"],
+        image: "/blog/tarot-mastery.png",
+        content: `
+            <h2>A Mirror of the Soul</h2>
+            <p><a href="https://en.wikipedia.org/wiki/Tarot" target="_blank" rel="noopener noreferrer">Tarot</a> is one of the most misunderstood tools in the spiritual toolkit. Often dismissed as mere "fortune-telling," the Tarot is actually a profound system of <a href="https://en.wikipedia.org/wiki/Archetype" target="_blank" rel="noopener noreferrer">archetypes</a> that mirrors the human experience. It was Carl Jung who recognized that Tarot cards depict universal symbols that reside in the collective unconscious.</p>
+            <p>A standard deck consists of 78 cards: 22 Major Arcana (The Big Secrets) and 56 Minor Arcana (The Little Secrets). The Major Arcana tells the story of the soul's evolution, often called "The Fool's Journey." The Minor Arcana deals with the day-to-day events and people in our lives.</p>
+
+            <h2>The Fool's Journey (The Major Arcana)</h2>
+            <p>The Major Arcana begins with <strong>0. The Fool</strong>, representing the soul before incarnation—innocent, open, and ready to jump off the cliff into the unknown. It ends with <strong>21. The World</strong>, representing completion, wholeness, and enlightenment. Each card in between is a lesson the soul must master.</p>
+
+            <h3>Phase 1: The Conscious Mind (Cards 1-7)</h3>
+            <p>This phase represents the development of the ego and self-awareness.</p>
+            <ul>
+                <li><strong>1. The Magician:</strong> "As above, so below." The power of manifestation. Using tools and will to create.</li>
+                <li><strong>2. The High Priestess:</strong> Intuition, mystery, and the subconscious mind. The guardian of the veil.</li>
+                <li><strong>3. The Empress:</strong> The Mother archetype. Fertility, abundance, nature, and creativity.</li>
+                <li><strong>4. The Emperor:</strong> The Father archetype. Structure, authority, logic, and protection.</li>
+                <li><strong>5. The Hierophant:</strong> Tradition, spiritual belief systems, and conformity. The teacher.</li>
+                <li><strong>6. The Lovers:</strong> Choice, duality, and union. Integrating opposites (masculine/feminine).</li>
+                <li><strong>7. The Chariot:</strong> Willpower, determination, and victory. Controlling the opposing forces of the ego.</li>
+            </ul>
+
+            <h3>Phase 2: The Subconscious Mind (Cards 8-14)</h3>
+            <p>Here, the journey turns inward. The hero must face their own psyche.</p>
+            <ul>
+                <li><strong>8. Strength:</strong> Not physical force, but inner courage and compassion. Taming the beast within.</li>
+                <li><strong>9. The Hermit:</strong> Solitude, introspection, and seeking one's own light in the darkness.</li>
+                <li><strong>10. Wheel of Fortune:</strong> Karma, destiny, and the cyclical nature of life. Change is inevitable.</li>
+                <li><strong>11. Justice:</strong> Truth, fairness, and cause and effect. Taking responsibility for actions.</li>
+                <li><strong>12. The Hanged Man:</strong> Surrender, sacrifice, and seeing things from a new perspective. Pausing.</li>
+                <li><strong>13. Death:</strong> Transformation. The end of one phase and the beginning of another. Letting go.</li>
+                <li><strong>14. Temperance:</strong> Alchemy, balance, and patience. Blending opposites to create something new.</li>
+            </ul>
+
+            <h3>Phase 3: The Superconscious Mind (Cards 15-21)</h3>
+            <p>The final stage is the spiritual ascent and enlightenment.</p>
+            <ul>
+                <li><strong>15. The Devil:</strong> Shadow work. Addiction, materialism, and self-imposed chains. Facing the ego.</li>
+                <li><strong>16. The Tower:</strong> Sudden upheaval. The destruction of false structures so truth can be revealed.</li>
+                <li><strong>17. The Star:</strong> Hope, healing, and renewal after the storm. Connection to the divine.</li>
+                <li><strong>18. The Moon:</strong> Illusion, fear, and the subconscious. Navigating the dark night of the soul.</li>
+                <li><strong>19. The Sun:</strong> Clarity, joy, vitality, and success. The light of truth shines.</li>
+                <li><strong>20. Judgement:</strong> Rebirth, calling, and absolution. Rising up to a higher level of consciousness.</li>
+                <li><strong>21. The World:</strong> Completion, integration, and travel. The end of the cycle and the start of a new one.</li>
+            </ul>
+
+            <h2>The Minor Arcana</h2>
+            <p>The Minor Arcana is divided into four suits, each corresponding to an element and a sphere of life.</p>
+
+            <h3>The Suit of Wands (Fire)</h3>
+            <p><strong>Keywords:</strong> Passion, Inspiration, Action, Creativity, Spirit.</p>
+            <p>Wands are associated with the astrological signs Aries, Leo, and Sagittarius. They deal with ambition, career, and personal projects. They are fast-moving and energetic.</p>
+
+            <h3>The Suit of Cups (Water)</h3>
+            <p><strong>Keywords:</strong> Emotion, Relationships, Intuition, Love, Dreams.</p>
+            <p>Cups are associated with Cancer, Scorpio, and Pisces. They deal with the heart. From the new love of the Ace to the happiness of the 10, they map our emotional landscape.</p>
+
+            <h3>The Suit of Swords (Air)</h3>
+            <p><strong>Keywords:</strong> Intellect, Conflict, Truth, Decisions, Sorrow.</p>
+            <p>Swords are associated with Gemini, Libra, and Aquarius. They represent the mind—which can be a tool for truth (Ace) or a weapon of self-destruction (9 and 10). They often indicate challenges.</p>
+
+            <h3>The Suit of Pentacles (Earth)</h3>
+            <p><strong>Keywords:</strong> Money, Body, Home, Work, Material Resources.</p>
+            <p>Pentacles are associated with Taurus, Virgo, and Capricorn. They deal with the tangible world. Health, wealth, and property fall under this suit.</p>
+
+            <h2>The Court Cards</h2>
+            <p>The Page, Knight, Queen, and King represent people in our lives or levels of maturity.</p>
+            <ul>
+                <li><strong>Pages:</strong> Children or messages. New beginnings. Learning.</li>
+                <li><strong>Knights:</strong> Teenagers or action. Movement, extremes, questing.</li>
+                <li><strong>Queens:</strong> Internal mastery. Nurturing, understanding, holding space.</li>
+                <li><strong>Kings:</strong> External mastery. Authority, control, leadership.</li>
+            </ul>
+
+            <h2>How to Read the Cards</h2>
+            <p>You do not need to be "psychic" to read Tarot. You need to be intuitive. The cards act as a visual prompt, unlocking what you already know deep down.</p>
+
+            <h3>1. Cleansing Your Deck</h3>
+            <p>Tarot decks absorb energy. When you get a new deck, or after a heavy reading, cleanse it. You can pass the cards through sage smoke, knock on the deck three times to "wake it up," or leave it under the moonlight.</p>
+
+            <h3>2. The Celtic Cross Spread</h3>
+            <p>This is the most famous spread for deep insight.</p>
+            <ol>
+                <li><strong>The Present:</strong> The heart of the matter.</li>
+                <li><strong>The Challenge:</strong> What is crossing you or blocking you.</li>
+                <li><strong>The Past:</strong> Root cause of the situation.</li>
+                <li><strong>The Future:</strong> Immediate outcome.</li>
+                <li><strong>Above (Conscious):</strong> What you are thinking about.</li>
+                <li><strong>Below (Subconscious):</strong> Underlying feelings or drives.</li>
+                <li><strong>Advice:</strong> Recommended action.</li>
+                <li><strong>Environment:</strong> External influences.</li>
+                <li><strong>Hopes/Fears:</strong> Your psychological state.</li>
+                <li><strong>Outcome:</strong> The final result if nothing changes.</li>
+            </ol>
+
+            <h3>3. Ethics of Tarot</h3>
+            <p><strong>Free Will vs. Fate:</strong> Tarot shows the <em>likely</em> outcome based on current energy. It is not set in stone. If you see a negative card, you have the power to change your path. That is the point of the reading.</p>
+            <p><strong>Third Party Readings:</strong> It is generally considered unethical to read for someone who is not present (e.g., "Does my ex miss me?"). Focus the reading on yourself ("How can I heal from this breakup?").</p>
+
+            <p>Tarot is best used not to predict the future, but to create it. It empowers you by showing the current trajectory of your energy. It is a mirror that reveals the face you show the world and the face you hide from yourself.</p>
+        `
+    },
+    {
+        id: "24",
+        slug: "feng-shui",
+        title: "Feng Shui: Harmonizing Your Home for Abundance and Peace",
+        excerpt: "Your home is a reflection of your inner state. Learn the ancient art of Feng Shui to arrange your space for maximum flow, prosperity, and harmony.",
+        author: "Judith Avotri",
+        date: "January 24, 2026",
+        readTime: "20 min read",
+        category: "Lifestyle",
+        tags: ["Feng Shui", "Energy", "Home", "Balance"],
+        image: "/blog/feng-shui.png",
+        content: `
+            <h2>The Energy of Space</h2>
+            <p><a href="https://en.wikipedia.org/wiki/Feng_shui" target="_blank" rel="noopener noreferrer">Feng Shui</a> (pronounced "fung shway") literally means "Wind and Water." It is the ancient Chinese art of placement. The premise is simple: our environment has an energy field (Chi), and the way we arrange our objects affects how that energy flows. When Chi flows freely, life flows freely. When Chi is blocked, we experience stagnation, illness, and bad luck.</p>
+            <p>Your home is not just a place to sleep; it is a living extension of your energy field. As Winston Churchill said, "We shape our buildings; thereafter they shape us." By shifting your environment, you shift your consciousness.</p>
+
+            <h2>Yin and Yang</h2>
+            <p>The foundation of Feng Shui is the balance of Yin (passive, soft, dark) and Yang (active, hard, light).</p>
+            <ul>
+                <li><strong>Yin Rooms:</strong> Bedrooms and bathrooms should be more Yin to promote rest. Soft lighting, cozy textures, and muted colors.</li>
+                <li><strong>Yang Rooms:</strong> Kitchens and home offices should be more Yang to promote activity. Bright lights, vibrant colors, and active noise.</li>
+            </ul>
+
+            <h2>The Commanding Position</h2>
+            <p>One of the most important principles in Feng Shui is the <a href="https://www.thespruce.com/commanding-position-in-feng-shui-1274415" target="_blank" rel="noopener noreferrer">Commanding Position</a>. This applies mainly to your bed, your desk, and your stove.</p>
+            <p>You should be positioned so that you can see the door without being directly in line with it. This places you in command of your life, allowing you to see opportunities (and threats) coming without being in the direct line of the rushing energy.</p>
+            <ul>
+                <li><strong>Bed:</strong> If your bed is on the same wall as the door, you may feel anxious or vulnerable. If your feet point directly out the door (the "coffin position"), your energy leaks out.</li>
+                <li><strong>Desk:</strong> Never sit with your back to the door. You are symbolically turning your back on success. If you must, place a mirror on your desk to see the door behind you.</li>
+            </ul>
+
+            <h2>The Bagua Map</h2>
+            <p>The <a href="https://en.wikipedia.org/wiki/Bagua" target="_blank" rel="noopener noreferrer">Bagua Map</a> is an energy blueprint that you overlay on your floor plan (aligning the bottom edge with your front door). It divides your home into nine areas.</p>
+            <ol>
+                <li><strong>Wealth & Prosperity (Southeast / Back Left):</strong> Enhance with wood, water, and the color purple or gold. Place money plants (Jade), fountains, or a bowl of coins here. Fix any leaks immediately (leaking water = leaking money).</li>
+                <li><strong>Fame & Reputation (South / Back Center):</strong> Enhance with fire and the color red. Diplomas, awards, and bright lights belong here.</li>
+                <li><strong>Love & Relationships (Southwest / Back Right):</strong> Enhance with earth and the color pink. Place pairs of objects (two candles, two hearts, two rose quartz crystals) here. Remove single imagery.</li>
+                <li><strong>Family & New Beginnings (East / Middle Left):</strong> Enhance with wood and green. Family photos and healthy plants go here.</li>
+                <li><strong>Health (Center):</strong> The heart of the home. Keep it open and clutter-free. Earth element (yellows, ceramics).</li>
+                <li><strong>Children & Creativity (West / Middle Right):</strong> Enhance with metal and white. Art supplies, musical instruments, and toys belong here.</li>
+                <li><strong>Knowledge & Self-Cultivation (Northeast / Front Left):</strong> Enhance with earth and blue. Books and meditation spaces fit here.</li>
+                <li><strong>Career (North / Front Center):</strong> Enhance with water and black. Mirrors and fountains are powerful here. It relates to your life path.</li>
+                <li><strong>Helpful People & Travel (Northwest / Front Right):</strong> Enhance with metal and grey. Maps, globes, and contact lists go here.</li>
+            </ol>
+
+            <h2>The Five Elements</h2>
+            <p>Balance is achieved through the interplay of the <a href="https://en.wikipedia.org/wiki/Wuxing_(Chinese_philosophy)" target="_blank" rel="noopener noreferrer">Five Elements</a>. Each element feeds the next (Productive Cycle) or destroys the next (Destructive Cycle).</p>
+            <ul>
+                <li><strong>Wood:</strong> Growth, vitality. (Plants, green, columnar shapes). <em>Too much:</em> Aggression. <em>Too little:</em> Stagnation.</li>
+                <li><strong>Fire:</strong> Passion, visibility. (Lighting, candles, red, triangles). <em>Too much:</em> Burnout/Anger. <em>Too little:</em> Coldness.</li>
+                <li><strong>Earth:</strong> Stability, grounding. (Ceramics, stones, beige/yellow, squares). <em>Too much:</em> Boredom. <em>Too little:</em> Anxiety.</li>
+                <li><strong>Metal:</strong> Clarity, precision. (Metal objects, white/grey, circles). <em>Too much:</em> Rigidity. <em>Too little:</em> Confusion.</li>
+                <li><strong>Water:</strong> Flow, emotion. (Mirrors, glass, black/blue, wavy lines). <em>Too much:</em> Overwhelmed. <em>Too little:</em> Stress/Loneliness.</li>
+            </ul>
+
+            <h2>Room by Room</h2>
+            <h3>The Entryway (The Mouth of Chi)</h3>
+            <p>This is where energy enters. It must be bright, clean, and inviting. A squeaky door or a blocked hallway repels opportunity.</p>
+
+            <h3>The Kitchen (Health and Wealth)</h3>
+            <p>The stove represents wealth. Keep it clean. Use all burners (don't just use one out of habit) to maximize wealth potential. Hide knives (sharp energy).</p>
+
+            <h3>The Bathroom (Draining Energy)</h3>
+            <p>Water drains away here. Keep the toilet lid down when not in use to prevent Chi from flushing away. Add Earth elements (stones, beige towels) to dam the water energy.</p>
+
+            <h2>Common Feng Shui Cures</h2>
+            <h3>1. Clear Clutter</h3>
+            <p>Clutter is stuck energy. It anchors you to the past and blocks new opportunities. Clearing clutter is the single most powerful Feng Shui adjustment you can make. If you do nothing else, do this.</p>
+
+            <h3>2. Fix Broken Things</h3>
+            <p>Broken items represent broken energy. A leaking tap drains your wealth. A stuck door blocks your career. Fix them or throw them out.</p>
+
+            <h3>3. Light and Air</h3>
+            <p>Chi is carried on the wind and light. Open windows daily to let stale energy out. Ensure your home is well-lit. Dark corners harbor stagnant Chi (Yin energy). Use crystals to disperse light in dark corners.</p>
+
+            <h3>4. Mirrors</h3>
+            <p>Mirrors expand space and reflect light. Place them to reflect beautiful views. <strong>Caution:</strong> Never place a mirror directly facing the front door (it pushes energy back out) or facing the bed (it can cause insomnia and third-party interference in relationships).</p>
+
+            <p>Feng Shui is not about superstition; it is about <a href="https://en.wikipedia.org/wiki/Environmental_psychology" target="_blank" rel="noopener noreferrer">mindfulness</a>. It asks us to pay attention to our surroundings and to honor the reciprocal relationship between our inner and outer worlds. Heal your home, and you heal your life.</p>
+        `
+    },
+    {
+        id: "25",
+        slug: "human-design",
+        title: "Human Design: Unlocking Your Energetic Blueprint",
+        excerpt: "A synthesis of ancient wisdom and modern science, Human Design reveals your unique decision-making strategy. Are you a Generator, Projector, or Reflector?",
+        author: "Judith Avotri",
+        date: "January 25, 2026",
+        readTime: "22 min read",
+        category: "Self-Discovery",
+        tags: ["Human Design", "Astrology", "Chakras", "I Ching"],
+        image: "/blog/human-design.png",
+        content: `
+            <h2>The Science of Differentiation</h2>
+            <p><a href="https://en.wikipedia.org/wiki/Human_Design" target="_blank" rel="noopener noreferrer">Human Design</a> is often called the "Science of Differentiation." It is a synthesis of Astrology, the I Ching, the Kabbalah, and the Hindu Chakra system, combined with modern quantum physics. It was channeled by <a href="https://jovianarchive.com/Human_Design/Ra_Uru_Hu" target="_blank" rel="noopener noreferrer">Ra Uru Hu</a> (formerly Robert Alan Krakower) in Ibiza in 1987 during a mystical experience with "The Voice."</p>
+            <p>Unlike personality tests which rely on psychology (the mind), Human Design is mechanical (the body). It is based on your birth time and reveals your specific energetic configuration, known as your BodyGraph. It answers two fundamental questions: "Who am I?" and "How should I make decisions?" It reveals your nature (what is fixed) and your nurture (where you are open to conditioning).</p>
+
+            <h2>The BodyGraph</h2>
+            <p>Your chart consists of nine Centers (geometric shapes), connected by Channels, which originate from Gates. </p>
+            <ul>
+                <li><strong>Defined Centers (Colored in):</strong> This is the energy you broadcast. It is consistent and reliable. This is who you are.</li>
+                <li><strong>Undefined/Open Centers (White):</strong> This is where you receive energy from others and amplify it. This is where you are sensitive and prone to conditioning. (e.g., An Open Emotional Center takes in other people's emotions and feels them twice as strong).</li>
+            </ul>
+
+            <h2>The Five Energy Types</h2>
+            <p>Every person falls into one of five energy types. Knowing your type is the first step to living in alignment.</p>
+
+            <h3>1. Manifestors (Approx 9% of population)</h3>
+            <p>The innovators and initiators. They are the only type designed to initiate action without waiting. They have a closed and repelling aura that allows them to push through resistance and make things happen.</p>
+            <p><strong>Strategy: To Inform.</strong> Because their aura is dense, people can feel threatened or controlled by them. Before acting, they must inform those who will be affected ("I am going to the store") to reduce resistance and find peace.</p>
+            <p><strong>Signature:</strong> Peace.</p>
+            <p><strong>Not-Self Theme:</strong> Anger (when people interrupt or try to control them).</p>
+
+            <h3>2. Generators (Approx 37% of population)</h3>
+            <p>The builders. They have a defined Sacral center that provides sustainable life-force energy. They are here to work, build, and create, but only on what lights them up.</p>
+            <p><strong>Strategy: To Respond.</strong> They cannot initiate. If they try to chase things, they fail. They must wait for life to come to them (a sign, a question, an opportunity) and then respond with their gut sounds (uh-huh for yes, un-uh for no). Their aura is open and enveloping.</p>
+            <p><strong>Signature:</strong> Satisfaction.</p>
+            <p><strong>Not-Self Theme:</strong> Frustration (when they initiate or do work they hate).</p>
+
+            <h3>3. Manifesting Generators (Approx 33% of population)</h3>
+            <p>A hybrid of the Manifestor and Generator. They are the multi-taskers who can move fast. They are here to find the shortcut. They can skip steps, but often have to go back and fix things.</p>
+            <p><strong>Strategy: To Respond, then Inform.</strong> Like Generators, they must wait for something to respond to. Once they have a "yes," they must inform before taking action (like a Manifestor).</p>
+            <p><strong>Signature:</strong> Satisfaction.</p>
+            <p><strong>Not-Self Theme:</strong> Frustration and Anger.</p>
+
+            <h3>4. Projectors (Approx 20% of population)</h3>
+            <p>The guides and managers. They do not have sustainable energy for work in the traditional sense (undefined Sacral). They are not here to "do"; they are here to "see." They have a focused and penetrating aura that absorbs the identity of the other.</p>
+            <p><strong>Strategy: Wait for the Invitation.</strong> Because their aura is invasive, they are often rejected if they offer advice without being asked. They must wait to be recognized and invited (into a job, relationship, or conversation) for their wisdom to be valued.</p>
+            <p><strong>Signature:</strong> Success.</p>
+            <p><strong>Not-Self Theme:</strong> Bitterness (when they give unasked-for advice and are ignored).</p>
+
+            <h3>5. Reflectors (Approx 1% of population)</h3>
+            <p>The mirrors. They have <em>no</em> defined centers. They are completely open. They take in the energy of their environment and magnify it. They are the barometers of the health of a community. If a Reflector is sick, the community is sick.</p>
+            <p><strong>Strategy: Wait a Lunar Cycle (28 days).</strong> Because they have no inner authority, their chemistry changes with the moon transits. They need a full month to sample the energy of a decision before having clarity. They must be in the right environment to thrive.</p>
+            <p><strong>Signature:</strong> Surprise.</p>
+            <p><strong>Not-Self Theme:</strong> Disappointment.</p>
+
+            <h2>Authority: How to Decide</h2>
+            <p>The mind is never the authority. It is a tool for processing data, not for making decisions. Human Design teaches us to trust the body's intelligence.</p>
+            <ul>
+                <li><strong>Emotional Authority:</strong> (50% of people) You must wait through your emotional wave (highs and lows). "There is no truth in the now." Sleep on it. Clarity comes over time.</li>
+                <li><strong>Sacral Authority:</strong> Trust your gut response in the moment. It is binary: yes or no. It does not explain "why."</li>
+                <li><strong>Splenic Authority:</strong> Trust your instant intuition/instinct (the quiet voice that speaks once and never repeats). It is a survival instinct.</li>
+                <li><strong>Ego Authority:</strong> Do I have the willpower for this? What's in it for me? (Rare).</li>
+                <li><strong>Self-Projected Authority:</strong> Talk it out. You need to hear your own voice to know your truth.</li>
+                <li><strong>Mental/Environmental Authority:</strong> You must bounce your thoughts off others to hear the truth in your own voice, but the decision comes from observing your environment.</li>
+                <li><strong>Lunar Authority:</strong> (Reflectors only) Wait 28 days.</li>
+            </ul>
+
+            <h2>Deconditioning</h2>
+            <p>We are all born unique, but we are conditioned to be the same. Society tells us "Just do it" (Manifestor strategy), which works for only 9% of people. It tells us to "Work hard" (Generator strategy), which burns out Projectors.</p>
+            <p>Living your design is a process of <a href="https://humandesignamerica.com/living-your-design" target="_blank" rel="noopener noreferrer">deconditioning</a>—letting go of who you think you should be to reveal who you actually are. It takes 7 years to cellularly renew the body. It is an experiment. Try following your Strategy and Authority for a week. Stop initiating. Stop over-thinking. Listen to your body. Watch how resistance drops away and flow begins.</p>
+        `
     }
 ];
 

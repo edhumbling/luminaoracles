@@ -174,7 +174,7 @@ export default function BlogGrid({ posts }: BlogGridProps) {
                         </div>
                         <h3 className="text-xl text-white font-light mb-2">No wisdom found</h3>
                         <p className="text-white/50 text-sm max-w-xs mx-auto mb-6">
-                            We couldn't find any articles matching "{searchQuery}". Try a different term or category.
+                            We couldn&apos;t find any articles matching &quot;{searchQuery}&quot;. Try a different term or category.
                         </p>
                         <button
                             onClick={() => { setSearchQuery(""); setSelectedCategory(null) }}
