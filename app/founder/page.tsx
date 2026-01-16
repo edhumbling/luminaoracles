@@ -1,5 +1,23 @@
 
-"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Judith Avotri - Founder | Lumina Oracles",
+  description: "Meet Judith Avotri, the spiritual teacher and mystic behind Lumina Oracles. Discover her journey of spiritual awakening and dedication to divine guidance.",
+  openGraph: {
+    title: "Judith Avotri - Founder | Lumina Oracles",
+    description: "Meet Judith Avotri, the spiritual teacher and mystic behind Lumina Oracles. Discover her journey of spiritual awakening and dedication to divine guidance.",
+    type: "profile",
+    images: [
+      {
+        url: "/founder-placeholder.jpg", // Placeholder or default
+        width: 1200,
+        height: 630,
+        alt: "Judith Avotri - Founder of Lumina Oracles",
+      },
+    ],
+  },
+};
 
 export default function FounderPage() {
   return (

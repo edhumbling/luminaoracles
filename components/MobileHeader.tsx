@@ -30,15 +30,15 @@ export default function MobileHeader() {
                         aria-expanded={isMenuOpen}
                     >
                         <span
-                            className={`block w-6 h-0.5 bg-lumina-gold shadow-[0_0_10px_rgba(250,204,21,0.5)] transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2" : ""
+                            className={`block w-6 h-0.5 bg-lumina-gold shadow-[0_0_10px_rgba(250,204,21,0.5)] transition-transform duration-150 ease-out ${isMenuOpen ? "rotate-45 translate-y-2" : ""
                                 }`}
                         />
                         <span
-                            className={`block w-6 h-0.5 bg-lumina-gold shadow-[0_0_10px_rgba(250,204,21,0.5)] transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""
+                            className={`block w-6 h-0.5 bg-lumina-gold shadow-[0_0_10px_rgba(250,204,21,0.5)] transition-opacity duration-100 ease-out ${isMenuOpen ? "opacity-0" : ""
                                 }`}
                         />
                         <span
-                            className={`block w-6 h-0.5 bg-lumina-gold shadow-[0_0_10px_rgba(250,204,21,0.5)] transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                            className={`block w-6 h-0.5 bg-lumina-gold shadow-[0_0_10px_rgba(250,204,21,0.5)] transition-transform duration-150 ease-out ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""
                                 }`}
                         />
                     </button>
@@ -55,17 +55,18 @@ export default function MobileHeader() {
                 </div>
             </header>
 
-            {/* Backdrop Overlay */}
+            {/* Backdrop Overlay - Fast fade */}
             <div
-                className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+                className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden transition-opacity duration-150 ease-out ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
                     }`}
                 onClick={closeMenu}
             />
 
-            {/* Slide-out Navigation Menu */}
+            {/* Slide-out Navigation Menu - Fast slide */}
             <nav
-                className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-[#FFFBEB] to-white z-50 md:hidden transform transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) shadow-2xl ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-[#FFFBEB] to-white z-50 md:hidden shadow-2xl transition-transform duration-200 ease-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
+                style={{ willChange: 'transform' }}
             >
                 {/* Spiritual Light overlay */}
                 <div className="absolute inset-0 bg-[url('/asset_sacred_geometry_1767893429698.png')] opacity-5 pointer-events-none mix-blend-multiply bg-cover bg-center" />
@@ -77,7 +78,7 @@ export default function MobileHeader() {
                     </span>
                     <button
                         onClick={closeMenu}
-                        className="w-8 h-8 flex items-center justify-center text-black/40 hover:text-lumina-gold transition-colors"
+                        className="w-8 h-8 flex items-center justify-center text-black/40 hover:text-lumina-gold transition-colors duration-100"
                         aria-label="Close menu"
                     >
                         <svg
@@ -104,12 +105,12 @@ export default function MobileHeader() {
                                 <Link
                                     href={link.href}
                                     onClick={closeMenu}
-                                    className="group flex items-center justify-between py-3 px-4 rounded-lg border border-lumina-gold/20 bg-white/60 hover:bg-gradient-to-r hover:from-[#FFFBEB] hover:to-white hover:border-lumina-gold hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] transition-all duration-300"
+                                    className="group flex items-center justify-between py-3 px-4 rounded-lg border border-lumina-gold/20 bg-white/60 hover:bg-gradient-to-r hover:from-[#FFFBEB] hover:to-white hover:border-lumina-gold hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] transition-all duration-150"
                                 >
-                                    <span className="text-black/80 font-medium uppercase tracking-widest text-sm group-hover:text-black transition-colors">
+                                    <span className="text-black/80 font-medium uppercase tracking-widest text-sm group-hover:text-black transition-colors duration-100">
                                         {link.label}
                                     </span>
-                                    <span className="text-lumina-gold opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
+                                    <span className="text-lumina-gold opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-150">
                                         ✨
                                     </span>
                                 </Link>
