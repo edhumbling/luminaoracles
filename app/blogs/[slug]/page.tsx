@@ -72,7 +72,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-20" />
 
                 {/* Back Link - Positioned below header */}
-                <div className="absolute top-24 md:top-32 left-6 md:left-8 z-30">
+                <div className="absolute top-24 md:top-32 left-6 md:left-auto md:right-12 z-40">
                     <BlogBackButton />
                 </div>
 

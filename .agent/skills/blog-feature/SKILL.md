@@ -99,7 +99,10 @@ Results are sorted by this score descending.
 Standard `Link` components reset scroll position. We use a custom component with `useRouter().back()` to ensure that when a user returns from an article to the main list, they are taken to their exact previous scroll position.
 
 ### Header Repositioning
-The Back button on the article page is carefully positioned (`top-24 md:top-32`) to avoid overlapping the article title while staying clear of the main site navigation.
+The Back button on the article page is carefully positioned:
+- **Mobile**: Stays on the left (`left-6`) for standard UX.
+- **Desktop**: Moves to the **far right** (`md:right-12`) to balance the layout and avoid title overlap.
+- **Z-Index**: Set to `z-40` to ensure it floats above hero elements.
 
 ## 6. Social Sharing (`components/ArticleShare.tsx`)
 A dedicated component handles sharing to:
