@@ -263,12 +263,7 @@ body {
 }
 
 /* Article Content Styling */
-.prose u {
-  color: #FACC15;
-  text-decoration: underline;
-  text-decoration-color: #FACC15;
-  text-underline-offset: 3px;
-}
+
 
 .prose a {
   color: #FACC15;
@@ -305,7 +300,8 @@ body {
   line-height: 1.9;
 }
 
-.prose ul, .prose ol {
+.prose ul,
+.prose ol {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
