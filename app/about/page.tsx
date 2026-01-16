@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "/founder-placeholder.jpg", // Placeholder or default
+        url: "/founder-placeholder.jpg",
         width: 1200,
         height: 630,
         alt: "Judith Avotri - Founder of Lumina Oracles",
@@ -23,8 +23,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen relative overflow-hidden bg-background text-foreground pt-24 md:pt-32 pb-20 px-6 md:px-12 lg:px-24">
-      {/* Creamy Glowy Top Effect */}
-      {/* Hero Background Image - Spiritual Lines */}
+      {/* Hero Background Image */}
       <div className="absolute top-0 left-0 w-full h-[700px] pointer-events-none z-0 overflow-hidden">
         <Image
           src="/founder-hero-new.png"
@@ -33,20 +32,18 @@ export default function AboutPage() {
           className="object-cover opacity-80 mix-blend-normal animate-pulse-slow"
           priority
         />
-        {/* Gradient Overlay for blending */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-background" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-lumina-gold/5 via-transparent to-transparent" />
       </div>
 
+      {/* Bio Section - Narrow Container */}
       <div className="relative z-10 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-calligraffitti)] text-center text-lumina-gold mb-12 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] animate-breath">
           The Founder
         </h1>
 
         <div className="prose prose-lg dark:prose-invert md:prose-xl max-w-none font-light leading-relaxed">
-          {/* Image Placeholder - Immersed in text */}
           <div className="float-right ml-8 mb-8 relative w-80 h-[400px] md:w-96 md:h-[500px] lg:w-[420px] lg:h-[560px] rounded-2xl overflow-hidden border border-lumina-gold/30 shadow-[0_0_30px_rgba(250,204,21,0.15)] group bg-background/50 backdrop-blur-sm">
-            {/* Placeholder Content */}
             <div className="absolute inset-0 bg-gradient-to-br from-lumina-gold/10 to-lumina-lavender/10 flex flex-col items-center justify-center p-6 text-center">
               <div className="w-20 h-20 rounded-full border border-lumina-gold/30 flex items-center justify-center mb-4">
                 <span className="text-4xl">✨</span>
@@ -58,8 +55,6 @@ export default function AboutPage() {
                 Image Placeholder
               </p>
             </div>
-
-            {/* Shine Effect */}
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           </div>
 
@@ -75,9 +70,11 @@ export default function AboutPage() {
             Through her guidance, many have found pathways to greater spiritual fulfillment and self-discovery. She embodies the sacred bridge between ancient wisdom and modern understanding, holding a lantern for those seeking to traverse the mists of the unknown.
           </p>
         </div>
+      </div>
 
-        {/* Mission & Vision Section - Knife Edge Gold Glassmorphism */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Mission & Vision Section - WIDE Container for horizontal cards */}
+      <div className="relative z-10 max-w-7xl mx-auto mt-24 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Mission */}
           <div className="group relative">
             <div
@@ -85,39 +82,38 @@ export default function AboutPage() {
               style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%)' }}
             />
             <div
-              className="relative h-full p-8 bg-black/40 backdrop-blur-xl border border-lumina-gold/30 hover:border-lumina-gold/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(250,204,21,0.2)]"
+              className="relative h-full p-8 lg:p-10 bg-black/40 backdrop-blur-xl border border-lumina-gold/30 hover:border-lumina-gold/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(250,204,21,0.2)]"
               style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%)' }}
             >
-              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-lumina-gold/20 to-transparent pointer-events-none" />
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-lumina-gold/20 to-transparent pointer-events-none" />
 
-              <h3 className="text-2xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4 drop-shadow-sm">
+              <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-6 drop-shadow-sm">
                 The Sacred Design
               </h3>
-              <p className="text-sm font-light leading-relaxed text-white/90">
+              <p className="text-sm lg:text-base font-light leading-relaxed text-white/90">
                 To reawaken the dormant divinity encoded within the human spirit. Our mission is to provide the architectural blueprints for the soul's ascension, guiding seekers through the labyrinth of existence with the unwavering lamp of ancient truth.
               </p>
 
-              {/* Decorative bottom corner accent */}
               <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-lumina-gold/50 opacity-50 group-hover:opacity-100 transition-opacity" />
             </div>
           </div>
 
-          {/* Vision for the Collective (Global) */}
-          <div className="group relative"> {/* Staggered removed */}
+          {/* Vision for the Collective */}
+          <div className="group relative">
             <div
               className="absolute inset-0 bg-lumina-gold/20 blur-[20px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
               style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%)' }}
             />
             <div
-              className="relative h-full p-8 bg-black/40 backdrop-blur-xl border border-lumina-gold/30 hover:border-lumina-gold/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(250,204,21,0.2)]"
+              className="relative h-full p-8 lg:p-10 bg-black/40 backdrop-blur-xl border border-lumina-gold/30 hover:border-lumina-gold/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(250,204,21,0.2)]"
               style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%)' }}
             >
-              <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-lumina-gold/20 to-transparent pointer-events-none" />
+              <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-lumina-gold/20 to-transparent pointer-events-none" />
 
-              <h3 className="text-2xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4 drop-shadow-sm">
+              <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-6 drop-shadow-sm">
                 Vision for the Collective
               </h3>
-              <p className="text-sm font-light leading-relaxed text-white/90">
+              <p className="text-sm lg:text-base font-light leading-relaxed text-white/90">
                 We envision a world that stands as a fortress of spiritual sovereignty. A global reality where the rhythmic heartbeat of ancient wisdom harmonizes with the pulse of the future, creating a sanctuary where every soul across the earth walks in the fullness of their power and purpose.
               </p>
             </div>
@@ -130,21 +126,24 @@ export default function AboutPage() {
               style={{ clipPath: 'polygon(0 0, 90% 0, 100% 15%, 100% 100%, 0 100%)' }}
             />
             <div
-              className="relative h-full p-8 bg-black/40 backdrop-blur-xl border border-lumina-gold/30 hover:border-lumina-gold/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(250,204,21,0.2)]"
+              className="relative h-full p-8 lg:p-10 bg-black/40 backdrop-blur-xl border border-lumina-gold/30 hover:border-lumina-gold/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(250,204,21,0.2)]"
               style={{ clipPath: 'polygon(0 0, 90% 0, 100% 15%, 100% 100%, 0 100%)' }}
             >
-              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-lumina-gold/20 to-transparent pointer-events-none" />
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-lumina-gold/20 to-transparent pointer-events-none" />
 
-              <h3 className="text-2xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4 drop-shadow-sm">
+              <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-6 drop-shadow-sm">
                 The Ripple Effect
               </h3>
-              <p className="text-sm font-light leading-relaxed text-white/90">
+              <p className="text-sm lg:text-base font-light leading-relaxed text-white/90">
                 We do not merely heal individuals; we weave a tapestry of awakened consciousness. Our impact is measured not in numbers, but in the silent revolutions of the heart—lives transformed, families restored, and a collective destiny elevated to the realm of the divine.
               </p>
             </div>
           </div>
         </div>
+      </div>
 
+      {/* Footer Section - Narrow Container */}
+      <div className="relative z-10 max-w-4xl mx-auto">
         {/* Decorative Divider */}
         <div className="flex items-center justify-center gap-4 mt-16 opacity-30">
           <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-lumina-gold to-transparent" />
@@ -198,7 +197,6 @@ export default function AboutPage() {
             </a>
           </div>
 
-          {/* Email text display */}
           <p className="mt-6 text-sm text-foreground/50 font-mono tracking-wide">
             goddessgreat16@gmail.com
           </p>
