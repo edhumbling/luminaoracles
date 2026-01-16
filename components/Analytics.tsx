@@ -6,8 +6,8 @@ import { useEffect } from "react";
 // Google Analytics Measurement ID
 const GA_MEASUREMENT_ID = "G-P9RTMNQPGE";
 
-// Microsoft Clarity Project ID (add your ID here when ready)
-const CLARITY_PROJECT_ID = "";
+// Microsoft Clarity Project ID
+const CLARITY_PROJECT_ID = "v2k3ymtj3v";
 
 export default function Analytics() {
     useEffect(() => {
