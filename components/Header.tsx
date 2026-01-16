@@ -15,7 +15,7 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
     { href: "/blogs", label: "Blogs" },
-    { href: "/founder", label: "Founder" },
+    { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];
 

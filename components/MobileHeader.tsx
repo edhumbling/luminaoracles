@@ -26,7 +26,7 @@ export default function MobileHeader() {
         { href: "/", label: "Home" },
         { href: "/services", label: "Services" },
         { href: "/blogs", label: "Blogs" },
-        { href: "/founder", label: "Founder" },
+        { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
     ];
 
@@ -57,9 +57,11 @@ export default function MobileHeader() {
                     </button>
 
                     {/* Brand Name - Center */}
-                    <span className="font-[family-name:var(--font-calligraffitti)] text-3xl text-lumina-gold drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">
-                        Lumora
-                    </span>
+                    <Link href="/" onClick={closeMenu}>
+                        <span className="font-[family-name:var(--font-calligraffitti)] text-3xl text-lumina-gold drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">
+                            Lumora
+                        </span>
+                    </Link>
 
                     {/* Logo - Right Side */}
                     <Link href="/" className="relative w-10 h-10" onClick={closeMenu}>

@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Judith Avotri - Founder | Lumina Oracles",
+  title: "About Judith Avotri | Lumina Oracles",
   description: "Meet Judith Avotri, the spiritual teacher and mystic behind Lumina Oracles. Discover her journey of spiritual awakening and dedication to divine guidance.",
   openGraph: {
-    title: "Judith Avotri - Founder | Lumina Oracles",
+    title: "About Judith Avotri | Lumina Oracles",
     description: "Meet Judith Avotri, the spiritual teacher and mystic behind Lumina Oracles. Discover her journey of spiritual awakening and dedication to divine guidance.",
     type: "profile",
     images: [
@@ -20,22 +20,22 @@ export const metadata: Metadata = {
   },
 };
 
-export default function FounderPage() {
+export default function AboutPage() {
   return (
     <main className="min-h-screen relative overflow-hidden bg-background text-foreground pt-24 md:pt-32 pb-20 px-6 md:px-12 lg:px-24">
       {/* Creamy Glowy Top Effect */}
       {/* Hero Background Image - Spiritual Lines */}
       <div className="absolute top-0 left-0 w-full h-[700px] pointer-events-none z-0 overflow-hidden">
         <Image
-          src="/hero-spiritual.png"
+          src="/founder-hero-new.png"
           alt="Sacred Geometry Spiritual Lines"
           fill
-          className="object-cover opacity-60 mix-blend-screen animate-pulse-slow"
+          className="object-cover opacity-80 mix-blend-normal animate-pulse-slow"
           priority
         />
         {/* Gradient Overlay for blending */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-background/50 to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-lumina-gold/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-lumina-gold/5 via-transparent to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
