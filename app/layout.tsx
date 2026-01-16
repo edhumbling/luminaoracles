@@ -6,8 +6,8 @@ import SanctuaryBackground from "@/components/SanctuaryBackground";
 import Footer from "@/components/Footer";
 import MarqueeFooter from "@/components/MarqueeFooter";
 import BackgroundAudio from "@/components/BackgroundAudio";
-import { GradientBlur } from "@/components/gradient-blur";
 import MobileHeader from "@/components/MobileHeader";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,7 +53,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${calligraffitti.variable} antialiased`}
       >
         <SanctuaryBackground />
-        <GradientBlur />
+        <Header />
         <MobileHeader />
         <BackgroundAudio />
         {children}

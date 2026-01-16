@@ -12,7 +12,8 @@ export default function MobileHeader() {
 
     const navLinks = [
         { href: "/", label: "Home" },
-        { href: "/#services", label: "Services" },
+        { href: "/services", label: "Services" },
+        { href: "/founder", label: "Founder" },
         { href: "/contact", label: "Contact" },
     ];
 

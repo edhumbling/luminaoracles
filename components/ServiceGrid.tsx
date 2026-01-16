@@ -10,9 +10,9 @@ const PulsingGeometricDream = dynamic(() => import("@/components/pulsing-geometr
 const PatternShader = dynamic(() => import("@/components/pattern-shader"), { ssr: false });
 const PsychedelicVortexHero = dynamic(() => import("@/components/psychedelic-vortex-hero").then(mod => mod.PsychedelicVortexHero), { ssr: false });
 
-export default function ServiceGrid() {
-    const Shaders = [ATCShader, AnimatedShader, PulsingGeometricDream, PatternShader, PsychedelicVortexHero];
+const Shaders = [ATCShader, AnimatedShader, PulsingGeometricDream, PatternShader, PsychedelicVortexHero];
 
+export default function ServiceGrid() {
     return (
         <section className="pt-24 pb-0 bg-black relative overflow-hidden">
             {/* Ethereal Section Header */}
@@ -32,7 +32,7 @@ export default function ServiceGrid() {
                         <Link
                             key={index}
                             href={`/services/${service.id}`}
-                            className="group relative h-72 p-8 border-b border-r border-white/10 bg-black hover:bg-black/80 transition-colors duration-300 overflow-hidden"
+                            className="group relative min-h-[18rem] p-8 border-b border-r border-white/10 bg-black hover:bg-black/80 transition-colors duration-300 overflow-hidden"
                         >
                             {/* Persistent Shader Background */}
                             <div className="absolute inset-0 z-0 opacity-60 transition-opacity duration-500 group-hover:opacity-100">
@@ -45,7 +45,7 @@ export default function ServiceGrid() {
                             <div className="relative z-20 flex flex-col justify-between h-full">
                                 {/* Header */}
                                 <div className="flex justify-between items-start">
-                                    <span className="font-mono text-xs tracking-widest text-white/40 group-hover:text-lumina-gold font-bold transition-colors">
+                                    <span className="font-mono text-xs tracking-widest text-white/70 group-hover:text-lumina-gold font-bold transition-colors">
                                         {"//"} {service.id}
                                     </span>
                                     <div className="w-2 h-2 bg-white/20 group-hover:bg-lumina-gold transition-colors duration-300" />

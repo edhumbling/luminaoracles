@@ -420,7 +420,7 @@ export function PsychedelicVortexHero({
 
       if (!renderer.isReady) {
         console.error("Failed to initialize renderer");
-        setIsWebGLSupported(false);
+        setTimeout(() => setIsWebGLSupported(false), 0);
         onError?.("Renderer initialization failed");
         return;
       }
@@ -477,7 +477,7 @@ export function PsychedelicVortexHero({
       };
     } catch (error) {
       console.error("Error initializing WebGL renderer:", error);
-      setIsWebGLSupported(false);
+      setTimeout(() => setIsWebGLSupported(false), 0);
       onError?.(error instanceof Error ? error.message : "Unknown error");
     }
   }, [shaderParams, animated, quality, onReady, onError]);
