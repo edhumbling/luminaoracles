@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "/founder-placeholder.jpg",
+        url: "https://ik.imagekit.io/humbling/damn.jpg",
         width: 1200,
         height: 630,
         alt: "Judith Avotri - Founder of Lumina Oracles",

@@ -9,6 +9,7 @@ import BackgroundAudio from "@/components/BackgroundAudio";
 import MobileHeader from "@/components/MobileHeader";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +29,57 @@ const calligraffitti = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://luminaoracles.com'),
-  title: "Lumina Oracles | Sacred Spiritual Consultation",
-  description: "Connect to your higher self with heavenly light and divine guidance.",
+  title: "Lumina Oracles | Spiritual Guidance, Tarot Readings & Mystical Wisdom",
+  description: "Connect to your higher self with divine spiritual guidance. Expert tarot readings, astrology, chakra healing, manifestation coaching, and ancestral wisdom from Judith Avotri in Ghana.",
+  keywords: [
+    "spiritual guidance",
+    "tarot reading",
+    "tarot card reader",
+    "astrology",
+    "zodiac readings",
+    "chakra healing",
+    "energy healing",
+    "manifestation",
+    "law of attraction",
+    "spiritual awakening",
+    "mystic",
+    "oracle",
+    "divine guidance",
+    "meditation",
+    "sacred geometry",
+    "ancestral wisdom",
+    "spiritual teacher Ghana",
+    "online tarot reading",
+    "psychic reading",
+    "spiritual consultation",
+    "Judith Avotri",
+    "Lumina Oracles",
+  ],
+  authors: [{ name: "Judith Avotri" }],
+  creator: "Judith Avotri",
+  publisher: "Lumina Oracles",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://luminaoracles.com",
+    siteName: "Lumina Oracles",
+    title: "Lumina Oracles | Spiritual Guidance & Tarot Readings",
+    description: "Connect to your higher self with divine spiritual guidance. Expert tarot readings, astrology, and mystical wisdom.",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lumina Oracles | Spiritual Guidance",
+    description: "Connect to your higher self with divine spiritual guidance.",
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -57,6 +107,7 @@ export default function RootLayout({
         <SanctuaryBackground />
         <Header />
         <MobileHeader />
+        <Breadcrumbs />
         <BackgroundAudio />
         {children}
         <Footer />

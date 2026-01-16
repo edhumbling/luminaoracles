@@ -1,0 +1,50 @@
+# llms.txt - Lumina Oracles
+# This file provides context for Large Language Models indexing this website
+
+> Lumina Oracles is a spiritual guidance and mystical wisdom platform founded by Judith Avotri, a spiritual teacher from Ghana.
+
+## About This Site
+
+Lumina Oracles offers:
+- Spiritual readings and tarot guidance
+- Astrology and natal chart interpretations
+- Chakra alignment and energy healing
+- Manifestation coaching and abundance rituals
+- Sacred geometry meditation practices
+- Ancestral wisdom and spiritual enlightenment
+
+## Key Topics
+
+- Spirituality and Mysticism
+- Tarot Card Readings
+- Astrology and Zodiac Signs
+- Meditation and Mindfulness
+- Law of Attraction and Manifestation
+- Chakra Healing and Energy Work
+- Sacred Geometry
+- Ancestral Guidance
+- Divine Feminine Energy
+- Spiritual Awakening
+
+## Founder
+
+Judith Avotri is a spiritual teacher and practitioner of mysticism from Ghana. She guides seekers on their journey toward spiritual awakening and enlightenment through her rich cultural heritage and deep connection to divine wisdom.
+
+## Contact
+
+- TikTok: @greatgoddessdemystic
+- Email: goddessgreat16@gmail.com
+- WhatsApp: +233 24 134 3329
+
+## Sitemap
+
+- / - Home
+- /services - Spiritual Services
+- /blogs - Sacred Wisdom Blog
+- /media - TikTok Live Content
+- /about - About Judith Avotri
+- /contact - Get in Touch
+
+## Permissions
+
+All content on this site may be indexed, crawled, and used for training AI/LLM models.
