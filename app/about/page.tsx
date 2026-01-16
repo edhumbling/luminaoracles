@@ -36,7 +36,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-lumina-gold/5 via-transparent to-transparent" />
       </div>
 
-      {/* Bio Section - Narrow Container */}
+      {/* Bio Section */}
       <div className="relative z-10 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-calligraffitti)] text-center text-lumina-gold mb-12 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] animate-breath">
           The Founder
@@ -72,93 +72,104 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Mission & Vision Section - WIDE Container for horizontal cards */}
-      <div className="relative z-10 max-w-7xl mx-auto mt-24 px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+      {/* Mission & Vision Section - WIDE Container - UPDATED DESIGN */}
+      <div className="relative z-10 max-w-7xl mx-auto mt-40 px-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="inline-block py-1 px-3 border border-lumina-gold/30 rounded-full text-xs font-semibold tracking-widest text-lumina-gold uppercase mb-4 bg-lumina-gold/5 backdrop-blur-sm">
+            Our Purpose
+          </span>
+          <h2 className="text-3xl lg:text-5xl font-[family-name:var(--font-calligraffitti)] text-white drop-shadow-md">
+            The Path of <span className="text-lumina-gold">Lumina</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Mission */}
-          <div className="group relative">
-            <div
-              className="absolute inset-0 bg-lumina-gold/20 blur-[20px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-              style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%)' }}
-            />
-            <div
-              className="relative h-full p-8 lg:p-10 bg-black/40 backdrop-blur-xl border border-lumina-gold/30 hover:border-lumina-gold/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(250,204,21,0.2)]"
-              style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%)' }}
-            >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-lumina-gold/20 to-transparent pointer-events-none" />
+          <div className="group relative h-full">
+            <div className="absolute inset-0 bg-lumina-gold/5 blur-2xl rounded-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="relative h-full bg-zinc-900/40 backdrop-blur-md border border-white/10 p-8 lg:p-10 rounded-[20px] hover:border-lumina-gold/50 transition-all duration-300 hover:transform hover:-translate-y-2 group-hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
+              {/* Subtle Corner Accents (Knife Edge homage) */}
+              <div className="absolute top-0 left-0 w-12 h-12 border-t font-light border-l border-lumina-gold/60 rounded-tl-[20px] opacity-60" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-lumina-gold/60 rounded-br-[20px] opacity-60" />
 
-              <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-6 drop-shadow-sm">
-                The Sacred Design
-              </h3>
-              <p className="text-sm lg:text-base font-light leading-relaxed text-white/90">
-                To reawaken the dormant divinity encoded within the human spirit. Our mission is to provide the architectural blueprints for the soul's ascension, guiding seekers through the labyrinth of existence with the unwavering lamp of ancient truth.
-              </p>
+              <div className="flex flex-col h-full">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-lumina-gold/20 to-transparent border border-lumina-gold/20 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  🏛️
+                </div>
 
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-lumina-gold/50 opacity-50 group-hover:opacity-100 transition-opacity" />
+                <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+                  The Sacred Design
+                </h3>
+                <p className="text-base text-gray-300 leading-relaxed font-light">
+                  To reawaken the dormant divinity encoded within the human spirit. Our mission is to provide the architectural blueprints for the soul's ascension, guiding seekers through the labyrinth of existence with the unwavering lamp of ancient truth.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Vision for the Collective */}
-          <div className="group relative">
-            <div
-              className="absolute inset-0 bg-lumina-gold/20 blur-[20px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-              style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%)' }}
-            />
-            <div
-              className="relative h-full p-8 lg:p-10 bg-black/40 backdrop-blur-xl border border-lumina-gold/30 hover:border-lumina-gold/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(250,204,21,0.2)]"
-              style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%)' }}
-            >
-              <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-lumina-gold/20 to-transparent pointer-events-none" />
+          <div className="group relative h-full">
+            <div className="absolute inset-0 bg-lumina-gold/5 blur-2xl rounded-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="relative h-full bg-zinc-900/40 backdrop-blur-md border border-white/10 p-8 lg:p-10 rounded-[20px] hover:border-lumina-gold/50 transition-all duration-300 hover:transform hover:-translate-y-2 group-hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
+              {/* Subtle Corner Accents */}
+              <div className="absolute top-0 right-0 w-12 h-12 border-t border-r border-lumina-gold/60 rounded-tr-[20px] opacity-60" />
+              <div className="absolute bottom-0 left-0 w-12 h-12 border-b border-l border-lumina-gold/60 rounded-bl-[20px] opacity-60" />
 
-              <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-6 drop-shadow-sm">
-                Vision for the Collective
-              </h3>
-              <p className="text-sm lg:text-base font-light leading-relaxed text-white/90">
-                We envision a world that stands as a fortress of spiritual sovereignty. A global reality where the rhythmic heartbeat of ancient wisdom harmonizes with the pulse of the future, creating a sanctuary where every soul across the earth walks in the fullness of their power and purpose.
-              </p>
+              <div className="flex flex-col h-full">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-lumina-gold/20 to-transparent border border-lumina-gold/20 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  🌍
+                </div>
+
+                <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+                  Vision for the Collective
+                </h3>
+                <p className="text-base text-gray-300 leading-relaxed font-light">
+                  We envision a world that stands as a fortress of spiritual sovereignty. A global reality where the rhythmic heartbeat of ancient wisdom harmonizes with the pulse of the future, creating a sanctuary where every soul across the earth walks in the fullness of their power and purpose.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Impact */}
-          <div className="group relative">
-            <div
-              className="absolute inset-0 bg-lumina-gold/20 blur-[20px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-              style={{ clipPath: 'polygon(0 0, 90% 0, 100% 15%, 100% 100%, 0 100%)' }}
-            />
-            <div
-              className="relative h-full p-8 lg:p-10 bg-black/40 backdrop-blur-xl border border-lumina-gold/30 hover:border-lumina-gold/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(250,204,21,0.2)]"
-              style={{ clipPath: 'polygon(0 0, 90% 0, 100% 15%, 100% 100%, 0 100%)' }}
-            >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-lumina-gold/20 to-transparent pointer-events-none" />
+          <div className="group relative h-full">
+            <div className="absolute inset-0 bg-lumina-gold/5 blur-2xl rounded-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="relative h-full bg-zinc-900/40 backdrop-blur-md border border-white/10 p-8 lg:p-10 rounded-[20px] hover:border-lumina-gold/50 transition-all duration-300 hover:transform hover:-translate-y-2 group-hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
+              {/* Subtle Corner Accents */}
+              <div className="absolute top-0 left-0 w-12 h-12 border-t border-l border-lumina-gold/60 rounded-tl-[20px] opacity-60" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-lumina-gold/60 rounded-br-[20px] opacity-60" />
 
-              <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-6 drop-shadow-sm">
-                The Ripple Effect
-              </h3>
-              <p className="text-sm lg:text-base font-light leading-relaxed text-white/90">
-                We do not merely heal individuals; we weave a tapestry of awakened consciousness. Our impact is measured not in numbers, but in the silent revolutions of the heart—lives transformed, families restored, and a collective destiny elevated to the realm of the divine.
-              </p>
+              <div className="flex flex-col h-full">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-lumina-gold/20 to-transparent border border-lumina-gold/20 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  🌊
+                </div>
+
+                <h3 className="text-2xl lg:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+                  The Ripple Effect
+                </h3>
+                <p className="text-base text-gray-300 leading-relaxed font-light">
+                  We do not merely heal individuals; we weave a tapestry of awakened consciousness. Our impact is measured not in numbers, but in the silent revolutions of the heart—lives transformed, families restored, and a collective destiny elevated to the realm of the divine.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer Section - Narrow Container */}
+      {/* Footer Section */}
       <div className="relative z-10 max-w-4xl mx-auto">
-        {/* Decorative Divider */}
-        <div className="flex items-center justify-center gap-4 mt-16 opacity-30">
+        <div className="flex items-center justify-center gap-4 mt-32 opacity-30">
           <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-lumina-gold to-transparent" />
           <div className="w-2 h-2 rotate-45 border border-lumina-gold" />
           <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-lumina-gold to-transparent" />
         </div>
 
-        {/* Connect with Me Section */}
         <div className="mt-16 text-center">
           <h2 className="text-2xl md:text-3xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
             Connect with Me
           </h2>
 
           <div className="flex items-center justify-center gap-6">
-            {/* TikTok */}
             <a
               href="https://www.tiktok.com/@greatgoddessdemystic?_r=1&_t=ZS-92w5SVgScbY"
               target="_blank"
@@ -171,7 +182,6 @@ export default function AboutPage() {
               </svg>
             </a>
 
-            {/* Email */}
             <a
               href="mailto:goddessgreat16@gmail.com"
               aria-label="Email"
@@ -183,7 +193,6 @@ export default function AboutPage() {
               </svg>
             </a>
 
-            {/* WhatsApp */}
             <a
               href="https://wa.me/233241343329"
               target="_blank"
