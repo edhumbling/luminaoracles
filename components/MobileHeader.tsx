@@ -26,6 +26,7 @@ export default function MobileHeader() {
         { href: "/", label: "Home" },
         { href: "/services", label: "Services" },
         { href: "/blogs", label: "Blogs" },
+        { href: "/media", label: "TikTok Live" },
         { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
     ];
