@@ -615,6 +615,147 @@ export const BLOG_POSTS: BlogPost[] = [
 
             <p>Whether Soulmate or Twin Flame, every relationship is a mirror. They appear exactly when you need them to show you who you really are.</p>
         `
+    },
+    {
+        id: "16",
+        slug: "unlocking-akashic-records",
+        title: "The Akashic Records: Accessing the Cosmic Library of Your Soul",
+        excerpt: "Imagine a library that contains every thought, word, and deed of every soul that has ever lived. This is the Akashic Record. Learn how to open the book of your life.",
+        author: "Judith Avotri",
+        date: "January 4, 2025",
+        readTime: "25 min read",
+        category: "Consciousness",
+        tags: ["Akashic Records", "Past Lives", "Soul", "Metaphysics"],
+        image: "/blog/akashic-records.png",
+        content: `
+            <h2>The Book of Life</h2>
+            <p>The term "Akasha" comes from the Sanskrit word for "sky" or "aether." In <a href="https://en.wikipedia.org/wiki/Theosophy" target="_blank" rel="noopener noreferrer">Theosophy</a> and Anthroposophy, the <a href="https://en.wikipedia.org/wiki/Akashic_records" target="_blank" rel="noopener noreferrer">Akashic Records</a> are a compendium of all universal events, thoughts, words, emotions, and intent ever to have occurred in the past, present, or future in terms of all entities and life forms, not just human.</p>
+            <p>Think of it as the Universe's super-computer or cloud storage. Every soul has its own file. By accessing this file, you can understand your karma, your soul contracts, and your purpose.</p>
+
+            <h2>Why Access the Records?</h2>
+            <p>People consult the Records not just for curiosity, but for deep <a href="https://en.wikipedia.org/wiki/Soul_retrieval" target="_blank" rel="noopener noreferrer">soul healing</a>. </p>
+            <ul>
+                <li><strong>Understand Recurring Patterns:</strong> Why do you date the same type of person? Why do you struggle with money? The root often lies in a past life vow or trauma.</li>
+                <li><strong>Discover Soul Purpose:</strong> What did you sign up to learn in this lifetime?</li>
+                <li><strong>Clear Karma:</strong> Once a pattern is understood in the Light of the Records, it can be released.</li>
+            </ul>
+
+            <h2>How to Open the Records</h2>
+            <h3>The Pathway Prayer Process</h3>
+            <p>Developed by Dr. <a href="https://lindahowe.com/" target="_blank" rel="noopener noreferrer">Linda Howe</a>, this vibrational prayer provides a safe and reliable path into the Records. It shifts your consciousness from the level of the ego to the level of the Soul.</p>
+
+            <h3>The Lords of the Records</h3>
+            <p>You do not just walk in; you are granted access by the "Keepers" or "Masters" of your Record. Respect, humility, and clear intention are the keys. You cannot access someone else's records without their explicit permission.</p>
+
+            <p>The Akashic Records are not a psychic prediction tool; they are a tool for <a href="https://en.wikipedia.org/wiki/Spiritual_growth" target="_blank" rel="noopener noreferrer">spiritual truth</a>. They show you who you really are in the eyes of the Divine.</p>
+        `
+    },
+    {
+        id: "17",
+        slug: "starseeds-galactic-heritage",
+        title: "Are You a Starseed? Tracing Your Galactic Heritage",
+        excerpt: "Do you feel like you don't belong on Earth? You might be a Starseed—a soul that originated from another star system like the Pleiades or Sirius to assist humanity.",
+        author: "Judith Avotri",
+        date: "February 11, 2025",
+        readTime: "22 min read",
+        category: "Spirituality",
+        tags: ["Starseeds", "Pleiadian", "Sirian", "Ascension"],
+        image: "/blog/starseeds.png",
+        content: `
+            <h2>The Cosmic Origin</h2>
+            <p>A <a href="https://en.wikipedia.org/wiki/Star_people_(New_Age)" target="_blank" rel="noopener noreferrer">Starseed</a> is a soul that has experienced life elsewhere in the Universe—on other planets or in other dimensions—before incarnating on Earth. They often volunteer to come here during times of great transition (like the current "Great Awakening") to anchor high-frequency light.</p>
+
+            <h2>Types of Starseeds</h2>
+            <h3>Pleiadians</h3>
+            <p>From the <a href="https://en.wikipedia.org/wiki/Pleiades" target="_blank" rel="noopener noreferrer">Pleiades</a> star cluster. Known for being heart-centered, creative, nurturing, and sensitive. They are the healers and emotional guides.</p>
+
+            <h3>Sirians</h3>
+            <p>From <a href="https://en.wikipedia.org/wiki/Sirius" target="_blank" rel="noopener noreferrer">Sirius</a> (the Dog Star). They are often drawn to ancient civilizations (Egypt, Atlantis), technology, and water (dolphins/whales). They are the guardians and truth-tellers.</p>
+
+            <h3>Arcturians</h3>
+            <p>From Arcturus. Highly mental, advanced, and focused on sacred geometry and sound healing. They are the architects of the new energy.</p>
+
+            <h2>Common Traits</h2>
+            <ul>
+                <li>Feeling of <a href="https://www.psychologytoday.com/us/blog/the-search-for-meaning/201609/why-do-i-feel-i-dont-belong" target="_blank" rel="noopener noreferrer">homesickness</a> for a place you can't remember.</li>
+                <li>Sensitivity to light, sound, and crowds (Empathic).</li>
+                <li>Fascination with the stars and astronomy.</li>
+                <li>A deep sense of mission, but often confusion about what it is.</li>
+            </ul>
+
+            <p>Being a Starseed isn't about being "special"; it's about responsibility. You carried a torch of light to a darkened planet. Your job is simply to let it shine.</p>
+        `
+    },
+    {
+        id: "18",
+        slug: "sacred-geometry-blueprint",
+        title: "Sacred Geometry: The Divine Blueprint of Creation",
+        excerpt: "From the spiral of a galaxy to the center of a sunflower, nature follows a mathematical code. Sacred Geometry reveals the order behind the chaos.",
+        author: "Judith Avotri",
+        date: "March 21, 2025",
+        readTime: "24 min read",
+        category: "Science",
+        tags: ["Sacred Geometry", "Math", "Metaphysics", "Flower of Life"],
+        image: "/blog/sacred-geometry.png",
+        content: `
+            <h2>The Code of Reality</h2>
+            <p><a href="https://en.wikipedia.org/wiki/Sacred_geometry" target="_blank" rel="noopener noreferrer">Sacred Geometry</a> is the belief that God is a mathematician. The universe is not random; it is built upon fundamental geometric patterns that repeat at every scale (fractals).</p>
+
+            <h2>Key Symbols</h2>
+            <h3>The Flower of Life</h3>
+            <p>Found in ancient temples in Egypt, China, and Japan. It creates the fundamental forms of space and time. It is visual music. It contains the Seed of Life and the Egg of Life.</p>
+
+            <h3>Metatron's Cube</h3>
+            <p>Named after the Archangel <a href="https://en.wikipedia.org/wiki/Metatron" target="_blank" rel="noopener noreferrer">Metatron</a>. It contains all five Platonic Solids—the building blocks of organic life (Tetrahedron, Hexahedron, Octahedron, Dodecahedron, Icosahedron).</p>
+            <p>The universe speaks in numbers. By studying these forms, we peer into the mind of the Creator.</p>
+        `
+    },
+    {
+        id: "19",
+        slug: "reiki-energy-healing",
+        title: "Reiki and Energy Medicine: Healing from the Inside Out",
+        excerpt: "Reiki is the Japanese art of channeling Universal Life Force energy. Discover how hands-on healing can clear blockages and restore physical and emotional health.",
+        author: "Judith Avotri",
+        date: "April 05, 2025",
+        readTime: "20 min read",
+        category: "Healing",
+        tags: ["Reiki", "Energy Healing", "Chakras", "Wellness"],
+        image: "/blog/crystal-healing.png",
+        content: `
+            <h2>Universal Life Force</h2>
+            <p>The word <a href="https://en.wikipedia.org/wiki/Reiki" target="_blank" rel="noopener noreferrer">Reiki</a> comes from the Japanese words "Rei" (Universal) and "Ki" (Life Energy). It is based on the idea that an unseen "life force energy" flows through us. If this energy is low, we get sick or stressed; if it is high, we are capable of being happy and healthy.</p>
+
+            <h2>How It Works</h2>
+            <p>A Reiki practitioner does not use their own energy. They act as a conduit. By placing hands lightly on or near the body, they channel high-frequency energy into the recipient's field. This energy breaks up negative energy (stagnant "Ki") and charges the area with positive energy.</p>
+
+            <h2>The Science (Biofield Therapies)</h2>
+            <p>While often called "pseudoscience," research into <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4654789/" target="_blank" rel="noopener noreferrer">Biofield Therapies</a> suggests Reiki can significantly reduce pain, anxiety, and blood pressure. It triggers the <a href="https://en.wikipedia.org/wiki/Parasympathetic_nervous_system" target="_blank" rel="noopener noreferrer">parasympathetic nervous system</a>—the body's "rest and digest" mode—where healing occurs.</p>
+        `
+    },
+    {
+        id: "20",
+        slug: "divine-polarity-masculine-feminine",
+        title: "The Dance of Polarity: Balancing Divine Masculine and Feminine",
+        excerpt: "We all contain both masculine and feminine energies within us. True spiritual power comes not from choosing one, but from integrating both.",
+        author: "Judith Avotri",
+        date: "May 15, 2025",
+        readTime: "28 min read",
+        category: "Relationships",
+        tags: ["Divine Feminine", "Divine Masculine", "Balance", "Yin Yang"],
+        image: "/blog/twin-flames.png",
+        content: `
+            <h2>The Two Halves of Creation</h2>
+            <p>Everything in the universe operates on polarity: Day/Night, Sun/Moon, Output/Input. In spiritual terms, these are the <a href="https://en.wikipedia.org/wiki/Divine_presence" target="_blank" rel="noopener noreferrer">Divine Masculine</a> (Shiva) and <a href="https://en.wikipedia.org/wiki/Shakti" target="_blank" rel="noopener noreferrer">Divine Feminine</a> (Shakti).</p>
+
+            <h2>The Divine Masculine</h2>
+            <p>This is the energy of **Action, Structure, Logic, and Protection**. It is the container. It is the riverbank that guides the flow. When healthy, it provides safety and direction. When wounded, it becomes dominating or distant.</p>
+
+            <h2>The Divine Feminine</h2>
+            <p>This is the energy of **Flow, Intuition, Creation, and Nurturing**. It is the water flowing in the river. It is chaos (in the sense of potential). When healthy, it brings life, empathy, and beauty. When wounded, it becomes needy or manipulative.</p>
+
+            <h2>The Hieros Gamos (Sacred Marriage)</h2>
+            <p>True awakening is the <a href="https://en.wikipedia.org/wiki/Hieros_gamos" target="_blank" rel="noopener noreferrer">Hieros Gamos</a>—the sacred marriage of these two energies within <em>yourself</em>. You don't need a partner to complete you; you need to balance your own inner polarities.</p>
+        `
     }
 ];
 
