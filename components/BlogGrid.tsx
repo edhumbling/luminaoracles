@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, X } from "lucide-react";
+import { Search, X, Filter } from "lucide-react";
 import { BlogPost } from "@/lib/blog-data";
 
 interface BlogGridProps {
@@ -13,12 +13,25 @@ interface BlogGridProps {
 export default function BlogGrid({ posts }: BlogGridProps) {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const filterRef = useRef<HTMLDivElement>(null);
 
     // Derive unique categories from posts
     const categories = useMemo(() => {
         const cats = new Set(posts.map((p) => p.category));
         return Array.from(cats).sort();
     }, [posts]);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (filterRef.current && !filterRef.current.contains(event.target as Node)) {
+                setIsFilterOpen(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
 
     // Filter Algorithm
     const filteredPosts = useMemo(() => {
@@ -75,7 +88,7 @@ export default function BlogGrid({ posts }: BlogGridProps) {
             {/* Search & Filter Bar */}
             <div className="mb-16 flex flex-col items-center gap-6">
                 {/* Search Input - Centered and Long */}
-                <div className="relative w-full max-w-2xl group">
+                <div className="relative w-full max-w-2xl group z-50">
                     <div className="absolute inset-0 bg-lumina-gold/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-white/50 group-focus-within:text-lumina-gold transition-colors" />
                     <input
@@ -83,42 +96,95 @@ export default function BlogGrid({ posts }: BlogGridProps) {
                         placeholder="Search for wisdom..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-14 pr-12 text-white placeholder:text-white/30 focus:outline-none focus:border-lumina-gold/50 focus:bg-black/40 transition-all backdrop-blur-md font-light tracking-wide text-base shadow-lg"
+                        className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-14 pr-32 text-white placeholder:text-white/30 focus:outline-none focus:border-lumina-gold/50 focus:bg-black/40 transition-all backdrop-blur-md font-light tracking-wide text-base shadow-lg"
                     />
-                    {searchQuery && (
-                        <button
-                            onClick={() => setSearchQuery("")}
-                            className="absolute right-6 top-1/2 -translate-y-1/2 hover:text-white text-white/50 transition-colors"
-                        >
-                            <X className="w-4 h-4" />
-                        </button>
-                    )}
+
+                    {/* Right Side Actions */}
+                    <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                        {/* Clear Search */}
+                        {searchQuery && (
+                            <button
+                                onClick={() => setSearchQuery("")}
+                                className="p-2 hover:text-white text-white/50 transition-colors"
+                            >
+                                <X className="w-4 h-4" />
+                            </button>
+                        )}
+
+                        {/* Divider */}
+                        <div className="w-px h-6 bg-white/10" />
+
+                        {/* Filter Button */}
+                        <div className="relative" ref={filterRef}>
+                            <button
+                                onClick={() => setIsFilterOpen(!isFilterOpen)}
+                                className={`p-2 rounded-full transition-all duration-300 flex items-center gap-2 pr-4 ${isFilterOpen || selectedCategory
+                                    ? "text-lumina-gold bg-lumina-gold/10"
+                                    : "text-white/50 hover:text-white"
+                                    }`}
+                            >
+                                <Filter className="w-5 h-5" />
+                                <span className="text-xs uppercase tracking-widest font-medium hidden sm:block">
+                                    {selectedCategory ? "Filtered" : "Filter"}
+                                </span>
+                            </button>
+
+                            {/* Dropdown Menu */}
+                            {isFilterOpen && (
+                                <div className="absolute right-0 top-full mt-4 w-64 bg-[#0a0a0a] border border-white/10 rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] overflow-hidden backdrop-blur-xl z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                                    <div className="p-2">
+                                        <div className="px-3 py-2 text-[10px] uppercase tracking-widest text-white/30 font-semibold">
+                                            Select Category
+                                        </div>
+                                        <button
+                                            onClick={() => {
+                                                setSelectedCategory(null);
+                                                setIsFilterOpen(false);
+                                            }}
+                                            className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition-all flex items-center justify-between ${!selectedCategory
+                                                ? "bg-lumina-gold/10 text-lumina-gold"
+                                                : "text-white/70 hover:bg-white/5 hover:text-white"
+                                                }`}
+                                        >
+                                            <span>All Categories</span>
+                                            {!selectedCategory && <span className="w-1.5 h-1.5 rounded-full bg-lumina-gold" />}
+                                        </button>
+                                        <div className="my-1 border-t border-white/5" />
+                                        {categories.map((cat) => (
+                                            <button
+                                                key={cat}
+                                                onClick={() => {
+                                                    setSelectedCategory(selectedCategory === cat ? null : cat);
+                                                    setIsFilterOpen(false);
+                                                }}
+                                                className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition-all flex items-center justify-between ${selectedCategory === cat
+                                                    ? "bg-lumina-gold/10 text-lumina-gold"
+                                                    : "text-white/70 hover:bg-white/5 hover:text-white"
+                                                    }`}
+                                            >
+                                                <span>{cat}</span>
+                                                {selectedCategory === cat && <span className="w-1.5 h-1.5 rounded-full bg-lumina-gold" />}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
 
-                {/* Category Filters - Underneath and Centered */}
-                <div className="flex flex-wrap gap-2.5 justify-center max-w-3xl">
-                    <button
-                        onClick={() => setSelectedCategory(null)}
-                        className={`px-4 py-1.5 rounded-full text-[10px] md:text-xs uppercase tracking-widest transition-all border font-medium ${!selectedCategory
-                            ? "bg-lumina-gold text-black border-lumina-gold shadow-[0_0_15px_rgba(250,204,21,0.3)]"
-                            : "bg-transparent text-white/60 border-white/10 hover:border-white/30 hover:text-white"
-                            }`}
-                    >
-                        All
-                    </button>
-                    {categories.map((cat) => (
+                {/* Active Filter Indicator */}
+                {selectedCategory && (
+                    <div className="animate-in fade-in slide-in-from-top-2 duration-300">
                         <button
-                            key={cat}
-                            onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
-                            className={`px-4 py-1.5 rounded-full text-[10px] md:text-xs uppercase tracking-widest transition-all border font-medium ${selectedCategory === cat
-                                ? "bg-lumina-gold text-black border-lumina-gold shadow-[0_0_15px_rgba(250,204,21,0.3)]"
-                                : "bg-transparent text-white/60 border-white/10 hover:border-white/30 hover:text-white"
-                                }`}
+                            onClick={() => setSelectedCategory(null)}
+                            className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-lumina-gold/10 border border-lumina-gold/20 text-lumina-gold text-xs uppercase tracking-widest hover:bg-lumina-gold/20 transition-colors group"
                         >
-                            {cat}
+                            <span>{selectedCategory}</span>
+                            <X className="w-3 h-3 opacity-50 group-hover:opacity-100" />
                         </button>
-                    ))}
-                </div>
+                    </div>
+                )}
             </div>
 
             {/* Results Grid */}

@@ -786,8 +786,8 @@ export const BLOG_POSTS: BlogPost[] = [
       "The Science of Crystal Healing: Vibrational Energy and Mineral Structures",
     excerpt:
       "Beyond the mysticism lies a world of physics. Explore the scientific principles of piezoelectricity, resonance, and entropy that explain how crystals interact with the human biofield.",
-    author: "Dr. Elena Vance",
-    date: "February 2, 2026",
+    author: "Judith Avotri",
+    date: "January 21, 2026",
     readTime: "35 min read",
     category: "Science & Spirit",
     tags: ["Crystals", "Quantum Physics", "Healing", "Geology", "Vibration"],
@@ -825,8 +825,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Emerald Tablets and the Tarot: Tracing the Path of Thoth",
     excerpt:
       "The Tarot is more than a card game; it is the visual encoding of the Hermetic wisdom of Thoth. Discover the ancient Egyptian origins of the Major Arcana.",
-    author: "Marcus Aurelius III",
-    date: "February 5, 2026",
+    author: "Judith Avotri",
+    date: "January 22, 2026",
     readTime: "42 min read",
     category: "Ancient Wisdom",
     tags: ["Thoth", "Tarot", "Hermeticism", "Egypt", "Kabbalah"],
@@ -857,8 +857,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Age of Technology and Rebellion: Pluto in Aquarius 2025-2044",
     excerpt:
       "A tectonic shift is upon us. Pluto's entry into Aquarius signals a 20-year era of technological revolution, the decentralization of power, and the rise of the collective.",
-    author: "Sarah Starwalker",
-    date: "February 10, 2026",
+    author: "Judith Avotri",
+    date: "January 23, 2026",
     readTime: "30 min read",
     category: "Astrology",
     tags: ["Pluto", "Aquarius", "2025", "Future", "Technology"],
@@ -886,8 +886,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Awake in the Dream: The Neuroscience of Lucid Dreaming",
     excerpt:
       "Lucid dreaming is not just a fantasy; it is a measurable state of hybrid consciousness. Learn how to activate your prefrontal cortex during REM sleep.",
-    author: "Dr. Morpheus",
-    date: "February 15, 2026",
+    author: "Judith Avotri",
+    date: "January 24, 2026",
     readTime: "25 min read",
     category: "Consciousness",
     tags: ["Lucid Dreaming", "Neuroscience", "Sleep", "REM", "Awareness"],
@@ -914,8 +914,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Language of God: Sacred Geometry and the Blueprint of Reality",
     excerpt:
       "From the spiral of a nautilus shell to the orbit of galaxies, the same mathematical patterns emerge. Explore the Golden Ratio, the Flower of Life, and the code of creation.",
-    author: "Pythagoras Reborn",
-    date: "February 20, 2026",
+    author: "Judith Avotri",
+    date: "January 25, 2026",
     readTime: "33 min read",
     category: "Ancient Wisdom",
     tags: [
