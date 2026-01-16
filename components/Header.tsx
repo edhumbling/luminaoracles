@@ -24,6 +24,12 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Never hide on media page
+      if (pathname === "/media") {
+        setIsHidden(false);
+        return;
+      }
+
       const footer = document.querySelector('footer');
       if (!footer) return;
       const rect = footer.getBoundingClientRect();
@@ -31,7 +37,7 @@ export default function Header() {
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname]);
 
   return (
     <header className={cn("fixed top-0 left-0 right-0 z-40 hidden md:block transition-opacity duration-300", isHidden ? "opacity-0 pointer-events-none" : "opacity-100")}>
