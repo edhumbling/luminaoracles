@@ -1,39 +1,40 @@
-
 export interface BlogPost {
-    id: string;
-    slug: string;
-    title: string;
-    excerpt: string;
-    content: string;
-    author: string;
-    date: string;
-    readTime: string;
-    category: string;
-    tags: string[];
-    image: string;
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  image: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
-    {
-        id: "1",
-        slug: "mastering-the-law-of-attraction-manifesting-your-desires",
-        title: "Mastering the Law of Attraction: A Guide to Manifesting Your Deepest Desires",
-        excerpt: "Unlock the secrets of the Universe and learn how to align your vibrational frequency with the reality you wish to create. The Law of Attraction is not just a concept; it is the fundamental physics of your existence.",
-        author: "Judith Avotri",
-        date: "January 1, 2026",
-        readTime: "15 min read",
-        category: "Manifestation",
-        tags: ["Law of Attraction", "Manifestation", "Spirituality", "Abundance"],
-        image: "/blog/law-of-attraction.png",
-        content: `
+  {
+    id: "1",
+    slug: "mastering-the-law-of-attraction-manifesting-your-desires",
+    title:
+      "Mastering the Law of Attraction: A Guide to Manifesting Your Deepest Desires",
+    excerpt:
+      "Unlock the secrets of the Universe and learn how to align your vibrational frequency with the reality you wish to create. The Law of Attraction is not just a concept; it is the fundamental physics of your existence.",
+    author: "Judith Avotri",
+    date: "January 1, 2026",
+    readTime: "15 min read",
+    category: "Manifestation",
+    tags: ["Law of Attraction", "Manifestation", "Spirituality", "Abundance"],
+    image: "/blog/law-of-attraction.png",
+    content: `
             <h2>The Fundamental Physics of Desire</h2>
             <p>The <a href="https://en.wikipedia.org/wiki/Law_of_attraction_(New_Thought)" target="_blank" rel="noopener noreferrer">Law of Attraction</a> is often misunderstood as simply "thinking positive thoughts." While mindset is a crucial component, the law operates on a much deeper, more visceral level of physics—specifically, <a href="https://en.wikipedia.org/wiki/Quantum_mechanics" target="_blank" rel="noopener noreferrer">quantum physics</a>. Everything in our universe, at its most fundamental level, is <a href="https://en.wikipedia.org/wiki/Energy" target="_blank" rel="noopener noreferrer">energy vibrating at a specific frequency</a>. This includes you, your thoughts, your emotions, and the physical objects you desire.</p>
             <p>To master the Law of Attraction is to master your own energy. It is the art of tuning your personal broadcast signal to match the frequency of the reality you wish to inhabit. Just as a radio tuner must be precisely aligned to catch a clear signal, your <a href="https://en.wikipedia.org/wiki/State_of_mind" target="_blank" rel="noopener noreferrer">internal state</a> must be precisely aligned with your desires to receive them into your experience.</p>
-          
+
 
             <h2>The Three Pillars of Manifestation</h2>
             <p><u>Manifestation</u> stands on three pillars: <strong>Clarity</strong>, <strong>Alignment</strong>, and <strong>Action</strong>. Without all three working in concert, your desires remain in the ethereal realm, never condensing into physical matter.</p>
-            
+
             <h3>1. Radical Clarity</h3>
             <p>The Universe responds to specificity. A vague desire produces vague results. You must know not only what you want but <em>why</em> you want it and <em>how it feels</em> to have it. Write down your desires with excruciating detail. <a href="https://en.wikipedia.org/wiki/Creative_visualization" target="_blank" rel="noopener noreferrer">Visualization</a> is the tool of clarity—a technique validated by research in <a href="https://en.wikipedia.org/wiki/Sports_psychology" target="_blank" rel="noopener noreferrer">sports psychology</a>. Close your eyes and see the outcome. Smell the air, feel the textures, hear the sounds. The more sensory details you can encode into your visualization, the more real it becomes to your <a href="https://en.wikipedia.org/wiki/Subconscious" target="_blank" rel="noopener noreferrer">subconscious mind</a>.</p>
 
@@ -60,20 +61,22 @@ export const BLOG_POSTS: BlogPost[] = [
             </ul>
 
             <p>Mastering the Law of Attraction is a lifelong journey of self-discovery. It forces you to take full responsibility for your life and your energy. It empowers you to become the <a href="https://lonerwolf.com/conscious-creator/" target="_blank" rel="noopener noreferrer">conscious creator</a> of your reality, rather than a victim of circumstance. Step into your power. The Universe is waiting for your command.</p>
-        `
-    },
-    {
-        id: "2",
-        slug: "understanding-frequencies-and-vibrations",
-        title: "The Symphony of Existence: Understanding Frequencies and Vibrations",
-        excerpt: "Everything is vibration. From the atoms in your body to the stars in the sky, existence is a musical score of energy. Learn how to tune your instrument.",
-        author: "Judith Avotri",
-        date: "January 2, 2026",
-        readTime: "12 min read",
-        category: "Spirituality",
-        tags: ["Frequency", "Vibration", "Energy", "Quantum Physics"],
-        image: "/blog/frequencies-vibrations.png",
-        content: `
+        `,
+  },
+  {
+    id: "2",
+    slug: "understanding-frequencies-and-vibrations",
+    title:
+      "The Symphony of Existence: Understanding Frequencies and Vibrations",
+    excerpt:
+      "Everything is vibration. From the atoms in your body to the stars in the sky, existence is a musical score of energy. Learn how to tune your instrument.",
+    author: "Judith Avotri",
+    date: "January 2, 2026",
+    readTime: "12 min read",
+    category: "Spirituality",
+    tags: ["Frequency", "Vibration", "Energy", "Quantum Physics"],
+    image: "/blog/frequencies-vibrations.png",
+    content: `
             <h2>The Universe as Music</h2>
             <p><a href="https://en.wikipedia.org/wiki/Nikola_Tesla" target="_blank" rel="noopener noreferrer">Nikola Tesla</a> famously said, "If you want to find the secrets of the universe, think in terms of <a href="https://www.brainyquote.com/quotes/nikola_tesla_383569" target="_blank" rel="noopener noreferrer">energy, frequency and vibration</a>." This is not a metaphor; it is a description of reality. Solid matter is an illusion—a persistent one, but an illusion nonetheless. Under a microscope, an <a href="https://en.wikipedia.org/wiki/Atom" target="_blank" rel="noopener noreferrer">atom</a> is 99.99999% empty space. What we perceive as "solid" is actually energy vibrating at a frequency slow enough for our senses to perceive.</p>
             <p>If we accept that we are <a href="https://www.gaia.com/article/everything-is-energy" target="_blank" rel="noopener noreferrer">vibrational beings</a> in a vibrational universe, the implications are profound. It means that we are constantly interacting with our environment through <a href="https://en.wikipedia.org/wiki/Resonance" target="_blank" rel="noopener noreferrer">resonance</a>. Interaction is not just physical; it is energetic.</p>
@@ -108,20 +111,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <p><strong><a href="https://en.wikipedia.org/wiki/Gratitude" target="_blank" rel="noopener noreferrer">Gratitude</a>:</strong> As mentioned in manifestation, gratitude is a high-frequency signal. It is impossible to feel fear and gratitude simultaneously.</p>
 
             <p>By understanding the mechanics of vibration, you stop reacting to the world and start orchestrating it. You become sensitive to discordant energies and can choose to disengage. You become a beacon of <a href="https://en.wikipedia.org/wiki/High_vibe" target="_blank" rel="noopener noreferrer">high frequency</a>, uplifting those around you simply by your presence. This is the true work of the spiritual warrior.</p>
-        `
-    },
-    {
-        id: "3",
-        slug: "energy-healing-comprehensive-guide",
-        title: "Energy Healing: A Comprehensive Guide to Restoring Balance",
-        excerpt: "Your body is a self-healing mechanism, blocked only by energetic stagnation. Discover how techniques like Reiki and Chakra balancing can restore your flow.",
-        author: "Judith Avotri",
-        date: "January 3, 2026",
-        readTime: "20 min read",
-        category: "Healing",
-        tags: ["Reiki", "Chakras", "Healing", "Wellness"],
-        image: "/blog/energy-healing.png",
-        content: `
+        `,
+  },
+  {
+    id: "3",
+    slug: "energy-healing-comprehensive-guide",
+    title: "Energy Healing: A Comprehensive Guide to Restoring Balance",
+    excerpt:
+      "Your body is a self-healing mechanism, blocked only by energetic stagnation. Discover how techniques like Reiki and Chakra balancing can restore your flow.",
+    author: "Judith Avotri",
+    date: "January 3, 2026",
+    readTime: "20 min read",
+    category: "Healing",
+    tags: ["Reiki", "Chakras", "Healing", "Wellness"],
+    image: "/blog/energy-healing.png",
+    content: `
             <h2>The Subtle Body</h2>
             <p>Western medicine treats the physical body—the hardware. <a href="https://en.wikipedia.org/wiki/Energy_medicine" target="_blank" rel="noopener noreferrer">Energy healing</a> treats the <a href="https://en.wikipedia.org/wiki/Subtle_body" target="_blank" rel="noopener noreferrer">subtle body</a>—the software. The subtle body consists of the <a href="https://en.wikipedia.org/wiki/Aura_(paranormal)" target="_blank" rel="noopener noreferrer">aura</a> (electromagnetic field), the <a href="https://en.wikipedia.org/wiki/Chakra" target="_blank" rel="noopener noreferrer">chakras</a> (energy centers), and the <a href="https://en.wikipedia.org/wiki/Nadi_(yoga)" target="_blank" rel="noopener noreferrer">nadis</a> or <a href="https://en.wikipedia.org/wiki/Meridian_(Chinese_medicine)" target="_blank" rel="noopener noreferrer">meridians</a> (energy channels).</p>
             <p>Disease (<a href="https://www.merriam-webster.com/dictionary/dis-ease" target="_blank" rel="noopener noreferrer">dis-ease</a>) often manifests in the energy body before it appears in the physical body. A block in the emotional layer of the aura, caused by suppressed grief, might eventually manifest as respiratory issues. By treating the <a href="https://en.wikipedia.org/wiki/Root_cause_analysis" target="_blank" rel="noopener noreferrer">energetic root</a>, we can facilitate profound physical and emotional healing.</p>
@@ -153,22 +157,23 @@ export const BLOG_POSTS: BlogPost[] = [
             <p><strong><a href="https://en.wikipedia.org/wiki/Balneotherapy" target="_blank" rel="noopener noreferrer">Salt Baths</a>:</strong> Salt neutralizes negative ions. A <a href="https://en.wikipedia.org/wiki/Himalayan_salt" target="_blank" rel="noopener noreferrer">Himalayan salt</a> bath clears the aura of "psychic dirt" accumulated during the day.</p>
             <p><strong><a href="https://en.wikipedia.org/wiki/Earthing" target="_blank" rel="noopener noreferrer">Grounding (Earthing)</a>:</strong> Walking barefoot on soil or grass allows free electrons from the Earth to neutralize <a href="https://en.wikipedia.org/wiki/Radical_(chemistry)" target="_blank" rel="noopener noreferrer">free radicals</a> in your body, reducing inflammation and settling the energy.</p>
             <p><strong><a href="https://en.wikipedia.org/wiki/Visualization_(meditation)" target="_blank" rel="noopener noreferrer">Visualization</a>:</strong> Imagine white light pouring into your <a href="https://en.wikipedia.org/wiki/Sahasrara" target="_blank" rel="noopener noreferrer">crown chakra</a> and washing through your body, carrying away dark, stagnant energy into the earth to be recycled. This simple act of imagination moves real energy.</p>
-            
+
             <p>Energy healing is not magic; it is mechanics. It is the restoration of <a href="https://en.wikipedia.org/wiki/Flow_(psychology)" target="_blank" rel="noopener noreferrer">flow</a>. When your energy flows freely, health, abundance, and joy are the natural byproducts. You are designed to be well.</p>
-        `
-    },
-    {
-        id: "4",
-        slug: "the-power-of-intention",
-        title: "The Power of Intention: Directing the Flow of Creation",
-        excerpt: "Intention is the arrow; energy is the bow. Without a target, your energy dissipates into the void. Learn to harness the laser-focus of spiritual intention.",
-        author: "Judith Avotri",
-        date: "January 4, 2026",
-        readTime: "10 min read",
-        category: "Mindfulness",
-        tags: ["Intention", "Focus", "Creation", "Purpose"],
-        image: "/blog/power-intention.png",
-        content: `
+        `,
+  },
+  {
+    id: "4",
+    slug: "the-power-of-intention",
+    title: "The Power of Intention: Directing the Flow of Creation",
+    excerpt:
+      "Intention is the arrow; energy is the bow. Without a target, your energy dissipates into the void. Learn to harness the laser-focus of spiritual intention.",
+    author: "Judith Avotri",
+    date: "January 4, 2026",
+    readTime: "10 min read",
+    category: "Mindfulness",
+    tags: ["Intention", "Focus", "Creation", "Purpose"],
+    image: "/blog/power-intention.png",
+    content: `
             <h2>Intention vs. Hope</h2>
             <p>Hope is passive. It waits for something good to happen. <a href="https://en.wikipedia.org/wiki/Intention" target="_blank" rel="noopener noreferrer">Intention</a> is active. It decides that something good <em>will</em> happen and sets the energetic conditions for it. Intention is a command to the <a href="https://en.wikipedia.org/wiki/Subconscious" target="_blank" rel="noopener noreferrer">subconscious mind</a> and the Universe.</p>
             <p><a href="https://en.wikipedia.org/wiki/Wayne_Dyer" target="_blank" rel="noopener noreferrer">Wayne Dyer</a> described intention not as a forceful will, but as a <a href="https://www.hayhouse.com/the-power-of-intention-1" target="_blank" rel="noopener noreferrer">field of energy</a> that we can tap into. When you are "in-tension," you are connected to the source of creation. It is a state of certainty.</p>
@@ -181,7 +186,7 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>To live effectively, one must live <a href="https://www.psychologytoday.com/us/blog/click-here-happiness/202102/intentional-living" target="_blank" rel="noopener noreferrer">intentionally</a>. This applies to the micro and the macro.</p>
             <h3>Segment Intending</h3>
             <p>Before entering a new segment of your day (e.g., a meeting, a drive, a dinner), pause and set an intention. "My intention for this drive is <a href="https://www.headspace.com/meditation/safety" target="_blank" rel="noopener noreferrer">safety and relaxation</a>." "My intention for this meeting is <a href="https://www.mindtools.com/pages/article/newCDV_34.htm" target="_blank" rel="noopener noreferrer">clarity and collaboration</a>." This pre-paves the energy of the event.</p>
-            
+
             <h3>Life Mission</h3>
             <p>On a macro scale, what is your life's <a href="https://en.wikipedia.org/wiki/Meaning_of_life" target="_blank" rel="noopener noreferrer">intention</a>? Is it to serve? To create? To experience joy? Without a clear life intention, we drift. With one, we steer. Your intention becomes your <a href="https://en.wikipedia.org/wiki/Polaris" target="_blank" rel="noopener noreferrer">North Star</a>, guiding decisions and priorities.</p>
 
@@ -190,22 +195,23 @@ export const BLOG_POSTS: BlogPost[] = [
             <h2>The Ritual of Setting Intention</h2>
             <p>Ritual anchors intention. Lighting a candle, burning <a href="https://en.wikipedia.org/wiki/Smudging" target="_blank" rel="noopener noreferrer">sage</a>, or writing it down signals to the psyche that this is a significant moment. It separates the mundane from the magical.</p>
             <p>State your intentions in the positive. Instead of "I don't want to be stressed," say "I intend to be <a href="https://www.calm.com/blog/grounding-techniques" target="_blank" rel="noopener noreferrer">calm and grounded</a>." The Universe ignores the "don't"—it just hears "stressed." Focus on the desired state.</p>
-            
+
             <p>Intention is the steering wheel of <a href="https://en.wikipedia.org/wiki/Destiny" target="_blank" rel="noopener noreferrer">destiny</a>. You are driving the car of your life. Are your hands on the wheel, or are you hoping the car creates its own map? Take control. Set the course.</p>
-        `
-    },
-    {
-        id: "5",
-        slug: "ancient-wisdom-for-modern-life",
-        title: "Ancient Wisdom for Modern Life: Timeless Truths in a Digital Age",
-        excerpt: "As technology advances, our souls starve for meaning. The ancient mystery schools held keys that are more relevant now than ever before.",
-        author: "Judith Avotri",
-        date: "January 5, 2026",
-        readTime: "18 min read",
-        category: "Philosophy",
-        tags: ["Ancient Wisdom", "Hermetics", "Philosophy", "Digital Age"],
-        image: "/blog/ancient-wisdom.png",
-        content: `
+        `,
+  },
+  {
+    id: "5",
+    slug: "ancient-wisdom-for-modern-life",
+    title: "Ancient Wisdom for Modern Life: Timeless Truths in a Digital Age",
+    excerpt:
+      "As technology advances, our souls starve for meaning. The ancient mystery schools held keys that are more relevant now than ever before.",
+    author: "Judith Avotri",
+    date: "January 5, 2026",
+    readTime: "18 min read",
+    category: "Philosophy",
+    tags: ["Ancient Wisdom", "Hermetics", "Philosophy", "Digital Age"],
+    image: "/blog/ancient-wisdom.png",
+    content: `
             <h2>The Great Disconnect</h2>
             <p>We live in the age of information, yet we are drowning in confusion. We are more connected than ever, yet we suffer from an epidemic of <a href="https://www.psychologytoday.com/us/basics/loneliness" target="_blank" rel="noopener noreferrer">loneliness</a>. The modern world offers comfort but rarely offers <a href="https://en.wikipedia.org/wiki/Meaning_of_life" target="_blank" rel="noopener noreferrer">meaning</a>. In this vacuum, the teachings of the ancients shine like diamonds.</p>
             <p>From the <a href="https://en.wikipedia.org/wiki/Stoicism" target="_blank" rel="noopener noreferrer">Stoics</a> of Rome to the <a href="https://en.wikipedia.org/wiki/Taoism" target="_blank" rel="noopener noreferrer">Taoists</a> of China, from the <a href="https://en.wikipedia.org/wiki/Hermeticism" target="_blank" rel="noopener noreferrer">Hermeticists</a> of Egypt to the <a href="https://en.wikipedia.org/wiki/Vedas" target="_blank" rel="noopener noreferrer">Vedics</a> of India, the wise of the past understood the human condition. They did not have smartphones, but they had <a href="https://en.wikipedia.org/wiki/Spiritual_practice" target="_blank" rel="noopener noreferrer">technologies of the soul</a> that we have largely forgotten.</p>
@@ -230,20 +236,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <p><a href="https://en.wikipedia.org/wiki/Wu_wei" target="_blank" rel="noopener noreferrer">Wu Wei</a> (effortless action) is the art of sailing rather than rowing. It is aligning with the <a href="https://en.wikipedia.org/wiki/Tao" target="_blank" rel="noopener noreferrer">Tao</a> (the Way of nature). Modern life is a struggle upstream. Taoism invites us to float, to trust the current of life, and to achieve great things without forcing. It is the wisdom of the water—soft, yielding, yet capable of carving canyons through stone.</p>
 
             <p>These ancient systems are not relics; they are maps. We are lost in a very complex territory, and these maps were drawn by those who walked the path before us. It is time to dust them off and find our <a href="https://en.wikipedia.org/wiki/Self-realization" target="_blank" rel="noopener noreferrer">way home</a>.</p>
-        `
-    },
-    {
-        id: "6",
-        slug: "meditation-for-beginners-complete-guide",
-        title: "Meditation for Beginners: A Complete Guide to Inner Stillness",
-        excerpt: "In the silence between thoughts lies the doorway to your true self. Learn how to meditate effectively and transform your mind from chaos to clarity.",
-        author: "Judith Avotri",
-        date: "January 6, 2026",
-        readTime: "14 min read",
-        category: "Mindfulness",
-        tags: ["Meditation", "Mindfulness", "Inner Peace", "Beginners"],
-        image: "/blog/meditation-beginners.png",
-        content: `
+        `,
+  },
+  {
+    id: "6",
+    slug: "meditation-for-beginners-complete-guide",
+    title: "Meditation for Beginners: A Complete Guide to Inner Stillness",
+    excerpt:
+      "In the silence between thoughts lies the doorway to your true self. Learn how to meditate effectively and transform your mind from chaos to clarity.",
+    author: "Judith Avotri",
+    date: "January 6, 2026",
+    readTime: "14 min read",
+    category: "Mindfulness",
+    tags: ["Meditation", "Mindfulness", "Inner Peace", "Beginners"],
+    image: "/blog/meditation-beginners.png",
+    content: `
             <h2>What Is Meditation?</h2>
             <h2>What Is Meditation?</h2>
             <p><a href="https://en.wikipedia.org/wiki/Meditation" target="_blank" rel="noopener noreferrer">Meditation</a> is not about stopping your thoughts—that is impossible. It is about changing your <a href="https://www.psychologytoday.com/us/blog/navigating-the-serpentine-path/202102/changing-your-relationship-thoughts" target="_blank" rel="noopener noreferrer">relationship</a> to your thoughts. Instead of being swept away by the mental chatter, you learn to observe it from a place of stillness. You become the sky watching the clouds pass, rather than being lost in the storm.</p>
@@ -277,20 +284,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <p><strong>"Nothing is happening."</strong> The benefits of meditation are often subtle and cumulative. Trust the process. Studies from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3485650/" target="_blank" rel="noopener noreferrer">NCBI</a> show measurable changes after just 8 weeks of consistent practice.</p>
 
             <p>Meditation is not an escape from life; it is preparation for it. It gives you access to a <a href="https://www.calm.com/blog/inner-peace" target="_blank" rel="noopener noreferrer">calm center</a> that remains stable regardless of external circumstances. This is the ultimate gift you can give yourself.</p>
-        `
-    },
-    {
-        id: "7",
-        slug: "shadow-work-embracing-your-darkness",
-        title: "Shadow Work: Embracing Your Darkness to Find the Light",
-        excerpt: "The parts of ourselves we reject don't disappear—they go underground and control us from the shadows. True healing requires meeting your darkness face to face.",
-        author: "Judith Avotri",
-        date: "January 7, 2026",
-        readTime: "16 min read",
-        category: "Healing",
-        tags: ["Shadow Work", "Psychology", "Self-Discovery", "Jung"],
-        image: "/blog/shadow-work.png",
-        content: `
+        `,
+  },
+  {
+    id: "7",
+    slug: "shadow-work-embracing-your-darkness",
+    title: "Shadow Work: Embracing Your Darkness to Find the Light",
+    excerpt:
+      "The parts of ourselves we reject don't disappear—they go underground and control us from the shadows. True healing requires meeting your darkness face to face.",
+    author: "Judith Avotri",
+    date: "January 7, 2026",
+    readTime: "16 min read",
+    category: "Healing",
+    tags: ["Shadow Work", "Psychology", "Self-Discovery", "Jung"],
+    image: "/blog/shadow-work.png",
+    content: `
             <h2>What Is the Shadow?</h2>
             <h2>What Is the Shadow?</h2>
             <p>The concept of the <a href="https://en.wikipedia.org/wiki/Shadow_(psychology)" target="_blank" rel="noopener noreferrer">shadow</a> was developed by Swiss psychiatrist <a href="https://en.wikipedia.org/wiki/Carl_Jung" target="_blank" rel="noopener noreferrer">Carl Jung</a>. It refers to the unconscious parts of our personality that the conscious ego does not identify with. These are the traits we've repressed—anger, jealousy, greed, sexuality—because they were deemed unacceptable by our families or society.</p>
@@ -324,20 +332,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>The goal is not to destroy the shadow but to <a href="https://en.wikipedia.org/wiki/Individuation" target="_blank" rel="noopener noreferrer">integrate</a> it. Your anger, properly channeled, becomes assertiveness. Your selfishness becomes healthy boundaries. Your darkness, once embraced, becomes your <a href="https://www.goodreads.com/quotes/tag/shadow" target="_blank" rel="noopener noreferrer">greatest strength</a>.</p>
 
             <p>"One does not become enlightened by imagining figures of light, but by making the darkness conscious." — <a href="https://en.wikipedia.org/wiki/Carl_Jung" target="_blank" rel="noopener noreferrer">Carl Jung</a></p>
-        `
-    },
-    {
-        id: "8",
-        slug: "the-science-of-gratitude",
-        title: "The Science of Gratitude: How Thankfulness Transforms Your Brain",
-        excerpt: "Gratitude is more than politeness—it is a powerful neurochemical intervention that rewires your brain for happiness. Discover the science behind saying thank you.",
-        author: "Judith Avotri",
-        date: "January 8, 2026",
-        readTime: "12 min read",
-        category: "Mindfulness",
-        tags: ["Gratitude", "Neuroscience", "Happiness", "Wellness"],
-        image: "/blog/gratitude.png",
-        content: `
+        `,
+  },
+  {
+    id: "8",
+    slug: "the-science-of-gratitude",
+    title: "The Science of Gratitude: How Thankfulness Transforms Your Brain",
+    excerpt:
+      "Gratitude is more than politeness—it is a powerful neurochemical intervention that rewires your brain for happiness. Discover the science behind saying thank you.",
+    author: "Judith Avotri",
+    date: "January 8, 2026",
+    readTime: "12 min read",
+    category: "Mindfulness",
+    tags: ["Gratitude", "Neuroscience", "Happiness", "Wellness"],
+    image: "/blog/gratitude.png",
+    content: `
             <h2>Gratitude as Medicine</h2>
             <h2>Gratitude as Medicine</h2>
             <p><a href="https://en.wikipedia.org/wiki/Gratitude" target="_blank" rel="noopener noreferrer">Gratitude</a> is not just a feel-good emotion; it is a powerful tool for <a href="https://www.psychologytoday.com/us/blog/prefrontal-nudity/201211/the-grateful-brain" target="_blank" rel="noopener noreferrer">neurological change</a>. Studies from the <a href="https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier" target="_blank" rel="noopener noreferrer">Harvard Medical School</a> show that practicing gratitude can increase happiness by 25%, improve sleep, reduce depression, and even boost immune function.</p>
@@ -364,20 +373,22 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>Gratitude is the bridge between wanting and having. When you are grateful for what you have, you emit the <a href="https://www.thesecret.tv/teachings/gratitude-and-law-of-attraction/" target="_blank" rel="noopener noreferrer">frequency of abundance</a>. The Universe responds by bringing more things to be grateful for. This is the <a href="https://en.wikipedia.org/wiki/Law_of_attraction_(New_Thought)" target="_blank" rel="noopener noreferrer">Law of Attraction</a> in action.</p>
 
             <p>Gratitude costs nothing but changes everything. It is the simplest upgrade you can make to your <a href="https://www.mindful.org/how-gratitude-changes-your-brain/" target="_blank" rel="noopener noreferrer">mental operating system</a>. Start today. Say thank you—and mean it.</p>
-        `
-    },
-    {
-        id: "9",
-        slug: "understanding-synchronicity",
-        title: "Understanding Synchronicity: The Universe Speaking Through Coincidence",
-        excerpt: "Have you ever thought of someone moments before they called? These meaningful coincidences are not random—they are the language of the Universe.",
-        author: "Judith Avotri",
-        date: "January 9, 2026",
-        readTime: "14 min read",
-        category: "Spirituality",
-        tags: ["Synchronicity", "Jung", "Universe", "Signs"],
-        image: "/blog/synchronicity.png",
-        content: `
+        `,
+  },
+  {
+    id: "9",
+    slug: "understanding-synchronicity",
+    title:
+      "Understanding Synchronicity: The Universe Speaking Through Coincidence",
+    excerpt:
+      "Have you ever thought of someone moments before they called? These meaningful coincidences are not random—they are the language of the Universe.",
+    author: "Judith Avotri",
+    date: "January 9, 2026",
+    readTime: "14 min read",
+    category: "Spirituality",
+    tags: ["Synchronicity", "Jung", "Universe", "Signs"],
+    image: "/blog/synchronicity.png",
+    content: `
             <h2>What Is Synchronicity?</h2>
             <h2>What Is Synchronicity?</h2>
             <p><a href="https://en.wikipedia.org/wiki/Synchronicity" target="_blank" rel="noopener noreferrer">Synchronicity</a> is a term coined by <a href="https://en.wikipedia.org/wiki/Carl_Jung" target="_blank" rel="noopener noreferrer">Carl Jung</a> to describe <a href="https://www.psychologytoday.com/us/blog/passion/201712/synchronicities-what-they-are-and-how-they-can-benefit-you" target="_blank" rel="noopener noreferrer">meaningful coincidences</a>—events that are connected not by cause and effect, but by meaning. You think of an old friend, and they call minutes later. You see the same number sequence everywhere—<a href="https://en.wikipedia.org/wiki/11:11_(numerology)" target="_blank" rel="noopener noreferrer">11:11</a>, 333. You ask the Universe for a sign and receive an unmistakable answer.</p>
@@ -411,20 +422,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>Document meaningful coincidences. Over time, patterns emerge that reveal deeper insights about your journey.</p>
 
             <p>Synchronicity is proof that you are not alone—that the Universe is <a href="https://en.wikipedia.org/wiki/Panpsychism" target="_blank" rel="noopener noreferrer">conscious</a> and conspiring in your favor. Pay attention. The answers you seek are all around you.</p>
-        `
-    },
-    {
-        id: "10",
-        slug: "kundalini-awakening-guide",
-        title: "Kundalini Awakening: The Serpent Power Within",
-        excerpt: "Coiled at the base of your spine lies a dormant force of unimaginable power. When awakened, Kundalini can transform every aspect of your being.",
-        author: "Judith Avotri",
-        date: "January 10, 2026",
-        readTime: "20 min read",
-        category: "Spirituality",
-        tags: ["Kundalini", "Yoga", "Awakening", "Energy"],
-        image: "/blog/kundalini.png",
-        content: `
+        `,
+  },
+  {
+    id: "10",
+    slug: "kundalini-awakening-guide",
+    title: "Kundalini Awakening: The Serpent Power Within",
+    excerpt:
+      "Coiled at the base of your spine lies a dormant force of unimaginable power. When awakened, Kundalini can transform every aspect of your being.",
+    author: "Judith Avotri",
+    date: "January 10, 2026",
+    readTime: "20 min read",
+    category: "Spirituality",
+    tags: ["Kundalini", "Yoga", "Awakening", "Energy"],
+    image: "/blog/kundalini.png",
+    content: `
             <h2>What Is Kundalini?</h2>
             <h2>What Is Kundalini?</h2>
             <p><a href="https://en.wikipedia.org/wiki/Kundalini" target="_blank" rel="noopener noreferrer">Kundalini</a> is a Sanskrit term meaning "coiled snake." It refers to a dormant <a href="https://en.wikipedia.org/wiki/Spirituality" target="_blank" rel="noopener noreferrer">spiritual energy</a> located at the base of the spine, in the <a href="https://en.wikipedia.org/wiki/Muladhara" target="_blank" rel="noopener noreferrer">Muladhara (Root) chakra</a>. In most people, this energy sleeps throughout their lifetime. But when awakened, it rises through the <a href="https://en.wikipedia.org/wiki/Nadi_(yoga)#Sushumna" target="_blank" rel="noopener noreferrer">central energy channel</a> (Sushumna), activating each chakra and culminating in a state of <a href="https://en.wikipedia.org/wiki/Enlightenment" target="_blank" rel="noopener noreferrer">enlightenment</a> at the Crown.</p>
@@ -457,23 +469,24 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>Awakening is just the beginning. The goal is <a href="https://en.wikipedia.org/wiki/Integration_(psychology)" target="_blank" rel="noopener noreferrer">integration</a>—living from this expanded state in everyday life. Grounding practices (time in nature, physical exercise, root chakra work) help stabilize the energy. <a href="https://en.wikipedia.org/wiki/Patience" target="_blank" rel="noopener noreferrer">Patience</a> is essential; the process unfolds over years, not days.</p>
 
             <p>Kundalini is your birthright—the full blossoming of <a href="https://en.wikipedia.org/wiki/Human_potential" target="_blank" rel="noopener noreferrer">human potential</a>. When you are ready, the serpent will rise.</p>
-        `
-    },
-    {
-        id: "11",
-        slug: "dark-night-of-the-soul",
-        title: "The Dark Night of the Soul: Spiritual Depression or Awakening?",
-        excerpt: "When the light goes out and meaning collapses, you aren't losing your mind—you are shedding your ego. A guide to navigating the hardest stage of awakening.",
-        author: "Judith Avotri",
-        date: "January 11, 2026",
-        readTime: "18 min read",
-        category: "Spirituality",
-        tags: ["Awakening", "Ego Death", "Healing", "Mysticism"],
-        image: "/blog/dark-night-soul.png",
-        content: `
+        `,
+  },
+  {
+    id: "11",
+    slug: "dark-night-of-the-soul",
+    title: "The Dark Night of the Soul: Spiritual Depression or Awakening?",
+    excerpt:
+      "When the light goes out and meaning collapses, you aren't losing your mind—you are shedding your ego. A guide to navigating the hardest stage of awakening.",
+    author: "Judith Avotri",
+    date: "January 11, 2026",
+    readTime: "18 min read",
+    category: "Spirituality",
+    tags: ["Awakening", "Ego Death", "Healing", "Mysticism"],
+    image: "/blog/dark-night-soul.png",
+    content: `
             <h2>Into the Void</h2>
             <p>The <a href="https://en.wikipedia.org/wiki/Dark_Night_of_the_Soul" target="_blank" rel="noopener noreferrer">Dark Night of the Soul</a> is a term coined by the 16th-century mystic <a href="https://en.wikipedia.org/wiki/John_of_the_Cross" target="_blank" rel="noopener noreferrer">St. John of the Cross</a>. It describes a period of spiritual desolation where former beliefs, comforts, and senses of meaning completely collapse. It often feels like deep depression, but there is a crucial difference: depression is a state of stagnation; the Dark Night is a state of <a href="https://www.psychologytoday.com/us/blog/enlightened-living/200812/the-dark-night-the-soul" target="_blank" rel="noopener noreferrer">transformation</a>.</p>
-            
+
             <h2>Why It Happens</h2>
             <p>This phase occurs when the <a href="https://en.wikipedia.org/wiki/Ego_(psychoanalysis)" target="_blank" rel="noopener noreferrer">ego</a> begins to dissolve. The structures you built your identity on—career, relationships, status—revealed themselves as illusory. The Universe strips away everything that is not <em>you</em> so that only the authentic Self remains.</p>
 
@@ -488,20 +501,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>Just as the night is darkest before the dawn, this stage precedes a major expansion of consciousness. You are not dying; you are being <a href="https://en.wikipedia.org/wiki/Spiritual_rebirth" target="_blank" rel="noopener noreferrer">reborn</a>.</p>
 
             <p>The Dark Night is not a punishment. It is an initiation. Walk through the fire, and you will find you are the gold.</p>
-        `
-    },
-    {
-        id: "12",
-        slug: "science-of-crystal-healing",
-        title: "The Science of Crystals: Frequency, Vibration, and Healing",
-        excerpt: "Crystals are not just pretty rocks. They are highly ordered structures that emit stable frequencies. promoting balance in the chaotic human energy field.",
-        author: "Judith Avotri",
-        date: "January 12, 2026",
-        readTime: "14 min read",
-        category: "Healing",
-        tags: ["Crystals", "Science", "Energy", "Vibration"],
-        image: "/blog/crystal-healing.png",
-        content: `
+        `,
+  },
+  {
+    id: "12",
+    slug: "science-of-crystal-healing",
+    title: "The Science of Crystals: Frequency, Vibration, and Healing",
+    excerpt:
+      "Crystals are not just pretty rocks. They are highly ordered structures that emit stable frequencies. promoting balance in the chaotic human energy field.",
+    author: "Judith Avotri",
+    date: "January 12, 2026",
+    readTime: "14 min read",
+    category: "Healing",
+    tags: ["Crystals", "Science", "Energy", "Vibration"],
+    image: "/blog/crystal-healing.png",
+    content: `
             <h2>More Than Meets the Eye</h2>
             <p>In the scientific world, crystals are defined by their widely ordered atomic structure. This lattice perfection allows them to hold a stable vibration. This is why quartz is used in watches and radios (the <a href="https://en.wikipedia.org/wiki/Piezoelectricity" target="_blank" rel="noopener noreferrer">piezoelectric effect</a>). Crystals can transmit, store, and transform energy.</p>
 
@@ -519,20 +533,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>Emits the frequency of unconditional love. It soothes the <a href="https://en.wikipedia.org/wiki/Anahata" target="_blank" rel="noopener noreferrer">Heart Chakra</a> and heals emotional wounds.</p>
 
             <p>Crystals are tools of the earth that help us tune our own instruments. By working with them, we anchor high-frequency light into our physical bodies.</p>
-        `
-    },
-    {
-        id: "13",
-        slug: "full-moon-rituals-guide",
-        title: "Harnessing Lunar Energy: A Guide to Full Moon Rituals",
-        excerpt: "The moon pulls the tides of the ocean and the tides of your soul. Learn how to use the Full Moon to release what no longer serves you.",
-        author: "Judith Avotri",
-        date: "January 13, 2026",
-        readTime: "10 min read",
-        category: "Spirituality",
-        tags: ["Moon", "Rituals", "Astrology", "Manifestation"],
-        image: "/blog/moon-rituals.png",
-        content: `
+        `,
+  },
+  {
+    id: "13",
+    slug: "full-moon-rituals-guide",
+    title: "Harnessing Lunar Energy: A Guide to Full Moon Rituals",
+    excerpt:
+      "The moon pulls the tides of the ocean and the tides of your soul. Learn how to use the Full Moon to release what no longer serves you.",
+    author: "Judith Avotri",
+    date: "January 13, 2026",
+    readTime: "10 min read",
+    category: "Spirituality",
+    tags: ["Moon", "Rituals", "Astrology", "Manifestation"],
+    image: "/blog/moon-rituals.png",
+    content: `
             <h2>The Lunar Influence</h2>
             <p>Just as the gravity of the <a href="https://en.wikipedia.org/wiki/Moon" target="_blank" rel="noopener noreferrer">Moon</a> affects the ocean's tides, it affects the water in our bodies (we are 60% water). The Full Moon represents the peak of energy, illumination, and fullness. It is the time when things come to the surface to be seen and released.</p>
 
@@ -553,20 +568,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>If possible, stand under the moonlight. Place your crystals out to be cleansed by the <a href="https://en.wikipedia.org/wiki/Moonlight" target="_blank" rel="noopener noreferrer">lunar light</a>.</p>
 
             <p>By syncing with the lunar cycles, you stop swimming upstream and learn to flow with the natural rhythms of the Universe.</p>
-        `
-    },
-    {
-        id: "14",
-        slug: "mastering-lucid-dreaming",
-        title: "Lucid Dreaming: Waking Up Within the Dream",
-        excerpt: "Imagine flying, visiting other dimensions, or speaking with your subconscious—all while you sleep. Lucid dreaming opens the door to a limitless reality.",
-        author: "Judith Avotri",
-        date: "January 14, 2026",
-        readTime: "16 min read",
-        category: "Consciousness",
-        tags: ["Dreams", "Lucid Dreaming", "Subconscious", "Astral"],
-        image: "/blog/lucid-dreaming.png",
-        content: `
+        `,
+  },
+  {
+    id: "14",
+    slug: "mastering-lucid-dreaming",
+    title: "Lucid Dreaming: Waking Up Within the Dream",
+    excerpt:
+      "Imagine flying, visiting other dimensions, or speaking with your subconscious—all while you sleep. Lucid dreaming opens the door to a limitless reality.",
+    author: "Judith Avotri",
+    date: "January 14, 2026",
+    readTime: "16 min read",
+    category: "Consciousness",
+    tags: ["Dreams", "Lucid Dreaming", "Subconscious", "Astral"],
+    image: "/blog/lucid-dreaming.png",
+    content: `
             <h2>What is Lucid Dreaming?</h2>
             <p><a href="https://en.wikipedia.org/wiki/Lucid_dream" target="_blank" rel="noopener noreferrer">Lucid dreaming</a> is the state of being aware that you are dreaming while you are still asleep. Scientific proof was provided by Dr. <a href="https://en.wikipedia.org/wiki/Stephen_LaBerge" target="_blank" rel="noopener noreferrer">Stephen LaBerge</a> at Stanford, who communicated from the dream state via eye movements.</p>
 
@@ -584,20 +600,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>Before sleep, repeat: "Tonight I will realize I am dreaming." Visualise becoming lucid. This programs the <a href="https://en.wikipedia.org/wiki/Subconscious" target="_blank" rel="noopener noreferrer">subconscious</a>.</p>
 
             <p>Dreams are not random static. They are messages from your deeper self. To wake up in a dream is the first step to waking up in life.</p>
-        `
-    },
-    {
-        id: "15",
-        slug: "twin-flames-vs-soulmates",
-        title: "Twin Flames vs. Soulmates: Understanding Spiritual Connections",
-        excerpt: "Not all intense romances are Twin Flames. Learn the difference between a comforting Soulmate and the burning mirror of a Twin Flame connection.",
-        author: "Judith Avotri",
-        date: "January 15, 2026",
-        readTime: "15 min read",
-        category: "Relationships",
-        tags: ["Love", "Twin Flames", "Soulmates", "Spirituality"],
-        image: "/blog/twin-flames.png",
-        content: `
+        `,
+  },
+  {
+    id: "15",
+    slug: "twin-flames-vs-soulmates",
+    title: "Twin Flames vs. Soulmates: Understanding Spiritual Connections",
+    excerpt:
+      "Not all intense romances are Twin Flames. Learn the difference between a comforting Soulmate and the burning mirror of a Twin Flame connection.",
+    author: "Judith Avotri",
+    date: "January 15, 2026",
+    readTime: "15 min read",
+    category: "Relationships",
+    tags: ["Love", "Twin Flames", "Soulmates", "Spirituality"],
+    image: "/blog/twin-flames.png",
+    content: `
             <h2>The Soulmate</h2>
             <p>A <a href="https://en.wikipedia.org/wiki/Soulmate" target="_blank" rel="noopener noreferrer">soulmate</a> is a person from your soul family. The connection feels easy, comforting, and familiar. You just "click." They are here to support you, grow with you, and often stay for a lifetime. It is a relationship of <u>harmony</u>.</p>
 
@@ -614,20 +631,21 @@ export const BLOG_POSTS: BlogPost[] = [
             </ul>
 
             <p>Whether Soulmate or Twin Flame, every relationship is a mirror. They appear exactly when you need them to show you who you really are.</p>
-        `
-    },
-    {
-        id: "16",
-        slug: "unlocking-akashic-records",
-        title: "The Akashic Records: Accessing the Cosmic Library of Your Soul",
-        excerpt: "Imagine a library that contains every thought, word, and deed of every soul that has ever lived. This is the Akashic Record. Learn how to open the book of your life.",
-        author: "Judith Avotri",
-        date: "January 16, 2026",
-        readTime: "25 min read",
-        category: "Consciousness",
-        tags: ["Akashic Records", "Past Lives", "Soul", "Metaphysics"],
-        image: "/blog/akashic-records.png",
-        content: `
+        `,
+  },
+  {
+    id: "16",
+    slug: "unlocking-akashic-records",
+    title: "The Akashic Records: Accessing the Cosmic Library of Your Soul",
+    excerpt:
+      "Imagine a library that contains every thought, word, and deed of every soul that has ever lived. This is the Akashic Record. Learn how to open the book of your life.",
+    author: "Judith Avotri",
+    date: "January 16, 2026",
+    readTime: "25 min read",
+    category: "Consciousness",
+    tags: ["Akashic Records", "Past Lives", "Soul", "Metaphysics"],
+    image: "/blog/akashic-records.png",
+    content: `
             <h2>The Book of Life</h2>
             <p>The term "Akasha" comes from the Sanskrit word for "sky" or "aether." In <a href="https://en.wikipedia.org/wiki/Theosophy" target="_blank" rel="noopener noreferrer">Theosophy</a> and Anthroposophy, the <a href="https://en.wikipedia.org/wiki/Akashic_records" target="_blank" rel="noopener noreferrer">Akashic Records</a> are a compendium of all universal events, thoughts, words, emotions, and intent ever to have occurred in the past, present, or future in terms of all entities and life forms, not just human.</p>
             <p>Think of it as the Universe's super-computer or cloud storage. Every soul has its own file. By accessing this file, you can understand your karma, your soul contracts, and your purpose.</p>
@@ -648,20 +666,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <p>You do not just walk in; you are granted access by the "Keepers" or "Masters" of your Record. Respect, humility, and clear intention are the keys. You cannot access someone else's records without their explicit permission.</p>
 
             <p>The Akashic Records are not a psychic prediction tool; they are a tool for <a href="https://en.wikipedia.org/wiki/Spiritual_growth" target="_blank" rel="noopener noreferrer">spiritual truth</a>. They show you who you really are in the eyes of the Divine.</p>
-        `
-    },
-    {
-        id: "17",
-        slug: "starseeds-galactic-heritage",
-        title: "Are You a Starseed? Tracing Your Galactic Heritage",
-        excerpt: "Do you feel like you don't belong on Earth? You might be a Starseed—a soul that originated from another star system like the Pleiades or Sirius to assist humanity.",
-        author: "Judith Avotri",
-        date: "January 17, 2026",
-        readTime: "22 min read",
-        category: "Spirituality",
-        tags: ["Starseeds", "Pleiadian", "Sirian", "Ascension"],
-        image: "/blog/starseeds.png",
-        content: `
+        `,
+  },
+  {
+    id: "17",
+    slug: "starseeds-galactic-heritage",
+    title: "Are You a Starseed? Tracing Your Galactic Heritage",
+    excerpt:
+      "Do you feel like you don't belong on Earth? You might be a Starseed—a soul that originated from another star system like the Pleiades or Sirius to assist humanity.",
+    author: "Judith Avotri",
+    date: "January 17, 2026",
+    readTime: "22 min read",
+    category: "Spirituality",
+    tags: ["Starseeds", "Pleiadian", "Sirian", "Ascension"],
+    image: "/blog/starseeds.png",
+    content: `
             <h2>The Cosmic Origin</h2>
             <p>A <a href="https://en.wikipedia.org/wiki/Star_people_(New_Age)" target="_blank" rel="noopener noreferrer">Starseed</a> is a soul that has experienced life elsewhere in the Universe—on other planets or in other dimensions—before incarnating on Earth. They often volunteer to come here during times of great transition (like the current "Great Awakening") to anchor high-frequency light.</p>
 
@@ -684,20 +703,21 @@ export const BLOG_POSTS: BlogPost[] = [
             </ul>
 
             <p>Being a Starseed isn't about being "special"; it's about responsibility. You carried a torch of light to a darkened planet. Your job is simply to let it shine.</p>
-        `
-    },
-    {
-        id: "18",
-        slug: "sacred-geometry-blueprint",
-        title: "Sacred Geometry: The Divine Blueprint of Creation",
-        excerpt: "From the spiral of a galaxy to the center of a sunflower, nature follows a mathematical code. Sacred Geometry reveals the order behind the chaos.",
-        author: "Judith Avotri",
-        date: "January 18, 2026",
-        readTime: "24 min read",
-        category: "Science",
-        tags: ["Sacred Geometry", "Math", "Metaphysics", "Flower of Life"],
-        image: "/blog/sacred-geometry.png",
-        content: `
+        `,
+  },
+  {
+    id: "18",
+    slug: "sacred-geometry-blueprint",
+    title: "Sacred Geometry: The Divine Blueprint of Creation",
+    excerpt:
+      "From the spiral of a galaxy to the center of a sunflower, nature follows a mathematical code. Sacred Geometry reveals the order behind the chaos.",
+    author: "Judith Avotri",
+    date: "January 18, 2026",
+    readTime: "24 min read",
+    category: "Science",
+    tags: ["Sacred Geometry", "Math", "Metaphysics", "Flower of Life"],
+    image: "/blog/sacred-geometry.png",
+    content: `
             <h2>The Code of Reality</h2>
             <p><a href="https://en.wikipedia.org/wiki/Sacred_geometry" target="_blank" rel="noopener noreferrer">Sacred Geometry</a> is the belief that God is a mathematician. The universe is not random; it is built upon fundamental geometric patterns that repeat at every scale (fractals).</p>
 
@@ -708,20 +728,21 @@ export const BLOG_POSTS: BlogPost[] = [
             <h3>Metatron's Cube</h3>
             <p>Named after the Archangel <a href="https://en.wikipedia.org/wiki/Metatron" target="_blank" rel="noopener noreferrer">Metatron</a>. It contains all five Platonic Solids—the building blocks of organic life (Tetrahedron, Hexahedron, Octahedron, Dodecahedron, Icosahedron).</p>
             <p>The universe speaks in numbers. By studying these forms, we peer into the mind of the Creator.</p>
-        `
-    },
-    {
-        id: "19",
-        slug: "reiki-energy-healing",
-        title: "Reiki and Energy Medicine: Healing from the Inside Out",
-        excerpt: "Reiki is the Japanese art of channeling Universal Life Force energy. Discover how hands-on healing can clear blockages and restore physical and emotional health.",
-        author: "Judith Avotri",
-        date: "January 19, 2026",
-        readTime: "20 min read",
-        category: "Healing",
-        tags: ["Reiki", "Energy Healing", "Chakras", "Wellness"],
-        image: "/blog/crystal-healing.png",
-        content: `
+        `,
+  },
+  {
+    id: "19",
+    slug: "reiki-energy-healing",
+    title: "Reiki and Energy Medicine: Healing from the Inside Out",
+    excerpt:
+      "Reiki is the Japanese art of channeling Universal Life Force energy. Discover how hands-on healing can clear blockages and restore physical and emotional health.",
+    author: "Judith Avotri",
+    date: "January 19, 2026",
+    readTime: "20 min read",
+    category: "Healing",
+    tags: ["Reiki", "Energy Healing", "Chakras", "Wellness"],
+    image: "/blog/crystal-healing.png",
+    content: `
             <h2>Universal Life Force</h2>
             <p>The word <a href="https://en.wikipedia.org/wiki/Reiki" target="_blank" rel="noopener noreferrer">Reiki</a> comes from the Japanese words "Rei" (Universal) and "Ki" (Life Energy). It is based on the idea that an unseen "life force energy" flows through us. If this energy is low, we get sick or stressed; if it is high, we are capable of being happy and healthy.</p>
 
@@ -730,20 +751,21 @@ export const BLOG_POSTS: BlogPost[] = [
 
             <h2>The Science (Biofield Therapies)</h2>
             <p>While often called "pseudoscience," research into <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4654789/" target="_blank" rel="noopener noreferrer">Biofield Therapies</a> suggests Reiki can significantly reduce pain, anxiety, and blood pressure. It triggers the <a href="https://en.wikipedia.org/wiki/Parasympathetic_nervous_system" target="_blank" rel="noopener noreferrer">parasympathetic nervous system</a>—the body's "rest and digest" mode—where healing occurs.</p>
-        `
-    },
-    {
-        id: "20",
-        slug: "divine-polarity-masculine-feminine",
-        title: "The Dance of Polarity: Balancing Divine Masculine and Feminine",
-        excerpt: "We all contain both masculine and feminine energies within us. True spiritual power comes not from choosing one, but from integrating both.",
-        author: "Judith Avotri",
-        date: "January 20, 2026",
-        readTime: "28 min read",
-        category: "Relationships",
-        tags: ["Divine Feminine", "Divine Masculine", "Balance", "Yin Yang"],
-        image: "/blog/twin-flames.png",
-        content: `
+        `,
+  },
+  {
+    id: "20",
+    slug: "divine-polarity-masculine-feminine",
+    title: "The Dance of Polarity: Balancing Divine Masculine and Feminine",
+    excerpt:
+      "We all contain both masculine and feminine energies within us. True spiritual power comes not from choosing one, but from integrating both.",
+    author: "Judith Avotri",
+    date: "January 20, 2026",
+    readTime: "28 min read",
+    category: "Relationships",
+    tags: ["Divine Feminine", "Divine Masculine", "Balance", "Yin Yang"],
+    image: "/blog/twin-flames.png",
+    content: `
             <h2>The Two Halves of Creation</h2>
             <p>Everything in the universe operates on polarity: Day/Night, Sun/Moon, Output/Input. In spiritual terms, these are the <a href="https://en.wikipedia.org/wiki/Divine_presence" target="_blank" rel="noopener noreferrer">Divine Masculine</a> (Shiva) and <a href="https://en.wikipedia.org/wiki/Shakti" target="_blank" rel="noopener noreferrer">Divine Feminine</a> (Shakti).</p>
 
@@ -755,17 +777,187 @@ export const BLOG_POSTS: BlogPost[] = [
 
             <h2>The Hieros Gamos (Sacred Marriage)</h2>
             <p>True awakening is the <a href="https://en.wikipedia.org/wiki/Hieros_gamos" target="_blank" rel="noopener noreferrer">Hieros Gamos</a>—the sacred marriage of these two energies within <em>yourself</em>. You don't need a partner to complete you; you need to balance your own inner polarities.</p>
-        `
-    }
+        `,
+  },
+  {
+    id: "21",
+    slug: "science-of-crystal-healing",
+    title:
+      "The Science of Crystal Healing: Vibrational Energy and Mineral Structures",
+    excerpt:
+      "Beyond the mysticism lies a world of physics. Explore the scientific principles of piezoelectricity, resonance, and entropy that explain how crystals interact with the human biofield.",
+    author: "Dr. Elena Vance",
+    date: "February 2, 2026",
+    readTime: "35 min read",
+    category: "Science & Spirit",
+    tags: ["Crystals", "Quantum Physics", "Healing", "Geology", "Vibration"],
+    image: "/blog/crystal-science.png",
+    content: `
+            <h2>The Intersection of Geology and Spirit</h2>
+            <p>For centuries, crystals have been dismissed by materialist science as mere rocks—pretty, perhaps, but inert. However, the bridge between ancient mysticism and modern physics is narrowing every day. To understand how crystals affect the human body, we must first understand the nature of matter itself. At the quantum level, everything is vibration. What we perceive as solid matter is actually energy vibrating at a slow frequency. This is not "woo-woo"; this is standard <a href="https://en.wikipedia.org/wiki/Quantum_field_theory" target="_blank" rel="noopener noreferrer">Quantum Field Theory</a>.</p>
+
+            <h2>The Physics of the Lattice: Order out of Chaos</h2>
+            <p>The defining characteristic of a crystal is its atomic structure. Unlike glass or organic matter, which have randomized molecular structures (amorphous), crystals possess a highly organized, repeating geometric pattern known as a <a href="https://en.wikipedia.org/wiki/Crystal_structure" target="_blank" rel="noopener noreferrer">Crystal Lattice</a>. In thermodynamics, this represents the state of lowest possible entropy (disorder).</p>
+            <p>The human body, by contrast, is a dynamic, oscillating system constantly fighting entropy. When we are sick, stressed, or depressed, our bio-magnetic field (measured by SQUIDs - Superconducting Quantum Interference Devices) becomes incoherent. The stable, perfect geometric frequency of a crystal acts as a "tuning fork." Through the principle of <strong>entrainment</strong>, the unstable vibration (the human body) synchronizes with the stable vibration (the crystal), bringing the system back into coherence.</p>
+
+            <h2>Piezoelectricity: The Spark of Life</h2>
+            <p>One of the most tangible scientific properties of crystals—specifically quartz—is <a href="https://en.wikipedia.org/wiki/Piezoelectricity" target="_blank" rel="noopener noreferrer">Piezoelectricity</a>. Discovered by the Curie brothers in 1880, this effect demonstrates that when mechanical pressure is applied to a crystal, it generates an electrical charge. Conversely, when an electrical charge is applied, the crystal vibrates.</p>
+            <p>This is not theoretical. It is the technology that powers your wristwatch, your computer's clock, and sonar equipment. If a crystal can drive the precise timing of a supercomputer, is it so far-fetched to believe it can influence the bio-electrical rhythms of the human heart and brain?</p>
+
+            <h2>Marcel Vogel and the IBM Connection</h2>
+            <p>No discussion on the science of crystals is complete without mentioning <a href="https://en.wikipedia.org/wiki/Marcel_Vogel" target="_blank" rel="noopener noreferrer">Marcel Vogel</a>. A senior scientist at IBM for 27 years holding over 100 patents, Vogel spent the latter half of his life researching quartz crystals. He used liquid crystal displays (LCDs)—technology he helped pioneer—to demonstrate that crystals could store and amplify thought energy.</p>
+            <p>Vogel discovered that the lattice structure of quartz allowed it to store information, much like the silicon chips (a cousin of quartz) in our computers. He postulated that the "phantom phantom" effect seen in leaves (Kirlian photography) could be replicated and stored in crystal structures.</p>
+
+            <h2>The Human Biofield and Resonance</h2>
+            <p>The <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4654789/" target="_blank" rel="noopener noreferrer">National Institutes of Health (NIH)</a> now recognizes the "Biofield" as a legitimate area of study. Our bodies generate electromagnetic fields. The heart's field is the strongest, detectable several feet away. When a crystal with a specific stable frequency enters this field, resonance occurs.</p>
+            <p>Just as a soprano singer can shatter a glass by matching its resonant frequency, a crystal can shatter energetic blockages by introducing a high-amplitude coherent frequency. This is the mechanism of "healing"—not magic, but the physics of resonance.</p>
+
+            <h2>Practical Application: Structuring Water</h2>
+            <p>Water is a liquid crystal. As demonstrated by researchers like <a href="https://en.wikipedia.org/wiki/Masaru_Emoto" target="_blank" rel="noopener noreferrer">Dr. Masaru Emoto</a> and more recently Dr. Gerald Pollack (The Fourth Phase of Water), water molecules can form structured hexagonal arrays similar to quartz. Placing a crystal in water (the indirect method is recommended for toxic stones) can transfer the lattice information to the water molecules, making the water more "bio-available" and coherent for our cells.</p>
+
+            <h2>Conclusion: A Tool for Consciousness</h2>
+            <p>Crystals are not batteries; they are transducers. They convert one form of energy into another. They take the chaotic energy of our environment or our emotions and, through their perfect lattice structure, output a coherent, stable frequency. In a world of increasing entropy and noise, they are nature's tools for maintaining energetic order.</p>
+        `,
+  },
+  {
+    id: "22",
+    slug: "thoth-tarot-history",
+    title: "The Emerald Tablets and the Tarot: Tracing the Path of Thoth",
+    excerpt:
+      "The Tarot is more than a card game; it is the visual encoding of the Hermetic wisdom of Thoth. Discover the ancient Egyptian origins of the Major Arcana.",
+    author: "Marcus Aurelius III",
+    date: "February 5, 2026",
+    readTime: "42 min read",
+    category: "Ancient Wisdom",
+    tags: ["Thoth", "Tarot", "Hermeticism", "Egypt", "Kabbalah"],
+    image: "/blog/tarot-thoth.png",
+    content: `
+            <h2>The Scribe of the Gods</h2>
+            <p>In the pantheon of ancient Egypt, <a href="https://en.wikipedia.org/wiki/Thoth" target="_blank" rel="noopener noreferrer">Thoth</a> stands as the neter of wisdom, writing, and magic. Depicted with the head of an ibis, he is the keeper of the Akashic Records and the author of the legendary Emerald Tablets. But his influence didn't end with the fall of Egypt. He reincarnated in the Greek mind as Hermes Trismegistus, and his wisdom was encoded into a pictorial book that could survive the burning of libraries: The Tarot.</p>
+
+            <h2>The Book of Thoth</h2>
+            <p>Occultists like <a href="https://en.wikipedia.org/wiki/Aleister_Crowley" target="_blank" rel="noopener noreferrer">Aleister Crowley</a> and Eliphas Levi believed that the 78 cards of the Tarot represent the 78 leaves of the legendary Book of Thoth. This book was said to contain the secrets of the universe, the process of creation, and the path of the soul back to divinity. While the physical book may be lost, its archetypes remain etched in the collective unconscious.</p>
+
+            <h2>The Major Arcana: The Fool's Journey</h2>
+            <p>The 22 cards of the Major Arcana correspond perfectly to the 22 letters of the Hebrew alphabet and the paths on the <a href="https://en.wikipedia.org/wiki/Tree_of_life_(Kabbalah)" target="_blank" rel="noopener noreferrer">Kabbalistic Tree of Life</a>. This is not a coincidence. It is a map. The Fool (0) represents the soul stepping into manifestation. The Magician (I) is Thoth himself, wielding the elements. The High Priestess (II) is Isis, guarding the veil of mystery.</p>
+
+            <h2>As Above, So Below</h2>
+            <p>The central tenet of Hermeticism, "As Above, So Below," is visually depicted in the Magician card. One hand points to the sky, drawing down power; the other points to the earth, grounding it. This teaches us that we are conduits. The Tarot is not a tool for fortune-telling; it is a tool for alignment. It aligns the "Below" (our subconscious) with the "Above" (the superconscious).</p>
+
+            <h2>The Emerald Tablets</h2>
+            <p>The famous lines from the <a href="https://en.wikipedia.org/wiki/Emerald_Tablet" target="_blank" rel="noopener noreferrer">Emerald Tablet</a>—"That which is below is like that which is above"—are the key to reading the cards. When you pull a card, you are seeing a mirror of your current vibrational state. You are seeing the "Below" reflecting the "Above" of the planetary movements and cosmic tides.</p>
+
+            <h2>Conclusion: The Living Book</h2>
+            <p>Thoth did not leave us a static text; he left us a living system. The Tarot evolves with us. Every time we shuffle, we are recreating the universe in miniature, allowing the divine intelligence to speak through the language of symbols. It is the ultimate act of co-creation.</p>
+        `,
+  },
+  {
+    id: "23",
+    slug: "astrology-2025-pluto-aquarius",
+    title: "The Age of Technology and Rebellion: Pluto in Aquarius 2025-2044",
+    excerpt:
+      "A tectonic shift is upon us. Pluto's entry into Aquarius signals a 20-year era of technological revolution, the decentralization of power, and the rise of the collective.",
+    author: "Sarah Starwalker",
+    date: "February 10, 2026",
+    readTime: "30 min read",
+    category: "Astrology",
+    tags: ["Pluto", "Aquarius", "2025", "Future", "Technology"],
+    image: "/blog/astrology-2025.png",
+    content: `
+            <h2>The Great Transformer Enters the Sign of the Future</h2>
+            <p>For the last 15 years, <a href="https://en.wikipedia.org/wiki/Pluto_(astrology)" target="_blank" rel="noopener noreferrer">Pluto</a> has been grinding through Capricorn, deconstructing our top-down structures: governments, banks, and corporations. Now, the Lord of the Underworld enters Aquarius, the sign of the people, technology, and the future. The last time Pluto was in Aquarius was during the French Revolution and the American Revolution. We are on the brink of a similar radical change.</p>
+
+            <h2>Power to the People</h2>
+            <p>Aquarius is the water bearer, pouring knowledge onto the collective. Pluto represents power. Put them together, and you get **Power to the Collective**. We will see the continued rise of Decentralized Finance (DeFi), DAOs (Decentralized Autonomous Organizations), and open-source intelligence. The era of the "CEO King" is ending; the era of the Network is beginning.</p>
+
+            <h2>The AI Revolution</h2>
+            <p>Aquarius rules electricity, networks, and artificial intelligence. With Pluto here, AI will not just evolve; it will transform the fundamental nature of reality. We must be vigilant. Pluto exposes the shadow. We will face the shadow side of technology: surveillance, loss of privacy, and the transhumanist debate. The spiritual challenge is to maintain our humanity in the face of the machine.</p>
+
+            <h2>Community as Currency</h2>
+            <p>In this new era, your net worth will be your network. Not your LinkedIn connections, but your true spiritual tribe. Aquarius is the sign of friendship and groups. As old systems crumble, small, resilient communities will become the lifeboats. We are moving from a "Me" consciousness (Aries/Leo axis) to a "We" consciousness.</p>
+
+            <h2>Conclusion: Surfing the Wave</h2>
+            <p>Do not fear the change. Pluto destroys only what is rotten. If your life is built on authentic foundations, you will thrive. This is the time to embrace innovation, to connect with your tribe, and to dream a new world into being. The revolution will not be televised; it will be decentralized.</p>
+        `,
+  },
+  {
+    id: "24",
+    slug: "lucid-dreaming-neuroscience",
+    title: "Awake in the Dream: The Neuroscience of Lucid Dreaming",
+    excerpt:
+      "Lucid dreaming is not just a fantasy; it is a measurable state of hybrid consciousness. Learn how to activate your prefrontal cortex during REM sleep.",
+    author: "Dr. Morpheus",
+    date: "February 15, 2026",
+    readTime: "25 min read",
+    category: "Consciousness",
+    tags: ["Lucid Dreaming", "Neuroscience", "Sleep", "REM", "Awareness"],
+    image: "/blog/lucid-dreaming-art.png",
+    content: `
+            <h2>The Hybrid State</h2>
+            <p><a href="https://en.wikipedia.org/wiki/Lucid_dream" target="_blank" rel="noopener noreferrer">Lucid dreaming</a>—the state of knowing you are dreaming while in the dream—was once considered a myth. Today, it is a scientifically validated phenomenon. fMRI scans show that during a lucid dream, the **dorsolateral prefrontal cortex** (the part of the brain responsible for logic and self-awareness) reactivates during REM sleep. Normally, this part of the brain is shut down, which is why we accept bizarre dream logic. In a lucid dream, the lights come back on.</p>
+
+            <h2>Gamma Waves: The Frequency of Insight</h2>
+            <p>Studies at the <a href="https://www.uni-heidelberg.de/en" target="_blank" rel="noopener noreferrer">Heidelberg University</a> have shown that lucid dreamers exhibit a spike in **Gamma brainwaves** (40Hz). This is the same frequency observed in long-term meditators during peak states of insight. It represents a "binding" of consciousness—a moment of hyper-connectivity between different brain regions.</p>
+
+            <h2>Techniques for Induction</h2>
+            <p>1. **Reality Testing**: Ask yourself "Am I dreaming?" throughout the day. Check your hands. In a dream, hands often look distorted.<br>
+            2. **Wake Back to Bed (WBTB)**: Wake up after 5 hours of sleep, stay up for 20 minutes, then go back to sleep. This targets your longest REM cycle.<br>
+            3. **Mnemonic Induction (MILD)**: Repeat a mantra as you fall asleep: "Next time I'm dreaming, I will remember I'm dreaming."</p>
+
+            <h2>The Simulation Hypothesis</h2>
+            <p>Lucid dreaming offers a profound philosophical insight. If your brain can generate a fully immersive, 3D reality that feels 100% real, how do you know <em>this</em> reality isn't a simulation? Ancient traditions like Buddhism call this world "Maya" (illusion). Lucid dreaming is the practice range for waking up from the Big Dream of life.</p>
+        `,
+  },
+  {
+    id: "25",
+    slug: "sacred-geometry-blueprints",
+    title: "The Language of God: Sacred Geometry and the Blueprint of Reality",
+    excerpt:
+      "From the spiral of a nautilus shell to the orbit of galaxies, the same mathematical patterns emerge. Explore the Golden Ratio, the Flower of Life, and the code of creation.",
+    author: "Pythagoras Reborn",
+    date: "February 20, 2026",
+    readTime: "33 min read",
+    category: "Ancient Wisdom",
+    tags: [
+      "Sacred Geometry",
+      "Math",
+      "Golden Ratio",
+      "Flower of Life",
+      "Creation",
+    ],
+    image: "/blog/sacred-geometry-blueprint.png",
+    content: `
+            <h2>Mathematics is the Language of Nature</h2>
+            <p>Galileo famously said, "Mathematics is the language in which God has written the universe." <a href="https://en.wikipedia.org/wiki/Sacred_geometry" target="_blank" rel="noopener noreferrer">Sacred Geometry</a> is the study of the fundamental shapes and ratios that govern the structure of space and time. It is the visible footprint of the invisible creator.</p>
+
+            <h2>The Golden Ratio (Phi - 1.618)</h2>
+            <p>The <a href="https://en.wikipedia.org/wiki/Golden_ratio" target="_blank" rel="noopener noreferrer">Golden Ratio</a> is found everywhere: in the proportions of the human body, the branching of trees, the spiral of pinecones, and the structure of DNA. It represents perfect harmony and regeneration. It is the only ratio that allows for infinite growth without changing the shape (fractal nature).</p>
+
+            <h2>The Flower of Life</h2>
+            <p>Found in temples across the world—from Egypt to China to India—the **Flower of Life** is a hexagonal pattern made of overlapping circles. It contains within it the "Seed of Life," the "Egg of Life," and the "Fruit of Life." It is said to contain the blueprint for every atom, every life form, and everything in existence. By meditating on this shape, we align our consciousness with the primal creative force.</p>
+
+            <h2>Platonic Solids</h2>
+            <p>There are only five perfect 3D shapes where every face is the same size and shape: the <a href="https://en.wikipedia.org/wiki/Platonic_solid" target="_blank" rel="noopener noreferrer">Platonic Solids</a>.
+            <br>- **Tetrahedron** (Fire)
+            <br>- **Hexahedron/Cube** (Earth)
+            <br>- **Octahedron** (Air)
+            <br>- **Icosahedron** (Water)
+            <br>- **Dodecahedron** (Ether/Spirit)
+            <br>Kepler believed these shapes nested within each other determined the orbits of the planets.</p>
+
+            <h2>Conclusion: We Are Geometry</h2>
+            <p>We are not separate from these shapes; we are made of them. Our cells divide in geometric progressions. Our DNA is a spiral. To study sacred geometry is to study the architecture of your own soul.</p>
+        `,
+  },
 ];
 
 // Helper functions
 export function getPostBySlug(slug: string) {
-    return BLOG_POSTS.find(post => post.slug === slug);
+  return BLOG_POSTS.find((post) => post.slug === slug);
 }
 
 export function getAllSlugs() {
-    return BLOG_POSTS.map(post => ({
-        slug: post.slug
-    }));
+  return BLOG_POSTS.map((post) => ({
+    slug: post.slug,
+  }));
 }
