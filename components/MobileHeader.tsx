@@ -21,7 +21,7 @@ export default function MobileHeader() {
         <>
             {/* Mobile Header Bar - Only visible on mobile */}
             <header className="fixed top-0 left-0 right-0 z-50 md:hidden">
-                <div className="flex items-center justify-between px-4 py-3 bg-white/5 backdrop-blur-xl border-b border-white/20 shadow-lg shadow-black/5">
+                <div className="flex items-center justify-between px-4 py-3 bg-transparent backdrop-blur-xl border-b border-white/10 shadow-sm">
                     {/* Hamburger Menu Button - Left Side */}
                     <button
                         onClick={toggleMenu}
@@ -44,7 +44,7 @@ export default function MobileHeader() {
                     </button>
 
                     {/* Brand Name - Center */}
-                    <span className="font-[family-name:var(--font-calligraffitti)] text-xl text-lumina-gold drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">
+                    <span className="font-[family-name:var(--font-calligraffitti)] text-3xl text-lumina-gold drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">
                         Lumora
                     </span>
 
