@@ -44,17 +44,12 @@ export default function AboutPage() {
 
         <div className="prose prose-lg dark:prose-invert md:prose-xl max-w-none font-light leading-relaxed">
           <div className="float-right ml-8 mb-8 relative w-80 h-[400px] md:w-96 md:h-[500px] lg:w-[420px] lg:h-[560px] rounded-2xl overflow-hidden border border-lumina-gold/30 shadow-[0_0_30px_rgba(250,204,21,0.15)] group bg-background/50 backdrop-blur-sm">
-            <div className="absolute inset-0 bg-gradient-to-br from-lumina-gold/10 to-lumina-lavender/10 flex flex-col items-center justify-center p-6 text-center">
-              <div className="w-20 h-20 rounded-full border border-lumina-gold/30 flex items-center justify-center mb-4">
-                <span className="text-4xl">✨</span>
-              </div>
-              <p className="font-[family-name:var(--font-calligraffitti)] text-lumina-gold text-xl">
-                Judith Avotri
-              </p>
-              <p className="text-xs uppercase tracking-widest opacity-50 mt-2">
-                Image Placeholder
-              </p>
-            </div>
+            <Image
+              src="https://ik.imagekit.io/humbling/damn.jpg"
+              alt="Judith Avotri - Founder of Lumina Oracles"
+              fill
+              className="object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           </div>
 

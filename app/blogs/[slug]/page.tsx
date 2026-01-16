@@ -118,8 +118,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         {/* Author & Share */}
                         <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-8 border border-white/10 rounded-lg bg-white/5 backdrop-blur-md">
                             <div className="flex items-center gap-4">
-                                <div className="w-16 h-16 rounded-full bg-lumina-gold/10 border border-lumina-gold/30 flex items-center justify-center text-2xl">
-                                    ✨
+                                <div className="relative w-16 h-16 rounded-full overflow-hidden border border-lumina-gold/30">
+                                    <Image
+                                        src="https://ik.imagekit.io/humbling/damn.jpg"
+                                        alt={post.author}
+                                        fill
+                                        className="object-cover"
+                                    />
                                 </div>
                                 <div>
                                     <span className="block text-xs uppercase tracking-widest text-white/50 mb-1">Written By</span>
