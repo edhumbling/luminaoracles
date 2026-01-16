@@ -12,6 +12,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import StructuredData from "@/components/StructuredData";
 import AEOSchemas from "@/components/AEOSchemas";
+import Analytics from "@/components/Analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -117,6 +118,7 @@ export default function RootLayout({
         <Footer />
         <MarqueeFooter />
         <ScrollToTop />
+        <Analytics />
       </body>
     </html>
   );
