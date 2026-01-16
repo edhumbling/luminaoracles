@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function TikTokEmbed() {
     const [isLoading, setIsLoading] = useState(true);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         // Dynamically load TikTok embed script
@@ -11,14 +12,46 @@ export default function TikTokEmbed() {
         script.src = "https://www.tiktok.com/embed.js";
         script.async = true;
 
-        script.onload = () => {
-            // Give TikTok embed time to render
-            setTimeout(() => setIsLoading(false), 1500);
-        };
-
         document.body.appendChild(script);
 
+        // Use MutationObserver to detect when TikTok actually renders the embed
+        const observer = new MutationObserver((mutations) => {
+            for (const mutation of mutations) {
+                if (mutation.type === 'childList') {
+                    // Check if TikTok iframe or embed container has been added
+                    const container = containerRef.current;
+                    if (container) {
+                        const iframe = container.querySelector('iframe');
+                        const tiktokContainer = container.querySelector('[class*="tiktok"]');
+                        if (iframe || (tiktokContainer && tiktokContainer.children.length > 1)) {
+                            // Add a small delay to ensure full render
+                            setTimeout(() => setIsLoading(false), 500);
+                            observer.disconnect();
+                            return;
+                        }
+                    }
+                }
+            }
+        });
+
+        // Start observing
+        if (containerRef.current) {
+            observer.observe(containerRef.current, {
+                childList: true,
+                subtree: true,
+                attributes: true
+            });
+        }
+
+        // Fallback timeout in case observer doesn't trigger (max 8 seconds)
+        const fallbackTimeout = setTimeout(() => {
+            setIsLoading(false);
+            observer.disconnect();
+        }, 8000);
+
         return () => {
+            observer.disconnect();
+            clearTimeout(fallbackTimeout);
             const existingScript = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
             if (existingScript) {
                 existingScript.remove();
@@ -30,7 +63,10 @@ export default function TikTokEmbed() {
         <>
             <main className="min-h-screen bg-black text-foreground pt-24 md:pt-32 pb-0 px-4">
                 {/* Full Width TikTok Embed Container */}
-                <div className="w-full min-h-[calc(100vh-96px)] md:min-h-[calc(100vh-128px)] flex items-start justify-center relative">
+                <div
+                    ref={containerRef}
+                    className="w-full min-h-[calc(100vh-96px)] md:min-h-[calc(100vh-128px)] flex items-start justify-center relative"
+                >
 
                     {/* Colorful Loading Animation */}
                     {isLoading && (
@@ -60,7 +96,7 @@ export default function TikTokEmbed() {
                         </div>
                     )}
 
-                    {/* Original TikTok Embed Box */}
+                    {/* TikTok Embed Box - hidden until loaded */}
                     <blockquote
                         className="tiktok-embed"
                         cite="https://www.tiktok.com/@greatgoddessdemystic"
@@ -68,7 +104,9 @@ export default function TikTokEmbed() {
                         data-embed-type="creator"
                         style={{
                             maxWidth: "780px",
-                            minWidth: "288px"
+                            minWidth: "288px",
+                            opacity: isLoading ? 0 : 1,
+                            transition: "opacity 0.5s ease-in-out"
                         }}
                     >
                         <section>
