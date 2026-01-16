@@ -86,23 +86,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 </div>
 
                 {/* Title and Meta - Positioned at bottom of hero */}
-                <div className="absolute bottom-0 left-0 right-0 z-30 container mx-auto px-6 pb-16 md:pb-20">
+                <div className="absolute bottom-0 left-0 right-0 z-30 container mx-auto px-6 pb-12 md:pb-20">
                     <div className="max-w-4xl">
-                        <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-6">
-                            <span className="bg-lumina-gold/20 text-lumina-gold border border-lumina-gold/30 px-3 py-1.5 text-xs uppercase tracking-widest rounded-sm backdrop-blur-md">
-                                {post.category}
-                            </span>
-                            <span className="text-white/60 text-xs md:text-sm font-mono uppercase tracking-widest">
-                                {post.date}
-                            </span>
-                            <span className="text-white/40 text-xs md:text-sm font-mono uppercase tracking-widest">
-                                • {post.readTime}
-                            </span>
-                        </div>
-                        <h1 className="text-2xl md:text-4xl lg:text-5xl font-light leading-tight mb-4 drop-shadow-xl text-white">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight mb-4 drop-shadow-xl text-white">
                             {post.title}
                         </h1>
-                        <p className="text-white/60 text-sm md:text-base max-w-2xl mt-4 leading-relaxed">
+
+                        <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-4">
+                            <span className="bg-lumina-gold/20 text-lumina-gold border border-lumina-gold/30 px-2.5 py-1 text-[10px] md:text-xs uppercase tracking-widest rounded-full backdrop-blur-md font-medium">
+                                {post.category}
+                            </span>
+                            <div className="flex items-center gap-2 text-white/50 text-[10px] md:text-xs font-mono uppercase tracking-widest">
+                                <span>{post.date}</span>
+                                <span>•</span>
+                                <span>{post.readTime}</span>
+                            </div>
+                        </div>
+
+                        <p className="text-white/70 text-sm md:text-lg max-w-2xl mt-4 leading-relaxed font-light">
                             {post.excerpt}
                         </p>
                     </div>
@@ -116,7 +117,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     {/* Main Text */}
                     <div className="lg:col-span-8 lg:col-start-2">
                         <div
-                            className="prose prose-lg md:prose-xl prose-invert max-w-none prose-headings:font-light prose-headings:text-lumina-gold prose-p:text-white/80 prose-p:leading-relaxed prose-p:font-light prose-strong:text-white prose-li:text-white/80 font-serif mt-12 mb-16"
+                            className="prose prose-lg md:prose-xl prose-invert max-w-none prose-headings:font-light prose-headings:text-lumina-gold prose-p:text-white/80 prose-p:leading-relaxed prose-p:font-light prose-strong:text-white prose-li:text-white/80 font-sans mt-12 mb-16"
                             dangerouslySetInnerHTML={{ __html: post.content }}
                         />
 
