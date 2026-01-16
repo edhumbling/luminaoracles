@@ -38,18 +38,21 @@ export default function BlogsPage() {
             {/* Blog Grid Section */}
             <section className="container mx-auto px-4 py-16 md:py-24 relative z-40 -mt-20">
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-                    {BLOG_POSTS.map((post, index) => (
+                    {BLOG_POSTS.map((post) => (
                         <Link
                             key={post.id}
                             href={`/blogs/${post.slug}`}
                             className="group relative flex flex-col h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden hover:border-lumina-gold/50 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(250,204,21,0.1)]"
                         >
-                            {/* Card Image Area (Gradient based on index for variety) */}
-                            <div className={`relative h-32 md:h-40 w-full overflow-hidden ${index % 3 === 0 ? 'bg-gradient-to-br from-indigo-900 via-purple-900 to-black' :
-                                    index % 3 === 1 ? 'bg-gradient-to-br from-lumina-gold/20 via-orange-900 to-black' :
-                                        'bg-gradient-to-br from-emerald-900 via-teal-900 to-black'
-                                }`}>
-                                <div className="absolute inset-0 bg-[url('/logo.png')] bg-contain bg-center bg-no-repeat opacity-10 group-hover:opacity-20 transition-opacity duration-500 scale-50" />
+                            {/* Card Image Area with Actual Thumbnail */}
+                            <div className="relative h-32 md:h-40 w-full overflow-hidden bg-black">
+                                <Image
+                                    src={post.image}
+                                    alt={post.title}
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                                 <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-[10px] uppercase tracking-widest text-lumina-gold border border-lumina-gold/20">
                                     {post.category}
                                 </div>

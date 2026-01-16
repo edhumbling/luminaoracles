@@ -31,6 +31,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             type: "article",
             publishedTime: post.date,
             authors: [post.author],
+            images: [
+                {
+                    url: post.image,
+                    width: 1200,
+                    height: 630,
+                    alt: post.title,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: post.title,
+            description: post.excerpt,
+            images: [post.image],
         },
     };
 }
@@ -45,12 +59,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
     return (
         <article className="min-h-screen bg-black text-white selection:bg-lumina-gold selection:text-black pb-24">
-            {/* Header / Hero */}
-            <div className="relative w-full h-[50vh] min-h-[400px]">
+            {/* Header / Hero with Article Image */}
+            <div className="relative w-full h-[60vh] min-h-[500px]">
                 <div className="absolute inset-0 bg-black/60 z-10" />
-                {/* Use the common blog header or a specific one if available */}
+                {/* Use the article-specific image */}
                 <Image
-                    src="/blog-header.png"
+                    src={post.image}
                     alt={post.title}
                     fill
                     className="object-cover object-center"
@@ -58,11 +72,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-20" />
 
-                {/* Back Link */}
-                <div className="absolute top-24 left-6 z-30">
+                {/* Back Link - Positioned below header */}
+                <div className="absolute top-32 md:top-36 left-6 md:left-8 z-30">
                     <Link
                         href="/blogs"
-                        className="flex items-center gap-2 text-white/70 hover:text-lumina-gold transition-colors group bg-black/20 backdrop-blur-sm pr-4 rounded-full"
+                        className="flex items-center gap-2 text-white/70 hover:text-lumina-gold transition-colors group bg-black/40 backdrop-blur-md pr-4 rounded-full border border-white/10"
                     >
                         <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-lumina-gold transition-colors">
                             <ArrowLeft className="w-4 h-4" />
@@ -71,22 +85,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     </Link>
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 z-30 container mx-auto px-6 pb-12 md:pb-16">
+                {/* Title and Meta - Positioned at bottom of hero */}
+                <div className="absolute bottom-0 left-0 right-0 z-30 container mx-auto px-6 pb-16 md:pb-20">
                     <div className="max-w-4xl">
-                        <div className="flex items-center gap-4 mb-6">
-                            <span className="bg-lumina-gold/20 text-lumina-gold border border-lumina-gold/30 px-3 py-1 text-xs uppercase tracking-widest rounded-sm backdrop-blur-md">
+                        <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-6">
+                            <span className="bg-lumina-gold/20 text-lumina-gold border border-lumina-gold/30 px-3 py-1.5 text-xs uppercase tracking-widest rounded-sm backdrop-blur-md">
                                 {post.category}
                             </span>
-                            <span className="text-white/60 text-sm font-mono uppercase tracking-widest">
+                            <span className="text-white/60 text-xs md:text-sm font-mono uppercase tracking-widest">
                                 {post.date}
                             </span>
-                            <span className="text-white/40 text-sm font-mono uppercase tracking-widest md:block hidden">
+                            <span className="text-white/40 text-xs md:text-sm font-mono uppercase tracking-widest">
                                 • {post.readTime}
                             </span>
                         </div>
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight mb-6 drop-shadow-xl text-white">
+                        <h1 className="text-2xl md:text-4xl lg:text-5xl font-light leading-tight mb-4 drop-shadow-xl text-white">
                             {post.title}
                         </h1>
+                        <p className="text-white/60 text-sm md:text-base max-w-2xl mt-4 leading-relaxed">
+                            {post.excerpt}
+                        </p>
                     </div>
                 </div>
             </div>

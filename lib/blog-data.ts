@@ -10,6 +10,7 @@ export interface BlogPost {
     readTime: string;
     category: string;
     tags: string[];
+    image: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -23,6 +24,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readTime: "15 min read",
         category: "Manifestation",
         tags: ["Law of Attraction", "Manifestation", "Spirituality", "Abundance"],
+        image: "/blog/law-of-attraction.png",
         content: `
             <h2>The Fundamental Physics of Desire</h2>
             <p>The <u>Law of Attraction</u> is often misunderstood as simply "thinking positive thoughts." While mindset is a crucial component, the law operates on a much deeper, more visceral level of physics—specifically, <a href="https://en.wikipedia.org/wiki/Quantum_mechanics" target="_blank" rel="noopener noreferrer">quantum physics</a>. Everything in our universe, at its most fundamental level, is <u>energy vibrating at a specific frequency</u>. This includes you, your thoughts, your emotions, and the physical objects you desire.</p>
@@ -69,6 +71,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readTime: "12 min read",
         category: "Spirituality",
         tags: ["Frequency", "Vibration", "Energy", "Quantum Physics"],
+        image: "/blog/frequencies-vibrations.png",
         content: `
             <h2>The Universe as Music</h2>
             <p><a href="https://en.wikipedia.org/wiki/Nikola_Tesla" target="_blank" rel="noopener noreferrer">Nikola Tesla</a> famously said, "If you want to find the secrets of the universe, think in terms of <u>energy, frequency and vibration</u>." This is not a metaphor; it is a description of reality. Solid matter is an illusion—a persistent one, but an illusion nonetheless. Under a microscope, an <a href="https://en.wikipedia.org/wiki/Atom" target="_blank" rel="noopener noreferrer">atom</a> is 99.99999% empty space. What we perceive as "solid" is actually energy vibrating at a frequency slow enough for our senses to perceive.</p>
@@ -116,6 +119,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readTime: "20 min read",
         category: "Healing",
         tags: ["Reiki", "Chakras", "Healing", "Wellness"],
+        image: "/blog/energy-healing.png",
         content: `
             <h2>The Subtle Body</h2>
             <p>Western medicine treats the physical body—the hardware. <u>Energy healing</u> treats the <u>subtle body</u>—the software. The subtle body consists of the <a href="https://en.wikipedia.org/wiki/Aura_(paranormal)" target="_blank" rel="noopener noreferrer">aura</a> (electromagnetic field), the <a href="https://en.wikipedia.org/wiki/Chakra" target="_blank" rel="noopener noreferrer">chakras</a> (energy centers), and the <a href="https://en.wikipedia.org/wiki/Nadi_(yoga)" target="_blank" rel="noopener noreferrer">nadis</a> or <a href="https://en.wikipedia.org/wiki/Meridian_(Chinese_medicine)" target="_blank" rel="noopener noreferrer">meridians</a> (energy channels).</p>
@@ -162,6 +166,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readTime: "10 min read",
         category: "Mindfulness",
         tags: ["Intention", "Focus", "Creation", "Purpose"],
+        image: "/blog/power-intention.png",
         content: `
             <h2>Intention vs. Hope</h2>
             <p>Hope is passive. It waits for something good to happen. <u>Intention</u> is active. It decides that something good <em>will</em> happen and sets the energetic conditions for it. Intention is a command to the <a href="https://en.wikipedia.org/wiki/Subconscious" target="_blank" rel="noopener noreferrer">subconscious mind</a> and the Universe.</p>
@@ -196,6 +201,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readTime: "18 min read",
         category: "Philosophy",
         tags: ["Ancient Wisdom", "Hermetics", "Philosophy", "Digital Age"],
+        image: "/blog/ancient-wisdom.png",
         content: `
             <h2>The Great Disconnect</h2>
             <p>We live in the age of information, yet we are drowning in confusion. We are more connected than ever, yet we suffer from an epidemic of <u>loneliness</u>. The modern world offers comfort but rarely offers <u>meaning</u>. In this vacuum, the teachings of the ancients shine like diamonds.</p>
@@ -233,6 +239,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readTime: "14 min read",
         category: "Mindfulness",
         tags: ["Meditation", "Mindfulness", "Inner Peace", "Beginners"],
+        image: "/blog/meditation-beginners.png",
         content: `
             <h2>What Is Meditation?</h2>
             <p><a href="https://en.wikipedia.org/wiki/Meditation" target="_blank" rel="noopener noreferrer">Meditation</a> is not about stopping your thoughts—that is impossible. It is about changing your <u>relationship</u> to your thoughts. Instead of being swept away by the mental chatter, you learn to observe it from a place of stillness. You become the sky watching the clouds pass, rather than being lost in the storm.</p>
@@ -276,6 +283,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readTime: "16 min read",
         category: "Healing",
         tags: ["Shadow Work", "Psychology", "Self-Discovery", "Jung"],
+        image: "/blog/shadow-work.png",
         content: `
             <h2>What Is the Shadow?</h2>
             <p>The concept of the <u>shadow</u> was developed by Swiss psychiatrist <a href="https://en.wikipedia.org/wiki/Carl_Jung" target="_blank" rel="noopener noreferrer">Carl Jung</a>. It refers to the unconscious parts of our personality that the conscious ego does not identify with. These are the traits we've repressed—anger, jealousy, greed, sexuality—because they were deemed unacceptable by our families or society.</p>
@@ -319,6 +327,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readTime: "12 min read",
         category: "Mindfulness",
         tags: ["Gratitude", "Neuroscience", "Happiness", "Wellness"],
+        image: "/blog/gratitude.png",
         content: `
             <h2>Gratitude as Medicine</h2>
             <p><u>Gratitude</u> is not just a feel-good emotion; it is a powerful tool for <u>neurological change</u>. Studies from the <a href="https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier" target="_blank" rel="noopener noreferrer">Harvard Medical School</a> show that practicing gratitude can increase happiness by 25%, improve sleep, reduce depression, and even boost immune function.</p>
@@ -356,6 +365,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readTime: "14 min read",
         category: "Spirituality",
         tags: ["Synchronicity", "Jung", "Universe", "Signs"],
+        image: "/blog/synchronicity.png",
         content: `
             <h2>What Is Synchronicity?</h2>
             <p><a href="https://en.wikipedia.org/wiki/Synchronicity" target="_blank" rel="noopener noreferrer">Synchronicity</a> is a term coined by <a href="https://en.wikipedia.org/wiki/Carl_Jung" target="_blank" rel="noopener noreferrer">Carl Jung</a> to describe <u>meaningful coincidences</u>—events that are connected not by cause and effect, but by meaning. You think of an old friend, and they call minutes later. You see the same number sequence everywhere—<a href="https://en.wikipedia.org/wiki/11:11_(numerology)" target="_blank" rel="noopener noreferrer">11:11</a>, 333. You ask the Universe for a sign and receive an unmistakable answer.</p>
@@ -399,6 +409,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readTime: "20 min read",
         category: "Spirituality",
         tags: ["Kundalini", "Yoga", "Awakening", "Energy"],
+        image: "/blog/kundalini.png",
         content: `
             <h2>What Is Kundalini?</h2>
             <p><a href="https://en.wikipedia.org/wiki/Kundalini" target="_blank" rel="noopener noreferrer">Kundalini</a> is a Sanskrit term meaning "coiled snake." It refers to a dormant <u>spiritual energy</u> located at the base of the spine, in the <a href="https://en.wikipedia.org/wiki/Muladhara" target="_blank" rel="noopener noreferrer">Muladhara (Root) chakra</a>. In most people, this energy sleeps throughout their lifetime. But when awakened, it rises through the <u>central energy channel</u> (Sushumna), activating each chakra and culminating in a state of <u>enlightenment</u> at the Crown.</p>

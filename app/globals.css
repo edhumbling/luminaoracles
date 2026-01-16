@@ -261,3 +261,56 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Article Content Styling */
+.prose u {
+  color: #FACC15;
+  text-decoration: underline;
+  text-decoration-color: #FACC15;
+  text-underline-offset: 3px;
+}
+
+.prose a {
+  color: #FACC15;
+  text-decoration: underline;
+  text-decoration-color: #FACC15;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.prose a:hover {
+  opacity: 0.8;
+}
+
+.prose h2 {
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
+.prose h3 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose p {
+  margin-bottom: 1.5em;
+  line-height: 1.9;
+}
+
+.prose ul, .prose ol {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.75em;
+  line-height: 1.8;
+}
