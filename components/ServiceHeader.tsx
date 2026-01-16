@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 import { useRouter } from "next/navigation";
 import { ATCShader } from "@/components/atc-shader";
 import { AnimatedShader } from "@/components/animated-shader-hero";
@@ -20,12 +22,25 @@ export default function ServiceHeader({ title, divineEssence, shaderIndex }: Ser
     const router = useRouter();
     const ShaderComponent = SHADERS[shaderIndex % SHADERS.length];
 
+    const [isHidden, setIsHidden] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const footer = document.querySelector('footer');
+            if (!footer) return;
+            const rect = footer.getBoundingClientRect();
+            setIsHidden(rect.top < window.innerHeight);
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <header className="relative w-full h-[60vh] min-h-[500px] border-b border-black/20 overflow-hidden flex flex-col justify-end">
             {/* Back Button - Positioned for visibility */}
             <button
                 onClick={() => router.back()}
-                className="fixed top-20 md:top-24 left-6 md:left-8 z-30 bg-black/80 backdrop-blur-sm text-white hover:text-lumina-gold hover:bg-black transition-all duration-300 flex items-center gap-2 group px-4 py-2 rounded-full border border-white/20 shadow-lg"
+                className={`fixed top-20 md:top-24 left-6 md:left-8 z-30 bg-black/80 backdrop-blur-sm text-white hover:text-lumina-gold hover:bg-black transition-all duration-300 flex items-center gap-2 group px-4 py-2 rounded-full border border-white/20 shadow-lg ${isHidden ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
             >
                 <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                 <span className="font-mono text-sm uppercase tracking-widest">Back</span>

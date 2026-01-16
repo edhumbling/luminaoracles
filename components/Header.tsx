@@ -1,6 +1,8 @@
 
 "use client";
 
+import { useState, useEffect } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -8,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export default function Header() {
   const pathname = usePathname();
-  
+
   // Check if we are on the founder page or any other page that needs dark text
   const isLightPage = pathname === "/founder" || pathname === "/contact";
 
@@ -19,13 +21,26 @@ export default function Header() {
     { href: "/contact", label: "Contact" },
   ];
 
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.querySelector('footer');
+      if (!footer) return;
+      const rect = footer.getBoundingClientRect();
+      setIsHidden(rect.top < window.innerHeight);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 hidden md:block">
+    <header className={cn("fixed top-0 left-0 right-0 z-40 hidden md:block transition-opacity duration-300", isHidden ? "opacity-0 pointer-events-none" : "opacity-100")}>
       <div className="mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-24">
           {/* Logo - Far Left */}
           <Link href="/" className="relative w-16 h-16 group">
-             <div className="absolute inset-0 bg-lumina-gold/20 blur-[20px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-lumina-gold/20 blur-[20px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <Image
               src="/logo.png"
               alt="Lumina Oracles Logo"
@@ -39,11 +54,11 @@ export default function Header() {
             {/* Glass Background for Nav */}
             <div className={cn(
               "absolute inset-0 backdrop-blur-md rounded-full border shadow-lg -z-10 transition-colors duration-300",
-              isLightPage 
-                ? "bg-white/40 border-black/10 shadow-black/5" 
+              isLightPage
+                ? "bg-white/40 border-black/10 shadow-black/5"
                 : "bg-white/5 border-white/10 shadow-black/20"
             )} />
-            
+
             <ul className="flex items-center gap-1 px-2 py-1.5">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
@@ -54,18 +69,18 @@ export default function Header() {
                       className={cn(
                         "relative px-6 py-2.5 rounded-full text-sm font-medium tracking-widest uppercase transition-all duration-300 overflow-hidden group",
                         // Active State
-                        isActive 
-                          ? (isLightPage 
-                              ? "text-lumina-gold bg-black/5 shadow-[0_0_15px_rgba(250,204,21,0.1)]" 
-                              : "text-lumina-gold bg-white/10 shadow-[0_0_15px_rgba(250,204,21,0.1)]")
+                        isActive
+                          ? (isLightPage
+                            ? "text-lumina-gold bg-black/5 shadow-[0_0_15px_rgba(250,204,21,0.1)]"
+                            : "text-lumina-gold bg-white/10 shadow-[0_0_15px_rgba(250,204,21,0.1)]")
                           // Inactive State
                           : (isLightPage
-                              ? "text-black/70 hover:text-black hover:bg-black/5"
-                              : "text-white/70 hover:text-white hover:bg-white/5")
+                            ? "text-black/70 hover:text-black hover:bg-black/5"
+                            : "text-white/70 hover:text-white hover:bg-white/5")
                       )}
                     >
                       <span className="relative z-10">{link.label}</span>
-                      
+
                       {/* Hover Glow Effect */}
                       <span className="absolute inset-0 bg-gradient-to-r from-lumina-gold/0 via-lumina-gold/10 to-lumina-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
                     </Link>
