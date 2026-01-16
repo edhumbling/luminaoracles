@@ -104,6 +104,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Analytics />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${calligraffitti.variable} antialiased`}
       >
@@ -118,7 +121,6 @@ export default function RootLayout({
         <Footer />
         <MarqueeFooter />
         <ScrollToTop />
-        <Analytics />
       </body>
     </html>
   );
