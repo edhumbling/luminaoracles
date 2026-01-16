@@ -71,9 +71,46 @@ export default function AboutPage() {
             Her work is rooted in her rich cultural heritage and her passion for helping individuals connect with their higher selves. As a practicing mystic, Judith offers insights and teachings that inspire growth, inner peace, and a profound understanding of the divine.
           </p>
 
+
           <p className="mt-6">
             Through her guidance, many have found pathways to greater spiritual fulfillment and self-discovery. She embodies the sacred bridge between ancient wisdom and modern understanding, holding a lantern for those seeking to traverse the mists of the unknown.
           </p>
+        </div>
+
+        {/* Mission & Vision Section - Subtle Sharp Design */}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Mission */}
+          <div className="group relative p-8 border border-white/10 hover:border-lumina-gold/30 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1">
+            <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-lumina-gold/50 opacity-50 group-hover:opacity-100 transition-opacity" />
+            <h3 className="text-xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+              The Sacred Design
+            </h3>
+            <p className="text-sm font-light leading-relaxed text-white/70">
+              To reawaken the dormant divinity encoded within the human spirit. Our mission is to provide the architectural blueprints for the soul's ascension, guiding seekers through the labyrinth of existence with the unwavering lamp of ancient truth.
+            </p>
+          </div>
+
+          {/* Vision for Ghana */}
+          <div className="group relative p-8 border border-white/10 hover:border-lumina-gold/30 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1">
+            <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-lumina-gold/50 opacity-50 group-hover:opacity-100 transition-opacity" />
+            <h3 className="text-xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+              Vision for the Gold Coast
+            </h3>
+            <p className="text-sm font-light leading-relaxed text-white/70">
+              We envision a Ghana that stands as a fortress of spiritual sovereignty. A nation where the rhythmic heartbeat of our ancestors harmonizes with the pulse of the future, creating a sanctuary where every citizen walks in the fullness of their power and purpose.
+            </p>
+          </div>
+
+          {/* Impact */}
+          <div className="group relative p-8 border border-white/10 hover:border-lumina-gold/30 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1">
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-lumina-gold/50 opacity-50 group-hover:opacity-100 transition-opacity" />
+            <h3 className="text-xl font-[family-name:var(--font-calligraffitti)] text-lumina-gold mb-4">
+              The Ripple Effect
+            </h3>
+            <p className="text-sm font-light leading-relaxed text-white/70">
+              We do not merely heal individuals; we weave a tapestry of awakened consciousness. Our impact is measured not in numbers, but in the silent revolutions of the heart—lives transformed, families restored, and a collective destiny elevated to the realm of the divine.
+            </p>
+          </div>
         </div>
 
         {/* Decorative Divider */}
