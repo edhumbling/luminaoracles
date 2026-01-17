@@ -1,0 +1,43 @@
+name: Monthly SEO Update
+
+on:
+  schedule:
+    # Run at 00:00 on the 1st day of every month
+    - cron: '0 0 1 * *'
+  # Allow manual trigger for testing
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  seo-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update SEO files
+        run: node scripts/update-seo.js
+
+      - name: Build project (Regenerate sitemap)
+        run: npm run build
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(seo): monthly automated update [skip ci]"
+          file_pattern: 'public/robots.txt .next/static/*' 
+          # Note: sitemaps in Next.js app directory often generated on build or require specific handling.
+          # If sitemap.xml is in public/, add it here.
+          branch: main
