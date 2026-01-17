@@ -31,6 +31,8 @@ export default function MobileHeader() {
         { href: "/contact", label: "Contact" },
     ];
 
+    const menuExpandedState: "true" | "false" = isMenuOpen ? "true" : "false";
+
     return (
         <>
             {/* Mobile Header Bar - Only visible on mobile */}
@@ -41,7 +43,7 @@ export default function MobileHeader() {
                         onClick={toggleMenu}
                         className="relative w-10 h-10 flex flex-col items-center justify-center gap-1.5 group"
                         aria-label="Toggle portals menu"
-                        aria-expanded={isMenuOpen}
+                        {...{ 'aria-expanded': menuExpandedState }}
                     >
                         <span
                             className={`block w-6 h-0.5 bg-lumina-gold shadow-[0_0_10px_rgba(250,204,21,0.5)] transition-transform duration-150 ease-out ${isMenuOpen ? "rotate-45 translate-y-2" : ""
@@ -85,13 +87,8 @@ export default function MobileHeader() {
 
             {/* Slide-out Navigation Menu - Knife Edge Glass Design */}
             <nav
-                className={`fixed top-0 left-0 h-full w-[85vw] max-w-md bg-transparent backdrop-blur-3xl z-50 md:hidden transition-transform duration-300 ease-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed top-0 left-0 h-full w-[85vw] max-w-md bg-transparent backdrop-blur-3xl z-50 md:hidden transition-transform duration-300 ease-out will-change-transform [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)] drop-shadow-[0_0_20px_rgba(0,0,0,0.3)] ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
-                style={{
-                    willChange: 'transform',
-                    clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)', // Knife edge shape
-                    filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.3))'
-                }}
             >
                 {/* Glass sheen overlay */}
                 <div className="absolute inset-0 bg-white/5 pointer-events-none" />

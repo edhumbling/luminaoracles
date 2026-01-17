@@ -89,25 +89,18 @@ export default function TikTokEmbed() {
 
                             {/* Animated Dots */}
                             <div className="flex gap-2 mt-4">
-                                <span className="w-3 h-3 rounded-full bg-pink-500 animate-bounce" style={{ animationDelay: "0ms" }} />
-                                <span className="w-3 h-3 rounded-full bg-purple-500 animate-bounce" style={{ animationDelay: "150ms" }} />
-                                <span className="w-3 h-3 rounded-full bg-cyan-500 animate-bounce" style={{ animationDelay: "300ms" }} />
-                            </div>
+                                <span className="w-3 h-3 rounded-full bg-pink-500 animate-bounce" />
+                                <span className="w-3 h-3 rounded-full bg-purple-500 animate-bounce [animation-delay:150ms]" />
+                                <span className="w-3 h-3 rounded-full bg-cyan-500 animate-bounce [animation-delay:300ms]" />                            </div>
                         </div>
                     )}
 
                     {/* TikTok Embed Box - hidden until loaded */}
                     <blockquote
-                        className="tiktok-embed"
+                        className={`tiktok-embed max-w-[780px] min-w-[288px] transition-opacity duration-500 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'}`}
                         cite="https://www.tiktok.com/@greatgoddessdemystic"
                         data-unique-id="greatgoddessdemystic"
                         data-embed-type="creator"
-                        style={{
-                            maxWidth: "780px",
-                            minWidth: "288px",
-                            opacity: isLoading ? 0 : 1,
-                            transition: "opacity 0.5s ease-in-out"
-                        }}
                     >
                         <section>
                             <a

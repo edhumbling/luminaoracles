@@ -83,13 +83,11 @@ export default function AboutPage() {
           {/* Mission */}
           <div className="group relative">
             <div
-              className="absolute inset-0 bg-lumina-gold/20 blur-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-              style={{ clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)' }}
+              className="absolute inset-0 bg-lumina-gold/20 blur-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none [clip-path:polygon(10px_0,100%_0,100%_calc(100%-10px),calc(100%-10px)_100%,0_100%,0_10px)]"
             />
             {/* Knife Edge Polygon Shape */}
             <div
-              className="relative h-full bg-black border border-lumina-gold/50 p-8 lg:p-10 shadow-[0_0_20px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all duration-300 hover:-translate-y-1"
-              style={{ clipPath: 'polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)' }}
+              className="relative h-full bg-black border border-lumina-gold/50 p-8 lg:p-10 shadow-[0_0_20px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all duration-300 hover:-translate-y-1 [clip-path:polygon(20px_0,100%_0,100%_calc(100%-20px),calc(100%-20px)_100%,0_100%,0_20px)]"
             >
               <div className="flex flex-col h-full items-center text-center">
                 <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -114,12 +112,10 @@ export default function AboutPage() {
           {/* Vision for the Collective */}
           <div className="group relative">
             <div
-              className="absolute inset-0 bg-lumina-gold/20 blur-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-              style={{ clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)' }}
+              className="absolute inset-0 bg-lumina-gold/20 blur-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none [clip-path:polygon(10px_0,100%_0,100%_calc(100%-10px),calc(100%-10px)_100%,0_100%,0_10px)]"
             />
             <div
-              className="relative h-full bg-black border border-lumina-gold/50 p-8 lg:p-10 shadow-[0_0_20px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all duration-300 hover:-translate-y-1"
-              style={{ clipPath: 'polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)' }}
+              className="relative h-full bg-black border border-lumina-gold/50 p-8 lg:p-10 shadow-[0_0_20px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all duration-300 hover:-translate-y-1 [clip-path:polygon(20px_0,100%_0,100%_calc(100%-20px),calc(100%-20px)_100%,0_100%,0_20px)]"
             >
               <div className="flex flex-col h-full items-center text-center">
                 <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -144,12 +140,10 @@ export default function AboutPage() {
           {/* Impact */}
           <div className="group relative">
             <div
-              className="absolute inset-0 bg-lumina-gold/20 blur-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-              style={{ clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)' }}
+              className="absolute inset-0 bg-lumina-gold/20 blur-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none [clip-path:polygon(10px_0,100%_0,100%_calc(100%-10px),calc(100%-10px)_100%,0_100%,0_10px)]"
             />
             <div
-              className="relative h-full bg-black border border-lumina-gold/50 p-8 lg:p-10 shadow-[0_0_20px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all duration-300 hover:-translate-y-1"
-              style={{ clipPath: 'polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)' }}
+              className="relative h-full bg-black border border-lumina-gold/50 p-8 lg:p-10 shadow-[0_0_20px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all duration-300 hover:-translate-y-1 [clip-path:polygon(20px_0,100%_0,100%_calc(100%-20px),calc(100%-20px)_100%,0_100%,0_20px)]"
             >
               <div className="flex flex-col h-full items-center text-center">
                 <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-300">

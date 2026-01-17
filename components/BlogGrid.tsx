@@ -106,6 +106,7 @@ export default function BlogGrid({ posts }: BlogGridProps) {
                             <button
                                 onClick={() => setSearchQuery("")}
                                 className="p-2 hover:text-white text-white/50 transition-colors"
+                                aria-label="Clear search"
                             >
                                 <X className="w-4 h-4" />
                             </button>
