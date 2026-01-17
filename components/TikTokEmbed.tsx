@@ -6,7 +6,29 @@ export default function TikTokEmbed() {
     const [isLoading, setIsLoading] = useState(true);
     const containerRef = useRef<HTMLDivElement>(null);
 
+    const [hasIntersected, setHasIntersected] = useState(false);
+
     useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setHasIntersected(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: "200px" } // Start loading a bit before it comes into view
+        );
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        if (!hasIntersected) return;
+
         // Dynamically load TikTok embed script
         const script = document.createElement("script");
         script.src = "https://www.tiktok.com/embed.js";
@@ -57,7 +79,7 @@ export default function TikTokEmbed() {
                 existingScript.remove();
             }
         };
-    }, []);
+    }, [hasIntersected]);
 
     return (
         <>
