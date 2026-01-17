@@ -210,7 +210,7 @@ function MobileChatView({
                                 onSubmit(e as unknown as React.FormEvent);
                             }
                         }}
-                        placeholder="Message"
+                        placeholder="Ask Great Goddess anything..."
                         rows={1}
                         className="bg-transparent text-white placeholder:text-white/40 focus:outline-none flex-1 text-[16px] resize-none overflow-y-auto leading-6 max-h-[120px] py-1 break-words [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                     />
@@ -605,7 +605,7 @@ export default function GoddessAI() {
                                         onSubmit(e as unknown as React.FormEvent);
                                     }
                                 }}
-                                placeholder="Ask a question..."
+                                placeholder="Ask Great Goddess anything..."
                                 rows={1}
                                 className={`bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base resize-none overflow-y-auto leading-6 max-h-[120px] py-1 break-words ${isOpen && !isMobile ? "px-2" : ""
                                     } [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] md:[&::-webkit-scrollbar]:block md:[&::-webkit-scrollbar]:w-1.5 md:[&::-webkit-scrollbar-track]:bg-transparent md:[&::-webkit-scrollbar-thumb]:bg-white/10 md:[&::-webkit-scrollbar-thumb]:rounded-full hover:md:[&::-webkit-scrollbar-thumb]:bg-white/20`}
