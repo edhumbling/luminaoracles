@@ -33,7 +33,11 @@ const calligraffitti = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://luminaoracles.com'),
-  title: "Lumina Oracles | Spiritual Guidance, Tarot Readings & Mystical Wisdom",
+  title: {
+    default: "Lumina Oracles | Spiritual Guidance, Tarot Readings & Mystical Wisdom",
+    template: "%s | Lumina Oracles",
+  },
+  applicationName: "Lumina Oracles",
   description: "Connect to your higher self with divine spiritual guidance. Expert tarot readings, astrology, chakra healing, manifestation coaching, and ancestral wisdom from Mamaga Judith Etornam in Ghana.",
   keywords: [
     "spiritual guidance",

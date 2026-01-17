@@ -8,12 +8,22 @@ const organizationSchema = {
     "@type": "Organization",
     "@id": "https://luminaoracles.com/#organization",
     name: "Lumina Oracles",
+    legalName: "Lumina Oracles",
     url: "https://luminaoracles.com",
     logo: {
         "@type": "ImageObject",
+        "@id": "https://luminaoracles.com/#logo",
         url: "https://luminaoracles.com/logo.png",
+        contentUrl: "https://luminaoracles.com/logo.png",
         width: 512,
         height: 512,
+        caption: "Lumina Oracles Logo"
+    },
+    image: {
+        "@type": "ImageObject",
+        url: "https://luminaoracles.com/logo.png",
+        width: 512,
+        height: 512
     },
     description: "Spiritual guidance, tarot readings, astrology, and mystical wisdom from Mamaga Judith Etornam.",
     founder: {
@@ -48,6 +58,7 @@ const websiteSchema = {
     "@id": "https://luminaoracles.com/#website",
     url: "https://luminaoracles.com",
     name: "Lumina Oracles",
+    alternateName: ["Lumina Oracles", "LuminaOracles"],
     description: "Spiritual guidance and mystical wisdom",
     publisher: {
         "@id": "https://luminaoracles.com/#organization"
