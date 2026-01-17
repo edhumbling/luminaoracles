@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { X, Sparkles, Send, Loader2 } from "lucide-react";
+import { X, Sparkles, Send, Loader2, ArrowUp } from "lucide-react";
 
 interface Message {
     id: string;
@@ -16,8 +16,41 @@ export default function GoddessAI() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
+
+    // Toggle visibility based on footer intersection
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(!entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        const footer = document.querySelector("footer");
+        if (footer) {
+            observer.observe(footer);
+        }
+
+        return () => {
+            if (footer) observer.unobserve(footer);
+        };
+    }, []);
+
+    // Ctrl+I shortcut
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === "i") {
+                e.preventDefault();
+                setIsOpen(true);
+                setTimeout(() => inputRef.current?.focus(), 100);
+            }
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, []);
 
     // Detect mobile
     useEffect(() => {
@@ -327,46 +360,42 @@ export default function GoddessAI() {
                 )}
 
                 {/* Search Bar / Input */}
-                <form onSubmit={onSubmit}>
+                <form onSubmit={onSubmit} className={`transition-opacity duration-300 ${!isVisible && !isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                     <div className="relative group">
-                        {!isOpen && (
-                            <div className="absolute inset-0 bg-lumina-gold/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        )}
-                        <div className={`relative flex items-center gap-2 ${isOpen && !isMobile
-                            ? "bg-[#0a0a0a] border border-white/10 rounded-full p-2"
-                            : "bg-black/80 backdrop-blur-xl border border-white/20 rounded-full p-2 shadow-2xl"
+                        <div className={`relative flex items-center justify-between gap-2 transition-all duration-300 ${isOpen && !isMobile
+                                ? "bg-[#0a0a0a] border border-white/10 rounded-2xl p-2"
+                                : "bg-[#111111] border border-white/10 rounded-full pl-6 pr-2 py-2 shadow-2xl w-[600px] max-w-[90vw] hidden md:flex"
                             }`}>
-                            {!isOpen && (
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lumina-gold/20 to-amber-600/20 border border-lumina-gold/30 flex items-center justify-center flex-shrink-0 relative overflow-hidden">
-                                    <Image
-                                        src="/logo.png"
-                                        alt="Goddess AI Logo"
-                                        fill
-                                        className="object-contain p-1"
-                                    />
-                                </div>
-                            )}
                             <input
                                 ref={!isOpen ? inputRef : undefined}
                                 type="text"
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                placeholder={isOpen ? "Ask the Goddess..." : "Ask Goddess AI..."}
-                                className={`bg-transparent text-white placeholder:text-white/40 focus:outline-none ${isOpen && !isMobile ? "flex-1 px-4 py-2" : "w-48 md:w-64 px-2 py-2"
+                                placeholder="Ask a question..."
+                                className={`bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base ${isOpen && !isMobile ? "px-2" : ""
                                     }`}
                             />
-                            <button
-                                type="submit"
-                                disabled={isLoading || !input.trim()}
-                                className="w-10 h-10 rounded-full bg-lumina-gold text-black flex items-center justify-center flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white transition-colors"
-                                aria-label="Send message"
-                            >
-                                {isLoading ? (
-                                    <Loader2 className="w-5 h-5 animate-spin" />
-                                ) : (
-                                    <Send className="w-5 h-5" />
+
+                            <div className="flex items-center gap-3">
+                                {!isOpen && !input && (
+                                    <span className="text-white/20 text-xs font-mono hidden sm:block">Ctrl+I</span>
                                 )}
-                            </button>
+                                <button
+                                    type="submit"
+                                    disabled={isLoading || !input.trim()}
+                                    className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${input.trim()
+                                            ? "bg-emerald-900/50 hover:bg-emerald-800 text-emerald-100"
+                                            : "bg-white/5 text-white/20 cursor-not-allowed"
+                                        }`}
+                                    aria-label="Send message"
+                                >
+                                    {isLoading ? (
+                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                    ) : (
+                                        <ArrowUp className="w-5 h-5" />
+                                    )}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </form>
