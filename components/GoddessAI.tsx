@@ -98,15 +98,8 @@ function MobileChatView({
             ref={containerRef}
             className="fixed top-0 left-0 right-0 z-[9999] bg-black flex flex-col font-sans overflow-hidden"
         >
-            {/* Header - ChatGPT Style */}
             <div className="flex items-center justify-between px-4 py-3 bg-black border-b border-white/5 flex-shrink-0">
-                <button
-                    onClick={onClose}
-                    className="p-2 -ml-2 rounded-full text-white/70 active:bg-white/10 transition-colors"
-                    aria-label="Close"
-                >
-                    <X className="w-5 h-5" />
-                </button>
+                <div className="w-9" />
                 <div className="flex items-center gap-2">
                     <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center overflow-hidden">
                         <Image
@@ -119,7 +112,13 @@ function MobileChatView({
                     </div>
                     <span className="text-white font-medium text-sm">Goddess AI</span>
                 </div>
-                <div className="w-9" />
+                <button
+                    onClick={onClose}
+                    className="p-2 -mr-2 rounded-full text-white/70 active:bg-white/10 transition-colors"
+                    aria-label="Close"
+                >
+                    <X className="w-5 h-5" />
+                </button>
             </div>
 
             {/* Messages Area */}
@@ -464,7 +463,11 @@ export default function GoddessAI() {
         setMessages([]);
         setInput("");
         if (pathname === '/goddess-ai') {
-            router.back();
+            if (window.history.length > 2) {
+                router.back();
+            } else {
+                router.push('/');
+            }
         }
     };
 
