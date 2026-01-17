@@ -272,48 +272,49 @@ export default function GoddessAI() {
     // Mobile: Full screen overlay - Pure Black & Glassy Design
     if (isMobile && isOpen) {
         return (
-            <div className="fixed inset-0 z-[9999] bg-black flex flex-col font-sans h-[100dvh]">
-                {/* Header - Glassy & Minimal */}
-                <div className="flex items-center gap-3 p-3 absolute top-0 left-0 right-0 z-10 bg-black/60 backdrop-blur-xl border-b border-white/5">
+            <div className="fixed inset-0 z-[9999] bg-black flex flex-col font-sans">
+                {/* Header - ChatGPT Style */}
+                <div className="flex items-center justify-between px-4 py-3 bg-black border-b border-white/5">
                     <button
                         onClick={handleClose}
-                        className="p-2 rounded-full text-white/70 hover:bg-white/10 transition-colors"
+                        className="p-2 -ml-2 rounded-full text-white/70 hover:bg-white/10 transition-colors"
                         aria-label="Back"
                     >
-                        <ArrowLeft className="w-6 h-6" />
+                        <ArrowLeft className="w-5 h-5" />
                     </button>
-                    <div className="flex items-center gap-3 flex-1 min-w-0 justify-center mr-10">
-                        <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center p-1.5 overflow-hidden">
+                    <div className="flex items-center gap-2">
+                        <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center overflow-hidden">
                             <Image
                                 src="/logo.png"
                                 alt="Goddess AI"
-                                fill
+                                width={28}
+                                height={28}
                                 className="object-contain"
                             />
                         </div>
-                        <div className="text-center">
-                            <h2 className="text-white font-medium text-sm">Goddess AI</h2>
-                        </div>
+                        <span className="text-white font-medium text-sm">Goddess AI</span>
                     </div>
+                    <div className="w-9" /> {/* Spacer for centering */}
                 </div>
 
                 {/* Messages Area */}
-                <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-black pt-20 pb-32">
+                <div className="flex-1 overflow-y-auto px-4 py-6 space-y-6 bg-black">
 
                     {/* Welcome System Message */}
                     {messages.length === 0 && (
-                        <div className="flex flex-col items-center justify-center mt-20 space-y-6 opacity-0 animate-in fade-in duration-700 fill-mode-forwards">
-                            <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center p-4 shadow-[0_0_30px_rgba(255,255,255,0.05)]">
+                        <div className="flex flex-col items-center justify-center h-full space-y-4">
+                            <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center">
                                 <Image
                                     src="/logo.png"
                                     alt="Goddess AI"
-                                    fill
+                                    width={40}
+                                    height={40}
                                     className="object-contain"
                                 />
                             </div>
-                            <div className="text-center space-y-2 max-w-[280px]">
+                            <div className="text-center space-y-1">
                                 <h3 className="text-white font-medium">Lumina Oracles</h3>
-                                <p className="text-white/50 text-sm">Ask me anything about your journey, guidance, or the divine.</p>
+                                <p className="text-white/50 text-sm max-w-[260px]">Ask me anything about your journey, guidance, or the divine.</p>
                             </div>
                         </div>
                     )}
@@ -323,61 +324,50 @@ export default function GoddessAI() {
                             key={message.id}
                             className={`flex w-full ${message.role === "user" ? "justify-end" : "justify-start"}`}
                         >
-                            <div
-                                className={`relative max-w-[85%] px-5 py-3 text-[15px] leading-relaxed ${message.role === "user"
-                                    ? "bg-[#2f2f2f] text-white rounded-[2rem] rounded-tr-sm"
-                                    : "bg-transparent text-white/90 pl-0"
-                                    }`}
-                            >
-                                {message.role === "assistant" && (
-                                    <div className="flex gap-4">
-                                        <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center p-1.5 flex-shrink-0 mt-1">
-                                            <Image
-                                                src="/logo.png"
-                                                alt="AI"
-                                                fill
-                                                className="object-contain"
-                                            />
-                                        </div>
-                                        <div className="space-y-1">
-                                            <p className="whitespace-pre-wrap">{message.content}</p>
-                                        </div>
+                            {message.role === "assistant" ? (
+                                <div className="flex gap-3 max-w-[90%]">
+                                    <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <Image
+                                            src="/logo.png"
+                                            alt="AI"
+                                            width={20}
+                                            height={20}
+                                            className="object-contain"
+                                        />
                                     </div>
-                                )}
-
-                                {message.role === "user" && (
-                                    <p className="whitespace-pre-wrap">{message.content}</p>
-                                )}
-                            </div>
+                                    <p className="text-white/90 text-[15px] leading-relaxed whitespace-pre-wrap pt-1">{message.content}</p>
+                                </div>
+                            ) : (
+                                <div className="bg-[#303030] text-white px-4 py-2.5 rounded-3xl rounded-tr-lg max-w-[85%]">
+                                    <p className="text-[15px] leading-relaxed whitespace-pre-wrap">{message.content}</p>
+                                </div>
+                            )}
                         </div>
                     ))}
 
                     {isLoading && messages[messages.length - 1]?.role === "user" && (
-                        <div className="flex justify-start pl-2">
-                            <div className="flex gap-4">
-                                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center p-1.5 flex-shrink-0">
-                                    <Image
-                                        src="/logo.png"
-                                        alt="AI"
-                                        fill
-                                        className="object-contain"
-                                    />
-                                </div>
-                                <div className="flex items-center">
-                                    <ThinkingDots />
-                                </div>
+                        <div className="flex gap-3">
+                            <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                                <Image
+                                    src="/logo.png"
+                                    alt="AI"
+                                    width={20}
+                                    height={20}
+                                    className="object-contain"
+                                />
                             </div>
+                            <ThinkingDots />
                         </div>
                     )}
                     <div ref={messagesEndRef} />
                 </div>
 
-                {/* Input Area - Pure, Floating, Glassy */}
+                {/* Input Area - Sits directly on keyboard */}
                 <form
                     onSubmit={onSubmit}
-                    className="fixed bottom-0 left-0 right-0 p-4 bg-black/80 backdrop-blur-xl border-t border-white/5 z-[10000]"
+                    className="bg-black px-3 py-2 pb-[max(8px,env(safe-area-inset-bottom))] border-t border-white/5"
                 >
-                    <div className="relative flex items-end gap-3 bg-[#1e1e1e] border border-white/10 rounded-[26px] p-2 pl-4 transition-all duration-300 focus-within:border-white/20 focus-within:bg-[#252525]">
+                    <div className="flex items-end gap-2 bg-[#303030] rounded-3xl px-4 py-2">
                         <textarea
                             ref={inputRef}
                             value={input}
@@ -392,21 +382,21 @@ export default function GoddessAI() {
                                     onSubmit(e as unknown as React.FormEvent);
                                 }
                             }}
-                            placeholder="Message Goddess AI..."
+                            placeholder="Message"
                             rows={1}
-                            className="bg-transparent text-white placeholder:text-white/40 focus:outline-none flex-1 text-[16px] resize-none overflow-y-auto leading-6 max-h-[120px] py-2"
+                            className="bg-transparent text-white placeholder:text-white/40 focus:outline-none flex-1 text-[16px] resize-none overflow-y-auto leading-6 max-h-[120px] py-1"
                         />
                         <button
                             type="submit"
                             disabled={isLoading || !input.trim()}
-                            className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 mb-0.5 ${input.trim()
-                                ? "bg-white text-black hover:bg-white/90"
-                                : "bg-white/10 text-white/30 cursor-not-allowed"
+                            className={`w-8 h-8 rounded-full flex items-center justify-center transition-all flex-shrink-0 ${input.trim()
+                                ? "bg-white text-black"
+                                : "bg-white/20 text-white/40"
                                 }`}
                             aria-label="Send"
                         >
                             {isLoading ? (
-                                <Loader2 className="w-5 h-5 animate-spin" />
+                                <Loader2 className="w-4 h-4 animate-spin" />
                             ) : (
                                 <ArrowUp className="w-5 h-5 stroke-[2.5]" />
                             )}
