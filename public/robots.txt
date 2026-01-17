@@ -9,14 +9,46 @@ Disallow: /_next/
 # Sitemap location
 Sitemap: https://luminaoracles.com/sitemap.xml
 
-# LLMs.txt file for AI crawlers
-# See: https://llmstxt.org
-
 # ============================================
-# AI/LLM Crawler Permissions - All Allowed
+# SEARCH ENGINE CRAWLERS
 # ============================================
 
-# OpenAI Crawlers
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Microsoft Bing
+User-agent: bingbot
+Allow: /
+
+User-agent: BingBot
+Allow: /
+
+# Yandex (Russia)
+User-agent: YandexBot
+Allow: /
+
+# Baidu (China)
+User-agent: Baiduspider
+Allow: /
+
+# Sogou (China)
+User-agent: Sogou
+Allow: /
+
+# Naver (Korea)
+User-agent: Yeti
+Allow: /
+
+# Seznam (Czech)
+User-agent: SeznamBot
+Allow: /
+
+# ============================================
+# AI SEARCH & ASSISTANT CRAWLERS
+# ============================================
+
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
@@ -26,48 +58,62 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# Anthropic Crawlers
-User-agent: Claude-Web
+# Anthropic Claude
+User-agent: ClaudeBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-Web
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
-# Google AI Crawlers
+# Google AI
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Googlebot
+User-agent: Google-CloudVertexBot
 Allow: /
 
 # Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
-# Microsoft/Bing AI
-User-agent: Bingbot
+User-agent: Perplexity-User
 Allow: /
 
-# Meta AI
+# Mistral AI
+User-agent: MistralAI-User
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+# ============================================
+# PLATFORM AI CRAWLERS
+# ============================================
+
+# Meta/Facebook
 User-agent: FacebookBot
 Allow: /
 
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
 User-agent: meta-externalagent
-Allow: /
-
-# Cohere AI
-User-agent: cohere-ai
-Allow: /
-
-# Common Crawl (used for training)
-User-agent: CCBot
-Allow: /
-
-# ByteDance/TikTok
-User-agent: Bytespider
 Allow: /
 
 # Apple
@@ -78,16 +124,52 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
+# ByteDance/TikTok
+User-agent: Bytespider
+Allow: /
+
+# Huawei
+User-agent: PetalBot
+Allow: /
+
+# ============================================
+# OTHER AI & DATA CRAWLERS
+# ============================================
+
+# Common Crawl (AI training data)
+User-agent: CCBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
 # Brave Search
 User-agent: Brave-Search
 Allow: /
 
-# DuckDuckGo
-User-agent: DuckDuckBot
-Allow: /
-
 # You.com AI
 User-agent: YouBot
+Allow: /
+
+# Internet Archive
+User-agent: archive.org_bot
+Allow: /
+
+# Anchor Browser
+User-agent: Anchor
+Allow: /
+
+# Novellum AI
+User-agent: NovellumAI
+Allow: /
+
+# ProRata.ai
+User-agent: ProRataInc
+Allow: /
+
+# Timpi
+User-agent: Timpibot
 Allow: /
 
 # ============================================
