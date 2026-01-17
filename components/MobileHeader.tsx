@@ -29,6 +29,7 @@ export default function MobileHeader() {
         { href: "/media", label: "TikTok Live" },
         { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
+        { href: "#goddess-ai", label: "✨ Goddess AI", isSpecial: true },
     ];
 
     const menuExpandedState: "true" | "false" = isMenuOpen ? "true" : "false";

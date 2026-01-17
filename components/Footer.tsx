@@ -11,6 +11,7 @@ export default function Footer() {
         { href: "/media", label: "TikTok Live" },
         { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
+        { href: "#goddess-ai", label: "Goddess AI", isSpecial: true },
     ];
 
     const socialLinks = [

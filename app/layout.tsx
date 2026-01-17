@@ -13,6 +13,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import StructuredData from "@/components/StructuredData";
 import AEOSchemas from "@/components/AEOSchemas";
 import Analytics from "@/components/Analytics";
+import GoddessAI from "@/components/GoddessAI";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -121,6 +122,7 @@ export default function RootLayout({
         <Footer />
         <MarqueeFooter />
         <ScrollToTop />
+        <GoddessAI />
       </body>
     </html>
   );
