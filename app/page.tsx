@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import ServiceGrid from "@/components/ServiceGrid";
 import ContactSection from "@/components/ContactSection";
+import WallOfLove from "@/components/WallOfLove";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <ServiceGrid />
       <ContactSection />
+      <WallOfLove />
     </main>
   );
 }
