@@ -1,18 +1,23 @@
 "use client";
 
-import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { TESTIMONIALS } from "@/lib/testimonials";
 
 export default function WallOfLove() {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({ target: containerRef });
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    // Auto-advance carousel every 2 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
+        }, 2000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
-        <section className="relative py-20 bg-black overflow-hidden" ref={containerRef}>
+        <section className="relative py-20 bg-black overflow-hidden">
             {/* Subtle Theme Background */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-[-50%] left-[-20%] w-[80%] h-[80%] bg-lumina-gold/5 blur-[150px] rounded-full" />
@@ -28,16 +33,23 @@ export default function WallOfLove() {
                 </h2>
             </div>
 
-            {/* Horizontal Scroll Container */}
-            <div className="w-full overflow-x-auto pb-12 hide-scrollbar snap-x snap-mandatory">
-                <div className="flex gap-6 px-6 md:px-12 w-max mx-auto">
+            {/* Auto-scrolling Carousel */}
+            <div className="w-full overflow-hidden pb-12">
+                <motion.div
+                    className="flex gap-6 px-6 md:px-12"
+                    animate={{ x: `calc(-${currentIndex * 300}px + 50% - 150px)` }}
+                    transition={{ duration: 0.7, ease: "easeInOut" }}
+                >
                     {TESTIMONIALS.map((testimonial, idx) => (
                         <div
                             key={idx}
                             className={cn(
-                                "flex-none w-[280px] md:w-[320px] snap-center",
-                                "relative p-6 bg-black border border-white/10 rounded-xl hover:border-lumina-gold/30 transition-all duration-300",
-                                "group flex flex-col justify-between"
+                                "flex-none w-[280px] md:w-[320px]",
+                                "relative p-6 bg-black border border-white/10 rounded-xl transition-all duration-500",
+                                "group flex flex-col justify-between",
+                                idx === currentIndex
+                                    ? "border-lumina-gold/50 scale-105 shadow-[0_0_30px_rgba(250,204,21,0.15)]"
+                                    : "opacity-50 scale-95"
                             )}
                         >
                             <div className="absolute top-4 right-4 text-lumina-gold/20 text-4xl font-serif leading-none group-hover:text-lumina-gold/40 transition-colors">
@@ -57,6 +69,23 @@ export default function WallOfLove() {
                                 </span>
                             </div>
                         </div>
+                    ))}
+                </motion.div>
+
+                {/* Dot indicators */}
+                <div className="flex justify-center gap-2 mt-8">
+                    {TESTIMONIALS.map((_, idx) => (
+                        <button
+                            key={idx}
+                            onClick={() => setCurrentIndex(idx)}
+                            className={cn(
+                                "w-2 h-2 rounded-full transition-all duration-300",
+                                idx === currentIndex
+                                    ? "bg-lumina-gold w-6"
+                                    : "bg-white/20 hover:bg-white/40"
+                            )}
+                            aria-label={`Go to testimonial ${idx + 1}`}
+                        />
                     ))}
                 </div>
             </div>
