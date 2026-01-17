@@ -17,6 +17,7 @@ export default function Header() {
     { href: "/blogs", label: "Blogs" },
     { href: "/media", label: "Media" },
     { href: "/about", label: "About" },
+    { href: "/goddess-ai", label: "Goddess AI" },
     { href: "/contact", label: "Contact" },
   ];
 

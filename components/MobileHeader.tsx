@@ -26,10 +26,10 @@ export default function MobileHeader() {
         { href: "/", label: "Home" },
         { href: "/services", label: "Services" },
         { href: "/blogs", label: "Blogs" },
-        { href: "/media", label: "TikTok Live" },
+        { href: "/media", label: "Media" },
         { href: "/about", label: "About" },
+        { href: "/goddess-ai", label: "✨ Goddess AI", isSpecial: true },
         { href: "/contact", label: "Contact" },
-        { href: "#goddess-ai", label: "✨ Goddess AI", isSpecial: true },
     ];
 
     const menuExpandedState: "true" | "false" = isMenuOpen ? "true" : "false";
@@ -98,8 +98,8 @@ export default function MobileHeader() {
                 <div className="absolute inset-0 bg-[url('/asset_sacred_geometry_1767893429698.png')] opacity-10 pointer-events-none mix-blend-overlay bg-cover bg-center" />
 
                 {/* Menu Header */}
-                <div className="relative flex items-center justify-between p-8 border-b border-white/10 bg-white/5 backdrop-blur-sm">
-                    <span className="font-[family-name:var(--font-calligraffitti)] text-4xl text-lumina-gold drop-shadow-md">
+                <div className="relative flex items-center justify-between px-6 py-6 border-b border-white/10 bg-white/5 backdrop-blur-sm">
+                    <span className="font-[family-name:var(--font-calligraffitti)] text-3xl text-lumina-gold drop-shadow-md">
                         Portals
                     </span>
                     <button
@@ -124,8 +124,8 @@ export default function MobileHeader() {
                 </div>
 
                 {/* Navigation Links */}
-                <div className="p-8 relative z-10">
-                    <ul className="space-y-6">
+                <div className="px-6 py-6 relative z-10">
+                    <ul className="space-y-4">
                         {navLinks.map((link) => (
                             <li key={link.href}>
                                 <Link

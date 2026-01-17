@@ -132,6 +132,15 @@ export default function StructuredData() {
                     description: "Get in touch with Mamaga Judith Etornam for spiritual guidance and consultations.",
                     mainEntity: { "@id": "https://luminaoracles.com/#organization" }
                 };
+            case "/media":
+                return {
+                    "@context": "https://schema.org",
+                    "@type": "CollectionPage",
+                    "@id": "https://luminaoracles.com/media#collection",
+                    name: "Lumina Oracles Media - Spiritual Videos & Teachings",
+                    description: "A collection of spiritual videos, live sessions, and mystical teachings by Mamaga Judith Etornam.",
+                    publisher: { "@id": "https://luminaoracles.com/#organization" }
+                };
             default:
                 return null;
         }

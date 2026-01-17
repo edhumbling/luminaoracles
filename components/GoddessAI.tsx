@@ -2,12 +2,27 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { X, Sparkles, Send, Loader2, ArrowUp } from "lucide-react";
 
 interface Message {
     id: string;
     role: "user" | "assistant";
     content: string;
+}
+
+// Animated thinking dots component
+function ThinkingDots() {
+    return (
+        <div className="flex items-center gap-1 px-2">
+            <span className="text-white/50 text-sm">thinking</span>
+            <span className="flex gap-0.5">
+                <span className="w-1.5 h-1.5 bg-lumina-gold rounded-full animate-bounce [animation-delay:0ms]" />
+                <span className="w-1.5 h-1.5 bg-lumina-gold rounded-full animate-bounce [animation-delay:150ms]" />
+                <span className="w-1.5 h-1.5 bg-lumina-gold rounded-full animate-bounce [animation-delay:300ms]" />
+            </span>
+        </div>
+    );
 }
 
 export default function GoddessAI() {
@@ -18,10 +33,18 @@ export default function GoddessAI() {
     const [isLoading, setIsLoading] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const messagesEndRef = useRef<HTMLDivElement>(null);
-    const inputRef = useRef<HTMLInputElement>(null);
+    const inputRef = useRef<HTMLTextAreaElement>(null);
+    const pathname = usePathname();
 
-    // Toggle visibility based on footer intersection
+    // Toggle visibility based on footer intersection and handle auto-open on /goddess-ai
     useEffect(() => {
+        // Auto-open on /goddess-ai route
+        if (pathname === '/goddess-ai') {
+            setIsOpen(true);
+            setIsVisible(true);
+            setTimeout(() => inputRef.current?.focus(), 100);
+        }
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setIsVisible(!entry.isIntersecting);
@@ -37,7 +60,7 @@ export default function GoddessAI() {
         return () => {
             if (footer) observer.unobserve(footer);
         };
-    }, []);
+    }, [pathname]);
 
     // Ctrl+I shortcut
     useEffect(() => {
@@ -236,28 +259,45 @@ export default function GoddessAI() {
                     {isLoading && messages[messages.length - 1]?.role === "user" && (
                         <div className="flex justify-start">
                             <div className="bg-white/10 rounded-2xl px-4 py-3">
-                                <Loader2 className="w-5 h-5 text-lumina-gold animate-spin" />
+                                <ThinkingDots />
                             </div>
                         </div>
                     )}
                     <div ref={messagesEndRef} />
                 </div>
 
-                {/* Input */}
-                <form onSubmit={onSubmit} className="p-4 border-t border-white/10">
-                    <div className="flex gap-2">
-                        <input
+                {/* Input - positioned to stay above keyboard on mobile */}
+                <form
+                    onSubmit={onSubmit}
+                    className="p-4 border-t border-white/10 bg-black sticky bottom-0 pb-[env(safe-area-inset-bottom,16px)]"
+                >
+                    <div className="flex gap-2 items-end">
+                        <textarea
                             ref={inputRef}
-                            type="text"
                             value={input}
-                            onChange={(e) => setInput(e.target.value)}
+                            onChange={(e) => {
+                                setInput(e.target.value);
+                                // Auto-resize up to 5 lines
+                                e.target.style.height = 'auto';
+                                const lineHeight = 24;
+                                const maxLines = 5;
+                                const newHeight = Math.min(e.target.scrollHeight, lineHeight * maxLines);
+                                e.target.style.height = `${newHeight}px`;
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' && !e.shiftKey) {
+                                    e.preventDefault();
+                                    onSubmit(e as unknown as React.FormEvent);
+                                }
+                            }}
                             placeholder="Ask the Goddess..."
-                            className="flex-1 bg-white/5 border border-white/10 rounded-full px-5 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-lumina-gold/50"
+                            rows={1}
+                            className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-lumina-gold/50 resize-none overflow-y-auto leading-6 max-h-[120px]"
                         />
                         <button
                             type="submit"
                             disabled={isLoading || !input.trim()}
-                            className="w-12 h-12 rounded-full bg-lumina-gold text-black flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white transition-colors"
+                            className="w-12 h-12 rounded-full bg-lumina-gold text-black flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white transition-colors flex-shrink-0"
                             aria-label="Send message"
                         >
                             <Send className="w-5 h-5" />
@@ -350,7 +390,7 @@ export default function GoddessAI() {
                             {isLoading && messages[messages.length - 1]?.role === "user" && (
                                 <div className="flex justify-start">
                                     <div className="bg-white/10 rounded-2xl px-4 py-3">
-                                        <Loader2 className="w-5 h-5 text-lumina-gold animate-spin" />
+                                        <ThinkingDots />
                                     </div>
                                 </div>
                             )}
@@ -363,16 +403,26 @@ export default function GoddessAI() {
                 <form onSubmit={onSubmit} className={`transition-opacity duration-300 ${!isVisible && !isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                     <div className="relative group">
                         <div className={`relative flex items-center justify-between gap-2 transition-all duration-300 ${isOpen && !isMobile
-                                ? "bg-[#0a0a0a] border border-white/10 rounded-2xl p-2"
-                                : "bg-[#111111] border border-white/10 rounded-full pl-6 pr-2 py-2 shadow-2xl w-[600px] max-w-[90vw] hidden md:flex"
+                            ? "bg-[#0a0a0a] border border-white/10 rounded-2xl p-2"
+                            : "bg-[#111111] border border-white/10 rounded-full pl-6 pr-2 py-2 shadow-2xl w-[600px] max-w-[90vw] hidden md:flex"
                             }`}>
-                            <input
+                            <textarea
                                 ref={!isOpen ? inputRef : undefined}
-                                type="text"
                                 value={input}
-                                onChange={(e) => setInput(e.target.value)}
+                                onChange={(e) => {
+                                    setInput(e.target.value);
+                                    e.target.style.height = 'auto';
+                                    e.target.style.height = `${Math.min(e.target.scrollHeight, 120)}px`;
+                                }}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' && !e.shiftKey) {
+                                        e.preventDefault();
+                                        onSubmit(e as unknown as React.FormEvent);
+                                    }
+                                }}
                                 placeholder="Ask a question..."
-                                className={`bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base ${isOpen && !isMobile ? "px-2" : ""
+                                rows={1}
+                                className={`bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base resize-none overflow-y-auto leading-6 max-h-[120px] ${isOpen && !isMobile ? "px-2" : ""
                                     }`}
                             />
 
@@ -384,8 +434,8 @@ export default function GoddessAI() {
                                     type="submit"
                                     disabled={isLoading || !input.trim()}
                                     className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${input.trim()
-                                            ? "bg-emerald-900/50 hover:bg-emerald-800 text-emerald-100"
-                                            : "bg-white/5 text-white/20 cursor-not-allowed"
+                                        ? "bg-emerald-900/50 hover:bg-emerald-800 text-emerald-100"
+                                        : "bg-white/5 text-white/20 cursor-not-allowed"
                                         }`}
                                     aria-label="Send message"
                                 >
