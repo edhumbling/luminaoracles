@@ -31,6 +31,207 @@ function ThinkingDots() {
     );
 }
 
+// Mobile Chat View with Visual Viewport API for instant keyboard handling
+interface MobileChatViewProps {
+    messages: Message[];
+    input: string;
+    setInput: (value: string) => void;
+    isLoading: boolean;
+    onSubmit: (e: React.FormEvent) => void;
+    onClose: () => void;
+    inputRef: React.RefObject<HTMLTextAreaElement | null>;
+    messagesEndRef: React.RefObject<HTMLDivElement | null>;
+}
+
+function MobileChatView({
+    messages,
+    input,
+    setInput,
+    isLoading,
+    onSubmit,
+    onClose,
+    inputRef,
+    messagesEndRef
+}: MobileChatViewProps) {
+    const [viewportHeight, setViewportHeight] = useState<number>(typeof window !== 'undefined' ? window.innerHeight : 0);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    // Use Visual Viewport API for instant keyboard detection
+    useEffect(() => {
+        const updateHeight = () => {
+            // visualViewport gives us the actual visible area (excluding keyboard)
+            const vv = window.visualViewport;
+            if (vv) {
+                setViewportHeight(vv.height);
+            } else {
+                setViewportHeight(window.innerHeight);
+            }
+        };
+
+        // Initial set
+        updateHeight();
+
+        // Listen to visualViewport changes (fires when keyboard shows/hides)
+        const vv = window.visualViewport;
+        if (vv) {
+            vv.addEventListener('resize', updateHeight);
+            vv.addEventListener('scroll', updateHeight);
+        }
+
+        // Fallback for older browsers
+        window.addEventListener('resize', updateHeight);
+
+        return () => {
+            if (vv) {
+                vv.removeEventListener('resize', updateHeight);
+                vv.removeEventListener('scroll', updateHeight);
+            }
+            window.removeEventListener('resize', updateHeight);
+        };
+    }, []);
+
+    // Scroll to bottom when messages change
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, [messages, messagesEndRef]);
+
+    return (
+        <div
+            ref={containerRef}
+            className={`fixed top-0 left-0 right-0 z-[9999] bg-black flex flex-col font-sans overflow-hidden h-[${viewportHeight}px]`}
+        >
+            {/* Header - ChatGPT Style */}
+            <div className="flex items-center justify-between px-4 py-3 bg-black border-b border-white/5 flex-shrink-0">
+                <button
+                    onClick={onClose}
+                    className="p-2 -ml-2 rounded-full text-white/70 active:bg-white/10 transition-colors"
+                    aria-label="Back"
+                >
+                    <ArrowLeft className="w-5 h-5" />
+                </button>
+                <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center overflow-hidden">
+                        <Image
+                            src="/logo.png"
+                            alt="Goddess AI"
+                            width={28}
+                            height={28}
+                            className="object-contain"
+                        />
+                    </div>
+                    <span className="text-white font-medium text-sm">Goddess AI</span>
+                </div>
+                <div className="w-9" />
+            </div>
+
+            {/* Messages Area */}
+            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4 bg-black min-h-0">
+                {messages.length === 0 && (
+                    <div className="flex flex-col items-center justify-center h-full space-y-4 py-12">
+                        <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center">
+                            <Image
+                                src="/logo.png"
+                                alt="Goddess AI"
+                                width={40}
+                                height={40}
+                                className="object-contain"
+                            />
+                        </div>
+                        <div className="text-center space-y-1">
+                            <h3 className="text-white font-medium">Lumina Oracles</h3>
+                            <p className="text-white/50 text-sm max-w-[260px]">Ask me anything about your journey, guidance, or the divine.</p>
+                        </div>
+                    </div>
+                )}
+
+                {messages.map((message) => (
+                    <div
+                        key={message.id}
+                        className={`flex w-full ${message.role === "user" ? "justify-end" : "justify-start"}`}
+                    >
+                        {message.role === "assistant" ? (
+                            <div className="flex gap-3 max-w-[90%]">
+                                <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <Image
+                                        src="/logo.png"
+                                        alt="AI"
+                                        width={20}
+                                        height={20}
+                                        className="object-contain"
+                                    />
+                                </div>
+                                <p className="text-white/90 text-[15px] leading-relaxed whitespace-pre-wrap pt-1">{message.content}</p>
+                            </div>
+                        ) : (
+                            <div className="bg-[#303030] text-white px-4 py-2.5 rounded-3xl rounded-tr-lg max-w-[85%]">
+                                <p className="text-[15px] leading-relaxed whitespace-pre-wrap">{message.content}</p>
+                            </div>
+                        )}
+                    </div>
+                ))}
+
+                {isLoading && messages[messages.length - 1]?.role === "user" && (
+                    <div className="flex gap-3">
+                        <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                            <Image
+                                src="/logo.png"
+                                alt="AI"
+                                width={20}
+                                height={20}
+                                className="object-contain"
+                            />
+                        </div>
+                        <ThinkingDots />
+                    </div>
+                )}
+                <div ref={messagesEndRef} />
+            </div>
+
+            {/* Input Area - Sits directly on keyboard */}
+            <form
+                onSubmit={onSubmit}
+                className="bg-black px-3 py-2 border-t border-white/5 flex-shrink-0"
+            >
+                <div className="flex items-end gap-2 bg-[#303030] rounded-3xl px-4 py-2">
+                    <textarea
+                        ref={inputRef}
+                        value={input}
+                        onChange={(e) => {
+                            setInput(e.target.value);
+                            e.target.style.height = 'auto';
+                            e.target.style.height = `${Math.min(e.target.scrollHeight, 120)}px`;
+                        }}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' && !e.shiftKey) {
+                                e.preventDefault();
+                                onSubmit(e as unknown as React.FormEvent);
+                            }
+                        }}
+                        placeholder="Message"
+                        rows={1}
+                        className="bg-transparent text-white placeholder:text-white/40 focus:outline-none flex-1 text-[16px] resize-none overflow-y-auto leading-6 max-h-[120px] py-1"
+                    />
+                    <button
+                        type="submit"
+                        disabled={isLoading || !input.trim()}
+                        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all flex-shrink-0 ${input.trim()
+                            ? "bg-white text-black"
+                            : "bg-white/20 text-white/40"
+                            }`}
+                        aria-label="Send"
+                    >
+                        {isLoading ? (
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                        ) : (
+                            <ArrowUp className="w-5 h-5 stroke-[2.5]" />
+                        )}
+                    </button>
+                </div>
+            </form>
+        </div>
+    );
+}
+
 export default function GoddessAI() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
@@ -272,138 +473,16 @@ export default function GoddessAI() {
     // Mobile: Full screen overlay - Pure Black & Glassy Design
     if (isMobile && isOpen) {
         return (
-            <div className="fixed inset-0 z-[9999] bg-black flex flex-col font-sans">
-                {/* Header - ChatGPT Style */}
-                <div className="flex items-center justify-between px-4 py-3 bg-black border-b border-white/5">
-                    <button
-                        onClick={handleClose}
-                        className="p-2 -ml-2 rounded-full text-white/70 hover:bg-white/10 transition-colors"
-                        aria-label="Back"
-                    >
-                        <ArrowLeft className="w-5 h-5" />
-                    </button>
-                    <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center overflow-hidden">
-                            <Image
-                                src="/logo.png"
-                                alt="Goddess AI"
-                                width={28}
-                                height={28}
-                                className="object-contain"
-                            />
-                        </div>
-                        <span className="text-white font-medium text-sm">Goddess AI</span>
-                    </div>
-                    <div className="w-9" /> {/* Spacer for centering */}
-                </div>
-
-                {/* Messages Area */}
-                <div className="flex-1 overflow-y-auto px-4 py-6 space-y-6 bg-black">
-
-                    {/* Welcome System Message */}
-                    {messages.length === 0 && (
-                        <div className="flex flex-col items-center justify-center h-full space-y-4">
-                            <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center">
-                                <Image
-                                    src="/logo.png"
-                                    alt="Goddess AI"
-                                    width={40}
-                                    height={40}
-                                    className="object-contain"
-                                />
-                            </div>
-                            <div className="text-center space-y-1">
-                                <h3 className="text-white font-medium">Lumina Oracles</h3>
-                                <p className="text-white/50 text-sm max-w-[260px]">Ask me anything about your journey, guidance, or the divine.</p>
-                            </div>
-                        </div>
-                    )}
-
-                    {messages.map((message) => (
-                        <div
-                            key={message.id}
-                            className={`flex w-full ${message.role === "user" ? "justify-end" : "justify-start"}`}
-                        >
-                            {message.role === "assistant" ? (
-                                <div className="flex gap-3 max-w-[90%]">
-                                    <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <Image
-                                            src="/logo.png"
-                                            alt="AI"
-                                            width={20}
-                                            height={20}
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                    <p className="text-white/90 text-[15px] leading-relaxed whitespace-pre-wrap pt-1">{message.content}</p>
-                                </div>
-                            ) : (
-                                <div className="bg-[#303030] text-white px-4 py-2.5 rounded-3xl rounded-tr-lg max-w-[85%]">
-                                    <p className="text-[15px] leading-relaxed whitespace-pre-wrap">{message.content}</p>
-                                </div>
-                            )}
-                        </div>
-                    ))}
-
-                    {isLoading && messages[messages.length - 1]?.role === "user" && (
-                        <div className="flex gap-3">
-                            <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                                <Image
-                                    src="/logo.png"
-                                    alt="AI"
-                                    width={20}
-                                    height={20}
-                                    className="object-contain"
-                                />
-                            </div>
-                            <ThinkingDots />
-                        </div>
-                    )}
-                    <div ref={messagesEndRef} />
-                </div>
-
-                {/* Input Area - Sits directly on keyboard */}
-                <form
-                    onSubmit={onSubmit}
-                    className="bg-black px-3 py-2 pb-[max(8px,env(safe-area-inset-bottom))] border-t border-white/5"
-                >
-                    <div className="flex items-end gap-2 bg-[#303030] rounded-3xl px-4 py-2">
-                        <textarea
-                            ref={inputRef}
-                            value={input}
-                            onChange={(e) => {
-                                setInput(e.target.value);
-                                e.target.style.height = 'auto';
-                                e.target.style.height = `${Math.min(e.target.scrollHeight, 120)}px`;
-                            }}
-                            onKeyDown={(e) => {
-                                if (e.key === 'Enter' && !e.shiftKey) {
-                                    e.preventDefault();
-                                    onSubmit(e as unknown as React.FormEvent);
-                                }
-                            }}
-                            placeholder="Message"
-                            rows={1}
-                            className="bg-transparent text-white placeholder:text-white/40 focus:outline-none flex-1 text-[16px] resize-none overflow-y-auto leading-6 max-h-[120px] py-1"
-                        />
-                        <button
-                            type="submit"
-                            disabled={isLoading || !input.trim()}
-                            className={`w-8 h-8 rounded-full flex items-center justify-center transition-all flex-shrink-0 ${input.trim()
-                                ? "bg-white text-black"
-                                : "bg-white/20 text-white/40"
-                                }`}
-                            aria-label="Send"
-                        >
-                            {isLoading ? (
-                                <Loader2 className="w-4 h-4 animate-spin" />
-                            ) : (
-                                <ArrowUp className="w-5 h-5 stroke-[2.5]" />
-                            )}
-                        </button>
-                    </div>
-                </form>
-            </div>
+            <MobileChatView
+                messages={messages}
+                input={input}
+                setInput={setInput}
+                isLoading={isLoading}
+                onSubmit={onSubmit}
+                onClose={handleClose}
+                inputRef={inputRef}
+                messagesEndRef={messagesEndRef}
+            />
         );
     }
 
