@@ -188,7 +188,7 @@ function MobileChatView({
             {/* Input Area - Sits directly on keyboard */}
             <form
                 onSubmit={onSubmit}
-                className="bg-black px-3 py-2 border-t border-white/5 flex-shrink-0"
+                className="bg-black px-3 py-2 border-t border-white/5 flex-shrink-0 transition-all duration-100"
             >
                 <div className="flex items-end gap-2 bg-[#303030] rounded-3xl px-4 py-2">
                     <textarea
@@ -212,7 +212,7 @@ function MobileChatView({
                     <button
                         type="submit"
                         disabled={isLoading || !input.trim()}
-                        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all flex-shrink-0 ${input.trim()
+                        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all flex-shrink-0 mb-0.5 ${input.trim()
                             ? "bg-white text-black"
                             : "bg-white/20 text-white/40"
                             }`}
@@ -578,9 +578,9 @@ export default function GoddessAI() {
                 {/* Search Bar / Input */}
                 <form onSubmit={onSubmit} className={`transition-opacity duration-300 ${!isVisible && !isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                     <div className="relative group">
-                        <div className={`relative flex items-center justify-between gap-2 transition-all duration-300 ${isOpen && !isMobile
+                        <div className={`relative flex items-end justify-between gap-2 transition-all duration-300 ${isOpen && !isMobile
                             ? "bg-[#0a0a0a] border border-white/10 rounded-2xl p-2"
-                            : "bg-[#111111] border border-white/10 rounded-full pl-6 pr-2 py-2 shadow-2xl w-[600px] max-w-[90vw] hidden md:flex"
+                            : "bg-[#111111] border border-white/10 rounded-full pl-6 pr-2 py-2 shadow-2xl w-[600px] max-w-[90vw] hidden md:flex items-center"
                             }`}>
                             <textarea
                                 ref={!isOpen ? inputRef : undefined}
@@ -598,11 +598,11 @@ export default function GoddessAI() {
                                 }}
                                 placeholder="Ask a question..."
                                 rows={1}
-                                className={`bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base resize-none overflow-y-auto leading-6 max-h-[120px] ${isOpen && !isMobile ? "px-2" : ""
+                                className={`bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base resize-none overflow-y-auto leading-6 max-h-[120px] py-1 ${isOpen && !isMobile ? "px-2" : ""
                                     }`}
                             />
 
-                            <div className="flex items-center gap-3">
+                            <div className={`flex items-center gap-3 ${isOpen && !isMobile ? "mb-0.5" : ""}`}>
                                 {!isOpen && !input && (
                                     <span className="text-white/20 text-xs font-mono hidden sm:block">Ctrl+I</span>
                                 )}
