@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback, useLayoutEffect } from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { X, Sparkles, Send, Loader2, ArrowUp, ArrowLeft } from "lucide-react";
@@ -53,18 +53,16 @@ function MobileChatView({
     inputRef,
     messagesEndRef
 }: MobileChatViewProps) {
-    const [viewportHeight, setViewportHeight] = useState<number>(typeof window !== 'undefined' ? window.innerHeight : 0);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    // Use Visual Viewport API for instant keyboard detection
-    useEffect(() => {
+    // Use Visual Viewport API for instant keyboard detection using direct DOM manipulation
+    // This avoids re-renders and solves lint warnings about inline styles
+    useLayoutEffect(() => {
         const updateHeight = () => {
-            // visualViewport gives us the actual visible area (excluding keyboard)
             const vv = window.visualViewport;
-            if (vv) {
-                setViewportHeight(vv.height);
-            } else {
-                setViewportHeight(window.innerHeight);
+            const height = vv ? vv.height : window.innerHeight;
+            if (containerRef.current) {
+                containerRef.current.style.height = `${height}px`;
             }
         };
 
@@ -98,7 +96,7 @@ function MobileChatView({
     return (
         <div
             ref={containerRef}
-            className={`fixed top-0 left-0 right-0 z-[9999] bg-black flex flex-col font-sans overflow-hidden h-[${viewportHeight}px]`}
+            className="fixed top-0 left-0 right-0 z-[9999] bg-black flex flex-col font-sans overflow-hidden"
         >
             {/* Header - ChatGPT Style */}
             <div className="flex items-center justify-between px-4 py-3 bg-black border-b border-white/5 flex-shrink-0">
