@@ -1,8 +1,9 @@
-import { getAllSlugs, getPostBySlug } from "@/lib/blog-data";
+import { getAllSlugs, getPostBySlug, getRelatedPosts } from "@/lib/blog-data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import ArticleShare from "@/components/ArticleShare";
 import BlogBackButton from "@/components/BlogBackButton";
+import RelatedPosts from "@/components/RelatedPosts";
 
 export async function generateStaticParams() {
     const slugs = getAllSlugs();
@@ -93,6 +94,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     }
 
     const articleSchema = getArticleSchema(post);
+    const relatedPosts = getRelatedPosts(post.slug, post.category);
 
     return (
         <article className="min-h-screen bg-black text-white selection:bg-lumina-gold selection:text-black pb-24">
@@ -180,6 +182,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
                             <ArticleShare title={post.title} slug={post.slug} />
                         </div>
+
+                        {/* Related Posts */}
+                        <RelatedPosts posts={relatedPosts} />
                     </div>
 
                 </div>

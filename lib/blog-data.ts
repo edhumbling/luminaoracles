@@ -1101,3 +1101,11 @@ export function getAllSlugs() {
   }));
 }
 
+export function getRelatedPosts(currentSlug: string, category: string, limit: number = 3) {
+  return BLOG_POSTS.filter(
+    (post) => post.category === category && post.slug !== currentSlug
+  )
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, limit);
+}
+
