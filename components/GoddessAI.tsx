@@ -241,9 +241,9 @@ export default function GoddessAI() {
                     </div>
                 </div>
 
-                {/* Messages Area - WhatsApp Dark Background Pattern */}
+                {/* Messages Area */}
                 <div
-                    className="flex-1 overflow-y-auto p-4 space-y-2 bg-[#0b141a] relative bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] bg-blend-overlay"
+                    className="flex-1 overflow-y-auto p-4 space-y-2 bg-[#0b141a] relative pb-[100px] bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] bg-blend-overlay"
                 >
                     <div className="absolute inset-0 bg-black/80 pointer-events-none" /> {/* Dim the background pattern */}
 
@@ -301,44 +301,53 @@ export default function GoddessAI() {
                     <div ref={messagesEndRef} />
                 </div>
 
-                {/* Input Area */}
+                {/* Input Area - Desktop Style & Keyboard Fixed */}
                 <form
                     onSubmit={onSubmit}
-                    className="p-2 bg-[#202c33] sticky bottom-0 pb-[env(safe-area-inset-bottom,16px)] flex items-end gap-2"
+                    className="fixed bottom-0 left-0 right-0 p-4 bg-[#0b141a]/90 backdrop-blur-md border-t border-white/5 pb-[env(safe-area-inset-bottom,20px)] z-[10000]"
                 >
-                    <div className="flex-1 bg-[#2a3942] rounded-3xl flex items-end px-4 py-2 min-h-[48px]">
-                        <textarea
-                            ref={inputRef}
-                            value={input}
-                            onChange={(e) => {
-                                setInput(e.target.value);
-                                e.target.style.height = 'auto';
-                                const lineHeight = 20;
-                                const maxLines = 6;
-                                e.target.style.height = `${Math.min(e.target.scrollHeight, lineHeight * maxLines)}px`;
-                            }}
-                            onKeyDown={(e) => {
-                                if (e.key === 'Enter' && !e.shiftKey) {
-                                    e.preventDefault();
-                                    onSubmit(e as unknown as React.FormEvent);
-                                }
-                            }}
-                            placeholder="Message"
-                            rows={1}
-                            className="w-full bg-transparent text-white text-[15px] placeholder:text-white/40 focus:outline-none resize-none max-h-[120px] leading-5 py-1"
-                        />
+                    <div className="relative group">
+                        <div className="relative flex items-center justify-between gap-2 bg-[#111111] border border-white/10 rounded-2xl p-2 transition-all duration-300">
+                            <textarea
+                                ref={inputRef}
+                                value={input}
+                                onChange={(e) => {
+                                    setInput(e.target.value);
+                                    e.target.style.height = 'auto';
+                                    const lineHeight = 20;
+                                    const maxLines = 6;
+                                    e.target.style.height = `${Math.min(e.target.scrollHeight, lineHeight * maxLines)}px`;
+                                }}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' && !e.shiftKey) {
+                                        e.preventDefault();
+                                        onSubmit(e as unknown as React.FormEvent);
+                                    }
+                                }}
+                                placeholder="Ask a question..."
+                                rows={1}
+                                className="bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base resize-none overflow-y-auto leading-6 max-h-[120px] px-2"
+                            />
+
+                            <button
+                                type="submit"
+                                disabled={isLoading || !input.trim()}
+                                className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors flex-shrink-0 ${input.trim()
+                                    ? "bg-emerald-900/50 hover:bg-emerald-800 text-emerald-100"
+                                    : "bg-white/5 text-white/20 cursor-not-allowed"
+                                    }`}
+                                aria-label="Send message"
+                            >
+                                {isLoading ? (
+                                    <Loader2 className="w-5 h-5 animate-spin" />
+                                ) : (
+                                    <ArrowUp className="w-6 h-6" />
+                                )}
+                            </button>
+                        </div>
                     </div>
-                    <button
-                        type="submit"
-                        disabled={isLoading || !input.trim()}
-                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-all flex-shrink-0 ${input.trim() ? "bg-[#00a884] text-white hover:bg-[#008f72]" : "bg-[#2a3942] text-white/30"
-                            }`}
-                        aria-label="Send"
-                    >
-                        {input.trim() ? <Send className="w-5 h-5 ml-0.5" /> : <span className="text-xl">🎙️</span>}
-                    </button>
                 </form>
-            </div>
+            </div >
         );
     }
 
@@ -389,7 +398,7 @@ export default function GoddessAI() {
                         </div>
 
                         {/* Messages */}
-                        <div className="h-[400px] overflow-y-auto p-4 space-y-4">
+                        <div className="h-[600px] md:h-[70vh] overflow-y-auto p-4 space-y-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/10 hover:[&::-webkit-scrollbar-thumb]:bg-white/20">
                             {messages.length === 0 && (
                                 <div className="text-center py-8">
                                     <div className="relative w-14 h-14 mx-auto mb-4">
