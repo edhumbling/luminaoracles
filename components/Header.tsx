@@ -68,7 +68,7 @@ export default function Header() {
                     <Link
                       href={link.href}
                       className={cn(
-                        "relative px-6 py-2.5 rounded-full text-sm font-medium tracking-widest uppercase transition-all duration-300 overflow-hidden group",
+                        "relative px-6 py-2.5 rounded-full text-sm font-medium tracking-wide transition-all duration-300 overflow-hidden group",
                         // Active State
                         isActive
                           ? "text-lumina-gold bg-white/10 shadow-[0_0_15px_rgba(250,204,21,0.1)]"
