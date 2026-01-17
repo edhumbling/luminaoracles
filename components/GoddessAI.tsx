@@ -43,7 +43,7 @@ export default function GoddessAI() {
     const pathname = usePathname();
     const router = useRouter();
 
-    // Toggle visibility based on footer intersection and handle auto-open on /goddess-ai
+    // Toggle visibility based on footer intersection and handle auto-open/hero check
     useEffect(() => {
         // Auto-open on /goddess-ai route
         if (pathname === '/goddess-ai') {
@@ -52,9 +52,43 @@ export default function GoddessAI() {
             setTimeout(() => inputRef.current?.focus(), 100);
         }
 
+        // Logic to hide on Blogs Hero (Desktop only)
+        const checkScroll = () => {
+            if (pathname === '/blogs' && window.innerWidth >= 768) {
+                // Hero is roughly 70vh. If we are near top (e.g. < 50vh), hide it.
+                // The search bar is around 60-70vh.
+                // We want to hide it when the user is viewing the hero.
+                if (window.scrollY < window.innerHeight * 0.6) {
+                    setIsVisible(false);
+                    return;
+                }
+            }
+
+            // If we are NOT in the hero logic (or scrolled past), we defer to the footer observer
+            // However, observer is async/callback based.
+            // We need to manage state carefully.
+            // Simplified: If scrollY is small trigger hidden. If larger, let observer dictate.
+            // But observer only sets FALSE when intersecting footer. It sets TRUE when NOT intersecting footer.
+            // So if we scroll past hero, observer says "TRUE" (not intersecting footer).
+            // This works.
+        };
+
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setIsVisible(!entry.isIntersecting);
+                const isFooterVisible = entry.isIntersecting;
+
+                // If footer is visible, ALWAYS hide
+                if (isFooterVisible) {
+                    setIsVisible(false);
+                } else {
+                    // Footer NOT visible.
+                    // Check if we are in Blogs Hero
+                    if (pathname === '/blogs' && window.innerWidth >= 768 && window.scrollY < window.innerHeight * 0.6) {
+                        setIsVisible(false);
+                    } else {
+                        setIsVisible(true);
+                    }
+                }
             },
             { threshold: 0.1 }
         );
@@ -64,8 +98,32 @@ export default function GoddessAI() {
             observer.observe(footer);
         }
 
+        // Add scroll listener for the blogs page dynamic check
+        const handleScroll = () => {
+            // We only care about this check on blogs page desktop
+            if (pathname === '/blogs' && window.innerWidth >= 768) {
+                // If footer is in view, observer handles it?
+                // Observer only fires on threshold change.
+                // We need constant checking for Hero area.
+                const footer = document.querySelector("footer");
+                const footerRect = footer?.getBoundingClientRect();
+                const isFooterVisible = footerRect && footerRect.top < window.innerHeight;
+
+                if (isFooterVisible) {
+                    setIsVisible(false);
+                } else if (window.scrollY < window.innerHeight * 0.6) {
+                    setIsVisible(false);
+                } else {
+                    setIsVisible(true);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
         return () => {
             if (footer) observer.unobserve(footer);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, [pathname]);
 
@@ -211,47 +269,51 @@ export default function GoddessAI() {
         }
     };
 
-    // Mobile: Full screen overlay
+    // Mobile: Full screen overlay - Pure Black & Glassy Design
     if (isMobile && isOpen) {
         return (
-            <div className="fixed inset-0 z-[9999] bg-[#0b141a] flex flex-col font-sans">
-                {/* WhatsApp-style Header */}
-                <div className="flex items-center gap-2 p-2 bg-[#202c33] border-b border-white/5 shadow-sm">
+            <div className="fixed inset-0 z-[9999] bg-black flex flex-col font-sans h-[100dvh]">
+                {/* Header - Glassy & Minimal */}
+                <div className="flex items-center gap-3 p-3 absolute top-0 left-0 right-0 z-10 bg-black/60 backdrop-blur-xl border-b border-white/5">
                     <button
                         onClick={handleClose}
-                        className="p-1 rounded-full text-white/70 hover:bg-white/10 flex items-center gap-1"
+                        className="p-2 rounded-full text-white/70 hover:bg-white/10 transition-colors"
                         aria-label="Back"
                     >
                         <ArrowLeft className="w-6 h-6" />
-                        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-lumina-gold/20 to-amber-600/20 border border-lumina-gold/30 flex items-center justify-center relative overflow-hidden flex-shrink-0">
+                    </button>
+                    <div className="flex items-center gap-3 flex-1 min-w-0 justify-center mr-10">
+                        <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center p-1.5 overflow-hidden">
                             <Image
                                 src="/logo.png"
                                 alt="Goddess AI"
                                 fill
-                                className="object-contain p-1"
+                                className="object-contain"
                             />
                         </div>
-                    </button>
-                    <div className="flex-1 min-w-0">
-                        <h2 className="text-white font-medium truncate text-base">Goddess AI</h2>
-                        <p className="text-white/60 text-xs truncate">online</p>
-                    </div>
-                    <div className="flex items-center gap-4 px-2">
-                        <div className="w-5 h-5" /> {/* Placeholder/Spacer for symmetry or potential menu */}
+                        <div className="text-center">
+                            <h2 className="text-white font-medium text-sm">Goddess AI</h2>
+                        </div>
                     </div>
                 </div>
 
                 {/* Messages Area */}
-                <div
-                    className="flex-1 overflow-y-auto p-4 space-y-2 bg-[#0b141a] relative pb-[100px] bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] bg-blend-overlay"
-                >
-                    <div className="absolute inset-0 bg-black/80 pointer-events-none" /> {/* Dim the background pattern */}
+                <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-black pt-20 pb-32">
 
                     {/* Welcome System Message */}
                     {messages.length === 0 && (
-                        <div className="flex justify-center my-4 relative z-10">
-                            <div className="bg-[#1f2c34] text-lumina-gold text-[10px] px-3 py-1.5 rounded-lg shadow-sm text-center max-w-[80%] border border-lumina-gold/10">
-                                Messages are private & sacred. Connect with divine guidance.
+                        <div className="flex flex-col items-center justify-center mt-20 space-y-6 opacity-0 animate-in fade-in duration-700 fill-mode-forwards">
+                            <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center p-4 shadow-[0_0_30px_rgba(255,255,255,0.05)]">
+                                <Image
+                                    src="/logo.png"
+                                    alt="Goddess AI"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div className="text-center space-y-2 max-w-[280px]">
+                                <h3 className="text-white font-medium">Lumina Oracles</h3>
+                                <p className="text-white/50 text-sm">Ask me anything about your journey, guidance, or the divine.</p>
                             </div>
                         </div>
                     )}
@@ -259,95 +321,99 @@ export default function GoddessAI() {
                     {messages.map((message) => (
                         <div
                             key={message.id}
-                            className={`flex w-full ${message.role === "user" ? "justify-end" : "justify-start"} relative z-10`}
+                            className={`flex w-full ${message.role === "user" ? "justify-end" : "justify-start"}`}
                         >
                             <div
-                                className={`relative max-w-[85%] rounded-lg px-3 py-1.5 shadow-sm text-[15px] leading-snug ${message.role === "user"
-                                    ? "bg-[#005c4b] text-[#e9edef] rounded-tr-none"
-                                    : "bg-[#202c33] text-[#e9edef] rounded-tl-none"
+                                className={`relative max-w-[85%] px-5 py-3 text-[15px] leading-relaxed ${message.role === "user"
+                                    ? "bg-[#2f2f2f] text-white rounded-[2rem] rounded-tr-sm"
+                                    : "bg-transparent text-white/90 pl-0"
                                     }`}
                             >
-                                {/* Tail Pseudo-element simulation */}
-                                <div className={`absolute top-0 w-3 h-3 ${message.role === "user"
-                                    ? "right-[-8px] border-t-[12px] border-t-[#005c4b] border-r-[12px] border-r-transparent rotate-0 [clip-path:polygon(0_0,100%_0,0_100%)]"
-                                    : "left-[-8px] border-t-[12px] border-t-[#202c33] border-l-[12px] border-l-transparent rotate-0 [clip-path:polygon(0_0,100%_0,100%_100%)]" // Using borders for triangle
-                                    }`}
-                                />
-
-                                <p className="whitespace-pre-wrap mb-1">{message.content}</p>
-                                <div className="flex items-center justify-end gap-1 mt-0.5 select-none">
-                                    <span className="text-[11px] text-white/50 min-w-[30px] text-right">
-                                        {message.timestamp || formatTime(new Date())}
-                                    </span>
-                                    {message.role === "user" && (
-                                        <div className="text-[#53bdeb]">
-                                            <svg viewBox="0 0 16 11" height="11" width="16" preserveAspectRatio="xMidYMid meet" className="" version="1.1" x="0px" y="0px" enableBackground="new 0 0 16 11">
-                                                <path fill="currentColor" d="M11.575 0.355L6.62 5.309 6.275 6.449 2.055 2.225 0.5 3.78 4.72 8 6.22 9.5 7.72 8 16 0.355H11.575z M13.125 0.355L8.17 5.309 7.825 6.449 6.275 8 7.775 9.5 16 1.275 16 0.355H13.125z"></path>
-                                            </svg>
+                                {message.role === "assistant" && (
+                                    <div className="flex gap-4">
+                                        <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center p-1.5 flex-shrink-0 mt-1">
+                                            <Image
+                                                src="/logo.png"
+                                                alt="AI"
+                                                fill
+                                                className="object-contain"
+                                            />
                                         </div>
-                                    )}
-                                </div>
+                                        <div className="space-y-1">
+                                            <p className="whitespace-pre-wrap">{message.content}</p>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {message.role === "user" && (
+                                    <p className="whitespace-pre-wrap">{message.content}</p>
+                                )}
                             </div>
                         </div>
                     ))}
 
                     {isLoading && messages[messages.length - 1]?.role === "user" && (
-                        <div className="flex justify-start relative z-10">
-                            <div className="bg-[#202c33] rounded-lg rounded-tl-none px-4 py-3 shadow-sm">
-                                <ThinkingDots />
+                        <div className="flex justify-start pl-2">
+                            <div className="flex gap-4">
+                                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center p-1.5 flex-shrink-0">
+                                    <Image
+                                        src="/logo.png"
+                                        alt="AI"
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+                                <div className="flex items-center">
+                                    <ThinkingDots />
+                                </div>
                             </div>
                         </div>
                     )}
                     <div ref={messagesEndRef} />
                 </div>
 
-                {/* Input Area - Desktop Style & Keyboard Fixed */}
+                {/* Input Area - Pure, Floating, Glassy */}
                 <form
                     onSubmit={onSubmit}
-                    className="fixed bottom-0 left-0 right-0 p-4 bg-[#0b141a]/90 backdrop-blur-md border-t border-white/5 pb-[env(safe-area-inset-bottom,20px)] z-[10000]"
+                    className="fixed bottom-0 left-0 right-0 p-4 bg-black/80 backdrop-blur-xl border-t border-white/5 z-[10000]"
                 >
-                    <div className="relative group">
-                        <div className="relative flex items-center justify-between gap-2 bg-[#111111] border border-white/10 rounded-2xl p-2 transition-all duration-300">
-                            <textarea
-                                ref={inputRef}
-                                value={input}
-                                onChange={(e) => {
-                                    setInput(e.target.value);
-                                    e.target.style.height = 'auto';
-                                    const lineHeight = 20;
-                                    const maxLines = 6;
-                                    e.target.style.height = `${Math.min(e.target.scrollHeight, lineHeight * maxLines)}px`;
-                                }}
-                                onKeyDown={(e) => {
-                                    if (e.key === 'Enter' && !e.shiftKey) {
-                                        e.preventDefault();
-                                        onSubmit(e as unknown as React.FormEvent);
-                                    }
-                                }}
-                                placeholder="Ask a question..."
-                                rows={1}
-                                className="bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base resize-none overflow-y-auto leading-6 max-h-[120px] px-2"
-                            />
-
-                            <button
-                                type="submit"
-                                disabled={isLoading || !input.trim()}
-                                className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors flex-shrink-0 ${input.trim()
-                                    ? "bg-emerald-900/50 hover:bg-emerald-800 text-emerald-100"
-                                    : "bg-white/5 text-white/20 cursor-not-allowed"
-                                    }`}
-                                aria-label="Send message"
-                            >
-                                {isLoading ? (
-                                    <Loader2 className="w-5 h-5 animate-spin" />
-                                ) : (
-                                    <ArrowUp className="w-6 h-6" />
-                                )}
-                            </button>
-                        </div>
+                    <div className="relative flex items-end gap-3 bg-[#1e1e1e] border border-white/10 rounded-[26px] p-2 pl-4 transition-all duration-300 focus-within:border-white/20 focus-within:bg-[#252525]">
+                        <textarea
+                            ref={inputRef}
+                            value={input}
+                            onChange={(e) => {
+                                setInput(e.target.value);
+                                e.target.style.height = 'auto';
+                                e.target.style.height = `${Math.min(e.target.scrollHeight, 120)}px`;
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' && !e.shiftKey) {
+                                    e.preventDefault();
+                                    onSubmit(e as unknown as React.FormEvent);
+                                }
+                            }}
+                            placeholder="Message Goddess AI..."
+                            rows={1}
+                            className="bg-transparent text-white placeholder:text-white/40 focus:outline-none flex-1 text-[16px] resize-none overflow-y-auto leading-6 max-h-[120px] py-2"
+                        />
+                        <button
+                            type="submit"
+                            disabled={isLoading || !input.trim()}
+                            className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 mb-0.5 ${input.trim()
+                                ? "bg-white text-black hover:bg-white/90"
+                                : "bg-white/10 text-white/30 cursor-not-allowed"
+                                }`}
+                            aria-label="Send"
+                        >
+                            {isLoading ? (
+                                <Loader2 className="w-5 h-5 animate-spin" />
+                            ) : (
+                                <ArrowUp className="w-5 h-5 stroke-[2.5]" />
+                            )}
+                        </button>
                     </div>
                 </form>
-            </div >
+            </div>
         );
     }
 
