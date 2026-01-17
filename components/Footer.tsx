@@ -11,6 +11,7 @@ export default function Footer() {
         { href: "/media", label: "Media" },
         { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
+        { href: "/wall-of-love", label: "Wall of Love" },
         { href: "/goddess-ai", label: "Goddess AI", isSpecial: true },
     ];
 
