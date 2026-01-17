@@ -28,7 +28,27 @@ try {
         process.exit(1);
     }
 
-    // 2. Trigger a build to regenerate sitemap (if using next-sitemap or similar build-time generation)
+    // 2. Update llms.txt with current month/year
+    const LLMS_TXT_PATH = path.join(__dirname, '../public/llms.txt');
+    if (fs.existsSync(LLMS_TXT_PATH)) {
+        let llmsContent = fs.readFileSync(LLMS_TXT_PATH, 'utf8');
+        const date = new Date();
+        const monthYear = date.toLocaleString('default', { month: 'long', year: 'numeric' }); // e.g., "January 2026"
+
+        // Replace the date under "## Last Updated"
+        // Matches "## Last Updated\n<Anything>" until next newline
+        const updatedLlmsContent = llmsContent.replace(
+            /(## Last Updated\s+).*/,
+            `$1${monthYear}`
+        );
+
+        fs.writeFileSync(LLMS_TXT_PATH, updatedLlmsContent);
+        console.log(`✅ Updated llms.txt date to: ${monthYear}`);
+    } else {
+        console.warn('⚠️ llms.txt not found at:', LLMS_TXT_PATH);
+    }
+
+    // 3. Trigger a build to regenerate sitemap (if using next-sitemap or similar build-time generation)
     // In GitHub Actions, the workflow will handle the actual "next build" step typically.
     // This script ensures we have modify/touched a file so git has something to commit.
 
