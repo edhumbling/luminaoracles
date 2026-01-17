@@ -87,7 +87,7 @@ export default function TikTokEmbed() {
                 {/* Full Width TikTok Embed Container */}
                 <div
                     ref={containerRef}
-                    className="w-full min-h-[calc(100vh-96px)] md:min-h-[calc(100vh-128px)] flex items-start justify-center relative"
+                    className="w-full min-h-[calc(100vh-96px)] md:min-h-[calc(100vh-128px)] flex flex-col md:flex-row items-start justify-center gap-8 relative pb-20 overflow-y-auto"
                 >
 
                     {/* Colorful Loading Animation */}
@@ -106,7 +106,7 @@ export default function TikTokEmbed() {
 
                             {/* Loading Text */}
                             <p className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 font-semibold text-lg animate-pulse">
-                                Loading TikTok Feed...
+                                Loading TikTok Feeds...
                             </p>
 
                             {/* Animated Dots */}
@@ -117,23 +117,47 @@ export default function TikTokEmbed() {
                         </div>
                     )}
 
-                    {/* TikTok Embed Box - hidden until loaded */}
-                    <blockquote
-                        className={`tiktok-embed max-w-[780px] min-w-[288px] transition-opacity duration-500 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-                        cite="https://www.tiktok.com/@greatgoddessdemystic"
-                        data-unique-id="greatgoddessdemystic"
-                        data-embed-type="creator"
-                    >
-                        <section>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://www.tiktok.com/@greatgoddessdemystic?refer=creator_embed"
-                            >
-                                @greatgoddessdemystic
-                            </a>
-                        </section>
-                    </blockquote>
+                    {/* Main Channel */}
+                    <div className={`transition-opacity duration-500 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'} flex flex-col items-center`}>
+                        <h2 className="text-lumina-gold font-serif text-xl mb-4 uppercase tracking-widest">Main Channel</h2>
+                        <blockquote
+                            className="tiktok-embed max-w-[780px] min-w-[288px]"
+                            cite="https://www.tiktok.com/@greatgoddessdemystic"
+                            data-unique-id="greatgoddessdemystic"
+                            data-embed-type="creator"
+                        >
+                            <section>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://www.tiktok.com/@greatgoddessdemystic?refer=creator_embed"
+                                >
+                                    @greatgoddessdemystic
+                                </a>
+                            </section>
+                        </blockquote>
+                    </div>
+
+                    {/* Backup Channel */}
+                    <div className={`transition-opacity duration-500 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'} flex flex-col items-center`}>
+                        <h2 className="text-white/60 font-serif text-xl mb-4 uppercase tracking-widest">Backup Channel</h2>
+                        <blockquote
+                            className="tiktok-embed max-w-[780px] min-w-[288px]"
+                            cite="https://www.tiktok.com/@great.goddesses.r"
+                            data-unique-id="great.goddesses.r"
+                            data-embed-type="creator"
+                        >
+                            <section>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://www.tiktok.com/@great.goddesses.r?refer=creator_embed"
+                                >
+                                    @great.goddesses.r
+                                </a>
+                            </section>
+                        </blockquote>
+                    </div>
                 </div>
             </main>
 
