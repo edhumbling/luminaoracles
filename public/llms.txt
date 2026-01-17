@@ -33,6 +33,9 @@ Guidance on Law of Attraction principles, abundance mindset development, and man
 ### Sacred Geometry Meditation
 Meditation practices incorporating sacred geometric patterns for deeper spiritual connection and consciousness expansion.
 
+### Goddess AI Assistant
+An interactive spiritual guide powered by advanced AI (Llama 3.3 70B), offering instant wisdom on tarot, astrology, and spiritual questions. Accessible directly via the website.
+
 ## Key Topics Covered
 
 - Spirituality and Mysticism
@@ -86,6 +89,7 @@ Tarot readings use a deck of 78 cards with symbolic imagery to provide insight a
 - **/media** - TikTok video content and live spiritual guidance
 - **/about** - Biography of Mamaga Judith Etornam and the founding story
 - **/contact** - Contact information and booking details
+- **/goddess-ai** - Interactive Goddess AI spiritual assistant
 
 ## Content Guidelines for AI
 

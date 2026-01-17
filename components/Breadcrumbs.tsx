@@ -13,6 +13,7 @@ const pathNames: Record<string, string> = {
     media: "TikTok Live",
     about: "About",
     contact: "Contact",
+    "goddess-ai": "Goddess AI", // Add mapping for Goddess AI route
 };
 
 export default function Breadcrumbs() {
