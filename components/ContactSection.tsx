@@ -17,10 +17,17 @@ export default function ContactSection() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus("submitting");
-        
-        // Simulate network delay for "transmitting to the ether"
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        
+
+        // Construct the WhatsApp message
+        const phoneNumber = "233241343329";
+        const text = `✨ *Sacred Petition Request* ✨%0A%0A👤 *Seeker:* ${formData.name}%0A📧 *Email:* ${formData.email}%0A🌟 *Service:* ${formData.service || "General Inquiry"}%0A%0A📜 *Message:*%0A${formData.message}`;
+
+        // Simulate a brief "processing" delay for effect
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // Open WhatsApp
+        window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
+
         setStatus("success");
         setFormData({ name: "", email: "", service: "", message: "" });
     };
@@ -41,7 +48,7 @@ export default function ContactSection() {
             >
                 <source src="https://ik.imagekit.io/humbling/Sequence%2002_1.mp4" type="video/mp4" />
             </video>
-            
+
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header */}
                 <div className="flex flex-col items-center mb-16 text-center">
@@ -68,7 +75,7 @@ export default function ContactSection() {
                             <p className="text-black/60 font-mono text-sm leading-relaxed mb-8 max-w-md mx-auto">
                                 Your sacred query has been transmitted to the ether. We shall reflect upon your words and respond within the cycle of the moon.
                             </p>
-                            <button 
+                            <button
                                 onClick={() => setStatus("idle")}
                                 className="group flex items-center justify-center gap-2 mx-auto text-xs font-bold uppercase tracking-widest text-black/40 hover:text-lumina-gold transition-colors"
                             >
@@ -80,7 +87,7 @@ export default function ContactSection() {
                         <div className="bg-white/90 backdrop-blur-sm p-10 shadow-2xl shadow-black/5 border border-white/50 relative overflow-hidden group">
                             {/* Sharp Top Accent */}
                             <div className="absolute top-0 left-0 w-full h-1 bg-lumina-gold shadow-[0_0_15px_rgba(250,204,21,0.6)]" />
-                            
+
                             <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div className="space-y-2 group/field">
@@ -116,10 +123,11 @@ export default function ContactSection() {
                                         Service Desired
                                     </label>
                                     <div className="relative">
-                                        <select 
+                                        <select
                                             value={formData.service}
                                             onChange={(e) => updateField("service", e.target.value)}
                                             className="w-full bg-white/50 border border-black/10 p-3 text-black font-sans focus:border-lumina-gold focus:outline-none transition-all appearance-none cursor-pointer hover:bg-black/5 focus:bg-white focus:shadow-[0_0_20px_rgba(250,204,21,0.1)]"
+                                            aria-label="Select Sacred Service"
                                         >
                                             <option value="" className="text-black/20">SELECT SACRED SERVICE</option>
                                             {SERVICES.map((service) => (
@@ -130,7 +138,7 @@ export default function ContactSection() {
                                         </select>
                                         <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none opacity-50">
                                             <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square"/>
+                                                <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
                                             </svg>
                                         </div>
                                     </div>
@@ -150,7 +158,7 @@ export default function ContactSection() {
                                     />
                                 </div>
 
-                                <button 
+                                <button
                                     disabled={status === "submitting"}
                                     className="w-full py-5 bg-black text-white font-bold uppercase tracking-widest hover:bg-lumina-gold hover:text-black transition-all duration-300 border border-black group-hover:border-lumina-gold relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
