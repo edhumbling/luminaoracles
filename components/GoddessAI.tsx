@@ -99,7 +99,13 @@ function MobileChatView({
             className="fixed top-0 left-0 right-0 z-[9999] bg-black flex flex-col font-sans overflow-hidden"
         >
             <div className="flex items-center justify-between px-4 py-3 bg-black border-b border-white/5 flex-shrink-0">
-                <div className="w-9" />
+                <button
+                    onClick={onClose}
+                    className="p-2 -ml-2 rounded-full text-white/70 active:bg-white/10 transition-colors"
+                    aria-label="Back"
+                >
+                    <ArrowLeft className="w-5 h-5" />
+                </button>
                 <div className="flex items-center gap-2">
                     <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center overflow-hidden">
                         <Image
