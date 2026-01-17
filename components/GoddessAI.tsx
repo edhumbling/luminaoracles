@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { X, Sparkles, Send, Loader2 } from "lucide-react";
 
 interface Message {
@@ -144,8 +145,13 @@ export default function GoddessAI() {
                 {/* Header */}
                 <div className="flex items-center justify-between p-4 border-b border-white/10">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lumina-gold to-amber-600 flex items-center justify-center">
-                            <Sparkles className="w-5 h-5 text-black" />
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lumina-gold/20 to-amber-600/20 border border-lumina-gold/30 flex items-center justify-center relative overflow-hidden">
+                            <Image
+                                src="/logo.png"
+                                alt="Goddess AI Logo"
+                                fill
+                                className="object-contain p-1"
+                            />
                         </div>
                         <div>
                             <h2 className="text-white font-medium">Goddess AI</h2>
@@ -165,7 +171,14 @@ export default function GoddessAI() {
                 <div className="flex-1 overflow-y-auto p-4 space-y-4">
                     {messages.length === 0 && (
                         <div className="text-center py-12">
-                            <Sparkles className="w-12 h-12 text-lumina-gold mx-auto mb-4" />
+                            <div className="relative w-16 h-16 mx-auto mb-4">
+                                <Image
+                                    src="/logo.png"
+                                    alt="Goddess AI Logo"
+                                    fill
+                                    className="object-contain drop-shadow-[0_0_15px_rgba(250,204,21,0.5)]"
+                                />
+                            </div>
                             <h3 className="text-xl text-white mb-2">Welcome, Beloved</h3>
                             <p className="text-white/50 text-sm max-w-xs mx-auto">
                                 I am here to guide you on your spiritual journey. Ask me about our services, teachings, or anything your soul seeks.
@@ -179,8 +192,8 @@ export default function GoddessAI() {
                         >
                             <div
                                 className={`max-w-[85%] rounded-2xl px-4 py-3 ${message.role === "user"
-                                        ? "bg-lumina-gold text-black"
-                                        : "bg-white/10 text-white"
+                                    ? "bg-lumina-gold text-black"
+                                    : "bg-white/10 text-white"
                                     }`}
                             >
                                 <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
@@ -236,8 +249,8 @@ export default function GoddessAI() {
             {/* Main container */}
             <div
                 className={`fixed z-[9999] transition-all duration-500 ease-out ${isOpen
-                        ? "bottom-0 left-0 right-0 md:bottom-8 md:left-1/2 md:-translate-x-1/2 md:w-[600px] md:max-w-[90vw]"
-                        : "bottom-8 left-1/2 -translate-x-1/2"
+                    ? "bottom-0 left-0 right-0 md:bottom-8 md:left-1/2 md:-translate-x-1/2 md:w-[600px] md:max-w-[90vw]"
+                    : "bottom-8 left-1/2 -translate-x-1/2"
                     }`}
             >
                 {/* Expanded Chat Panel */}
@@ -246,8 +259,13 @@ export default function GoddessAI() {
                         {/* Header */}
                         <div className="flex items-center justify-between p-4 border-b border-white/10">
                             <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lumina-gold to-amber-600 flex items-center justify-center">
-                                    <Sparkles className="w-5 h-5 text-black" />
+                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lumina-gold/20 to-amber-600/20 border border-lumina-gold/30 flex items-center justify-center relative overflow-hidden">
+                                    <Image
+                                        src="/logo.png"
+                                        alt="Goddess AI Logo"
+                                        fill
+                                        className="object-contain p-1"
+                                    />
                                 </div>
                                 <div>
                                     <h2 className="text-white font-medium">Goddess AI</h2>
@@ -267,7 +285,14 @@ export default function GoddessAI() {
                         <div className="h-[400px] overflow-y-auto p-4 space-y-4">
                             {messages.length === 0 && (
                                 <div className="text-center py-8">
-                                    <Sparkles className="w-10 h-10 text-lumina-gold mx-auto mb-3" />
+                                    <div className="relative w-14 h-14 mx-auto mb-4">
+                                        <Image
+                                            src="/logo.png"
+                                            alt="Goddess AI Logo"
+                                            fill
+                                            className="object-contain drop-shadow-[0_0_15px_rgba(250,204,21,0.5)]"
+                                        />
+                                    </div>
                                     <h3 className="text-lg text-white mb-2">Welcome, Beloved</h3>
                                     <p className="text-white/50 text-sm max-w-xs mx-auto">
                                         I am here to illuminate your path. Ask me anything about Lumina Oracles.
@@ -281,8 +306,8 @@ export default function GoddessAI() {
                                 >
                                     <div
                                         className={`max-w-[80%] rounded-2xl px-4 py-3 ${message.role === "user"
-                                                ? "bg-lumina-gold text-black"
-                                                : "bg-white/10 text-white"
+                                            ? "bg-lumina-gold text-black"
+                                            : "bg-white/10 text-white"
                                             }`}
                                     >
                                         <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
@@ -308,12 +333,17 @@ export default function GoddessAI() {
                             <div className="absolute inset-0 bg-lumina-gold/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         )}
                         <div className={`relative flex items-center gap-2 ${isOpen && !isMobile
-                                ? "bg-[#0a0a0a] border border-white/10 rounded-full p-2"
-                                : "bg-black/80 backdrop-blur-xl border border-white/20 rounded-full p-2 shadow-2xl"
+                            ? "bg-[#0a0a0a] border border-white/10 rounded-full p-2"
+                            : "bg-black/80 backdrop-blur-xl border border-white/20 rounded-full p-2 shadow-2xl"
                             }`}>
                             {!isOpen && (
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lumina-gold to-amber-600 flex items-center justify-center flex-shrink-0">
-                                    <Sparkles className="w-5 h-5 text-black" />
+                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lumina-gold/20 to-amber-600/20 border border-lumina-gold/30 flex items-center justify-center flex-shrink-0 relative overflow-hidden">
+                                    <Image
+                                        src="/logo.png"
+                                        alt="Goddess AI Logo"
+                                        fill
+                                        className="object-contain p-1"
+                                    />
                                 </div>
                             )}
                             <input
