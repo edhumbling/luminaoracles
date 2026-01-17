@@ -2,14 +2,20 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { X, Sparkles, Send, Loader2, ArrowUp } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { X, Sparkles, Send, Loader2, ArrowUp, ArrowLeft } from "lucide-react";
 
 interface Message {
     id: string;
     role: "user" | "assistant";
     content: string;
+    timestamp?: string;
 }
+
+// Helper to format time
+const formatTime = (date: Date) => {
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+};
 
 // Animated thinking dots component
 function ThinkingDots() {
@@ -35,6 +41,7 @@ export default function GoddessAI() {
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLTextAreaElement>(null);
     const pathname = usePathname();
+    const router = useRouter();
 
     // Toggle visibility based on footer intersection and handle auto-open on /goddess-ai
     useEffect(() => {
@@ -103,6 +110,7 @@ export default function GoddessAI() {
             id: Date.now().toString(),
             role: "user",
             content: userMessage.trim(),
+            timestamp: formatTime(new Date()),
         };
 
         setMessages(prev => [...prev, userMsg]);
@@ -132,7 +140,12 @@ export default function GoddessAI() {
             const assistantId = (Date.now() + 1).toString();
 
             // Add placeholder for assistant message
-            setMessages(prev => [...prev, { id: assistantId, role: "assistant", content: "" }]);
+            setMessages(prev => [...prev, {
+                id: assistantId,
+                role: "assistant",
+                content: "",
+                timestamp: formatTime(new Date())
+            }]);
 
             if (reader) {
                 while (true) {
@@ -169,6 +182,7 @@ export default function GoddessAI() {
                     id: (Date.now() + 1).toString(),
                     role: "assistant",
                     content: "I apologize, beloved. I am experiencing difficulties connecting to the divine realm. Please try again in a moment.",
+                    timestamp: formatTime(new Date())
                 },
             ]);
         } finally {
@@ -192,73 +206,94 @@ export default function GoddessAI() {
         setIsOpen(false);
         setMessages([]);
         setInput("");
+        if (pathname === '/goddess-ai') {
+            router.back();
+        }
     };
 
     // Mobile: Full screen overlay
     if (isMobile && isOpen) {
         return (
-            <div className="fixed inset-0 z-[9999] bg-black flex flex-col">
-                {/* Header */}
-                <div className="flex items-center justify-between p-4 border-b border-white/10">
-                    <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lumina-gold/20 to-amber-600/20 border border-lumina-gold/30 flex items-center justify-center relative overflow-hidden">
+            <div className="fixed inset-0 z-[9999] bg-[#0b141a] flex flex-col font-sans">
+                {/* WhatsApp-style Header */}
+                <div className="flex items-center gap-2 p-2 bg-[#202c33] border-b border-white/5 shadow-sm">
+                    <button
+                        onClick={handleClose}
+                        className="p-1 rounded-full text-white/70 hover:bg-white/10 flex items-center gap-1"
+                        aria-label="Back"
+                    >
+                        <ArrowLeft className="w-6 h-6" />
+                        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-lumina-gold/20 to-amber-600/20 border border-lumina-gold/30 flex items-center justify-center relative overflow-hidden flex-shrink-0">
                             <Image
                                 src="/logo.png"
-                                alt="Goddess AI Logo"
+                                alt="Goddess AI"
                                 fill
                                 className="object-contain p-1"
                             />
                         </div>
-                        <div>
-                            <h2 className="text-white font-medium">Goddess AI</h2>
-                            <p className="text-white/50 text-xs">Divine Guidance</p>
-                        </div>
-                    </div>
-                    <button
-                        onClick={handleClose}
-                        className="p-2 text-white/50 hover:text-white transition-colors"
-                        aria-label="Close chat"
-                    >
-                        <X className="w-6 h-6" />
                     </button>
+                    <div className="flex-1 min-w-0">
+                        <h2 className="text-white font-medium truncate text-base">Goddess AI</h2>
+                        <p className="text-white/60 text-xs truncate">online</p>
+                    </div>
+                    <div className="flex items-center gap-4 px-2">
+                        <div className="w-5 h-5" /> {/* Placeholder/Spacer for symmetry or potential menu */}
+                    </div>
                 </div>
 
-                {/* Messages */}
-                <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                {/* Messages Area - WhatsApp Dark Background Pattern */}
+                <div
+                    className="flex-1 overflow-y-auto p-4 space-y-2 bg-[#0b141a] relative bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] bg-blend-overlay"
+                >
+                    <div className="absolute inset-0 bg-black/80 pointer-events-none" /> {/* Dim the background pattern */}
+
+                    {/* Welcome System Message */}
                     {messages.length === 0 && (
-                        <div className="text-center py-12">
-                            <div className="relative w-16 h-16 mx-auto mb-4">
-                                <Image
-                                    src="/logo.png"
-                                    alt="Goddess AI Logo"
-                                    fill
-                                    className="object-contain drop-shadow-[0_0_15px_rgba(250,204,21,0.5)]"
-                                />
+                        <div className="flex justify-center my-4 relative z-10">
+                            <div className="bg-[#1f2c34] text-lumina-gold text-[10px] px-3 py-1.5 rounded-lg shadow-sm text-center max-w-[80%] border border-lumina-gold/10">
+                                Messages are private & sacred. Connect with divine guidance.
                             </div>
-                            <h3 className="text-xl text-white mb-2">Welcome, Beloved</h3>
-                            <p className="text-white/50 text-sm max-w-xs mx-auto">
-                                I am here to guide you on your spiritual journey. Ask me about our services, teachings, or anything your soul seeks.
-                            </p>
                         </div>
                     )}
+
                     {messages.map((message) => (
                         <div
                             key={message.id}
-                            className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
+                            className={`flex w-full ${message.role === "user" ? "justify-end" : "justify-start"} relative z-10`}
                         >
                             <div
-                                className={`max-w-[85%] rounded-2xl px-4 py-3 ${message.role === "user"
-                                    ? "bg-lumina-gold text-black"
-                                    : "bg-white/10 text-white"
+                                className={`relative max-w-[85%] rounded-lg px-3 py-1.5 shadow-sm text-[15px] leading-snug ${message.role === "user"
+                                    ? "bg-[#005c4b] text-[#e9edef] rounded-tr-none"
+                                    : "bg-[#202c33] text-[#e9edef] rounded-tl-none"
                                     }`}
                             >
-                                <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
+                                {/* Tail Pseudo-element simulation */}
+                                <div className={`absolute top-0 w-3 h-3 ${message.role === "user"
+                                    ? "right-[-8px] border-t-[12px] border-t-[#005c4b] border-r-[12px] border-r-transparent rotate-0 [clip-path:polygon(0_0,100%_0,0_100%)]"
+                                    : "left-[-8px] border-t-[12px] border-t-[#202c33] border-l-[12px] border-l-transparent rotate-0 [clip-path:polygon(0_0,100%_0,100%_100%)]" // Using borders for triangle
+                                    }`}
+                                />
+
+                                <p className="whitespace-pre-wrap mb-1">{message.content}</p>
+                                <div className="flex items-center justify-end gap-1 mt-0.5 select-none">
+                                    <span className="text-[11px] text-white/50 min-w-[30px] text-right">
+                                        {message.timestamp || formatTime(new Date())}
+                                    </span>
+                                    {message.role === "user" && (
+                                        <div className="text-[#53bdeb]">
+                                            <svg viewBox="0 0 16 11" height="11" width="16" preserveAspectRatio="xMidYMid meet" className="" version="1.1" x="0px" y="0px" enableBackground="new 0 0 16 11">
+                                                <path fill="currentColor" d="M11.575 0.355L6.62 5.309 6.275 6.449 2.055 2.225 0.5 3.78 4.72 8 6.22 9.5 7.72 8 16 0.355H11.575z M13.125 0.355L8.17 5.309 7.825 6.449 6.275 8 7.775 9.5 16 1.275 16 0.355H13.125z"></path>
+                                            </svg>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     ))}
+
                     {isLoading && messages[messages.length - 1]?.role === "user" && (
-                        <div className="flex justify-start">
-                            <div className="bg-white/10 rounded-2xl px-4 py-3">
+                        <div className="flex justify-start relative z-10">
+                            <div className="bg-[#202c33] rounded-lg rounded-tl-none px-4 py-3 shadow-sm">
                                 <ThinkingDots />
                             </div>
                         </div>
@@ -266,23 +301,21 @@ export default function GoddessAI() {
                     <div ref={messagesEndRef} />
                 </div>
 
-                {/* Input - positioned to stay above keyboard on mobile */}
+                {/* Input Area */}
                 <form
                     onSubmit={onSubmit}
-                    className="p-4 border-t border-white/10 bg-black sticky bottom-0 pb-[env(safe-area-inset-bottom,16px)]"
+                    className="p-2 bg-[#202c33] sticky bottom-0 pb-[env(safe-area-inset-bottom,16px)] flex items-end gap-2"
                 >
-                    <div className="flex gap-2 items-end">
+                    <div className="flex-1 bg-[#2a3942] rounded-3xl flex items-end px-4 py-2 min-h-[48px]">
                         <textarea
                             ref={inputRef}
                             value={input}
                             onChange={(e) => {
                                 setInput(e.target.value);
-                                // Auto-resize up to 5 lines
                                 e.target.style.height = 'auto';
-                                const lineHeight = 24;
-                                const maxLines = 5;
-                                const newHeight = Math.min(e.target.scrollHeight, lineHeight * maxLines);
-                                e.target.style.height = `${newHeight}px`;
+                                const lineHeight = 20;
+                                const maxLines = 6;
+                                e.target.style.height = `${Math.min(e.target.scrollHeight, lineHeight * maxLines)}px`;
                             }}
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter' && !e.shiftKey) {
@@ -290,19 +323,20 @@ export default function GoddessAI() {
                                     onSubmit(e as unknown as React.FormEvent);
                                 }
                             }}
-                            placeholder="Ask the Goddess..."
+                            placeholder="Message"
                             rows={1}
-                            className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-lumina-gold/50 resize-none overflow-y-auto leading-6 max-h-[120px]"
+                            className="w-full bg-transparent text-white text-[15px] placeholder:text-white/40 focus:outline-none resize-none max-h-[120px] leading-5 py-1"
                         />
-                        <button
-                            type="submit"
-                            disabled={isLoading || !input.trim()}
-                            className="w-12 h-12 rounded-full bg-lumina-gold text-black flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white transition-colors flex-shrink-0"
-                            aria-label="Send message"
-                        >
-                            <Send className="w-5 h-5" />
-                        </button>
                     </div>
+                    <button
+                        type="submit"
+                        disabled={isLoading || !input.trim()}
+                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-all flex-shrink-0 ${input.trim() ? "bg-[#00a884] text-white hover:bg-[#008f72]" : "bg-[#2a3942] text-white/30"
+                            }`}
+                        aria-label="Send"
+                    >
+                        {input.trim() ? <Send className="w-5 h-5 ml-0.5" /> : <span className="text-xl">🎙️</span>}
+                    </button>
                 </form>
             </div>
         );
