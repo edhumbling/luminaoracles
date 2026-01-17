@@ -162,7 +162,7 @@ function MobileChatView({
                             </div>
                         ) : (
                             <div className="bg-[#303030] text-white px-4 py-2.5 rounded-3xl rounded-tr-lg max-w-[85%]">
-                                <p className="text-[15px] leading-relaxed whitespace-pre-wrap">{message.content}</p>
+                                <p className="text-[15px] leading-relaxed whitespace-pre-wrap break-words">{message.content}</p>
                             </div>
                         )}
                     </div>
@@ -207,7 +207,7 @@ function MobileChatView({
                         }}
                         placeholder="Message"
                         rows={1}
-                        className="bg-transparent text-white placeholder:text-white/40 focus:outline-none flex-1 text-[16px] resize-none overflow-y-auto leading-6 max-h-[120px] py-1"
+                        className="bg-transparent text-white placeholder:text-white/40 focus:outline-none flex-1 text-[16px] resize-none overflow-y-auto leading-6 max-h-[120px] py-1 break-words [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                     />
                     <button
                         type="submit"
@@ -555,11 +555,11 @@ export default function GoddessAI() {
                                 >
                                     <div
                                         className={`max-w-[80%] rounded-2xl px-4 py-3 ${message.role === "user"
-                                            ? "bg-lumina-gold text-black"
+                                            ? "bg-[#2f2f2f] text-white"
                                             : "bg-white/10 text-white"
                                             }`}
                                     >
-                                        <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
+                                        <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">{message.content}</p>
                                     </div>
                                 </div>
                             ))}
@@ -598,8 +598,8 @@ export default function GoddessAI() {
                                 }}
                                 placeholder="Ask a question..."
                                 rows={1}
-                                className={`bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base resize-none overflow-y-auto leading-6 max-h-[120px] py-1 ${isOpen && !isMobile ? "px-2" : ""
-                                    }`}
+                                className={`bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base resize-none overflow-y-auto leading-6 max-h-[120px] py-1 break-words ${isOpen && !isMobile ? "px-2" : ""
+                                    } [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] md:[&::-webkit-scrollbar]:block md:[&::-webkit-scrollbar]:w-1.5 md:[&::-webkit-scrollbar-track]:bg-transparent md:[&::-webkit-scrollbar-thumb]:bg-white/10 md:[&::-webkit-scrollbar-thumb]:rounded-full hover:md:[&::-webkit-scrollbar-thumb]:bg-white/20`}
                             />
 
                             <div className={`flex items-center gap-3 ${isOpen && !isMobile ? "mb-0.5" : ""}`}>
