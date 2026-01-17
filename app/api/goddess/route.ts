@@ -47,7 +47,17 @@ async function tryModel(
 
 export async function POST(req: Request) {
     try {
+        // Check for API key
+        if (!process.env.GROQ_API_KEY) {
+            console.error('GROQ_API_KEY is not set!');
+            return new Response(
+                JSON.stringify({ error: 'API key not configured' }),
+                { status: 500, headers: { 'Content-Type': 'application/json' } }
+            );
+        }
+
         const { messages } = await req.json();
+        console.log('Goddess AI received request with', messages.length, 'messages');
 
         // Get RAG context
         const context = getGoddessContext();
