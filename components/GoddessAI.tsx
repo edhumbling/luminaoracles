@@ -116,7 +116,7 @@ function MobileChatView({
                             className="object-contain"
                         />
                     </div>
-                    <span className="text-white font-medium text-sm">Goddess AI</span>
+                    <span className="text-white font-medium text-sm">Great Goddess AI</span>
                 </div>
                 <button
                     onClick={onClose}
@@ -134,7 +134,7 @@ function MobileChatView({
                         <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center">
                             <Image
                                 src="/logo.png"
-                                alt="Goddess AI"
+                                alt="Great Goddess AI"
                                 width={40}
                                 height={40}
                                 className="object-contain"
@@ -210,7 +210,7 @@ function MobileChatView({
                                 onSubmit(e as unknown as React.FormEvent);
                             }
                         }}
-                        placeholder="Ask Great Goddess anything..."
+                        placeholder="Ask Great Goddess AI anything..."
                         rows={1}
                         className="bg-transparent text-white placeholder:text-white/40 focus:outline-none flex-1 text-[16px] resize-none overflow-y-auto leading-6 max-h-[120px] py-1 break-words [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                     />
@@ -520,13 +520,13 @@ export default function GoddessAI() {
                                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lumina-gold/20 to-amber-600/20 border border-lumina-gold/30 flex items-center justify-center relative overflow-hidden">
                                     <Image
                                         src="/logo.png"
-                                        alt="Goddess AI Logo"
+                                        alt="Great Goddess AI Logo"
                                         fill
                                         className="object-contain p-1"
                                     />
                                 </div>
                                 <div>
-                                    <h2 className="text-white font-medium">Goddess AI</h2>
+                                    <h2 className="text-white font-medium">Great Goddess AI</h2>
                                     <p className="text-white/50 text-xs">Divine Guidance • Lumina Oracles</p>
                                 </div>
                             </div>
@@ -546,7 +546,7 @@ export default function GoddessAI() {
                                     <div className="relative w-14 h-14 mx-auto mb-4">
                                         <Image
                                             src="/logo.png"
-                                            alt="Goddess AI Logo"
+                                            alt="Great Goddess AI Logo"
                                             fill
                                             className="object-contain drop-shadow-[0_0_15px_rgba(250,204,21,0.5)]"
                                         />
@@ -605,7 +605,7 @@ export default function GoddessAI() {
                                         onSubmit(e as unknown as React.FormEvent);
                                     }
                                 }}
-                                placeholder="Ask Great Goddess anything..."
+                                placeholder="Ask Great Goddess AI anything..."
                                 rows={1}
                                 className={`bg-transparent text-white placeholder:text-white/30 focus:outline-none flex-1 text-base resize-none overflow-y-auto leading-6 max-h-[120px] py-1 break-words ${isOpen && !isMobile ? "px-2" : ""
                                     } [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] md:[&::-webkit-scrollbar]:block md:[&::-webkit-scrollbar]:w-1.5 md:[&::-webkit-scrollbar-track]:bg-transparent md:[&::-webkit-scrollbar-thumb]:bg-white/10 md:[&::-webkit-scrollbar-thumb]:rounded-full hover:md:[&::-webkit-scrollbar-thumb]:bg-white/20`}
