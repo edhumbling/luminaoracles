@@ -85,6 +85,14 @@ Tarot readings use a deck of 78 cards with symbolic imagery to provide insight a
 
 - **/** - Homepage: Overview of spiritual services and introduction
 - **/services** - Detailed listing of all spiritual services offered
+  - **/services/spiritual-consultation** - Holistic guidance for your spiritual journey
+  - **/services/psychic-readings** - Clarity from the energetic realm
+  - **/services/meditation-guidance** - Peace for your inner sanctuary
+  - **/services/energy-healing** - Restore your natural bio-rhythm
+  - **/services/spiritual-coaching** - Nurturing your soul's growth
+  - **/services/manifestation-guidance** - Weaving your dreams into reality
+  - **/services/spiritual-workshops** - Gathering in sacred learning
+  - **/services/intuitive-guidance** - Trusting your inner knowing
 - **/blogs** - Blog articles on spirituality, tarot, astrology, and manifestation
 - **/media** - TikTok video content and live spiritual guidance
 - **/about** - Biography of Mamaga Judith Etornam and the founding story

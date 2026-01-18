@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { BLOG_POSTS } from '@/lib/blog-data';
+import { SERVICES } from '@/lib/data';
 
 // Required for static export (output: 'export')
 export const dynamic = 'force-static';
@@ -53,6 +54,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
     ];
 
+    // Dynamic service pages - all services with their slugs
+    const servicePages: MetadataRoute.Sitemap = SERVICES.map((service) => ({
+        url: `${baseUrl}/services/${service.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+    }));
+
     // Dynamic blog post pages - automatically includes all posts
     const blogPosts: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
         url: `${baseUrl}/blogs/${post.slug}`,
@@ -61,5 +70,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }));
 
-    return [...staticPages, ...blogPosts];
+    return [...staticPages, ...servicePages, ...blogPosts];
 }
+

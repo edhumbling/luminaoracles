@@ -31,7 +31,7 @@ export default function ServiceGrid() {
                     return (
                         <Link
                             key={index}
-                            href={`/services/${service.id}`}
+                            href={`/services/${service.slug}`}
                             className="group relative min-h-[18rem] p-8 border-b border-r border-white/10 bg-black hover:bg-black/80 transition-colors duration-300 overflow-hidden"
                         >
                             {/* Persistent Shader Background */}
@@ -46,7 +46,7 @@ export default function ServiceGrid() {
                                 {/* Header */}
                                 <div className="flex justify-between items-start">
                                     <span className="font-mono text-xs tracking-widest text-white/70 group-hover:text-lumina-gold font-bold transition-colors">
-                                        {"//"} {service.id}
+                                        {"//"} {service.slug}
                                     </span>
                                     <div className="w-2 h-2 bg-white/20 group-hover:bg-lumina-gold transition-colors duration-300" />
                                 </div>

@@ -1,6 +1,7 @@
 export const SERVICES = [
     {
         id: "01",
+        slug: "spiritual-consultation",
         title: "Spiritual Consultation",
         desc: "Holistic guidance for your journey.",
         longDesc: "A comprehensive session addressing your spiritual needs and questions.",
@@ -11,6 +12,7 @@ export const SERVICES = [
     },
     {
         id: "02",
+        slug: "psychic-readings",
         title: "Psychic Readings",
         desc: "Clarity from the energetic realm.",
         longDesc: "Connect with the subtle energies that shape your reality.",
@@ -21,6 +23,7 @@ export const SERVICES = [
     },
     {
         id: "03",
+        slug: "meditation-guidance",
         title: "Meditation Guidance",
         desc: "Peace for your inner sanctuary.",
         longDesc: "Journey inward to the sanctuary of your heart.",
@@ -31,6 +34,7 @@ export const SERVICES = [
     },
     {
         id: "04",
+        slug: "energy-healing",
         title: "Energy Healing",
         desc: "Restore your natural bio-rhythm.",
         longDesc: "Harmonize your bio-field like the flow of water.",
@@ -41,6 +45,7 @@ export const SERVICES = [
     },
     {
         id: "05",
+        slug: "spiritual-coaching",
         title: "Spiritual Coaching",
         desc: "Nurturing your soul's growth.",
         longDesc: "Walk your spiritual path with support.",
@@ -51,6 +56,7 @@ export const SERVICES = [
     },
     {
         id: "06",
+        slug: "manifestation-guidance",
         title: "Manifestation Guidance",
         desc: "Weaving your dreams into reality.",
         longDesc: "Become the architect of your reality.",
@@ -61,6 +67,7 @@ export const SERVICES = [
     },
     {
         id: "07",
+        slug: "spiritual-workshops",
         title: "Spiritual Workshops",
         desc: "Gathering in sacred learning.",
         longDesc: "Expand your consciousness in community.",
@@ -71,6 +78,7 @@ export const SERVICES = [
     },
     {
         id: "08",
+        slug: "intuitive-guidance",
         title: "Intuitive Guidance",
         desc: "Trusting your inner knowing.",
         longDesc: "Awaken your own inner oracle.",

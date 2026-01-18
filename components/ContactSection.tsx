@@ -131,7 +131,7 @@ export default function ContactSection() {
                                         >
                                             <option value="" className="text-black/20">SELECT SACRED SERVICE</option>
                                             {SERVICES.map((service) => (
-                                                <option key={service.id} value={service.id}>
+                                                <option key={service.slug} value={service.title}>
                                                     {service.title}
                                                 </option>
                                             ))}

@@ -3,16 +3,16 @@ import ServiceHeader from "@/components/ServiceHeader";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-// Generate static params for all services
+// Generate static params for all services using slugs
 export async function generateStaticParams() {
     return SERVICES.map((service) => ({
-        id: service.id,
+        slug: service.slug,
     }));
 }
 
-export default async function ServicePage({ params }: { params: Promise<{ id: string }> }) {
-    const { id } = await params;
-    const service = SERVICES.find((s) => s.id === id);
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const service = SERVICES.find((s) => s.slug === slug);
 
     if (!service) {
         notFound();
@@ -25,7 +25,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
     const shaderIndex = service.shaderIndex ?? 0;
 
     // Get related services (different from current, limit to 3)
-    const relatedServices = SERVICES.filter(s => s.id !== service.id).slice(0, 3);
+    const relatedServices = SERVICES.filter(s => s.slug !== service.slug).slice(0, 3);
 
     return (
         <main className="min-h-screen bg-white text-black">
@@ -53,7 +53,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
                         <div className="md:col-span-4 flex flex-col gap-4">
                             <div className="bg-zinc-50 border border-black/10 p-6 rounded-lg">
                                 <span className="block font-mono text-xs text-black/50 uppercase tracking-widest mb-2">Service ID</span>
-                                <span className="text-4xl font-mono text-lumina-gold">#{service.id}</span>
+                                <span className="text-4xl font-mono text-lumina-gold">#{service.slug}</span>
                             </div>
                             <div className="bg-zinc-50 border border-black/10 p-6 rounded-lg">
                                 <span className="block font-mono text-xs text-black/50 uppercase tracking-widest mb-2">Category</span>
@@ -210,11 +210,11 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {relatedServices.map((related) => (
                             <Link
-                                key={related.id}
-                                href={`/services/${related.id}`}
+                                key={related.slug}
+                                href={`/services/${related.slug}`}
                                 className="group border border-black/10 p-6 rounded-lg hover:border-lumina-gold/50 hover:bg-lumina-gold/5 transition-all duration-300"
                             >
-                                <span className="block font-mono text-xs text-lumina-gold mb-2">#{related.id}</span>
+                                <span className="block font-mono text-xs text-lumina-gold mb-2">#{related.slug}</span>
                                 <h4 className="text-xl font-medium text-black group-hover:text-lumina-gold transition-colors mb-2">
                                     {related.title}
                                 </h4>
