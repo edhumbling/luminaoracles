@@ -159,33 +159,107 @@ export default function TikTokEmbed() {
                         </blockquote>
                     </div>
 
-                    {/* YouTube Channel */}
-                    <div className={`transition-opacity duration-500 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'} flex flex-col items-center`}>
+                    {/* YouTube Channel - Designed to match TikTok vertical proportions */}
+                    <div className={`transition-opacity duration-1000 ease-in-out ${isLoading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'} flex flex-col items-center h-[730px]`}>
                         <h2 className="text-[#FF0000] font-serif text-xl mb-4 uppercase tracking-widest flex items-center gap-2">
                             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                             </svg>
                             YouTube
                         </h2>
-                        <a
-                            href="https://youtube.com/@priestess-c5l?si=jtjkbWQJJDDO4qxB"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-[#1a1a1a] border border-white/10 rounded-xl p-6 w-[325px] flex flex-col items-center gap-4 hover:border-[#FF0000]/50 hover:shadow-[0_0_30px_-10px_rgba(255,0,0,0.3)] transition-all duration-300 group"
-                        >
-                            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#FF0000] to-[#cc0000] flex items-center justify-center mb-2 shadow-lg group-hover:scale-110 transition-transform">
-                                <svg className="w-10 h-10 text-white fill-current" viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
+
+                        <div className="w-[325px] h-full bg-[#0f0f0f] rounded-xl overflow-hidden shadow-2xl border border-white/5 hover:border-[#FF0000]/30 transition-colors flex flex-col group">
+                            {/* Banner Area */}
+                            <div className="h-24 bg-gradient-to-r from-[#2c0000] to-[#5e0000] relative">
+                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
                             </div>
-                            <div className="text-center">
-                                <h3 className="text-white font-serif text-xl mb-1">Priestess C5L</h3>
-                                <p className="text-white/60 text-sm">Official YouTube Channel</p>
+
+                            {/* Profile Header */}
+                            <div className="relative px-4 pb-4 border-b border-white/10">
+                                <div className="absolute -top-10 left-4 w-20 h-20 rounded-full bg-[#0f0f0f] p-1">
+                                    <div className="w-full h-full rounded-full bg-gradient-to-br from-[#FF0000] to-[#990000] flex items-center justify-center text-white text-2xl font-bold">
+                                        P
+                                    </div>
+                                </div>
+                                <div className="absolute -top-10 left-[4.5rem] bottom-0 w-full"></div>
+
+                                <div className="mt-12 flex justify-between items-start">
+                                    <div>
+                                        <h3 className="text-white font-medium text-lg flex items-center gap-1">
+                                            Priestess C5L
+                                            <span className="text-[#aaa] bg-white/10 rounded-full p-0.5" title="Verified">
+                                                <svg className="w-3 h-3 text-white fill-current" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>
+                                            </span>
+                                        </h3>
+                                        <p className="text-[#aaa] text-xs">@priestess-c5l • Spiritual Teacher</p>
+                                    </div>
+                                </div>
+
+                                <a
+                                    href="https://www.youtube.com/@priestess-c5l?sub_confirmation=1"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-4 w-full bg-white text-black font-medium text-sm py-2 rounded-full hover:bg-[#d9d9d9] transition-colors flex items-center justify-center gap-2"
+                                >
+                                    Subscribe
+                                </a>
                             </div>
-                            <button className="mt-2 text-xs uppercase tracking-widest text-white bg-[#FF0000] hover:bg-[#cc0000] px-6 py-2 rounded-full transition-colors font-medium">
-                                Subscribe / Watch
-                            </button>
-                        </a>
+
+                            {/* Simulated Video List to fill height */}
+                            <div className="flex-1 p-4 space-y-4 overflow-hidden bg-[#0f0f0f]">
+                                <h4 className="text-white font-medium text-sm">Latest Videos</h4>
+
+                                {/* Mock Video 1 */}
+                                <div className="flex gap-3 group/video cursor-pointer">
+                                    <div className="w-32 h-20 bg-white/5 rounded-lg flex-shrink-0 relative overflow-hidden">
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-[#333] to-[#1a1a1a]"></div>
+                                        <div className="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1 rounded">12:44</div>
+                                    </div>
+                                    <div className="flex flex-col gap-1">
+                                        <div className="h-4 w-32 bg-white/10 rounded"></div>
+                                        <div className="h-3 w-20 bg-white/5 rounded"></div>
+                                    </div>
+                                </div>
+
+                                {/* Mock Video 2 */}
+                                <div className="flex gap-3 group/video cursor-pointer">
+                                    <div className="w-32 h-20 bg-white/5 rounded-lg flex-shrink-0 relative overflow-hidden">
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-[#333] to-[#1a1a1a]"></div>
+                                        <div className="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1 rounded">8:30</div>
+                                    </div>
+                                    <div className="flex flex-col gap-1">
+                                        <div className="h-4 w-28 bg-white/10 rounded"></div>
+                                        <div className="h-3 w-16 bg-white/5 rounded"></div>
+                                    </div>
+                                </div>
+
+                                {/* Mock Video 3 */}
+                                <div className="flex gap-3 group/video cursor-pointer">
+                                    <div className="w-32 h-20 bg-white/5 rounded-lg flex-shrink-0 relative overflow-hidden">
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-[#333] to-[#1a1a1a]"></div>
+                                        <div className="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1 rounded">5:12</div>
+                                    </div>
+                                    <div className="flex flex-col gap-1">
+                                        <div className="h-4 w-36 bg-white/10 rounded"></div>
+                                        <div className="h-3 w-24 bg-white/5 rounded"></div>
+                                    </div>
+                                </div>
+
+                                <div className="pt-4 border-t border-white/5">
+                                    <p className="text-[#aaa] text-xs text-center">Check out the channel for <br />deep spiritual insights.</p>
+                                </div>
+                            </div>
+
+                            {/* Bottom Action */}
+                            <a
+                                href="https://www.youtube.com/@priestess-c5l?sub_confirmation=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#1e1e1e] p-4 text-center text-[#FF0000] text-sm font-medium hover:bg-[#2a2a2a] transition-colors border-t border-white/10"
+                            >
+                                Visit Channel &rarr;
+                            </a>
+                        </div>
                     </div>
                 </div>
             </main>
