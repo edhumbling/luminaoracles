@@ -161,8 +161,8 @@ export default function TikTokEmbed() {
                         </div>
                     </div>
 
-                    {/* YouTube Channel - Horizontal Card Below TikTok */}
-                    <div className={`transition-opacity duration-1000 ease-in-out ${isLoading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'} w-full max-w-3xl px-4`}>
+                    {/* YouTube Channel */}
+                    <div className={`transition-opacity duration-1000 ease-in-out ${isLoading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'} w-full flex flex-col items-center px-4`}>
                         <h2 className="text-[#FF0000] font-serif text-xl mb-4 uppercase tracking-widest flex items-center justify-center gap-2">
                             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
@@ -170,14 +170,39 @@ export default function TikTokEmbed() {
                             YouTube
                         </h2>
 
+                        {/* Mobile: Simple Vertical Card */}
                         <a
                             href="https://www.youtube.com/@priestess-c5l?sub_confirmation=1"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#0f0f0f] rounded-xl overflow-hidden shadow-2xl border border-white/5 hover:border-[#FF0000]/30 transition-all duration-300 flex flex-col md:flex-row group"
+                            className="md:hidden bg-[#0f0f0f] border border-white/10 rounded-xl p-6 w-full max-w-[325px] flex flex-col items-center gap-4 hover:border-[#FF0000]/50 transition-all duration-300 group"
+                        >
+                            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#FF0000] to-[#990000] flex items-center justify-center text-white text-3xl font-bold group-hover:scale-110 transition-transform">
+                                G
+                            </div>
+                            <div className="text-center">
+                                <h3 className="text-white font-medium text-xl flex items-center justify-center gap-2">
+                                    Great Goddess
+                                    <span className="text-[#aaa] bg-white/10 rounded-full p-0.5" title="Verified">
+                                        <svg className="w-3 h-3 text-white fill-current" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>
+                                    </span>
+                                </h3>
+                                <p className="text-[#aaa] text-sm">@priestess-c5l</p>
+                            </div>
+                            <button className="mt-2 bg-white text-black font-medium text-sm px-8 py-2.5 rounded-full hover:bg-[#d9d9d9] transition-colors">
+                                Subscribe
+                            </button>
+                        </a>
+
+                        {/* Desktop: Horizontal Professional Card */}
+                        <a
+                            href="https://www.youtube.com/@priestess-c5l?sub_confirmation=1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hidden md:flex bg-[#0f0f0f] rounded-xl overflow-hidden shadow-2xl border border-white/5 hover:border-[#FF0000]/30 transition-all duration-300 max-w-3xl w-full group"
                         >
                             {/* Left: Avatar & Channel Info */}
-                            <div className="flex items-center gap-4 p-6 md:w-1/2 border-b md:border-b-0 md:border-r border-white/10">
+                            <div className="flex items-center gap-4 p-6 w-1/2 border-r border-white/10">
                                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#FF0000] to-[#990000] flex items-center justify-center text-white text-3xl font-bold flex-shrink-0 group-hover:scale-105 transition-transform">
                                     G
                                 </div>
@@ -196,7 +221,7 @@ export default function TikTokEmbed() {
                             </div>
 
                             {/* Right: Description & CTA */}
-                            <div className="flex flex-col justify-center p-6 md:w-1/2 bg-[#1a1a1a]">
+                            <div className="flex flex-col justify-center p-6 w-1/2 bg-[#1a1a1a]">
                                 <p className="text-white/70 text-sm mb-4 leading-relaxed">
                                     Join the Great Goddess on YouTube for exclusive spiritual teachings, guided meditations, and transformative content to elevate your journey.
                                 </p>
