@@ -51,15 +51,16 @@ const organizationSchema = {
     }
 };
 
-// WebSite Schema - for sitelinks search box
+// WebSite Schema - for sitelinks search box and site name in Google Search
 const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://luminaoracles.com/#website",
     url: "https://luminaoracles.com",
     name: "Lumina Oracles",
-    alternateName: ["Lumina Oracles", "LuminaOracles"],
-    description: "Spiritual guidance and mystical wisdom",
+    alternateName: ["Lumina Oracles", "LuminaOracles", "luminaoracles"],
+    description: "Spiritual guidance, tarot readings, and mystical wisdom from Mamaga Judith Etornam.",
+    inLanguage: "en-US",
     publisher: {
         "@id": "https://luminaoracles.com/#organization"
     },
