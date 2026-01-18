@@ -31,5 +31,13 @@ export const TESTIMONIALS = [
     {
         name: "TompoGh777",
         text: "Since the day I was born, I have never known happiness in my life until GG came into my life. Every second I close my eyes, I see GG and find happiness in my heart ❤️. I'm proud to say you are my everything. I love everything about you and you're my world. I LOVE YOU MAA GODDESS 😘🥰❤️"
+    },
+    {
+        name: "Mayiba",
+        text: "You are so beautiful and amazing = 90% ✨ Self confidence, doing everything possible to improve on your own self = 95% ✨ Your selfless nature = 100% ✨ You are unique in your own ways = 100% ✨ Self control = 50% 😂 Professional. Eiii Sisy the kindness alone is super!"
+    },
+    {
+        name: "Augustus",
+        text: "I'm truly glad I met you on Maame Grace's show. Since that day, so much has changed—the way I think, the way I see things, and especially the way the universe seems to work in my favor. I'm deeply grateful to the universe for bringing us together. Your patience, kindness, and calm way of making worries fade away are truly inspiring. Time is a precious commodity, yet you give yours so freely, no matter how busy you are. Thank you."
     }
 ];
