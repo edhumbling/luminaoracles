@@ -97,16 +97,16 @@ export default function TikTokEmbed() {
                             <div className="relative w-32 h-32 mb-8">
                                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 animate-spin blur-lg opacity-60" />
                                 <div className="absolute inset-2 rounded-full bg-gradient-to-r from-cyan-400 via-pink-400 to-yellow-400 animate-pulse" />
-                                <div className="absolute inset-4 rounded-full bg-black flex items-center justify-center">
-                                    <svg className="w-12 h-12 text-white animate-pulse" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                                <div className="absolute inset-4 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center shadow-[inset_0_0_20px_rgba(255,255,255,0.1)]">
+                                    <svg className="w-12 h-12 text-white fill-current drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] ml-1" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
                                     </svg>
                                 </div>
                             </div>
 
                             {/* Loading Text */}
-                            <p className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 font-semibold text-lg animate-pulse">
-                                Loading TikTok Feeds...
+                            <p className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 font-semibold text-lg animate-pulse tracking-wide">
+                                Loading Media...
                             </p>
 
                             {/* Animated Dots */}
