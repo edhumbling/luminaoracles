@@ -31,6 +31,42 @@ function ThinkingDots() {
     );
 }
 
+// Helper function to render message content with clickable URLs
+function renderMessageContent(content: string) {
+    // Regex to match URLs (http, https, www)
+    const urlRegex = /(https?:\/\/[^\s<]+|www\.[^\s<]+)/gi;
+
+    const parts = content.split(urlRegex);
+    const matches = content.match(urlRegex) || [];
+
+    let matchIndex = 0;
+    const elements: React.ReactNode[] = [];
+
+    parts.forEach((part, index) => {
+        if (part.match(urlRegex)) {
+            // This part is a URL
+            const url = part.startsWith('www.') ? `https://${part}` : part;
+            elements.push(
+                <a
+                    key={`url-${index}`}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lumina-gold underline underline-offset-2 hover:text-lumina-gold/80 transition-colors break-all"
+                >
+                    {part}
+                </a>
+            );
+            matchIndex++;
+        } else if (part) {
+            // Regular text
+            elements.push(<span key={`text-${index}`}>{part}</span>);
+        }
+    });
+
+    return elements.length > 0 ? elements : content;
+}
+
 // Mobile Chat View with Visual Viewport API for instant keyboard handling
 interface MobileChatViewProps {
     messages: Message[];
@@ -163,7 +199,7 @@ function MobileChatView({
                                         className="object-contain"
                                     />
                                 </div>
-                                <p className="text-white/90 text-[15px] leading-relaxed whitespace-pre-wrap pt-1">{message.content}</p>
+                                <p className="text-white/90 text-[15px] leading-relaxed whitespace-pre-wrap pt-1">{renderMessageContent(message.content)}</p>
                             </div>
                         ) : (
                             <div className="bg-[#303030] text-white px-4 py-2.5 rounded-3xl rounded-tr-lg max-w-[85%]">
@@ -568,7 +604,9 @@ export default function GoddessAI() {
                                             : "bg-white/10 text-white"
                                             }`}
                                     >
-                                        <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">{message.content}</p>
+                                        <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">
+                                            {message.role === "assistant" ? renderMessageContent(message.content) : message.content}
+                                        </p>
                                     </div>
                                 </div>
                             ))}
