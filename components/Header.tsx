@@ -41,7 +41,7 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className={cn("fixed top-0 left-0 right-0 z-40 hidden md:block transition-opacity duration-300", isHidden ? "opacity-0 pointer-events-none" : "opacity-100")}>
+    <header className={cn("fixed top-0 left-0 right-0 z-[100] hidden md:block transition-opacity duration-300", isHidden ? "opacity-0 pointer-events-none" : "opacity-100")}>
       <div className="mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-24">
           {/* Logo - Far Left */}
