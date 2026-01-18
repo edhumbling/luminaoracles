@@ -246,8 +246,8 @@ export default function PrivacyPage() {
                             <li>
                                 <strong className="text-lumina-gold">Analytics Cookies:</strong> Help us understand how visitors interact with our website. We use:
                                 <ul className="mt-2 ml-4 space-y-1">
-                                    <li><strong>Google Analytics</strong> (Tracking ID: G-P9RTMNQPGE) - Collects anonymized usage data</li>
-                                    <li><strong>Microsoft Clarity</strong> (Project ID: v2k3ymtj3v) - Provides heatmaps and session recordings</li>
+                                    <li><strong>Google Analytics</strong> - Collects anonymized usage data</li>
+                                    <li><strong>Microsoft Clarity</strong> - Provides heatmaps and session recordings</li>
                                 </ul>
                             </li>
                             <li>
