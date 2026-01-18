@@ -150,6 +150,24 @@ export default function Footer() {
                     <p className="text-white/30 text-xs tracking-[0.3em] font-mono uppercase">
                         Lumina Oracles © {new Date().getFullYear()}
                     </p>
+
+                    {/* Legal Links */}
+                    <div className="flex items-center gap-4">
+                        <Link
+                            href="/terms"
+                            className="text-white/40 hover:text-lumina-gold text-xs tracking-wide transition-colors duration-300"
+                        >
+                            Terms of Service
+                        </Link>
+                        <span className="text-white/20">|</span>
+                        <Link
+                            href="/privacy"
+                            className="text-white/40 hover:text-lumina-gold text-xs tracking-wide transition-colors duration-300"
+                        >
+                            Privacy Policy
+                        </Link>
+                    </div>
+
                     <p className="text-white/20 text-xs tracking-wide">
                         Light your way ✨
                     </p>
