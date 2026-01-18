@@ -146,15 +146,33 @@ export default function MobileHeader() {
                 </div>
 
                 {/* Footer Decoration */}
-                {/* Footer Decoration */}
                 <div className="absolute bottom-0 left-0 right-0 p-8 border-t border-white/10 bg-transparent">
                     <p className="text-white/30 font-mono text-[10px] text-center uppercase tracking-[0.2em] mb-2">
                         Sacred Geometry
                     </p>
-                    <div className="flex justify-center gap-2 opacity-30">
+                    <div className="flex justify-center gap-2 opacity-30 mb-4">
                         <div className="w-1 h-1 rounded-full bg-lumina-gold" />
                         <div className="w-1 h-1 rounded-full bg-lumina-gold" />
                         <div className="w-1 h-1 rounded-full bg-lumina-gold" />
+                    </div>
+
+                    {/* Legal Links */}
+                    <div className="flex justify-center items-center gap-3">
+                        <Link
+                            href="/terms"
+                            onClick={closeMenu}
+                            className="text-white/30 hover:text-lumina-gold text-[10px] tracking-wide transition-colors duration-300"
+                        >
+                            Terms
+                        </Link>
+                        <span className="text-white/20 text-[10px]">•</span>
+                        <Link
+                            href="/privacy"
+                            onClick={closeMenu}
+                            className="text-white/30 hover:text-lumina-gold text-[10px] tracking-wide transition-colors duration-300"
+                        >
+                            Privacy
+                        </Link>
                     </div>
                 </div>
             </nav>
