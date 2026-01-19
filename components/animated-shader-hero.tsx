@@ -270,6 +270,8 @@ const useShaderBackground = () => {
   const animationFrameRef = useRef<number | undefined>(undefined);
   const rendererRef = useRef<WebGLRenderer | null>(null);
   const pointersRef = useRef<PointerHandler | null>(null);
+  const isVisibleRef = useRef<boolean>(true);
+  const isInViewRef = useRef<boolean>(true);
 
   const resize = () => {
     if (!canvasRef.current) return;
@@ -292,12 +294,24 @@ const useShaderBackground = () => {
 
   const loop = (now: number) => {
     if (!rendererRef.current || !pointersRef.current) return;
+    // Only render if visible and in view
+    if (!isVisibleRef.current || !isInViewRef.current) {
+      animationFrameRef.current = requestAnimationFrame(loop);
+      return;
+    }
 
     rendererRef.current.updateMouse(pointersRef.current.first);
     rendererRef.current.updatePointerCount(pointersRef.current.count);
     rendererRef.current.updatePointerCoords(pointersRef.current.coords);
     rendererRef.current.updateMove(pointersRef.current.move);
     rendererRef.current.render(now);
+    animationFrameRef.current = requestAnimationFrame(loop);
+  };
+
+  const startLoop = () => {
+    if (animationFrameRef.current) {
+      cancelAnimationFrame(animationFrameRef.current);
+    }
     animationFrameRef.current = requestAnimationFrame(loop);
   };
 
@@ -319,12 +333,41 @@ const useShaderBackground = () => {
       rendererRef.current.updateShader(defaultShaderSource);
     }
 
-    loop(0);
+    // Handle visibility change (mobile browsers pause RAF when tab/page is hidden)
+    const handleVisibilityChange = () => {
+      isVisibleRef.current = document.visibilityState === 'visible';
+      if (isVisibleRef.current && isInViewRef.current) {
+        // Force a render cycle and restart loop when becoming visible
+        startLoop();
+      }
+    };
+
+    // Handle intersection observer for when canvas scrolls into/out of view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isInViewRef.current = entry.isIntersecting;
+          if (entry.isIntersecting && isVisibleRef.current) {
+            // Restart animation when scrolling back into view
+            startLoop();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(canvas);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Start the animation loop
+    startLoop();
 
     window.addEventListener('resize', resize);
 
     return () => {
       window.removeEventListener('resize', resize);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      observer.disconnect();
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
