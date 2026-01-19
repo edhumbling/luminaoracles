@@ -1,14 +1,22 @@
 import { getGoddessContext, GODDESS_SYSTEM_PROMPT } from '@/lib/goddess-context';
 
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+const GLM_API_URL = 'https://open.bigmodel.cn/api/paas/v4/chat/completions';
 
-// Models in order of priority (primary first, then fallbacks)
+// Groq models in order of priority (primary first, then fallbacks)
 const MODELS = [
     'moonshotai/kimi-k2-instruct-0905',      // Kimi K2 - Primary (200 tok/s, 262K context)
     'meta-llama/llama-4-maverick-17b-128e-instruct', // Llama 4 Maverick (600 tok/s, 131K context)
     'meta-llama/llama-4-scout-17b-16e-instruct',     // Llama 4 Scout (750 tok/s, 131K context)
     'qwen/qwen3-32b',                         // Qwen3-32B (400 tok/s, 131K context)
     'llama-3.3-70b-versatile',               // Llama 3.3 70B - Final fallback
+];
+
+// GLM backup models (free tier) - used when all Groq models fail
+const GLM_MODELS = [
+    'glm-4.7-flash',    // Latest free model
+    'glm-4.6v-flash',   // Vision-capable free model
+    'glm-4.5-flash',    // Stable free model
 ];
 
 async function tryModel(
@@ -45,13 +53,51 @@ async function tryModel(
     }
 }
 
+// Try GLM model (backup fallback)
+async function tryGlmModel(
+    model: string,
+    apiMessages: Array<{ role: string; content: string }>,
+): Promise<Response | null> {
+    if (!process.env.GLM_API_KEY) {
+        return null;
+    }
+
+    try {
+        const response = await fetch(GLM_API_URL, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${process.env.GLM_API_KEY}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                model,
+                messages: apiMessages,
+                max_tokens: 1024,
+                temperature: 0.7,
+                stream: true,
+            }),
+        });
+
+        if (response.ok) {
+            return response;
+        }
+
+        const errorText = await response.text();
+        console.warn(`GLM Model ${model} failed (${response.status}):`, errorText.slice(0, 200));
+        return null;
+    } catch (error) {
+        console.warn(`GLM Model ${model} error:`, error);
+        return null;
+    }
+}
+
 export async function POST(req: Request) {
     try {
-        // Check for API key
-        if (!process.env.GROQ_API_KEY) {
-            console.error('GROQ_API_KEY is not set!');
+        // Check for at least one API key
+        if (!process.env.GROQ_API_KEY && !process.env.GLM_API_KEY) {
+            console.error('No API keys configured!');
             return new Response(
-                JSON.stringify({ error: 'API key not configured' }),
+                JSON.stringify({ error: 'No API keys configured' }),
                 { status: 500, headers: { 'Content-Type': 'application/json' } }
             );
         }
@@ -85,6 +131,19 @@ ${context}`;
                 usedModel = model;
                 console.log(`Using model: ${model}`);
                 break;
+            }
+        }
+
+        // If all Groq models failed, try GLM backup models
+        if (!response && process.env.GLM_API_KEY) {
+            console.log('All Groq models failed, trying GLM backup models...');
+            for (const model of GLM_MODELS) {
+                response = await tryGlmModel(model, apiMessages);
+                if (response) {
+                    usedModel = `glm:${model}`;
+                    console.log(`Using GLM backup model: ${model}`);
+                    break;
+                }
             }
         }
 
