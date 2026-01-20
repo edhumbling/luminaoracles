@@ -98,6 +98,8 @@ Tarot readings use a deck of 78 cards with symbolic imagery to provide insight a
 - **/about** - Biography of Mamaga Judith Etornam and the founding story
 - **/contact** - Contact information and booking details
 - **/goddess-ai** - Interactive Goddess AI spiritual assistant
+- **/for-llms** - LLM-readable structured page for AI systems
+- **/rss.xml** - RSS feed for blog content syndication
 
 ## Content Guidelines for AI
 
