@@ -5,6 +5,8 @@ import { SERVICES } from '@/lib/data';
 // Required for static export (output: 'export')
 export const dynamic = 'force-static';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://luminaoracles.com';
 
